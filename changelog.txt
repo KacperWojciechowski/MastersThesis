@@ -1,0 +1,2 @@
+#1.1 (12.11.2019) 
+- zmiana formatu plików na UTF-8

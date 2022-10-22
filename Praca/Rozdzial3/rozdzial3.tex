@@ -1,0 +1,34 @@
+\chapter{Inżynieria danych eksperymentalnych i testowe szablony modeli}
+\section{Omówienie danych eksperymentalnych}
+	
+	W celu zestawienia funkcjonalnego bibliotek uczenia maszynowego w języku C++ i przedstawienia przykładów konieczne było wybranie danych eksperymentalnych możliwych do wykorzystania jako porównawczy punkt odniesienia. Jako w/w dane wybrano bazę dotyczącą diagnostyki raka piersi, w której zamieszczono wyniki obrazowania określone w sposób liczbowy. Dane mają następującą strukturę:
+	
+	\begin{enumerate}
+		\item [1)] ID - numer identyfikacyjny pacjentki;
+		\item [2)] Diagnosis [\textit{Malignant - M} / \textit{Benign - B}] - charakter nowotworu, \textbf{zmienna odpowiedzi};
+		\item [3)] Dane klasyfikujące:
+			\begin{enumerate}
+				\item [a)] \textit{Radius} - średnica guza;
+				\item [b)] \textit{Texture} - tekstura guza;
+				\item [c)] \textit{Perimeter} - obwód guza;
+				\item [d)] \textit{Area} - pole guza;
+				\item [e)] \textit{Smoothness} - gładkość, miara lokalnych różnic w promieniu guza;
+				\item [f)] \textit{Compactness} - zwartość, wykorzystywana do oceny stadium guza;
+				\item [g)] \textit{Concavity} - stopień wklęsłości miejsc guza;
+				\item [h)] \textit{Concave points} - punkty wklęsłości guza;
+				\item [i)] \textit{Symmetry} - symetria guza, pomagająca w ocenie charakteru przyrostu guza.
+				\item [j)] \textit{Fractal dimention (,,coastline approximation'' - 1)} - wymiar fraktalny pozwalający na ilościowy opis złożoności komórek nerwowych, umożliwiający stwierdzenie nowotworzenia się zbioru komórek.
+			\end{enumerate}
+	\end{enumerate}
+	
+	Dla każdej ze zmiennych odpowiedzi została zebrana średnia wartość, odcyhelenie standardowe oraz średnia trzech największych pomiarów, gdzie każdy zestaw ustawiony jest sekwencyjnie (np. kolumna 3 - średni promień, kolumna 12 - odchylenie standardowe promienia, kolumna 22 - średnia trzech największych pomiarów promienia).
+	
+\section{Charakterystyka i przetwarzenie danych}
+
+\section{Szablony docelowych modeli dla zadanych danych eksperymentalnych}
+
+Ze względu na dychotomiczny charakter zmiennej odpowiedzi, wybrany został przedstawiony poniżej zestaw metod dla których wykonano i przedstawiono testy praktyczne. Szablony struktury rozwiązań, takie jak np. wybór zmiennych uczestniczących w procesie uczenia, lub struktura sieci neuronowej zostały ustalone w sposób empiryczny z wykorzystaniem programu do uczenia maszynowego JMP. 
+
+\subsection{Regresja logistyczna}
+
+\subsection{Głęboka sieć neuronowa}

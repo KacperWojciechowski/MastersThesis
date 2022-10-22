@@ -1,0 +1,137 @@
+%==========================================================================================
+%
+%								Uniwersytet Zielonogórski
+%
+%						SZABLON PRACY DYPLOMOWEJ W PAKIECIE LaTeX
+%							wykonany podczas zajęć seminaryjnych
+%				pod przewodnictwem prof. dr hab. inż Dariusza Ucińskiego
+%
+%							 Damian Kowalów, Mariusz Buciakowski
+%
+% 				       Wydział Informatyki, Elektrotechniki i Automatyki
+%						Instytut Sterowania i~Systemów Informatycznych
+%
+%							 Zielona Góra, kwiecień 2013
+%			   (ostatnia modyfikacja: 15.11.2019 przez Paweł Jamroziak)
+%==========================================================================================
+%\documentclass[a4paper,12pt]{book}
+\documentclass[a4paper,12pt,openany]{book}
+\input{Pakiety/pakiety.tex}
+\input{Ustawienia/ustawienia.tex}
+
+
+%==========================================================================================
+% Dane na temat pracy do wypełnienia
+%==========================================================================================
+\author{Kacper Wojciechowski}
+\kierunek{Informatyka}
+\grupa{21 INF-ZSI-SD}		% np. 101AiRDz
+\title{Analiza porównawcza bibliotek uczenia maszynowego języka C++ na potrzeby zastosowań w biostatystyce}
+\tytulAngielski{Comparative analysis of machine learning libraries in C++ for applications in biostatistics}
+\uczelnia{Uniwersytet Zielonogórski}
+\wydzial{Wydział Informatyki, Elektrotechniki i Automatyki}
+\praca{Praca dyplomowa} % pozostawić właściwe
+\promotor{Prof. dr hab. inż. Dariusz Uciński}
+\konsultant{} 	% nie usuwać w~przypadku braku lecz pozostawić puste czyli: \konsultant{}
+%\konsultant{}
+\miasto{Zielona Góra}
+\miesiac{czerwiec}	% miesiąc złożenia pracy
+\rok{2023}
+\dzien{dd} 			% dzień podpisania oświadczenia (cyfrowo) np. 10
+\mm{mm} 				% miesiąc podpisania oświadczenia (cyfrowo) np. 01 (styczeń)
+
+%==========================================================================================
+% Uwaga! polecenie \myemptypage dodaje pustą stronę do treści. Praca oddana do dziekanatu powinna być zbudowana zgodnie z szablonem znajdującym się na stronie WEIT (z jedną stroną pustą następującą po karcie pracy), jednak jeżeli student planuje wydruk dla siebie, zalecane jest zastąpienie poleceń \newpage poleceniem \myemptypage. Skutkuje to utworzeniem bardziej przejrzystego układu zgodnego z zaleceniami pisania książek, czyli rozpoczynanie nowych treści na prawej stronie.
+%==========================================================================================
+
+
+%==========================================================================================
+% Dokument glowny
+%==========================================================================================
+\begin{document}
+\pagenumbering{roman}
+%=========================================================================================
+% Strona tytułowa
+%=========================================================================================
+\thispagestyle{empty}
+\stronatytulowa
+
+\thispagestyle{empty}
+\pustastrona
+\newpage
+%=========================================================================================
+% Oświadczenie o~współrealizacji pracy - w~przypadku braku zakomentować lub usunąć sekcję
+%========================================================================================
+%\autorDwa{Imię i~nazwisko współautora}
+%\wspolrealizacjaTrescJeden{wykaz czynności wykonanych przez tę osobę}
+%\wspolrealizacjaTrescDwa{wykaz czynności wykonanych przez tę osobę}
+%\wspolrealizacja
+%\newpage
+
+\thispagestyle{empty}
+\newpage
+
+%========================================================================================
+% Streszczenie
+%========================================================================================
+\normalsize
+\input{Streszczenie/Streszczenie.tex}
+\newpage
+%\myemptypage
+
+%========================================================================================
+% Spis tresci, spis tabel i~rysunków
+%========================================================================================
+%spis tresci
+	\tableofcontents
+	\newpage
+	%\myemptypage
+%spis rysunków
+ 	\listoffigures
+	\newpage
+	%\myemptypage
+%spis tabel
+	\listoftables
+	\newpage
+	%\myemptypage
+
+%========================================================================================
+% Licznik Stron
+%========================================================================================
+\newcounter{licznikStron}
+\setcounter{licznikStron}{\value{page}}
+\setcounter{licznikStron}{1}
+\pagenumbering{arabic}
+\setcounter{page}{\value{licznikStron}}
+
+%========================================================================================
+% Tresc
+%========================================================================================
+\input{Rozdzial1/rozdzial1.tex}
+\input{Rozdzial2/rozdzial2.tex}
+\input{Rozdzial3/rozdzial3.tex}
+\input{Rozdzial4/rozdzial4.tex}
+\input{Rozdzial5/rozdzial5.tex}
+
+
+%========================================================================================
+% Dodatki
+%========================================================================================
+\begin{appendix}
+\appendix
+	%\input{Dodatki/dodatek_a.tex}
+	%\input{Dodatki/dodatek_b.tex}
+\end{appendix}
+
+%========================================================================================
+% Literatura
+%========================================================================================
+
+\begin{flushleft}
+	\printbibliography[title={Bibliografia}]
+\end{flushleft}
+
+\end{document}
+%========================================================================================
+% Koniec dokumentu
+%========================================================================================
