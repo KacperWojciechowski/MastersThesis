@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.12)  26 NOV 2022 23:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.12)  8 DEC 2022 02:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1358,7 +1358,7 @@ Overfull \hbox (6.8981pt too wide) in paragraph at lines 2--2
 []\T1/lmr/bx/n/17.28 Problemy wspóª-cze-snego ucze-nia ma-szy-no-wego 
  []
 
-<Rysunki/Rozdzial2/perceptron.jpg, id=143, 523.35526pt x 195.129pt>
+<Rysunki/Rozdzial2/perceptron.jpg, id=148, 523.35526pt x 195.129pt>
 File: Rysunki/Rozdzial2/perceptron.jpg Graphic file (type jpg)
 <use Rysunki/Rozdzial2/perceptron.jpg>
 Package pdftex.def Info: Rysunki/Rozdzial2/perceptron.jpg  used on input line 1
@@ -1370,7 +1370,7 @@ Package pdftex.def Info: Rysunki/Rozdzial2/perceptron.jpg  used on input line 1
 Underfull \vbox (badness 4193) has occurred while \output is active []
 
  [4 <./Rysunki/Rozdzial2/perceptron.jpg>]
-<Rysunki/Rozdzial2/multithreading.jpg, id=154, 573.94424pt x 231.86626pt>
+<Rysunki/Rozdzial2/multithreading.jpg, id=160, 573.94424pt x 231.86626pt>
 File: Rysunki/Rozdzial2/multithreading.jpg Graphic file (type jpg)
 <use Rysunki/Rozdzial2/multithreading.jpg>
 Package pdftex.def Info: Rysunki/Rozdzial2/multithreading.jpg  used on input li
@@ -1382,14 +1382,14 @@ Rozdzia\l  3.
 [7
 
 ]
-<Rysunki/Rozdzial2/diagnosis_distribution.png, id=169, 355.3275pt x 126.4725pt>
+<Rysunki/Rozdzial2/diagnosis_distribution.png, id=174, 355.3275pt x 126.4725pt>
 
 File: Rysunki/Rozdzial2/diagnosis_distribution.png Graphic file (type png)
 <use Rysunki/Rozdzial2/diagnosis_distribution.png>
 Package pdftex.def Info: Rysunki/Rozdzial2/diagnosis_distribution.png  used on 
 input line 34.
 (pdftex.def)             Requested size: 341.43437pt x 121.53186pt.
-<Rysunki/Rozdzial2/variable_distribution.png, id=171, 369.63094pt x 237.88875pt
+<Rysunki/Rozdzial2/variable_distribution.png, id=176, 369.63094pt x 237.88875pt
 >
 File: Rysunki/Rozdzial2/variable_distribution.png Graphic file (type png)
 <use Rysunki/Rozdzial2/variable_distribution.png>
@@ -1398,32 +1398,45 @@ nput line 41.
 (pdftex.def)             Requested size: 298.75264pt x 192.27501pt.
  [8 <./Rysunki/Rozdzial2/diagnosis_distribution.png> <./Rysunki/Rozdzial2/varia
 ble_distribution.png (PNG copy)>]
-<Rysunki/Rozdzial2/box_graph.png, id=177, 423.08063pt x 378.66469pt>
+<Rysunki/Rozdzial2/box_graph.png, id=182, 423.08063pt x 378.66469pt>
 File: Rysunki/Rozdzial2/box_graph.png Graphic file (type png)
 <use Rysunki/Rozdzial2/box_graph.png>
 Package pdftex.def Info: Rysunki/Rozdzial2/box_graph.png  used on input line 57
 .
 (pdftex.def)             Requested size: 298.75264pt x 267.39777pt.
- [9 <./Rysunki/Rozdzial2/box_graph.png (PNG copy)>]) (./Rozdzial4/rozdzial4.tex
-) (./Rozdzial5/rozdzial5.tex)
+ [9 <./Rysunki/Rozdzial2/box_graph.png (PNG copy)>]
+<Rysunki/Rozdzial3/log.png, id=187, 368.1253pt x 258.9675pt>
+File: Rysunki/Rozdzial3/log.png Graphic file (type png)
+<use Rysunki/Rozdzial3/log.png>
+Package pdftex.def Info: Rysunki/Rozdzial3/log.png  used on input line 84.
+(pdftex.def)             Requested size: 298.75264pt x 210.18137pt.
+ [10 <./Rysunki/Rozdzial3/log.png (PNG copy)>]
+<Rysunki/Rozdzial3/cube_root.png, id=205, 385.44pt x 251.43938pt>
+File: Rysunki/Rozdzial3/cube_root.png Graphic file (type png)
+<use Rysunki/Rozdzial3/cube_root.png>
+Package pdftex.def Info: Rysunki/Rozdzial3/cube_root.png  used on input line 10
+6.
+(pdftex.def)             Requested size: 298.75264pt x 194.8865pt.
+)
+(./Rozdzial4/rozdzial4.tex) (./Rozdzial5/rozdzial5.tex)
 
 LaTeX Warning: Empty bibliography on input line 131.
 
-[10] (./praca.aux)
+[11 <./Rysunki/Rozdzial3/cube_root.png (PNG copy)>] [12] (./praca.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: 99D2C187336D3607CCEEC5E72ED2A6B0;3794.
+(rerunfilecheck)             Checksum: 335B560B8E07BE94C7871B3F172B6F70;3926.
 Package logreq Info: Writing requests to 'praca.run.xml'.
 \openout1 = `praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30918 strings out of 475071
- 562537 string characters out of 5780911
- 1338879 words of memory out of 5000000
- 51721 multiletter control sequences out of 15000+600000
+ 30967 strings out of 475071
+ 563433 string characters out of 5780911
+ 1339112 words of memory out of 5000000
+ 51743 multiletter control sequences out of 15000+600000
  527532 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,11n,109p,1878b,1736s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1438,10 +1451,10 @@ t/fonts/type1/public/lm/lmri12.pfb><e:/Programy/TeXLive/texmf-dist/fonts/type1/
 public/lm/lmsy10.pfb><e:/Programy/TeXLive/texmf-dist/fonts/type1/public/cm-supe
 r/sfxc1728.pfb><e:/Programy/TeXLive/texmf-dist/fonts/type1/public/cm-super/sfxc
 2074.pfb>
-Output written on praca.pdf (16 pages, 373833 bytes).
+Output written on praca.pdf (18 pages, 395480 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 196 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 281 PDF objects out of 1000 (max. 8388607)
+ 232 compressed objects within 3 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 172 words of extra memory for PDF output out of 10000 (max. 10000000)
 

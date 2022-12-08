@@ -46,11 +46,11 @@
 	
 	Proces analizy rozkładu rozpoczęty został od przyjrzenia się zmiennej odpowiedzi (\textit{Diagnosis}). Rysunek 3.1 przedstawia uzyskany histogram, wraz z tabelą określającą ilość obserwacji danej klasy i współczynnik prawdopodobieństwa przynależności odpowiedzi do danej klasy. Zauważyć można, że dla użytego zestawu danych ilość zarejestrowano 357 obserwacji łagodnego raka piersi, a jego prawdopodobieństwo przynależności do klasy \textit{Benign} wynosi $\approx$ 62,7\%, natomiast do klasy \textit{Malignant} przynależało 212 obserwacji z prawodpodobieństwem $\approx$ 37,3\%.
 		
-	Podczas analizy histogramów zmiennych decyzyjnych, stwierdzono że znaczna ilość ma charakter prawostronnie skośny oraz występują dla nich obserwacje odstające, o czym informuje znajdujący się po prawej stronie histogramu wykres okienkowy (ang. \textit{box graph}), co przedstawiono na rysunku 3.2. Wyjątkiem okazała się zmienna \textit{Mean Largest Concave Points}), która mimo lekkiej skośności, okazała się nie posiadać obserwacji odstających. Na podstawie tych informacji stwierdzono, że aby przygotować dane w odpowiedni sposób do procesu uczenia należy przeprowadzić ich czyszczenie oraz normalizację.
+	Podczas analizy histogramów zmiennych decyzyjnych, stwierdzono że znaczna ilość ma charakter prawostronnie skośny oraz występują dla nich obserwacje odstające, o czym informuje znajdujący się po prawej stronie histogramu wykres okienkowy (ang. \textit{box graph}), co przedstawiono na rysunku 3.2. Wyjątkiem okazała się zmienna \textit{Mean Largest Concave Points}), która mimo lekkiej skośności, okazała się nie posiadać obserwacji odstających. Na podstawie tych informacji stwierdzono, że aby przygotować dane w odpowiedni sposób do procesu uczenia należy przeprowadzić ich czyszczenie oraz normalizację rozkładu.
 	
-	\subsection{Czyszczenie danych}
+	\subsection{Czyszczenie i normalizacja rozkładu danych}
 	
-	Na pełny zestaw danych składa się 569 obserwacji. Podczas wstępnej analizy nie stwierdzono istnienia brakujących wartości, w związku z czym głównym problemem okazały się obserwacje odstające. Do usunięcia obserwacji odstających wykorzystano wykresy okienkowe, gdzie oś Y reprezentowała zmienną odpowiedzi, natomiast oś X czyszczoną zmienną decyzyjną. Pozwoliło to na zachowanie relatywnego stosunku poszczególnych klas (co okazało się niemożliwe przy pierwszej próbie usunięcia wprost obserwacji odstających bez uwzględnienia poszczególych klas, skutkując w prawie całkowitym wyeliminowaniu klasy \textit{Malignant}). Przykładowy wykres został przedstawiony na rysunku 3.3.
+	Na pełny zestaw danych składa się 569 obserwacji. Podczas wstępnej analizy nie stwierdzono istnienia brakujących wartości, w związku z czym głównym problemem okazały się obserwacje odstające oraz skośności rozkładu. Do analizy obserwacji odstających wykorzystano wykresy okienkowe, gdzie oś Y reprezentowała zmienną odpowiedzi, natomiast oś X czyszczoną zmienną decyzyjną. Przykładowy wykres został przedstawiony na rysunku 3.3. Ze względu na bardzo małą ilość obserwacji zdecydowano się rozpocząć proces przystosowywania danych do uczenia poprzez normalizację ich rozkładu, aby zminimalizować lub wyeliminować konieczność usunięcia danych odstających. 
 	
 	\begin{figure}[!ht]
 		\centering
@@ -60,6 +60,54 @@
 	\end{figure}
 
 	\newpage
+	
+	W pierwszym podejściu zdecydowano się na zastosowanie transformacji logarytmicznej dla wszystkich zmiennych decyzyjnych i porównanie charakterystyk uzyskanych rozkładów z oryginalnymi. Zmienna \textit{Mean largest concave points} okazała się posiadać rozkład bardzo zbliżony do standardowego, w związku z czym wyłączono ją z dalszej analizy normalizacji.Przykładowe wyniki przedstawiono na rysunkach 3.4 oraz 3.5. Transformacja ta okazała się skutecznym rozwiązaniem jedynie dla następujących zmiennych:
+	
+	\begin{enumerate}
+		\item \textit{Mean radius};
+		\item \textit{Mean texture};
+		\item \textit{Mean perimeter},
+		\item \textit{Mean area};
+		\item \textit{Mean smoothness};
+		\item \textit{Mean symmetry};
+		\item \textit{Std err texture};
+		\item \textit{Std err smoothness};
+		\item \textit{Std err compactness};
+		\item \textit{Std err concave points};
+		\item \textit{Mean largest texture};
+		\item \textit{Mean largest smoothness};
+		\item \textit{Mean largest compactness}.
+	\end{enumerate}
+
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Rysunki/Rozdzial3/log}
+		\caption{Porównanie rozkładu danych przed i po transformacji logarytmicznej.}
+		\label{fig:log}
+	\end{figure}
+	
+	\newpage
+
+	W drugim kroku podjęto próbę wykorzystania transformacji pierwiastkiem sześciennym dla pozostałych zmiennych decyzyjych, ze względu na jej skuteczność dla danych o rozkładzie prawoskośnym. Rysunek 3.6. przedstawia porównanie rozkładu zmiennej \textit{Mean concavity} przed i po transfromacji pierwiastkiem sześciennym. Pomyślnie znormalizowano rozkład następujących zmiennych:
+	
+	\begin{enumerate}
+		\item \textit{Mean compactness};
+		\item \textit{Mean concavity};
+		\item \textit{Mean concave points};
+		\item \textit{Std err concavity};
+		\item \textit{Mean largest radius};
+		\item \textit{Mean largest perimeter};
+		\item \textit{Mean largest concavity};
+		\item \textit{Mean largest symmetry}.
+	\end{enumerate} 
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Rysunki/Rozdzial3/cube_root}
+	\caption{Porównanie rozkładów danych przed i po zastosowaniu transformacji pierwiastkiem sześciennym.}
+	\label{fig:cuberoot}
+\end{figure}
+
 	
 
 \section{Szablony docelowych modeli dla zadanych danych eksperymentalnych}
