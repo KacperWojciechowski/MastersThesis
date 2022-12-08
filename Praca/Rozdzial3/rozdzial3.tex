@@ -61,7 +61,7 @@
 
 	\newpage
 	
-	W pierwszym podejściu zdecydowano się na zastosowanie transformacji logarytmicznej dla wszystkich zmiennych decyzyjnych i porównanie charakterystyk uzyskanych rozkładów z oryginalnymi. Zmienna \textit{Mean largest concave points} okazała się posiadać rozkład bardzo zbliżony do standardowego, w związku z czym wyłączono ją z dalszej analizy normalizacji.Przykładowe wyniki przedstawiono na rysunkach 3.4 oraz 3.5. Transformacja ta okazała się skutecznym rozwiązaniem jedynie dla następujących zmiennych:
+	W pierwszym podejściu zdecydowano się na zastosowanie transformacji logarytmicznej dla wszystkich zmiennych decyzyjnych i porównanie charakterystyk uzyskanych rozkładów z oryginalnymi. Zmienna \textit{Mean largest concave points} okazała się posiadać rozkład bardzo zbliżony do standardowego, w związku z czym wyłączono ją z dalszej analizy normalizacji. Przykładowe wyniki przedstawiono na rysunku 3.4. Transformacja ta okazała się skutecznym rozwiązaniem jedynie dla następujących zmiennych:
 	
 	\begin{enumerate}
 		\item \textit{Mean radius};
@@ -108,7 +108,17 @@
 	\label{fig:cuberoot}
 \end{figure}
 
+	Ostatecznym krokiem okazało się zastosownie odwrotnej transformacji Arrheniusa, Niestety część z uzyskanych zmodyfikowanych zmiennych decyzyjnych zachowała częściowy skośny rozkład, jednak inne przetestowane transformacje, jak m.in. pierwiastek kwadratowy, potęga kwadratowa, logarytm x+1, logarytm dziesiętny, funkcja potęgowa, funkcja wykładnicza, przyniosły rezultaty porównywalne lub gorsze od uzyskanego w wyniku w/w odwrotnej transformacji Arrheniusa. Rysunek 3.6 przedstawia porównanie uzyskanych rozkładów.
 	
+	\newpage
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Rysunki/Rozdzial3/arrhenius}
+		\caption{Porównanie uzyskanych rozkładów danych przed i po odwrotnej transformacji Arrheniusa.}
+		\label{fig:arrhenius}
+	\end{figure}
+	
+	Ze względu na bardzo małą ilość obserwacji, zdecydowano się na zachowanie wszystkich obserwacji odstających, aby zapobiec utracie informacji i zmianie uzyskanych w procesie normalizacji rozkładów.
 
 \section{Szablony docelowych modeli dla zadanych danych eksperymentalnych}
 
