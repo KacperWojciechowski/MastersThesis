@@ -126,6 +126,82 @@ Ze względu na dychotomiczny charakter zmiennej odpowiedzi, wybrany został prze
 
 \subsection{Regresja logistyczna}
 
+Badanie zależności w modelu regresji logistycznej odbyło się z wykorzystaniem wykresu wpływu zmiennej decyzyjnej na zmienną odpowiedzi opartego o p-wartość. Jako próg pozwalający na odrzucenie hipotezy zerowej (hipotezy o braku wypływu zmiennej na odpowiedź) przyjęto 0.05 jednostek. Rysunek 3.7 przedstawia w/w wykres wraz z p-wartościami dla poszczególnych zmiennych. Zauważyć można, że dla części zmiennych nie została wyznaczona p-wartość -- oznacza to, że część zmiennych jest ze sobą skorelowanych.
+
+Pierwszym krokiem w wybraniu istotnych zmiennych było usunięcie zmiennych skorelowanych, drugim natomiast stopniowe usuwanie zmiennych o p-wartości powyżej określonego progu. Rysunek 3.8 przedstawia listę wraz z wykresem kolumnowym istotnych zmiennych, wymienionych poniżej:
+
+\begin{enumerate}
+	\item \textit{Log mean largest texture} (p-wartość 0.00000);
+	\item \textit{Log mean largest compactness} (p-wartość 0.00000);
+	\item \textit{Cube root mean largest symmetry} (p-wartość 0.00001);
+	\item \textit{Arrhenius inverse std err symmetry} (p-wartość: 0.00005);
+	\item \textit{Arrhenius inverse std radius} (p-wartość 0.00018);
+	\item \textit{Cube root mean concave points} (p-wartość 0.00056);
+	\item \textit{Cube root mean largest concavity} (p-wartość 0.00069);
+	\item \textit{Log std err texture} (p-wartość 0.00252);
+	\item \textit{Cube root mean largest perimeter} (p-wartość 0.00526);
+	\item \textit{Log mean smoothness} (p-wartość 0.04867);
+	\item \textit{Log mean radius} (p-wartość 0.04884).
+\end{enumerate}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Rozdzial3/pvalue1}
+	\caption{Wykres p-wartości dla całego zestawu zmiennych decyzyjnych.}
+	\label{fig:pvalue1}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Rozdzial3/pvalue2}
+	\caption{Wykres i p-wartości istotnych zmiennych decyzyjnych}
+	\label{fig:pvalue2}
+\end{figure}
+
+Dla wybranego zestawu zmiennych model osiągnął dokładność na poziomie $R^{2}$ = 0.9401. Zgodnie z macierzą pomyłek, 207 obserwacji typu \textit{Malignant} oraz 335 obserwacji \textit{Benign} zostało zaklasyfikowanych poprawnie. Oznacza to, że model uzyskał tylko 2 wyniki typu \textit{false-positive} (prawdopodobieństwo 0,6\%) i 5 wyników typu \textit{false-negative} (prawdopodobieństwo 2,4\%) dla danych treningowych. Ze względu na mały zestaw obserwacji, ryzyko przeuczenia jest znikome, w związku z czym nie wytypowano zestawu danych walidacyjnych. Rysunek 3.9 przedstawia krzywą charakterystyczną odbiornika dla modelu. 
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.6\linewidth]{Rozdzial3/roc}
+	\caption{Krzywa charakterystyczna odbiornika (ROC) dla modelu regresji logistycznej}
+	\label{fig:roc}
+\end{figure}
+
+
+
+\newpage
 \subsection{Głęboka sieć neuronowa}
+
+Do przygotowania sieci neuronowej wykorzystano zestaw zmiennych które zostały uznane za istotne w punkcje 3.3.1. Do uczenia zestaw danych został losowo podzielony na dane uczące i walidacyjne w propocji 80\% do 20\%. W wyniku prób i błędów, optymalny model uzyskano przy następującej strukturze:
+
+\begin{itemize}
+	\item [-] warstwa ukryta złożona z 5 neuronów o aktywacji tangensa hiperbolicznego;
+	\item [-] warstwa ukryta złożona z 5 neuronów o aktywacji tangensa hiperbolicznego;
+	\item [-] warstwa wyjściowa złożona z 2 neuronów.
+\end{itemize}
+
+Dla ziarna o wartości 1234 uzyskano model którego statystyka $R^{2}$ dla danych treningowych wyniosła 0.966268, natomiast dla danych testowych 0.9924547. Trafność dla losowo wybranego zestawu testowego wyniosła 100\%, natomiast dla danych uczących napotkano 5 przypadków \textit{false-negative} (prawdopodobieństwo 3\%) oraz 1 przypadek \textit{false-positive} (prawdopodobieństwo 0,4\%). Rysunki 3.10 oraz 3.11 przedstawiają krzywe charakterystyczne odbiornika dla zestawu testowego i walidacyjnego.
+
+\begin{figure}[!ht]
+	\begin{minipage}{0.48\textwidth}
+			\centering
+			\includegraphics[width=0.95\linewidth]{Rozdzial3/roc_test}
+			\caption{Krzywa charakterysty-czna odbiornika dla zestawu testowego}
+			\label{fig:roctest}
+	\end{minipage}%
+	\hspace{8pt}
+	\begin{minipage}{0.48\textwidth}
+			\centering
+			\includegraphics[width=0.95\linewidth]{Rozdzial3/roc_valid}
+			\caption{Krzywa charakterysty-czna odbiornika dla danych walidacyjnych}
+			\label{fig:rocvalid}
+	\end{minipage}
+\end{figure}
+
+
+
+
+
+
 
 \subsection{Maszyna wektorów nośnych}
