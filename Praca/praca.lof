@@ -6,14 +6,14 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Histogram rozkładu zmiennej odpowiedzi\relax }}{8}{figure.caption.4}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Przykłady histogramów zmiennych decyzyjnych\relax }}{8}{figure.caption.5}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Przykład analizy obserwacji odstających dla poszczególnych klas zmiennej odpowiedzi\relax }}{9}{figure.caption.6}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Porównanie rozkładu danych przed i po transformacji logarytmicznej.\relax }}{10}{figure.caption.7}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Porównanie rozkładów danych przed i po zastosowaniu transformacji pierwiastkiem sześciennym.\relax }}{11}{figure.caption.8}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Porównanie uzyskanych rozkładów danych przed i po odwrotnej transformacji Arrheniusa.\relax }}{12}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Wykres p-wartości dla całego zestawu zmiennych decyzyjnych.\relax }}{13}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Wykres i p-wartości istotnych zmiennych decyzyjnych\relax }}{14}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Krzywa charakterystyczna odbiornika (ROC) dla modelu regresji logistycznej\relax }}{14}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Krzywa charakterysty-czna odbiornika dla zestawu testowego\relax }}{15}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Krzywa charakterysty-czna odbiornika dla danych walidacyjnych\relax }}{15}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Krzywa charakterystycz-na odbiornika dla danych uczących modelu SVM\relax }}{16}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Krzywa charakterystycz-na odbiornika dla danych walidacyjnych modelu SVM\relax }}{16}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Przykład analizy obserwacji odstających dla poszczególnych klas zmiennej odpowiedzi\relax }}{10}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Porównanie rozkładu danych przed i po transformacji logarytmicznej.\relax }}{11}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Porównanie rozkładów danych przed i po zastosowaniu transformacji pierwiastkiem sześciennym.\relax }}{12}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Porównanie uzyskanych rozkładów danych przed i po odwrotnej transformacji Arrheniusa.\relax }}{13}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Wykres p-wartości dla całego zestawu zmiennych decyzyjnych.\relax }}{14}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Wykres i p-wartości istotnych zmiennych decyzyjnych\relax }}{15}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Krzywa charakterystyczna odbiornika (ROC) dla modelu regresji logistycznej\relax }}{15}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Krzywa charakterysty-czna odbiornika dla zestawu testowego\relax }}{16}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Krzywa charakterysty-czna odbiornika dla danych walidacyjnych\relax }}{16}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Krzywa charakterystycz-na odbiornika dla danych uczących modelu SVM\relax }}{17}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Krzywa charakterystycz-na odbiornika dla danych walidacyjnych modelu SVM\relax }}{17}{figure.caption.16}%
