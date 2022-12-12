@@ -6,7 +6,7 @@
 \contentsline {chapter}{\numberline {2}Uczenie maszynowe w ujęciu praktycznym}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Problemy współczesnego uczenia maszynowego}{3}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Język C++ jako narzędzie do rozwiązania problemów uczenia maszynowego}{5}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Biblioteki - co mają na celu ?}{6}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Cel powstania bibliotek}{6}{section.2.3}%
 \contentsline {chapter}{\numberline {3}Inżynieria danych eksperymentalnych i testowe szablony modeli}{7}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Omówienie danych eksperymentalnych}{7}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Charakterystyka i przetwarzenie danych}{8}{section.3.2}%
@@ -14,5 +14,5 @@
 \contentsline {subsection}{\numberline {3.2.2}Czyszczenie i normalizacja rozkładu danych}{9}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Szablony docelowych modeli dla zadanych danych eksperymentalnych}{12}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Regresja logistyczna}{12}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Głęboka sieć neuronowa}{15}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.2}Głęboka sieć neuronowa}{14}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Maszyna wektorów nośnych}{15}{subsection.3.3.3}%
