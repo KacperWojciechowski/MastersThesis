@@ -16,5 +16,87 @@
   {}
 \endgroup
 
-\datalist[entry]{none/global//global/global}\enddatalist
+\datalist[entry]{none/global//global/global}
+  \entry{wisconsin}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=DWHWOLMWNS}{%
+         family={Dr\bibnamedelima William H.\bibnamedelima Wolberg},
+         familyi={D\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim
+  H\bibinitperiod\bibinitdelim W\bibinitperiod},
+         suffix={W.\bibnamedelima Nick\bibnamedelima Street},
+         suffixi={W\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim
+  S\bibinitperiod},
+         given={Olvi L.\bibnamedelima Mangasarian},
+         giveni={O\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DWHWWNSOLM1}
+    \strng{fullhash}{DWHWWNSOLM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Wisconsin Diagnostic Breast Cancer (WDBC)}
+    \verb{url}
+    \verb https://archive.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+(diag
+    \verb nostic)
+    \endverb
+    \list{institution}{1}{%
+      {University of Wisconsin}%
+    }
+    \field{year}{1995}
+  \endentry
+
+  \entry{Dua:2019}{misc}{}
+    \name{author}{2}{}{%
+      {{hash=DD}{%
+         family={Dua},
+         familyi={D\bibinitperiod},
+         given={Dheeru},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=GC}{%
+         family={Graff},
+         familyi={G\bibinitperiod},
+         given={Casey},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DDGC1}
+    \strng{fullhash}{DDGC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{UCI} Machine Learning Repository}
+    \verb{url}
+    \verb http://archive.ics.uci.edu/ml
+    \endverb
+    \list{institution}{2}{%
+      {University of California, Irvine, School of Information}%
+      {Computer Sciences}%
+    }
+    \field{year}{2017}
+  \endentry
+
+  \entry{biostatisticsJMP}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BT}{%
+         family={Bihl},
+         familyi={B\bibinitperiod},
+         given={Trevor},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {SAS Institute Inc.}%
+    }
+    \strng{namehash}{BT1}
+    \strng{fullhash}{BT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Biostatistics Using JMP: A Practical Guide}
+    \list{location}{1}{%
+      {Cary, NC}%
+    }
+    \field{year}{2017}
+  \endentry
+\enddatalist
 \endinput

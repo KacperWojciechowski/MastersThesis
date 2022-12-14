@@ -1,11 +1,7 @@
 \chapter{Inżynieria danych eksperymentalnych i testowe szablony modeli}
 \section{Omówienie danych eksperymentalnych}
 	
-	W celu zestawienia funkcjonalnego bibliotek uczenia maszynowego w języku C++ i przedstawienia przykładów konieczne było wybranie danych eksperymentalnych możliwych do wykorzystania jako porównawczy punkt odniesienia. Jako w/w dane wybrano bazę dotyczącą diagnostyki raka piersi, w której zamieszczono wyniki obrazowania określone w sposób liczbowy. 
-	
-	DOPISAĆ ŹRÓDŁO DANYCH
-	
-	Dane mają następującą strukturę:
+	W celu zestawienia funkcjonalnego bibliotek uczenia maszynowego w języku C++ i przedstawienia przykładów konieczne było wybranie danych eksperymentalnych możliwych do wykorzystania jako porównawczy punkt odniesienia. Jako w/w dane wybrano bazę dotyczącą diagnostyki raka piersi ,,\textit{Wisconsin Diagnostic Breast Cancer}'' z listopada 1995 roku, w której zamieszczono wyniki obrazowania określone w sposób liczbowy. Autorami zestawu są Dr. Wiliam H. Wolberg, W. Nick Street oraz Olvi L. Mangasarian z Uniwersytetu Wisconsin \cite{wisconsin}. Baza ta jest dostępna do pobrania z repozytorium Uniwersytetu Californii \cite{Dua:2019}. Dane mają następującą strukturę:
 	
 	\begin{enumerate}
 		\item [1)] ID - numer identyfikacyjny pacjentki;
@@ -25,32 +21,32 @@
 			\end{enumerate}
 	\end{enumerate}
 	
-	Dla każdej ze zmiennych odpowiedzi została zebrana średnia wartość, odcyhelenie standardowe oraz średnia trzech największych pomiarów, gdzie każdy zestaw ustawiony jest sekwencyjnie (np. kolumna 3 - średni promień, kolumna 12 - odchylenie standardowe promienia, kolumna 22 - średnia trzech największych pomiarów promienia). Każda ze zmiennych ma charakter ciągły.
+	Dla każdej ze zmiennych odpowiedzi została zebrana średnia wartość, odcyhelenie standardowe oraz średnia trzech największych pomiarów, gdzie każdy zestaw ustawiony jest sekwencyjnie (np. kolumna 3 - średni promień, kolumna 12 - odchylenie standardowe promienia, kolumna 22 - średnia trzech największych pomiarów promienia). Każda ze zmiennych ma charakter ciągły. Zredukowany zestaw danych, zawierający jedynie zmienne decyzyjne informujące o średnich wartościach znaleźć można jako dodatek do książki ,,\textit{Biostatistics Using JMP: A Practical Guide}'' autorstwa Trevora Bihla \cite{biostatisticsJMP}.
 	
 \section{Charakterystyka i przetwarzenie danych}
 
 	W celu przeprowadzenia procesu uczenia maszynowego, jednym z najistotniejszych kroków jakie należy podjąć jest wstępne zaznajomienie się z zestawem danych i jego analiza pod kątem rozkładu poszczególnych zmiennych oraz prawdopodobieństw. W tym celu wykorzystane zostało oprogramowanie JMP. 
 
 	\subsection{Analiza rozkładu danych}
+		
+	Proces analizy rozkładu rozpoczęty został od przyjrzenia się zmiennej odpowiedzi (\textit{Diagnosis}). Rysunek 3.1 przedstawia uzyskany histogram, wraz z tabelą określającą ilość obserwacji danej klasy i współczynnik prawdopodobieństwa przynależności odpowiedzi do danej klasy. Zauważyć można, że dla użytego zestawu danych ilość zarejestrowano 357 obserwacji łagodnego raka piersi, a jego prawdopodobieństwo przynależności do klasy \textit{Benign} wynosi $\approx$ 62,7\%, natomiast do klasy \textit{Malignant} przynależało 212 obserwacji z prawodpodobieństwem $\approx$ 37,3\%.
+		
+	Podczas analizy histogramów zmiennych decyzyjnych, stwierdzono że znaczna ilość ma charakter prawostronnie skośny oraz występują dla nich obserwacje odstające, o czym informuje znajdujący się po prawej stronie histogramu wykres okienkowy (ang. \textit{box graph}), co przedstawiono na rysunku 3.2. Wyjątkiem okazała się zmienna \textit{Mean Largest Concave Points}), która mimo lekkiej skośności, okazała się nie posiadać obserwacji odstających. Na podstawie tych informacji stwierdzono, że aby przygotować dane w odpowiedni sposób do procesu uczenia należy przeprowadzić ich czyszczenie oraz normalizację rozkładu.
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[width=0.8\linewidth]{Rysunki/Rozdzial2/diagnosis_distribution}
+		\includegraphics[width=0.6\linewidth]{Rysunki/Rozdzial2/diagnosis_distribution}
 		\caption{Histogram rozkładu zmiennej odpowiedzi}
 		\label{fig:diagnosisdistribution}
 	\end{figure}
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[width=0.7\linewidth]{Rysunki/Rozdzial2/variable_distribution}
+		\includegraphics[width=0.6\linewidth]{Rysunki/Rozdzial2/variable_distribution}
 		\caption{Przykłady histogramów zmiennych decyzyjnych}
 		\label{fig:variabledistribution}
 	\end{figure}
 	
-	
-	Proces analizy rozkładu rozpoczęty został od przyjrzenia się zmiennej odpowiedzi (\textit{Diagnosis}). Rysunek 3.1 przedstawia uzyskany histogram, wraz z tabelą określającą ilość obserwacji danej klasy i współczynnik prawdopodobieństwa przynależności odpowiedzi do danej klasy. Zauważyć można, że dla użytego zestawu danych ilość zarejestrowano 357 obserwacji łagodnego raka piersi, a jego prawdopodobieństwo przynależności do klasy \textit{Benign} wynosi $\approx$ 62,7\%, natomiast do klasy \textit{Malignant} przynależało 212 obserwacji z prawodpodobieństwem $\approx$ 37,3\%.
-		
-	Podczas analizy histogramów zmiennych decyzyjnych, stwierdzono że znaczna ilość ma charakter prawostronnie skośny oraz występują dla nich obserwacje odstające, o czym informuje znajdujący się po prawej stronie histogramu wykres okienkowy (ang. \textit{box graph}), co przedstawiono na rysunku 3.2. Wyjątkiem okazała się zmienna \textit{Mean Largest Concave Points}), która mimo lekkiej skośności, okazała się nie posiadać obserwacji odstających. Na podstawie tych informacji stwierdzono, że aby przygotować dane w odpowiedni sposób do procesu uczenia należy przeprowadzić ich czyszczenie oraz normalizację rozkładu.
 	
 	\subsection{Czyszczenie i normalizacja rozkładu danych}
 	
@@ -157,7 +153,7 @@ Pierwszym krokiem w wybraniu istotnych zmiennych było usunięcie zmiennych skor
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.9\linewidth]{Rozdzial3/pvalue1}
+	\includegraphics[width=0.9\linewidth]{Rysunki/Rozdzial3/pvalue1}
 	\caption{Wykres p-wartości dla całego zestawu zmiennych decyzyjnych.}
 	\label{fig:pvalue1}
 \end{figure}
@@ -167,24 +163,23 @@ Dla wybranego zestawu zmiennych model osiągnął dokładność na poziomie $R^{
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.9\linewidth]{Rozdzial3/pvalue2}
+	\includegraphics[width=0.7\linewidth]{Rysunki/Rozdzial3/pvalue2}
 	\caption{Wykres i p-wartości istotnych zmiennych decyzyjnych}
 	\label{fig:pvalue2}
 \end{figure}
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.6\linewidth]{Rozdzial3/roc}
+	\includegraphics[width=0.5\linewidth]{Rysunki/Rozdzial3/roc}
 	\caption{Krzywa charakterystyczna odbiornika (ROC) dla modelu regresji logistycznej}
 	\label{fig:roc}
 \end{figure}
 
 \subsection{Głęboka sieć neuronowa}
 
-Do przygotowania sieci neuronowej wykorzystano zestaw zmiennych zawartych w tabeli 3.1. Dane zostały losowo podzielony na dane uczące i walidacyjne w propocji 80\% do 20\%. W wyniku prób i błędów, optymalny model uzyskano przy strukturze przedstawionej w tabeli 3.2.
+Do przygotowania sieci neuronowej wykorzystano zestaw zmiennych zawartych w tabeli 3.1. Dane zostały losowo podzielony na dane uczące i walidacyjne w propocji 80\% do 20\%. W wyniku prób i błędów, optymalny model uzyskano przy strukturze przedstawionej w tabeli 3.2. Graficzny schemat struktury został także przedstawiony na rysunku 3.10.
 
-\newpage
-\begin{table}
+\begin{table}[!ht]
 	\centering
 	\begin{tabular}{c|c|c}
 		Typ warstwy & ilość neuronów & aktywacja \\
@@ -197,24 +192,32 @@ Do przygotowania sieci neuronowej wykorzystano zestaw zmiennych zawartych w tabe
 	\label{neural:1}
 \end{table}
 
-Środowisko JMP nie udostępnia informacji o funkcji aktywacji warstwy wyjściowej, w związku z czym w tabeli 3.2 została ona pominięta. Dla ziarna o wartości 1234 uzyskano model którego statystyka $R^{2}$ dla danych treningowych wyniosła 0.966268, natomiast dla danych testowych 0.9924547. Trafność dla losowo wybranego zestawu testowego wyniosła 100\%, natomiast dla danych uczących napotkano 5 przypadków \textit{false-negative} (prawdopodobieństwo 3\%) oraz 1 przypadek \textit{false-positive} (prawdopodobieństwo 0,4\%). Rysunki 3.10 oraz 3.11 przedstawiają krzywe charakterystyczne odbiornika dla zestawu testowego i walidacyjnego.
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.6\linewidth]{Rysunki/Rozdzial3/neural_struct}
+	\caption{Schemat struktury sieci}
+	\label{fig:neuralstruct}
+\end{figure}
+
+Środowisko JMP nie udostępnia informacji o funkcji aktywacji warstwy wyjściowej, w związku z czym w tabeli 3.2 została ona pominięta. Dla ziarna o wartości 1234 uzyskano model którego statystyka $R^{2}$ dla danych treningowych wyniosła 0.966268, natomiast dla danych testowych 0.9924547. Trafność dla losowo wybranego zestawu testowego wyniosła 100\%, natomiast dla danych uczących napotkano 5 przypadków \textit{false-negative} (prawdopodobieństwo 3\%) oraz 1 przypadek \textit{false-positive} (prawdopodobieństwo 0,4\%). Rysunki 3.11 oraz 3.12 przedstawiają krzywe charakterystyczne odbiornika dla zestawu testowego i walidacyjnego.
 
 \begin{figure}[!ht]
 	\begin{minipage}{0.48\textwidth}
 			\centering
-			\includegraphics[width=0.95\linewidth]{Rozdzial3/roc_test}
+			\includegraphics[width=0.95\linewidth]{Rysunki/Rozdzial3/roc_test}
 			\caption{Krzywa charakterysty-czna odbiornika dla zestawu testowego}
 			\label{fig:roctest}
 	\end{minipage}%
 	\hspace{8pt}
 	\begin{minipage}{0.48\textwidth}
 			\centering
-			\includegraphics[width=0.95\linewidth]{Rozdzial3/roc_valid}
+			\includegraphics[width=0.95\linewidth]{Rysunki/Rozdzial3/roc_valid}
 			\caption{Krzywa charakterysty-czna odbiornika dla danych walidacyjnych}
 			\label{fig:rocvalid}
 	\end{minipage}
 \end{figure}
 
+\newpage
 \subsection{Maszyna wektorów nośnych}
 
 Do predykcji diagnozy wykorzystano ten sam zestaw regresorów, zawartych w tabeli 3.1. Ponownie w celu walidacji użyto metody wybrania losowego zestawu walidacyjnego spośród dostarczonych danych, w proporcji 80\% obserwacji uczących i 20\% testowych, z użyciem wartości 1234 dla ziarna generatora liczb pseudolosowych. Jako funkcję jądra maszyny wektorów nośnych (ang. Support Vector Machine, SVM) wybrano \textit{Radial Basis Function}, która jest domyślnym wyborem dla SVM w środowisku JMP. 
@@ -241,17 +244,17 @@ Do predykcji diagnozy wykorzystano ten sam zestaw regresorów, zawartych w tabel
 \begin{figure}[!ht]
 	\begin{minipage}{0.48\textwidth}
 		\centering
-		\includegraphics[width=0.98\linewidth]{Rozdzial3/roc_svm1_test}
+		\includegraphics[width=0.98\linewidth]{Rysunki/Rozdzial3/roc_svm1_test}
 		\caption{Krzywa charakterystycz-na odbiornika dla danych uczących modelu SVM}
 		\label{fig:rocsvm1test}		
 	\end{minipage}%
 	\hspace{10pt}
 	\begin{minipage}{0.48\textwidth}
 		\centering
-		\includegraphics[width=0.98\linewidth]{Rozdzial3/roc_svm1_val}
+		\includegraphics[width=0.98\linewidth]{Rysunki/Rozdzial3/roc_svm1_val}
 		\caption{Krzywa charakterystycz-na odbiornika dla danych walidacyjnych modelu SVM}
 		\label{fig:rocsvm1val}				
 	\end{minipage}	
 \end{figure}
 
-Utworzony w ten sposób model posiada generalizowaną statystykę $R^{2}$ na poziomie 0.97161 dla zestawu walidacyjnego, i uzyskał wskaźnik błędnej klasyfikacji wynoszący 0\% dla danych testowych, oraz 1,3\% dla danych uczących. Tabela 3.3 przedstawia wartości X dla poszczególnych regresorów. Rysunki 3.12 oraz 3.13 przedstawiają krzywe charakterystyczne odbiornika dla uzyskanego modelu.
+Utworzony w ten sposób model posiada generalizowaną statystykę $R^{2}$ na poziomie 0.97161 dla zestawu walidacyjnego, i uzyskał wskaźnik błędnej klasyfikacji wynoszący 0\% dla danych testowych, oraz 1,3\% dla danych uczących. Tabela 3.3 przedstawia wartości X dla poszczególnych regresorów. Rysunki 3.13 oraz 3.14 przedstawiają krzywe charakterystyczne odbiornika dla uzyskanego modelu.
