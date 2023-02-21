@@ -98,5 +98,154 @@
     }
     \field{year}{2017}
   \endentry
+
+  \entry{tf}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=BG}{%
+         family={Brain},
+         familyi={B\bibinitperiod},
+         given={Google},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BG1}
+    \strng{fullhash}{BG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{TensorFlow}
+    \verb{url}
+    \verb https://www.tensorflow.org/
+    \endverb
+    \field{year}{2023}
+  \endentry
+
+  \entry{protobuf}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=BV}{%
+         family={Bezhachev},
+         familyi={B\bibinitperiod},
+         given={Vitaly},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BV1}
+    \strng{fullhash}{BV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{How to deploy Machine Learning models with TensorFlow. Part 1
+  - make your model ready for serving.}
+    \field{year}{2017}
+  \endentry
+
+  \entry{deploy3}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=MNI}{%
+         family={Mokhtari},
+         familyi={M\bibinitperiod},
+         given={Nour\bibnamedelima Islam},
+         giveni={N\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MNI1}
+    \strng{fullhash}{MNI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{How to Deploy TensorFlow Models in C++ in 3 different ways}
+    \field{year}{2022}
+  \endentry
+
+  \entry{tflite}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=BG}{%
+         family={Brain},
+         familyi={B\bibinitperiod},
+         given={Google},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BG1}
+    \strng{fullhash}{BG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{TensorFlow Lite}
+    \verb{url}
+    \verb https://www.tensorflow.org/lite
+    \endverb
+    \field{year}{2023}
+  \endentry
+
+  \entry{tfcpp}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=G}{%
+         family={Google},
+         familyi={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{G1}
+    \strng{fullhash}{G1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{TensorFlow C++ API Reference}
+    \verb{url}
+    \verb https://www.tensorflow.org/api_docs/cc
+    \endverb
+    \field{year}{2023}
+  \endentry
+
+  \entry{tfhelloworld}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=k}{%
+         family={ksachdeva},
+         familyi={k\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{k1}
+    \strng{fullhash}{k1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{TensorFlow C++ Examples}
+    \verb{url}
+    \verb https://github.com/ksachdeva/tensorflow-cc-examples/blob/master/examp
+    \verb les/1_Introduction/src/hello-world.cc
+    \endverb
+    \field{year}{2018}
+  \endentry
+
+  \entry{protobuf2}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=G}{%
+         family={Google},
+         familyi={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{G1}
+    \strng{fullhash}{G1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{A Tool Developer's Guide to TensorFlow Model Files}
+    \verb{url}
+    \verb https://chromium.googlesource.com/external/github.com/tensorflow/tens
+    \verb orflow/+/r0.10/tensorflow/g3doc/how_tos/tool_developers/index.md
+    \endverb
+    \field{year}{2023}
+  \endentry
+
+  \entry{input_tf}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=a}{%
+         family={asimshankar},
+         familyi={a\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{a1}
+    \strng{fullhash}{a1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Training TensorFlow Models in C++}
+    \verb{url}
+    \verb https://gist.github.com/asimshankar/5c96acd1280507940bad9083370fe8dc
+    \endverb
+    \field{year}{2022}
+  \endentry
 \enddatalist
 \endinput

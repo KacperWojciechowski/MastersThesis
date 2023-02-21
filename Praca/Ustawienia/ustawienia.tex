@@ -45,7 +45,8 @@
                         basewidth=0.5em,
                         extendedchars=true,
                         frame=tb}
-\lstset{style=praca}
+
+\newcommand{\cppcode}[2]{\vspace{8pt}\lstinputlisting[caption=#2, style=praca, language=C++, label=lst:listing, xleftmargin=.02\textwidth, xrightmargin=.02\textwidth]{#1}}
 
 %-------------------------------------------------------------------------
 % stopka i nagłówek
@@ -81,9 +82,6 @@
 % ------------------------------------------------------------------------
 \renewcommand{\figurename}{Rys.}
 \renewcommand{\tablename}{Tab.}
-
-\newcommand{\ccode}[2]{\vspace{8pt}\lstinputlisting[caption=#2, style=praca, language=C, label=lst:listing, xleftmargin=.02\textwidth, xrightmargin=.02\textwidth]{#1}}
-\newcommand{\cppcode}[2]{\vspace{8pt}\lstinputlisting[caption=#2, style=praca, language=C++, label=lst:listing, xleftmargin=.02\textwidth, xrightmargin=.02\textwidth]{#1}}
 
 % ------------------------------------------------------------------------
 % Bibliografia
