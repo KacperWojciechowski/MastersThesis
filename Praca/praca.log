@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.12)  21 FEB 2023 00:52
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.22)  9 JAN 2023 02:58
->>>>>>> 0307b36fa8a25267e42af207b55a1d399d59cce1
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1340,13 +1336,13 @@ enie/Streszczenie.tex) [3] (./praca.toc)
 
  [5] (./praca.lof
 Overfull \hbox (8.92395pt too wide) in paragraph at lines 9--9
- [][] [][]\T1/lmr/m/n/12 Przykªad ana-lizy ob-ser-wa-cji od-sta-j¡-cych dla po-
-szcze-gól-nych klas zmien- 
+ [][] [][]\T1/lmr/m/n/12 Przykï¿½ad ana-lizy ob-ser-wa-cji od-sta-jï¿½-cych dla po-
+szcze-gï¿½l-nych klas zmien- 
  []
 
 
 Overfull \hbox (0.96068pt too wide) in paragraph at lines 12--12
- [][] [][]\T1/lmr/m/n/12 Porównanie uzy-ska-nych roz-kªa-dów da-nych przed i po
+ [][] [][]\T1/lmr/m/n/12 Porï¿½wnanie uzy-ska-nych roz-kï¿½a-dï¿½w da-nych przed i po
  od-wrot-nej trans- 
  []
 
@@ -1365,7 +1361,7 @@ Rozdzia\l  1.
 
 Overfull \hbox (9.45137pt too wide) in paragraph at lines 10--11
 []\T1/lmr/m/n/12 Istotnym kro-kiem w przy-go-to-wy-wa-niu opro-gra-mo-wa-nia wy
--ko-rzy-stu-j¡-cego sztuczn¡
+-ko-rzy-stu-jï¿½-cego sztucznï¿½
  []
 
 
@@ -1378,7 +1374,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Rozdzia\l  2.
 
 Overfull \hbox (6.8981pt too wide) in paragraph at lines 2--2
-[]\T1/lmr/bx/n/17.28 Problemy wspóª-cze-snego ucze-nia ma-szy-no-wego 
+[]\T1/lmr/bx/n/17.28 Problemy wspï¿½-cze-snego ucze-nia ma-szy-no-wego 
  []
 
 <<<<<<< HEAD
@@ -1634,14 +1630,14 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (./Rozdzial4/helloworldgraph.cpp) [18] (./Rozdzial4/cppconstructor.cpp)
 [19] (./Rozdzial4/tfruntrainingstep.cpp)
 Overfull \hbox (2.26628pt too wide) in paragraph at lines 59--60
-[]\T1/lmr/bx/n/12 stacking \T1/lmr/m/n/12 - zª¡-cza N ten-so-rów R-wymiarowych 
+[]\T1/lmr/bx/n/12 stacking \T1/lmr/m/n/12 - zï¿½ï¿½-cza N ten-so-rï¿½w R-wymiarowych 
 w je-den ten-sor R+1-wymiarowy; 
  []
 
 [20]
 Overfull \hbox (7.04388pt too wide) in paragraph at lines 95--96
-\T1/lmr/m/n/12 Oprócz wy-mie-nio-nych wcze-±niej po-le-ce« opty-ma-li-zu-j¡-cyc
-h lub prze-twa-rza-j¡-cych dane,
+\T1/lmr/m/n/12 Oprï¿½cz wy-mie-nio-nych wcze-ï¿½niej po-le-ceï¿½ opty-ma-li-zu-jï¿½-cyc
+h lub prze-twa-rza-jï¿½-cych dane,
  []
 
 [21]) (./Rozdzial5/rozdzial5.tex [22]
