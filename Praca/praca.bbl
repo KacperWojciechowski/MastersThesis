@@ -247,5 +247,44 @@
     \endverb
     \field{year}{2022}
   \endentry
+
+  \entry{tfcookbook}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MN}{%
+         family={McClure},
+         familyi={M\bibinitperiod},
+         given={Nick},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Packt Publishing}%
+    }
+    \strng{namehash}{MN1}
+    \strng{fullhash}{MN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{TensorFlow Machine Learning Cookbook}
+    \field{year}{Luty 2017}
+  \endentry
+
+  \entry{engineeringstackdistance}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=c}{%
+         family={comingstorm},
+         familyi={c\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{c1}
+    \strng{fullhash}{c1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Distance from point to n-dimentional line}
+    \verb{url}
+    \verb https://softwareengineering.stackexchange.com/questions/168572/distan
+    \verb ce-from-point-to-n-dimensional-line
+    \endverb
+    \field{year}{2013}
+  \endentry
 \enddatalist
 \endinput

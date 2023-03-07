@@ -103,9 +103,14 @@ Oprócz wymienionych wcześniej poleceń optymalizujących lub przetwarzających
 
 \section{Modele uczenia maszynowego}
 
-Bazując na informacjach dostępnych w dokumentacji API biblioteki TensorFlow dla języka C++, w chwili obecnej udostępnia ono głównie funkcjonalności związane z sieciami neuronowymi. Możliwe do zbudowania z ich wykorzystaniem modele to:
+Biblioteka TensorFlow z racji dostarczania operacji na tensorach i realizacji przetwarzania za pomocą grafu obliczeniowego, wspiera szereg modeli zarówno płytkiego jak i głębokiego uczenia maszynowego. Należą do nich \cite{tfcookbook}:
 
 \begin{itemize}
+	\item regresja liniowa;
+	\item regresja logistyczna;
+	\item regresja Deminga;
+	\item regresja grzbietowa i lasso;
+	\item maszyna wektorów nośnych;
 	\item jednokierunkowa sieć neuronowa (ang. \textit{feedforward neural network});
 	\item splotowa sieć neuronowa;
 	\item rekurencyjna sieć neuronowa;
@@ -113,15 +118,59 @@ Bazując na informacjach dostępnych w dokumentacji API biblioteki TensorFlow dl
 	\item wzmocnione uczenie maszynowe;
 \end{itemize}
 
-Powyższe modele mogą zostać wykorzystane do rozwiązywania wielu problemów, w tym także o charakterystyce liniowej czy klasyfikacji. Szczególnie istotne z punktu widzenia biostatystyki może być model rekurencyjnej oraz jednokierunkowej sieci, który pozwala na analizę danych numerycznych, i jest relatywnie prosty w zrozumieniu sposobu działania, ze względu na analogię do funkcjonowania neuronów w ludzkim mózgu.
+Powyższe modele mogą zostać wykorzystane do rozwiązywania wielu problemów, w tym także o charakterystyce liniowej czy klasyfikacji. Poniższe fragmenty omawiają sposób implementacji poszczególnych modeli, oraz przedstawiają praktyczne przykłady dla wybranych z nich.
 
-\subsection{Przykład jednokierunkowej sieci neuronowej}
+\subsection{Regresja liniowa}
 
-PARSOWANIE CSV
+Regresja liniowa przy wykorzystaniu API TensorFlow wykonywana jest poprzez metodę macierzy odwrotnej. Problem określony jest wzorem:
 
-UTWORZENIE MODELU
+\begin{equation}
+	Ax = b
+\end{equation}
 
-TRENING MODELU
+gdzie A odpowiada za macierz wartości regresorów, x za wektor współczynników poszczególnych zmiennych, a b stanowi wektor wartości oczekiwanych. Rozwiązanie w postaci ogólnej określić można wzorem:
+
+\begin{equation}
+	x = (A^TA)^{-1}A^Tb
+\end{equation}
+
+Operacje te wykonać można wykorzystując transpozycję oraz iloczyn tensorów, dostępny w sekcji matematycznej API TensorFlow. Pozostałe rodzaje regresji przedstawione w dalszych sekcjach, korzystają z wyżej opisanego mechanizmu.
+
+\subsection{Regresja logistyczna}
+
+Implementacja regresji logistycznej wykorzystuje proces regresji liniowej, jednak dokonuje na wyjściu normalizacji przewidywanego wyniku z użyciem funkcji sigmoidalnej, otrzymując prawdopodobieństwo przynależności. Obserwacja jest uznawana za należącą do sprawdzanej klasy jeżeli znormalizowana wartość przekroczy pewną zadaną wartość progową.
+
+Implementację rozpoczęto od przygotowania mechanizmu parsowania pliku zawierającego dane eksperymentalne do postaci macierzy regresorów i wektora diagnozy. Wykorzystano w tym celu możliwość parsowania pliku CSV z dostępnego API biblioteki.
+
+\subsection{Regresja Deminga}
+
+Polega ona na minimalizowaniu całkowitego dystansu pomiędzy punktami pomiarowymi a uzyskaną prostą, zamiast minimalizacji dystansu pionowego. W celu jej uzyskania należy wykorzystać mechanizm regresji liniowej, modyfikując funkcję straty, w celu minimalizacji następującego wzoru:
+
+\begin{equation}
+	d = \frac{y_0 - (ax_0 + b)}{\sqrt{m^2 + 1}}
+\end{equation}
+
+gdzie (x\texttt{\char`_}0, y\texttt{\char`_}0) oznaczają punkt pomiarowy, a prosta uzyskiwana w wyniku regresji dana jest wzorem y = ax + b. Powyższy wzór ma zastosowanie dla pomiarów w przestrzeni dwuwymiarowej (jeden regresor i jedna wartość odpowiedzi). W przypadku większej liczby regresorów należy zastosować metodę operatą o ilocznym skalarny wektorów N+1 wymiarowych, gdzie N oznacza ilość regresorów, za pomocą 3 punktów (punktu dla którego liczymy odległość, czyli obserwacji [punkt P], oraz dwóch punktów leżących na prostej uzyskanej w wyniku regresji [punkty A i B]). Metoda ta przedstawiona jest następującymi wzorami \cite{engineeringstackdistance}:
+
+\begin{equation}
+	\overrightarrow{pa} = P - A
+\end{equation}
+
+\begin{equation}
+	\overrightarrow{ba} = B - A
+\end{equation}
+
+\begin{equation}
+	t = (\overrightarrow{pa} \cdot \overrightarrow{ba}) / (\overrightarrow{ba} \cdot \overrightarrow{ba})
+\end{equation}
+
+\begin{equation}
+	d = \lvert \overrightarrow{pa} - t * \overrightarrow{ba} \rvert
+\end{equation}
+
+Wzór 4.7 przedstawia wynikową formułę obliczania odległości, która musi być minimalizowana w ramach funkcji straty.
 
 \section{Metody analizy modeli}
 \section{Dostępność dokumentacji i źródeł wiedzy}
+
+Niestety biblioteka TensorFlow posiada bardzo ograniczone zasoby umożliwiające pisanie z jej użyciem programów w języku C++. Dokumentacja okazuje się bardzo ograniczona i niekompletna. Dodatkowo niewielka liczba osób korzysta z tej biblioteki w języku C++, przez co ciężko znaleźć artykuły lub publikacje które prezentowałyby przykłady kodu źródłowego lub omawiały sposób pracy z udostępnionym API. Wiele dostępnych w API poleceń jak np. Placeholder, nie znalazło się w oficjalnej liście dostępnych funkcji i klas.

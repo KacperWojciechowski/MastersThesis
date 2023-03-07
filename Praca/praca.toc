@@ -29,34 +29,36 @@
 \contentsline {subsection}{\numberline {4.4.2}Eksploracja danych}{21}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Sterowanie przepływem obliczeń}{22}{subsection.4.4.3}%
 \contentsline {section}{\numberline {4.5}Modele uczenia maszynowego}{22}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Przykład jednokierunkowej sieci neuronowej}{22}{subsection.4.5.1}%
-\contentsline {section}{\numberline {4.6}Metody analizy modeli}{22}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Dostępność dokumentacji i źródeł wiedzy}{22}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Biblioteka Shark}{23}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Wprowadzenie}{23}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Metody wdrożenia modeli}{23}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Formaty źródeł danych}{23}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Metody przetwarzania i eksploracji danych}{23}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Modele uczenia maszynowego}{23}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Metody analizy modeli}{23}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Dostępność dokumentacji i źródeł wiedzy}{23}{section.5.7}%
-\contentsline {chapter}{\numberline {6}Biblioteka Caffe}{24}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Wprowadzenie}{24}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Metody wdrożenia modeli}{24}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Formaty źródeł danych}{24}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Metody przetwarzania i eksploracji danych}{24}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Modele uczenia maszynowego}{24}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Metody analizy modeli}{24}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Dostępność dokumentacji i źródeł wiedzy}{24}{section.6.7}%
-\contentsline {chapter}{\numberline {7}Biblioteka PyTorch}{25}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Wprowadzenie}{25}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Metody wdrożenia modeli}{25}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Formaty źródeł danych}{25}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Metody przetwarzania i eksploracji danych}{25}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Modele uczenia maszynowego}{25}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Metody analizy modeli}{25}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Dostępność dokumentacji i źródeł wiedzy}{25}{section.7.7}%
-\contentsline {chapter}{\numberline {8}Podsumowanie}{26}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Nakład pracy}{26}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Funkcjonalności}{26}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Dostępność źródeł wiedzy i dokumentacja}{26}{section.8.3}%
+\contentsline {subsection}{\numberline {4.5.1}Regresja liniowa}{22}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Regresja logistyczna}{23}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Regresja Deminga}{23}{subsection.4.5.3}%
+\contentsline {section}{\numberline {4.6}Metody analizy modeli}{24}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Dostępność dokumentacji i źródeł wiedzy}{24}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Biblioteka Shark}{25}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Wprowadzenie}{25}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Metody wdrożenia modeli}{25}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Formaty źródeł danych}{25}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Metody przetwarzania i eksploracji danych}{25}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Modele uczenia maszynowego}{25}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Metody analizy modeli}{25}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Dostępność dokumentacji i źródeł wiedzy}{25}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Biblioteka Caffe}{26}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Wprowadzenie}{26}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Metody wdrożenia modeli}{26}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Formaty źródeł danych}{26}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Metody przetwarzania i eksploracji danych}{26}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Modele uczenia maszynowego}{26}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Metody analizy modeli}{26}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Dostępność dokumentacji i źródeł wiedzy}{26}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Biblioteka PyTorch}{27}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Wprowadzenie}{27}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Metody wdrożenia modeli}{27}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Formaty źródeł danych}{27}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Metody przetwarzania i eksploracji danych}{27}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Modele uczenia maszynowego}{27}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Metody analizy modeli}{27}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Dostępność dokumentacji i źródeł wiedzy}{27}{section.7.7}%
+\contentsline {chapter}{\numberline {8}Podsumowanie}{28}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Nakład pracy}{28}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Funkcjonalności}{28}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Dostępność źródeł wiedzy i dokumentacja}{28}{section.8.3}%
