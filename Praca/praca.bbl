@@ -99,192 +99,96 @@
     \field{year}{2017}
   \endentry
 
-  \entry{tf}{misc}{}
+  \entry{shogun:github}{misc}{}
     \name{author}{1}{}{%
-      {{hash=BG}{%
-         family={Brain},
-         familyi={B\bibinitperiod},
-         given={Google},
-         giveni={G\bibinitperiod},
+      {{hash=st}{%
+         prefix={shogun},
+         prefixi={s\bibinitperiod},
+         family={toolbox},
+         familyi={t\bibinitperiod},
       }}%
     }
-    \strng{namehash}{BG1}
-    \strng{fullhash}{BG1}
+    \strng{namehash}{ts1}
+    \strng{fullhash}{ts1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{title}{TensorFlow}
+    \field{title}{Shogun}
     \verb{url}
-    \verb https://www.tensorflow.org/
+    \verb https://github.com/shogun-toolbox/shogun
     \endverb
-    \field{year}{2023}
+    \field{year}{2020}
   \endentry
 
-  \entry{protobuf}{misc}{}
+  \entry{handsOnMachineLearning}{book}{}
     \name{author}{1}{}{%
-      {{hash=BV}{%
-         family={Bezhachev},
-         familyi={B\bibinitperiod},
-         given={Vitaly},
-         giveni={V\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{BV1}
-    \strng{fullhash}{BV1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{How to deploy Machine Learning models with TensorFlow. Part 1
-  - make your model ready for serving.}
-    \field{year}{2017}
-  \endentry
-
-  \entry{deploy3}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=MNI}{%
-         family={Mokhtari},
-         familyi={M\bibinitperiod},
-         given={Nour\bibnamedelima Islam},
-         giveni={N\bibinitperiod\bibinitdelim I\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{MNI1}
-    \strng{fullhash}{MNI1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{How to Deploy TensorFlow Models in C++ in 3 different ways}
-    \field{year}{2022}
-  \endentry
-
-  \entry{tflite}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=BG}{%
-         family={Brain},
-         familyi={B\bibinitperiod},
-         given={Google},
-         giveni={G\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{BG1}
-    \strng{fullhash}{BG1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{TensorFlow Lite}
-    \verb{url}
-    \verb https://www.tensorflow.org/lite
-    \endverb
-    \field{year}{2023}
-  \endentry
-
-  \entry{tfcpp}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=G}{%
-         family={Google},
-         familyi={G\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{G1}
-    \strng{fullhash}{G1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{TensorFlow C++ API Reference}
-    \verb{url}
-    \verb https://www.tensorflow.org/api_docs/cc
-    \endverb
-    \field{year}{2023}
-  \endentry
-
-  \entry{tfhelloworld}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=k}{%
-         family={ksachdeva},
-         familyi={k\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{k1}
-    \strng{fullhash}{k1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{TensorFlow C++ Examples}
-    \verb{url}
-    \verb https://github.com/ksachdeva/tensorflow-cc-examples/blob/master/examp
-    \verb les/1_Introduction/src/hello-world.cc
-    \endverb
-    \field{year}{2018}
-  \endentry
-
-  \entry{protobuf2}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=G}{%
-         family={Google},
-         familyi={G\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{G1}
-    \strng{fullhash}{G1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{A Tool Developer's Guide to TensorFlow Model Files}
-    \verb{url}
-    \verb https://chromium.googlesource.com/external/github.com/tensorflow/tens
-    \verb orflow/+/r0.10/tensorflow/g3doc/how_tos/tool_developers/index.md
-    \endverb
-    \field{year}{2023}
-  \endentry
-
-  \entry{input_tf}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=a}{%
-         family={asimshankar},
-         familyi={a\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{a1}
-    \strng{fullhash}{a1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Training TensorFlow Models in C++}
-    \verb{url}
-    \verb https://gist.github.com/asimshankar/5c96acd1280507940bad9083370fe8dc
-    \endverb
-    \field{year}{2022}
-  \endentry
-
-  \entry{tfcookbook}{book}{}
-    \name{author}{1}{}{%
-      {{hash=MN}{%
-         family={McClure},
-         familyi={M\bibinitperiod},
-         given={Nick},
-         giveni={N\bibinitperiod},
+      {{hash=KK}{%
+         family={Kolodiazhnyi},
+         familyi={K\bibinitperiod},
+         given={Kirill},
+         giveni={K\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
       {Packt Publishing}%
     }
-    \strng{namehash}{MN1}
-    \strng{fullhash}{MN1}
+    \strng{namehash}{KK1}
+    \strng{fullhash}{KK1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{title}{TensorFlow Machine Learning Cookbook}
-    \field{year}{Luty 2017}
+    \field{title}{Hands-On Machine Learning with C++}
+    \field{year}{Maj 2020}
   \endentry
 
-  \entry{engineeringstackdistance}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=c}{%
-         family={comingstorm},
-         familyi={c\bibinitperiod},
+  \entry{shark}{article}{}
+    \name{author}{3}{}{%
+      {{hash=IC}{%
+         family={Igel},
+         familyi={I\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=HMV}{%
+         family={Heidrich-Meisner},
+         familyi={H\bibinithyphendelim M\bibinitperiod},
+         given={Verena},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=GT}{%
+         family={Glasmachers},
+         familyi={G\bibinitperiod},
+         given={Tobias},
+         giveni={T\bibinitperiod},
       }}%
     }
-    \strng{namehash}{c1}
-    \strng{fullhash}{c1}
+    \strng{namehash}{ICHMVGT1}
+    \strng{fullhash}{ICHMVGT1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{title}{Distance from point to n-dimentional line}
+    \field{pages}{993\bibrangedash 996}
+    \field{title}{Shark}
+    \field{volume}{9}
+    \field{journaltitle}{Journal of Machine Learning Research}
+    \field{year}{2008}
+  \endentry
+
+  \entry{dlib:license}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=tD}{%
+         family={team},
+         familyi={t\bibinitperiod},
+         given={Dlib},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{tD1}
+    \strng{fullhash}{tD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Dlib License}
     \verb{url}
-    \verb https://softwareengineering.stackexchange.com/questions/168572/distan
-    \verb ce-from-point-to-n-dimensional-line
+    \verb http://dlib.net/license.html
     \endverb
-    \field{year}{2013}
+    \field{year}{2003}
   \endentry
 \enddatalist
 \endinput

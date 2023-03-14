@@ -1,9 +1,21 @@
-\chapter{Biblioteka Caffe}
+\chapter{Biblioteka Dlib}
 
 \section{Wprowadzenie}
-\section{Metody wdrożenia modeli}
+
+Jest to biblioteka do uczenia maszynowego napisana w nowoczesnym C++, o zastosowaniu przemysłowym oraz naukowym. Podobnie jak poprzednio omawiane biblioteki, posiada ona otwarte źródło na licencji Boost Software Licence \cite{dlib:license}. Do dziedzin wykorzystujących wyżej wspomnianą bibliotekę należą robotyka, systemy wbudowane, telefony komórkowe oraz śrowodiska o dużej wydajności obliczeniowej. Kod źródłowy biblioteki opatrzony jest testami jednostkowymi, co pozwala na łatwiejsze utrzymanie jakości dostarczanego rozwiązania. Ciekawym aspektem jest fakt, że Dlib stanowi nie tylko bibliotekę, lecz zestaw narzędzi, oferujący funkcjonalności wykraczające także poza dziedzinę uczenia maszynowego.
+
 \section{Formaty źródeł danych}
+
+Do reprezentacji wektora w bibliotece Dlib wykorzystywane są kontenery z biblioteki szablonów STL języka C++. Dodatkowo, istnieje możliwość ich inicjalizacji za pomocą operatora przecinka, oraz opakowania surowej tablicy (ang. \textit{raw array}). Oznacza to, że podobnie jak w przypadku biblioteki Shogun, dane mogą być przekazywane do programu wykorzystującego Dlib w dowolny sposób zapewniający umieszczenie ich np. w surowej tablicy do późniejszego przetworzenia na obiekty akceptowane przez bibliotekę. Tak samo jak poprzednio, występuje tu wsparcie dla formatu CSV obwarowanego tymi samymi ograniczeniami co dla Shogun. Za wspomniane wsparcie odpowiada przeładowany operator strumienia współpracujący z klasą \textit{std::ifstream} biblioteki standardowej C++.
+
+\cppcode{Rozdzial6/csv.cpp}{Fragment kodu ilustrujący sposób odczytu z pliku w formacie CSV}
+
 \section{Metody przetwarzania i eksploracji danych}
+
+Jednym z ważniejszych aspektów pracy z danymi w bibliotece Dlib jest przystosowanie ich do procesu uczenia, np. przez transformacje normalizujące rozkład. Mimo że biblioteka sama w sobie nie udostępnia funkcji realizujące operacje transformacji, dostarcza ona szereg operacji na macierzach i wektorach, dzięki czemu użytkownik może pracować na danych już w docelowej strukturze, aplikując własne przekształcenia. Do wspieranych działań należą zarówno działania na macierzach, jak i na ich elementach jak np. mnożenie według elementów (ang. \textit{elementwise multiplication}).
+
 \section{Modele uczenia maszynowego}
 \section{Metody analizy modeli}
 \section{Dostępność dokumentacji i źródeł wiedzy}
+
+Dlib posiada zbiór przykładów w postaci listingów kodów źródłowych realizujących poszczególne mechanizmy, dostępnych na stronie głównej projektu \cite{dlib:home}. Jest ona także jedną z głównych bibliotek omawianych w ramach wspomnianej wcześniej książki ,,Hands-On Machine Learning with C++''. Niestety większość forów społecznościowych skupia się na pracy z Dlib z poziomu interfejsu języka Python, co może utrudnić szukanie rozwiązań dla specyficznych przypadków. Warto wspomnieć, że oprócz funkcjonalności uczenia maszynowego, Dlib realizuje także inne zadania, jak np. networking, co sprawia, że przykłady kodów źródłowych dla programów machine learningu zgrupowane są razem z innymi mechanizmami. 
