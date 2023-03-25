@@ -20,24 +20,42 @@
 \contentsline {section}{\numberline {4.1}Wprowadzenie}{17}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Formaty źródeł danych}{17}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Metody przetwarzania i eksploracji danych}{18}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Modele uczenia maszynowego}{18}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Metody analizy modeli}{18}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Dostępność dokumentacji i źródeł wiedzy}{18}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Biblioteka Shark-ML}{19}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Wprowadzenie}{19}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Formaty źródeł danych}{19}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Metody przetwarzania i eksploracji danych}{19}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Modele uczenia maszynowego}{19}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Metody analizy modeli}{19}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Dostępność dokumentacji i źródeł wiedzy}{20}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Biblioteka Dlib}{21}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Wprowadzenie}{21}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Formaty źródeł danych}{21}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Metody przetwarzania i eksploracji danych}{22}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Modele uczenia maszynowego}{22}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Metody analizy modeli}{22}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Dostępność dokumentacji i źródeł wiedzy}{22}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Zestawienie zbiorcze i podsumowanie}{23}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Oferowane funkcjonalności}{23}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Wymagany nakład pracy}{23}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Jakość i ilość dostępnych źródeł referencyjnych}{23}{section.7.3}%
+\contentsline {section}{\numberline {4.4}Modele uczenia maszynowego}{19}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Metody analizy modeli}{19}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Dostępność dokumentacji i źródeł wiedzy}{19}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Przykłady testowe}{19}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Regresja liniowa}{19}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Maszyna wektorów nośnych}{19}{subsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.7.3}Sieć neuronowa}{19}{subsection.4.7.3}%
+\contentsline {chapter}{\numberline {5}Biblioteka Shark-ML}{20}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Wprowadzenie}{20}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Formaty źródeł danych}{20}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Metody przetwarzania i eksploracji danych}{22}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Modele uczenia maszynowego}{23}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Regresja liniowa}{23}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Liniowa analiza dyskryminacyjna}{24}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Regresja logistyczna}{25}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Maszyna wektorów nośnych}{27}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}Sieć neuronowa}{27}{subsection.5.4.5}%
+\contentsline {subsection}{\numberline {5.4.6}Neuronowa sieć splotowa}{27}{subsection.5.4.6}%
+\contentsline {section}{\numberline {5.5}Metody analizy modeli}{27}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Dostępność dokumentacji i źródeł wiedzy}{27}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Przykłady testowe}{28}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Regresja liniowa}{28}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Maszyna wektorów nośnych}{28}{subsection.5.7.2}%
+\contentsline {subsection}{\numberline {5.7.3}Sieć neuronowa}{28}{subsection.5.7.3}%
+\contentsline {chapter}{\numberline {6}Biblioteka Dlib}{29}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Wprowadzenie}{29}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Formaty źródeł danych}{29}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Metody przetwarzania i eksploracji danych}{30}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Modele uczenia maszynowego}{30}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Metody analizy modeli}{30}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Dostępność dokumentacji i źródeł wiedzy}{30}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Przykłady testowe}{31}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Regresja liniowa}{31}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Maszyna wektorów nośnych}{31}{subsection.6.7.2}%
+\contentsline {subsection}{\numberline {6.7.3}Sieć neuronowa}{31}{subsection.6.7.3}%
+\contentsline {chapter}{\numberline {7}Zestawienie zbiorcze i podsumowanie}{32}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Oferowane funkcjonalności}{32}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Wymagany nakład pracy}{32}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Jakość i ilość dostępnych źródeł referencyjnych}{32}{section.7.3}%

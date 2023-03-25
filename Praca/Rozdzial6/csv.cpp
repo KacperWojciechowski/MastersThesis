@@ -6,7 +6,6 @@ using namespace Dlib;
 
 // [...]
 
-
 matrix<double> data;
 std::ifstream file("data_file.csv");
 file >> data;

@@ -16,13 +16,13 @@ Podstawową klasą pozwalającą na załadowanie danych do biblioteki Shogun jes
 	\item \textbf{Liczby rzeczywiste powinny być zapisywane z użyciem kropki jako separatora dziesiętnego} - wynika to ze specyfiki języka C++ (jak i wielu innych języków), że domyślne mechanizmy wymuszają użycie kropki jako separatora dziesiętnego, i oczekują jej w przypadku parsowania liczby rzeczywistej z postaci ciągu znakowego odczytanego z pliku, do postaci wartości liczbowej.
 \end{itemize} 
 
+Do odczytu i parsowania danych z pliku CSV wykorzystywana jest klasa \textit{shogun::CCSVFile}, której wynik następnie ładowany jest do klasy \textit{shogun::SGMatrix}. Ze względu na zapis odczytanych danych w kolejności według kolumn. do wykorzystania ich w procesie uczenia konieczna jest transpozycja, a następnie rozdzielenie macierzy na dwie części, z których jedna zawiera regresory, a druga wartości zmiennej odpowiedzi. Przykładowy fragment kodu realizujący to zadanie zamieszczony został na listingu \ref{shogun:csv}.
 
-
-std::vector, wsparcie dla odczytywania z CSV, DOKOŃCZYĆ !!!!!
+\cppcode{Rozdzial4/shogun-csv.cpp}{Przykładowy program do odczytu i przygotowania danych z pliku CSV dla biblioteki Shogun \cite{handsOnMachineLearning}}{shogun:csv}
 
 \section{Metody przetwarzania i eksploracji danych}
-
-Normalizacja przez reskalowanie funkcją min-max, przy transformacjach wpływających na rozkład danych, konieczność przeliczenia ich własnym kodem. 
+     
+Biblioteka dostarcza możliwość normalizacji typu min-max, zapewniając że dane mieścić się będą w przedziale jednostkowym, za pomocą klasy \textit{shogun::CRescaleFeatu-res}. Zastosowanie innych transformacji na danych, jak np. transformacji logarytmicznej, wymaga przygotowania własnego kodu. W przypadku niektórych algorytmów oferowanych przez Shogun, normalizacja jest jednym z pierwszych wykonywanych kroków, w związku z czym nie zawsze jest potrzeba wykonania jej we wstępnym przetwarzaniu.
 
 \section{Modele uczenia maszynowego}
 
@@ -35,3 +35,9 @@ Log-loss (CLogLoss),
 \section{Dostępność dokumentacji i źródeł wiedzy}
 
 Internetowe źródła informacji w postaci forów społecznościowych skupiają się na wykorzystaniu biblioteki Shark w innych językach, jak np. Python, lecz wraz z jej kodem źródłowym na platformie GitHub \cite{shogun:github} możliwe jest znalezienie wielu przykładów jej wykorzystania także w języku C++ w folderze examples. Przykłady te należy zbudować za pomocą odpowiednego skryptu Pythona zawartego w repozytorium, powodując wygenerowanie listingów kodów w docelowym języku w plikach JSON. Ponadto, Shogun jest jedną z bibliotek opisaną w książce ,,\textit{Hands On Machine Learning with C++}'' autorstwa Kirilla Kolodiazhnyi \cite{handsOnMachineLearning}, wprowadzającej czytelnika zarówno do podstawowych funkcjonalności Shogun, jak i podsumowującej podstawy teorii uczenia maszynowego w kontekście ich zastosowania. Większość z przykładów realizacji poszczególnych typów modeli w tej książce posiada przedstawione główne fragmenty listingów dla biblioteki Shogun.
+
+\section{Przykłady testowe}
+
+\subsection{Regresja liniowa}
+\subsection{Maszyna wektorów nośnych}
+\subsection{Sieć neuronowa}

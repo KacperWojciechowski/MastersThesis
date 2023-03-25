@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.22)  14 MAR 2023 23:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.22)  26 MAR 2023 00:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1358,7 +1358,7 @@ Overfull \hbox (6.8981pt too wide) in paragraph at lines 2--2
 []\T1/lmr/bx/n/17.28 Problemy wspóª-cze-snego ucze-nia ma-szy-no-wego 
  []
 
-<Rysunki/Rozdzial2/perceptron.jpg, id=306, 523.35526pt x 195.129pt>
+<Rysunki/Rozdzial2/perceptron.jpg, id=397, 523.35526pt x 195.129pt>
 File: Rysunki/Rozdzial2/perceptron.jpg Graphic file (type jpg)
 <use Rysunki/Rozdzial2/perceptron.jpg>
 Package pdftex.def Info: Rysunki/Rozdzial2/perceptron.jpg  used on input line 1
@@ -1370,7 +1370,7 @@ Package pdftex.def Info: Rysunki/Rozdzial2/perceptron.jpg  used on input line 1
 Underfull \vbox (badness 4193) has occurred while \output is active []
 
  [4 <./Rysunki/Rozdzial2/perceptron.jpg>]
-<Rysunki/Rozdzial2/multithreading.jpg, id=317, 573.94424pt x 231.86626pt>
+<Rysunki/Rozdzial2/multithreading.jpg, id=408, 573.94424pt x 231.86626pt>
 File: Rysunki/Rozdzial2/multithreading.jpg Graphic file (type jpg)
 <use Rysunki/Rozdzial2/multithreading.jpg>
 Package pdftex.def Info: Rysunki/Rozdzial2/multithreading.jpg  used on input li
@@ -1382,14 +1382,14 @@ Rozdzia\l  3.
 [7
 
 ]
-<Rysunki/Rozdzial2/diagnosis_distribution.png, id=340, 355.3275pt x 126.4725pt>
+<Rysunki/Rozdzial2/diagnosis_distribution.png, id=430, 355.3275pt x 126.4725pt>
 
 File: Rysunki/Rozdzial2/diagnosis_distribution.png Graphic file (type png)
 <use Rysunki/Rozdzial2/diagnosis_distribution.png>
 Package pdftex.def Info: Rysunki/Rozdzial2/diagnosis_distribution.png  used on 
 input line 38.
 (pdftex.def)             Requested size: 256.07741pt x 91.1489pt.
-<Rysunki/Rozdzial2/variable_distribution.png, id=342, 369.63094pt x 237.88875pt
+<Rysunki/Rozdzial2/variable_distribution.png, id=432, 369.63094pt x 237.88875pt
 >
 File: Rysunki/Rozdzial2/variable_distribution.png Graphic file (type png)
 <use Rysunki/Rozdzial2/variable_distribution.png>
@@ -1397,7 +1397,7 @@ Package pdftex.def Info: Rysunki/Rozdzial2/variable_distribution.png  used on i
 nput line 45.
 (pdftex.def)             Requested size: 256.07741pt x 164.80766pt.
  [8 <./Rysunki/Rozdzial2/diagnosis_distribution.png>]
-<Rysunki/Rozdzial2/box_graph.png, id=350, 423.08063pt x 378.66469pt>
+<Rysunki/Rozdzial2/box_graph.png, id=440, 423.08063pt x 378.66469pt>
 File: Rysunki/Rozdzial2/box_graph.png Graphic file (type png)
 <use Rysunki/Rozdzial2/box_graph.png>
 Package pdftex.def Info: Rysunki/Rozdzial2/box_graph.png  used on input line 57
@@ -1405,26 +1405,26 @@ Package pdftex.def Info: Rysunki/Rozdzial2/box_graph.png  used on input line 57
 (pdftex.def)             Requested size: 298.75264pt x 267.39777pt.
  [9 <./Rysunki/Rozdzial2/variable_distribution.png (PNG copy)> <./Rysunki/Rozdz
 ial2/box_graph.png (PNG copy)>]
-<Rysunki/Rozdzial3/log.png, id=356, 368.1253pt x 258.9675pt>
+<Rysunki/Rozdzial3/log.png, id=446, 368.1253pt x 258.9675pt>
 File: Rysunki/Rozdzial3/log.png Graphic file (type png)
 <use Rysunki/Rozdzial3/log.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/log.png  used on input line 84.
 (pdftex.def)             Requested size: 298.75264pt x 210.18137pt.
  [10 <./Rysunki/Rozdzial3/log.png (PNG copy)>]
-<Rysunki/Rozdzial3/cube_root.png, id=375, 385.44pt x 251.43938pt>
+<Rysunki/Rozdzial3/cube_root.png, id=466, 385.44pt x 251.43938pt>
 File: Rysunki/Rozdzial3/cube_root.png Graphic file (type png)
 <use Rysunki/Rozdzial3/cube_root.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/cube_root.png  used on input line 10
 6.
 (pdftex.def)             Requested size: 298.75264pt x 194.8865pt.
  [11 <./Rysunki/Rozdzial3/cube_root.png (PNG copy)>]
-<Rysunki/Rozdzial3/arrhenius.png, id=389, 398.23781pt x 237.88875pt>
+<Rysunki/Rozdzial3/arrhenius.png, id=480, 398.23781pt x 237.88875pt>
 File: Rysunki/Rozdzial3/arrhenius.png Graphic file (type png)
 <use Rysunki/Rozdzial3/arrhenius.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/arrhenius.png  used on input line 11
 6.
 (pdftex.def)             Requested size: 298.75264pt x 178.46692pt.
-<Rysunki/Rozdzial3/pvalue1.png, id=393, 382.42876pt x 400.49625pt>
+<Rysunki/Rozdzial3/pvalue1.png, id=484, 382.42876pt x 400.49625pt>
 File: Rysunki/Rozdzial3/pvalue1.png Graphic file (type png)
 <use Rysunki/Rozdzial3/pvalue1.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/pvalue1.png  used on input line 156.
@@ -1432,18 +1432,18 @@ Package pdftex.def Info: Rysunki/Rozdzial3/pvalue1.png  used on input line 156.
 (pdftex.def)             Requested size: 384.1096pt x 402.27359pt.
  [12 <./Rysunki/Rozdzial3/arrhenius.png (PNG copy)>] [13 <./Rysunki/Rozdzial3/p
 value1.png>]
-<Rysunki/Rozdzial3/pvalue2.png, id=407, 377.15906pt x 156.585pt>
+<Rysunki/Rozdzial3/pvalue2.png, id=498, 377.15906pt x 156.585pt>
 File: Rysunki/Rozdzial3/pvalue2.png Graphic file (type png)
 <use Rysunki/Rozdzial3/pvalue2.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/pvalue2.png  used on input line 166.
 
 (pdftex.def)             Requested size: 298.75264pt x 124.0329pt.
-<Rysunki/Rozdzial3/roc.png, id=408, 287.57437pt x 286.06876pt>
+<Rysunki/Rozdzial3/roc.png, id=499, 287.57437pt x 286.06876pt>
 File: Rysunki/Rozdzial3/roc.png Graphic file (type png)
 <use Rysunki/Rozdzial3/roc.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/roc.png  used on input line 173.
 (pdftex.def)             Requested size: 213.39568pt x 212.28557pt.
-<Rysunki/Rozdzial3/neural_struct.png, id=412, 763.85374pt x 653.44125pt>
+<Rysunki/Rozdzial3/neural_struct.png, id=503, 763.85374pt x 653.44125pt>
 File: Rysunki/Rozdzial3/neural_struct.png Graphic file (type png)
 <use Rysunki/Rozdzial3/neural_struct.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/neural_struct.png  used on input lin
@@ -1451,7 +1451,7 @@ e 197.
 (pdftex.def)             Requested size: 256.07741pt x 219.05623pt.
  [14 <./Rysunki/Rozdzial3/pvalue2.png (PNG copy)> <./Rysunki/Rozdzial3/roc.png 
 (PNG copy)>]
-<Rysunki/Rozdzial3/roc_test.png, id=419, 397.485pt x 285.31593pt>
+<Rysunki/Rozdzial3/roc_test.png, id=510, 397.485pt x 285.31593pt>
 File: Rysunki/Rozdzial3/roc_test.png Graphic file (type png)
 <use Rysunki/Rozdzial3/roc_test.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/roc_test.png  used on input line 207
@@ -1467,7 +1467,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--208
 \T1/lmr/m/n/10.95 czna od-bior-nika dla
  []
 
-<Rysunki/Rozdzial3/roc_valid.png, id=420, 398.23781pt x 285.31593pt>
+<Rysunki/Rozdzial3/roc_valid.png, id=511, 398.23781pt x 285.31593pt>
 File: Rysunki/Rozdzial3/roc_valid.png Graphic file (type png)
 <use Rysunki/Rozdzial3/roc_valid.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/roc_valid.png  used on input line 21
@@ -1485,7 +1485,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 215--215
 
 [15 <./Rysunki/Rozdzial3/neural_struct.png> <./Rysunki/Rozdzial3/roc_test.png (
 PNG copy)> <./Rysunki/Rozdzial3/roc_valid.png (PNG copy)>]
-<Rysunki/Rozdzial3/roc_svm1_test.png, id=426, 402.00188pt x 281.55188pt>
+<Rysunki/Rozdzial3/roc_svm1_test.png, id=517, 402.00188pt x 281.55188pt>
 File: Rysunki/Rozdzial3/roc_svm1_test.png Graphic file (type png)
 <use Rysunki/Rozdzial3/roc_svm1_test.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/roc_svm1_test.png  used on input lin
@@ -1496,7 +1496,7 @@ Underfull \hbox (badness 2035) in paragraph at lines 248--248
 [][]|\T1/lmr/m/n/10.95 Krzywa charakterystycz-
  []
 
-<Rysunki/Rozdzial3/roc_svm1_val.png, id=427, 406.51875pt x 280.79906pt>
+<Rysunki/Rozdzial3/roc_svm1_val.png, id=518, 406.51875pt x 280.79906pt>
 File: Rysunki/Rozdzial3/roc_svm1_val.png Graphic file (type png)
 <use Rysunki/Rozdzial3/roc_svm1_val.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/roc_svm1_val.png  used on input line
@@ -1526,21 +1526,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [17
 
-])
-(./Rozdzial5/rozdzial5.tex [18]
-Rozdzia\l  5.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-5.
-(e:/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) (./Rozdzial6/rozdzial6.tex
-Underfull \vbox (badness 3386) has occurred while \output is active []
-
- [19
-
 ]
-[20]
-Rozdzia\l  6.
 (e:/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
@@ -1551,32 +1537,60 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 11.
+nput line 21.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+1.
 
-(./Rozdzial6/csv.cpp [21
+(e:/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) (./Rozdzial4/shogun-csv.cpp)
+Overfull \hbox (2.96196pt too wide) in paragraph at lines 25--26
+\T1/lmr/m/n/12 mie-±ci¢ si¦ b¦d¡ w prze-dziale jed-nost-ko-wym, za po-moc¡ klas
+y \T1/lmr/m/it/12 shogun::CRescaleFeatu-
+ []
+
+[18]) (./Rozdzial5/rozdzial5.tex [19]
+Rozdzia\l  5.
+(./Rozdzial5/shark-csv-http.cpp [20
+
+])
+Overfull \hbox (9.5257pt too wide) in paragraph at lines 13--14
+\T1/lmr/m/n/12 wy-ko-rzy-sta-nie spe-cjal-nych funk-cji ad-ap-to-ro-wych, do kt
+ó-rych prze-ka-zy-wany jest wska¹-
+ []
+
+(./Rozdzial5/shark-adaptor.cpp)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+(./Rozdzial5/shark-preprocessing.cpp)
+(./Rozdzial5/shark-dimension-reduction.cpp) [22] (./Rozdzial5/shark-linear.cpp
+[23]) (./Rozdzial5/shark-linear2.cpp) [24] (./Rozdzial5/shark-lda.cpp) [25]
+(./Rozdzial5/shark-logistic.cpp) [26] (./Rozdzial5/shark-logistic2.cpp))
+(./Rozdzial6/rozdzial6.tex
+Underfull \vbox (badness 1838) has occurred while \output is active []
+
+ [27]
+[28]
+Rozdzia\l  6.
+(./Rozdzial6/csv.cpp [29
 
 ])
 
-LaTeX Warning: Citation 'dlib:home' on page 22 undefined on input line 21.
+LaTeX Warning: Citation 'dlib:home' on page 30 undefined on input line 24.
 
-) (./Rozdzial7/rozdzial7.tex [22]
+) (./Rozdzial7/rozdzial7.tex [30] [31]
 Rozdzia\l  7.
-) [23
+) [32
 
-] [24
+] [33
 
 ] (./praca.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `praca.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `praca.out':
-(rerunfilecheck)             Before: 31271E9A44E07CDD136C9CDDC3C32A55;8732
-(rerunfilecheck)             After:  FE7EE2477D5975B6AB64E185233D4F4A;8781.
+Package rerunfilecheck Info: File `praca.out' has not changed.
+(rerunfilecheck)             Checksum: ECB1C121AA1430391B5C7BE26DF4E56B;11701.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                praca
@@ -1587,16 +1601,16 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31818 strings out of 475071
- 573975 string characters out of 5782907
- 1337725 words of memory out of 5000000
- 52492 multiletter control sequences out of 15000+600000
- 537321 words of font info for 69 fonts, out of 8000000 for 9000
+ 32522 strings out of 475071
+ 585314 string characters out of 5782907
+ 1387993 words of memory out of 5000000
+ 52855 multiletter control sequences out of 15000+600000
+ 537640 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,12n,109p,2233b,2289s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,12n,109p,2233b,2352s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {e:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{e:/texlive/2022/tex
-mf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{e:/texlive/2022/texmf-dist/fonts/enc/dvi
-ps/lm/lm-rm.enc}{e:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{e
+mf-dist/fonts/enc/dvips/lm/lm-rm.enc}{e:/texlive/2022/texmf-dist/fonts/enc/dvip
+s/lm/lm-ts1.enc}{e:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{e
 :/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{e:/texlive/2022/tex
 mf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<e:/texlive/2022/texmf-dist/fo
 nts/type1/public/lm/lmbx10.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/l
@@ -1608,12 +1622,13 @@ ublic/lm/lmr12.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr17.pfb>
 mf-dist/fonts/type1/public/lm/lmri12.pfb><e:/texlive/2022/texmf-dist/fonts/type
 1/public/lm/lmsy10.pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10
 .pfb><e:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><e:/texlive/2
-022/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb><e:/texlive/2022/texmf-
-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on praca.pdf (31 pages, 727211 bytes).
+022/texmf-dist/fonts/type1/public/lm/lmtti10.pfb><e:/texlive/2022/texmf-dist/fo
+nts/type1/public/cm-super/sfxc1728.pfb><e:/texlive/2022/texmf-dist/fonts/type1/
+public/cm-super/sfxc2074.pfb>
+Output written on praca.pdf (40 pages, 776516 bytes).
 PDF statistics:
- 606 PDF objects out of 1000 (max. 8388607)
- 518 compressed objects within 6 object streams
- 135 named destinations out of 1000 (max. 500000)
- 417 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1131 PDF objects out of 1200 (max. 8388607)
+ 1017 compressed objects within 11 object streams
+ 445 named destinations out of 1000 (max. 500000)
+ 561 words of extra memory for PDF output out of 10000 (max. 10000000)
 

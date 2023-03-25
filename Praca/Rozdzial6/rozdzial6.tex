@@ -6,16 +6,25 @@ Jest to biblioteka do uczenia maszynowego napisana w nowoczesnym C++, o zastosow
 
 \section{Formaty źródeł danych}
 
-Do reprezentacji wektora w bibliotece Dlib wykorzystywane są kontenery z biblioteki szablonów STL języka C++. Dodatkowo, istnieje możliwość ich inicjalizacji za pomocą operatora przecinka, oraz opakowania surowej tablicy (ang. \textit{raw array}). Oznacza to, że podobnie jak w przypadku biblioteki Shogun, dane mogą być przekazywane do programu wykorzystującego Dlib w dowolny sposób zapewniający umieszczenie ich np. w surowej tablicy do późniejszego przetworzenia na obiekty akceptowane przez bibliotekę. Tak samo jak poprzednio, występuje tu wsparcie dla formatu CSV obwarowanego tymi samymi ograniczeniami co dla Shogun. Za wspomniane wsparcie odpowiada przeładowany operator strumienia współpracujący z klasą \textit{std::ifstream} biblioteki standardowej C++.
+Do reprezentacji wektora w bibliotece Dlib wykorzystywane są kontenery z biblioteki szablonów STL języka C++. Dodatkowo, istnieje możliwość ich inicjalizacji za pomocą operatora przecinka, oraz opakowania surowej tablicy (ang. \textit{raw array}). Oznacza to, że podobnie jak w przypadku biblioteki Shogun, dane mogą być przekazywane do programu wykorzystującego Dlib w dowolny sposób zapewniający umieszczenie ich np. w surowej tablicy do późniejszego przetworzenia na obiekty akceptowane przez bibliotekę. Metoda ta działa także z kontenerami biblioteki STL, które pozwalają na dostęp do surowych danych przy użyciu metody \textit{data()}. Tak samo jak poprzednio, występuje tu wsparcie dla formatu CSV obwarowanego tymi samymi ograniczeniami co dla Shogun. Za wspomniane wsparcie odpowiada przeładowany operator strumienia współpracujący z klasą \textit{std::ifstream} biblioteki standardowej C++. Przykładowy kod wykorzystujący opisany mechanizm zamieszczony został na listingu \ref{dlib:csv}.
 
-\cppcode{Rozdzial6/csv.cpp}{Fragment kodu ilustrujący sposób odczytu z pliku w formacie CSV}
+\cppcode{Rozdzial6/csv.cpp}{Fragment kodu ilustrujący sposób odczytu z pliku w formacie CSV \cite{handsOnMachineLearning}}{dlib:csv}
 
 \section{Metody przetwarzania i eksploracji danych}
 
-Jednym z ważniejszych aspektów pracy z danymi w bibliotece Dlib jest przystosowanie ich do procesu uczenia, np. przez transformacje normalizujące rozkład. Mimo że biblioteka sama w sobie nie udostępnia funkcji realizujące operacje transformacji, dostarcza ona szereg operacji na macierzach i wektorach, dzięki czemu użytkownik może pracować na danych już w docelowej strukturze, aplikując własne przekształcenia. Do wspieranych działań należą zarówno działania na macierzach, jak i na ich elementach jak np. mnożenie według elementów (ang. \textit{elementwise multiplication}).
+Jednym z ważniejszych aspektów pracy z danymi w bibliotece Dlib jest przystosowanie ich do procesu uczenia, np. przez transformacje normalizujące rozkład. Mimo że biblioteka sama w sobie nie udostępnia funkcji realizujące operacje transformacji, dostarcza ona szereg operacji na macierzach i wektorach, dzięki czemu użytkownik może pracować na danych już w docelowej strukturze, aplikując własne przekształcenia. Do wspieranych działań należą zarówno działania na macierzach, jak i na ich elementach jak np. mnożenie według elementów (ang. \textit{elementwise multiplication}). Biblioteka udostępnia także normalizację danych poprzez standaryzację, realizowaną przez klasę \textit{Dlib::vector\texttt{\char`_}normalizer}. Głównym warunkiem ograniczającym zastosowanie jej jest fakt, że nie można w niej umieścić całego zestawu danych treningowych na raz, co wymusza podział obserwacji na osobne wektory, a następnie umieszczenie ich w kontenerze \textit{std::vector} do dalszego przetwarzania.
 
 \section{Modele uczenia maszynowego}
+
+Biblioteka Dlib udostępnia szereg metod uczenia maszynowego, zarówno dla danych liczbowych, jak i obrazów, jednak ze względu na dokonywanie analizy porównawczej w kontekście zastosowań dla biostatystyki, ta sekcja uwzględnia jedynie metody przeznaczone do pracy z danymi numerycznymi.
+
 \section{Metody analizy modeli}
 \section{Dostępność dokumentacji i źródeł wiedzy}
 
 Dlib posiada zbiór przykładów w postaci listingów kodów źródłowych realizujących poszczególne mechanizmy, dostępnych na stronie głównej projektu \cite{dlib:home}. Jest ona także jedną z głównych bibliotek omawianych w ramach wspomnianej wcześniej książki ,,Hands-On Machine Learning with C++''. Niestety większość forów społecznościowych skupia się na pracy z Dlib z poziomu interfejsu języka Python, co może utrudnić szukanie rozwiązań dla specyficznych przypadków. Warto wspomnieć, że oprócz funkcjonalności uczenia maszynowego, Dlib realizuje także inne zadania, jak np. networking, co sprawia, że przykłady kodów źródłowych dla programów machine learningu zgrupowane są razem z innymi mechanizmami. 
+
+\section{Przykłady testowe}
+
+\subsection{Regresja liniowa}
+\subsection{Maszyna wektorów nośnych}
+\subsection{Sieć neuronowa}

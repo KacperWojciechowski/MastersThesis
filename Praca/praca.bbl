@@ -171,6 +171,70 @@
     \field{year}{2008}
   \endentry
 
+  \entry{shark:http}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=m}{%
+         family={mlcpp},
+         familyi={m\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{m1}
+    \strng{fullhash}{m1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Classification with Shark-ML machine learning library}
+    \verb{url}
+    \verb https://github.com/Kolkir/mlcpp/tree/master/classification_shark
+    \endverb
+    \field{year}{2018}
+  \endentry
+
+  \entry{shark:linear}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=dtTS}{%
+         prefix={developer},
+         prefixi={d\bibinitperiod},
+         family={team},
+         familyi={t\bibinitperiod},
+         given={The\bibnamedelima Shark},
+         giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{tTSd1}
+    \strng{fullhash}{tTSd1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{General Optimization Tasks}
+    \verb{url}
+    \verb http://image.diku.dk/shark/sphinx_pages/build/html/rest_sources/tutor
+    \verb ials/first_steps/general_optimization_tasks.html
+    \endverb
+    \field{year}{2018}
+  \endentry
+
+  \entry{shark:lda}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=dtTS}{%
+         prefix={developer},
+         prefixi={d\bibinitperiod},
+         family={team},
+         familyi={t\bibinitperiod},
+         given={The\bibnamedelima Shark},
+         giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{tTSd1}
+    \strng{fullhash}{tTSd1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Linear Discriminant Analysis}
+    \verb{url}
+    \verb http://image.diku.dk/shark/sphinx_pages/build/html/rest_sources/tutor
+    \verb ials/algorithms/lda.html
+    \endverb
+    \field{year}{2018}
+  \endentry
+
   \entry{dlib:license}{misc}{}
     \name{author}{1}{}{%
       {{hash=tD}{%
