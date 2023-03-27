@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.22)  26 MAR 2023 00:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.22)  27 MAR 2023 23:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1551,39 +1551,32 @@ y \T1/lmr/m/it/12 shogun::CRescaleFeatu-
 
 [18]) (./Rozdzial5/rozdzial5.tex [19]
 Rozdzia\l  5.
-(./Rozdzial5/shark-csv-http.cpp [20
+[20
 
-])
-Overfull \hbox (9.5257pt too wide) in paragraph at lines 13--14
+] (./Rozdzial5/shark-csv-http.cpp)
+Overfull \hbox (9.5257pt too wide) in paragraph at lines 14--15
 \T1/lmr/m/n/12 wy-ko-rzy-sta-nie spe-cjal-nych funk-cji ad-ap-to-ro-wych, do kt
 ó-rych prze-ka-zy-wany jest wska¹-
  []
 
-(./Rozdzial5/shark-adaptor.cpp)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
-(./Rozdzial5/shark-preprocessing.cpp)
+(./Rozdzial5/shark-adaptor.cpp) [21] (./Rozdzial5/shark-preprocessing.cpp)
 (./Rozdzial5/shark-dimension-reduction.cpp) [22] (./Rozdzial5/shark-linear.cpp
 [23]) (./Rozdzial5/shark-linear2.cpp) [24] (./Rozdzial5/shark-lda.cpp) [25]
-(./Rozdzial5/shark-logistic.cpp) [26] (./Rozdzial5/shark-logistic2.cpp))
-(./Rozdzial6/rozdzial6.tex
-Underfull \vbox (badness 1838) has occurred while \output is active []
-
- [27]
-[28]
+(./Rozdzial5/shark-logistic.cpp) [26] (./Rozdzial5/shark-logistic2.cpp)
+[27] (./Rozdzial5/shark-svm.cpp [28]) (./Rozdzial5/shark-svm2.cpp) [29])
+(./Rozdzial6/rozdzial6.tex [30]
 Rozdzia\l  6.
-(./Rozdzial6/csv.cpp [29
+(./Rozdzial6/csv.cpp [31
 
 ])
 
-LaTeX Warning: Citation 'dlib:home' on page 30 undefined on input line 24.
+LaTeX Warning: Citation 'dlib:home' on page 32 undefined on input line 24.
 
-) (./Rozdzial7/rozdzial7.tex [30] [31]
+) (./Rozdzial7/rozdzial7.tex [32] [33]
 Rozdzia\l  7.
-) [32
+) [34
 
-] [33
+] [35
 
 ] (./praca.aux)
 
@@ -1601,13 +1594,13 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32522 strings out of 475071
- 585314 string characters out of 5782907
- 1387993 words of memory out of 5000000
- 52855 multiletter control sequences out of 15000+600000
+ 32688 strings out of 475071
+ 588125 string characters out of 5782907
+ 1394322 words of memory out of 5000000
+ 52921 multiletter control sequences out of 15000+600000
  537640 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,12n,109p,2233b,2352s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,12n,109p,2233b,2360s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {e:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{e:/texlive/2022/tex
 mf-dist/fonts/enc/dvips/lm/lm-rm.enc}{e:/texlive/2022/texmf-dist/fonts/enc/dvip
 s/lm/lm-ts1.enc}{e:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{e
@@ -1625,10 +1618,10 @@ mf-dist/fonts/type1/public/lm/lmri12.pfb><e:/texlive/2022/texmf-dist/fonts/type
 022/texmf-dist/fonts/type1/public/lm/lmtti10.pfb><e:/texlive/2022/texmf-dist/fo
 nts/type1/public/cm-super/sfxc1728.pfb><e:/texlive/2022/texmf-dist/fonts/type1/
 public/cm-super/sfxc2074.pfb>
-Output written on praca.pdf (40 pages, 776516 bytes).
+Output written on praca.pdf (42 pages, 786029 bytes).
 PDF statistics:
- 1131 PDF objects out of 1200 (max. 8388607)
- 1017 compressed objects within 11 object streams
- 445 named destinations out of 1000 (max. 500000)
+ 1258 PDF objects out of 1440 (max. 8388607)
+ 1139 compressed objects within 12 object streams
+ 539 named destinations out of 1000 (max. 500000)
  561 words of extra memory for PDF output out of 10000 (max. 10000000)
 

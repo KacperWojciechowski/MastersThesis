@@ -235,6 +235,29 @@
     \field{year}{2018}
   \endentry
 
+  \entry{shark:svm}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=dtTS}{%
+         prefix={developer},
+         prefixi={d\bibinitperiod},
+         family={team},
+         familyi={t\bibinitperiod},
+         given={The\bibnamedelima Shark},
+         giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{tTSd1}
+    \strng{fullhash}{tTSd1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Support Vector Machines: First Steps}
+    \verb{url}
+    \verb http://image.diku.dk/shark/sphinx_pages/build/html/rest_sources/tutor
+    \verb ials/algorithms/svm.html
+    \endverb
+    \field{year}{2018}
+  \endentry
+
   \entry{dlib:license}{misc}{}
     \name{author}{1}{}{%
       {{hash=tD}{%

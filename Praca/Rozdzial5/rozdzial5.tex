@@ -8,6 +8,7 @@ Shark-ML to biblioteka uczenia maszynowego dedykowana dla języka C++. Posiada o
 
 Biblioteka operuje na własnych reprezentacjach macierzy i wektorów, które tworzone są poprzez opakowywanie surowych tablic. Mechanizm ten jest identyczny jak w przypadku pozostałych z omawianych bibliotek, co daje użytkownikowi dużą dowolność co do sposobu przechowywania danych i mechanizmu ich odczytywania. Posiada ona także dedykowany parser dla plików w formacie CSV, lecz zakłada on obecność w pliku jedynie danych numerycznych. Do jego użycia należy użyć klasy kontenera \textit{ClassificationDataset} oraz metody \textit{importCSV} która zapisuje odczytane dane do wcześniej wspomnianego obiektu poprzez mechanizm zwracania przez parametr. Jeden z argumentów funkcji określa która z kolumn zawiera zmienną decyzyjną, dzięki czemu biblioteka jest w stanie od razu oddzielić dane wejściowe od kolumny oczekiwanych wartości. Artykuł ,,Classification with Shark-ML machine learning library''\cite{shark:http} dostępny na platformie GitHub pokazuje także, jak pobrać dane w postaci formatu CSV z internetu z pomocą API biblioteki \textit{curl}, i przetworzyć je do formy akceptowanej przez Shark-ML, co zostało przedstawione na listingu \ref{shark:http}. W aktualnej wersji biblioteki znalazły się także wbudowane funkcje pobierania danych współpracujące z protokołem HTTP.
 
+\newpage
 \cppcode{Rozdzial5/shark-csv-http.cpp}{Pobranie danych do uczenia z serwera HTTP \cite{shark:http}}{shark:http}
 
 W celu opakowania danych zawartych w kontenerach biblioteki standardowej języka C++ do obiektów akceptowanych przez bibliotekę Shark-ML, konieczne jest wykorzystanie specjalnych funkcji adaptorowych, do których przekazywany jest wskaźnik na dane w postaci surowej tablicy, wraz z oczekiwanymi wymiarami wynikowej macierzy / wektora. Sposób opakowania danych pokazano na listingu \ref{shark:adaptor}
@@ -54,6 +55,7 @@ Mechanizm regresji logistycznej dostępny w bibliotece Shark-ML z natury rozwią
 
 \begin{equation}
 	\frac{N(N-1)}{2}	
+	\label{multiclass}
 \end{equation}
 
 gdzie N oznacza ilość klas występujących w problemie. Utworzone klasyfikatory następnie są złączane w jeden za pomocą odpowiedniej konfiguracji obiektu \textit{OneVersusOneClassifier}, rozwiązując problem klasyfikacji wieloklasowej. W tym celu zestaw danych należy iteracyjnie podzielić na podproblemy o charakterystyce binarnej za pomocą wbudowanej funkcji \textit{binarySubProblem()} przyjmującej zestaw danych i klasy. Nauczanie poszczególnych modeli realizowane jest poprzez klasę trenera \textit{LogisticRegression}. Po zakończeniu trenowania okreslonej partii pomniejszych modeli, są one ładowane do głównego modelu. Wykorzystanie gotowego klasyfikatora wieloklasowego nie różni się od sposobu użycia modelu uzyskanego np. w klasyfikacji liniowej. Listing \ref{shark:logistic} prezentuje funkcję budującą model logistycznej regresji wieloklasowej, natomiast listing \ref{shark:logistic2} prezentuje sposób utworzenia prostego modelu dla problemu binarnego.
@@ -63,6 +65,32 @@ gdzie N oznacza ilość klas występujących w problemie. Utworzone klasyfikator
 \cppcode{Rozdzial5/shark-logistic2.cpp}{Przykład prostej binarnej regresji logistycznej}{shark:logistic2}
 
 \subsection{Maszyna wektorów nośnych}
+
+Jednym z bardzo istotnych z perspektywy zastosowania biblioteki Shark-ML oferowanych przez nią metod uczenia maszynowego jest maszyna wektorów nośnych stanowiąca rodzaj tzw. modeli jądra (ang. \textit{kernel model}). Opiera się ona na wykonaniu regresji liniowej w przestrzeni cech określonych przez wykorzystany kernel. Podobnie jak w przypadku regresji logistycznej, API biblioteki umożliwia wykonanie klasyfikacji dla przypadku binarnego, natomiast rozwiązanie przy jej użyciu problemu wieloklasowego wymaga kombinacji instancji maszyn wektorów nośnych w model złożony, czego można dokonać przy pomocy klasy \textit{OneVersusOneClassifier} oraz ilości klas wyrażonej wzorem \ref{multiclass}. Zgodnie z charakterystyczną cechą tej biblioteki, użycie metody podzielone jest na utworzenie instancji modelu oraz obiektu klasy trenera, która go konfiguruje w procesie uczenia. W tym celu dostępne są dla użytkownika klasy:
+
+\begin{itemize}
+	\item \textit{GaussianRbfKernel} - odpowiada za obliczenie podobieństwa między zadanymi cechami wykorzystując funkcję bazową \textit{ang. Radial Basis Function, RBF};
+	\item \textit{KernelClassifier} - funkcja realizująca regresję liniową wewnątrz przestrzeni określonej przez jądro;
+	\item \textit{CSvmTrainer} - klasa trenera realizująca uczenie w oparciu o skonfigurowane parametry;
+\end{itemize}
+
+Do parametrów pozwalających na konfigurację modelu należą m.in.:
+
+\begin{itemize}
+	\item przepustowość modelu - podawana w konstruktorze \textit{GaussianRbfKernel} jako liczba z przedziału $\langle 0 ; 1 \rangle$;
+	\item regularyzacja - podawana jako liczba rzeczywista w konstruktorze \textit{CSvmTrainer}, domyślnie maszyna wektorów nośnych używa kary typu \textit{1-norm penalty} za przekroczenie docelowej granicy;
+	\item bias - flaga binarna (bool) określająca czy model ma używać biasu, podawana w konstruktorze \textit{CSvmTrainer};
+	\item \textit{sparsify} - parametr określający czy model ma zachować wektory które nie są nośne, dostępny przez metodę \textit{sparsify()} trenera;
+	\item minimalna dokładność zakończenia nauczania - pozwala wyspecyfikować precyzję modelu, jest dostępna jako pole struktury zwracane przez metodę \textit{stoppingCondition()} klasy trenera;
+	\item wielkość cache - ustawiana za pomocą funkcji \textit{setCacheSize()} trenera;
+\end{itemize}
+
+Sposób użycia modelu jest identyczny jak w przypadku pozostałych modeli, poprzez operator wywołania funkcji - (). Listing \ref{shark:svm} ukazuje przykład utworzenia i skonfigurowania modelu na podstawie wpisów dostępnych w dokumentacji biblioteki, natomiast listing \ref{shark:svm} przedstawia sposób utworzenia maszyny wektorów nośnych dla problemów wieloklasowych wewnątrz funkcji przyjmującej zestawy danych uczących i testowych.
+
+\cppcode{Rozdzial5/shark-svm.cpp}{Przykład maszyny wektorów nośnych dla problemu binarnego \cite{shark:svm}}{shark:svm}
+
+\cppcode{Rozdzial5/shark-svm2.cpp}{Przykład maszyny wektorów nośnych dla problemu wieloklasowego \cite{handsOnMachineLearning}}{shark:svm2} 
+
 \subsection{Sieć neuronowa}
 \subsection{Neuronowa sieć splotowa}
 
