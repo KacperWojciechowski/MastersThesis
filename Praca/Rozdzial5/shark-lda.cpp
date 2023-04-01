@@ -24,7 +24,6 @@ int main(int argc, char **argv)
 
     // wyodrębnienie danych testowych
     auto test = splitAtElement(data, .5 * data.numberOfElements());
-
     // utworzenie i wytrenowanie modelu
     LDA ldaTrainer;
     LinearClassifier<> lda;
@@ -39,4 +38,6 @@ int main(int argc, char **argv)
     prediction = lda(test.inputs());
     std::cout << "LDA on test set accuracy: " 
         << 1. - loss(test.labels(), prediction) << std::endl;
+
+    return 0;
 }

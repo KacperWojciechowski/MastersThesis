@@ -189,29 +189,6 @@
     \field{year}{2018}
   \endentry
 
-  \entry{shark:linear}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=dtTS}{%
-         prefix={developer},
-         prefixi={d\bibinitperiod},
-         family={team},
-         familyi={t\bibinitperiod},
-         given={The\bibnamedelima Shark},
-         giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{tTSd1}
-    \strng{fullhash}{tTSd1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{General Optimization Tasks}
-    \verb{url}
-    \verb http://image.diku.dk/shark/sphinx_pages/build/html/rest_sources/tutor
-    \verb ials/first_steps/general_optimization_tasks.html
-    \endverb
-    \field{year}{2018}
-  \endentry
-
   \entry{shark:lda}{misc}{}
     \name{author}{1}{}{%
       {{hash=dtTS}{%
@@ -235,6 +212,29 @@
     \field{year}{2018}
   \endentry
 
+  \entry{shark:linear}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=dtTS}{%
+         prefix={developer},
+         prefixi={d\bibinitperiod},
+         family={team},
+         familyi={t\bibinitperiod},
+         given={The\bibnamedelima Shark},
+         giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{tTSd1}
+    \strng{fullhash}{tTSd1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{General Optimization Tasks}
+    \verb{url}
+    \verb http://image.diku.dk/shark/sphinx_pages/build/html/rest_sources/tutor
+    \verb ials/first_steps/general_optimization_tasks.html
+    \endverb
+    \field{year}{2018}
+  \endentry
+
   \entry{shark:svm}{misc}{}
     \name{author}{1}{}{%
       {{hash=dtTS}{%
@@ -254,6 +254,45 @@
     \verb{url}
     \verb http://image.diku.dk/shark/sphinx_pages/build/html/rest_sources/tutor
     \verb ials/algorithms/svm.html
+    \endverb
+    \field{year}{2018}
+  \endentry
+
+  \entry{sharkml:knn}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=dtTS}{%
+         prefix={developer},
+         prefixi={d\bibinitperiod},
+         family={team},
+         familyi={t\bibinitperiod},
+         given={The\bibnamedelima Shark},
+         giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{tTSd1}
+    \strng{fullhash}{tTSd1}
+    \field{labelnamesource}{author}
+  \endentry
+
+  \entry{shark:loss}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=dtTS}{%
+         prefix={developer},
+         prefixi={d\bibinitperiod},
+         family={team},
+         familyi={t\bibinitperiod},
+         given={The\bibnamedelima Shark},
+         giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{tTSd1}
+    \strng{fullhash}{tTSd1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Loss and Cost Functions}
+    \verb{url}
+    \verb http://image.diku.dk/shark/sphinx_pages/build/html/rest_sources/tutor
+    \verb ials/concepts/library_design/losses.html
     \endverb
     \field{year}{2018}
   \endentry

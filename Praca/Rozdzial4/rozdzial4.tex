@@ -24,13 +24,42 @@ Do odczytu i parsowania danych z pliku CSV wykorzystywana jest klasa \textit{sho
      
 Biblioteka dostarcza możliwość normalizacji typu min-max, zapewniając że dane mieścić się będą w przedziale jednostkowym, za pomocą klasy \textit{shogun::CRescaleFeatu-res}. Zastosowanie innych transformacji na danych, jak np. transformacji logarytmicznej, wymaga przygotowania własnego kodu. W przypadku niektórych algorytmów oferowanych przez Shogun, normalizacja jest jednym z pierwszych wykonywanych kroków, w związku z czym nie zawsze jest potrzeba wykonania jej we wstępnym przetwarzaniu.
 
+\subsection{Normalizacja}
+\subsection{Redukcja wymiarowości}
+\subsection{Regularyzacja L1 i L2}
+
+W przypadku biblioteki Shogun, regularyzacja stanowi integralną część modelu, co oznacza że występuje ona zawsze podczas wykorzystania danego typu modelu uczenia maszynowego, oraz nie ma możliwości zmiany typu regularyzacji używanej przez docelowy model.
+
+\subsection{Sprawdzian krzyżowy K-fold}
+\subsection{Przeszukiwanie siatki}
+
 \section{Modele uczenia maszynowego}
 
-Regresja liniowa realizowana dekompozycją macierzy Choleskiego przy użyciu klasy CLinearRidgeRegression.
+\subsection{Regresja liniowa}
+\subsection{Liniowa analiza dyskryminacyjna}
+\subsection{Regresja liniowa}
+\subsection{Maszyna wektorów nośnych}
+\subsection{Algorytm K najbliższych sąsiadów}
+\subsection{Algorytm zbiorowy}
+\subsection{Sieć neuronowa}
 
 \section{Metody analizy modeli}
 
-Log-loss (CLogLoss), 
+\subsection{Błąd średniokwadratowy}
+
+Obliczenie błędu średniokwadratowego w bibliotece Shogun sprowadza się do utworzenia obiektu wykorzystującego typ \textit{CMeanSquaredError} jako argument szablonu funkcji \textit{some<>()}. Jest on zwracany pod postacią wskaźnika. W celu otrzymania wartości błędu dla posiadanych danych, należy wywołać z jego pomocą funkcję evaluate, do której przekazany zostaje zestaw predykcji oraz oczekiwanych wartości. Listing \ref{shogun:mse} ukazuje sposób użycia wspomnianego mechanizmu.
+
+\cppcode{Rozdzial4/shogun-mse.cpp}{Przykład obliczenia wartości błędu średniokwadratowego \cite{handsOnMachineLearning}}{shogun:mse}
+
+\subsection{Średni błąd absolutny}
+
+\subsection{Logarytmiczna funkcja straty}
+\subsection{Metryka $R^2$}
+\subsection{Metryka adjusted $R^2$}
+\subsection{Dokładność}
+\subsection{Precyzja i pamięć (recall)}
+\subsection{Metryka F-score}
+\subsection{Metryki AUC i ROC}
 
 \section{Dostępność dokumentacji i źródeł wiedzy}
 
@@ -38,6 +67,6 @@ Internetowe źródła informacji w postaci forów społecznościowych skupiają 
 
 \section{Przykłady testowe}
 
-\subsection{Regresja liniowa}
+\subsection{Regresja logistyczna}
 \subsection{Maszyna wektorów nośnych}
 \subsection{Sieć neuronowa}

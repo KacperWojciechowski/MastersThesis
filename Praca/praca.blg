@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2022)
+This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: praca.aux
 The style file: biblatex.bst
@@ -19,49 +19,53 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: praca-blx.bib
 Database file #2: Bibliografia/bibliografia.bib
+I was expecting a `,' or a `}'---line 225 of file Bibliografia/bibliografia.bib
+ :  author = {The Shark developer team}
+ :                                     .
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "dlib:home"
-Biblatex version: 3.18
+Biblatex version: 3.19
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 12 entries,
+You've used 14 entries,
             6399 wiz_defined-function locations,
-            1260 strings with 10474 characters,
-and the built_in function-call counts, 69958 in all, are:
-= -- 5530
-> -- 1096
-< -- 332
-+ -- 1577
-- -- 339
-* -- 4537
-:= -- 7257
+            1264 strings with 10629 characters,
+and the built_in function-call counts, 81761 in all, are:
+= -- 6473
+> -- 1260
+< -- 364
++ -- 1841
+- -- 389
+* -- 5322
+:= -- 8535
 add.period$ -- 0
-call.type$ -- 12
-change.case$ -- 216
+call.type$ -- 14
+change.case$ -- 228
 chr.to.int$ -- 42
-cite$ -- 22
-duplicate$ -- 6616
-empty$ -- 6569
-format.name$ -- 561
-if$ -- 14845
+cite$ -- 26
+duplicate$ -- 7753
+empty$ -- 7702
+format.name$ -- 663
+if$ -- 17320
 int.to.chr$ -- 0
-int.to.str$ -- 31
+int.to.str$ -- 39
 missing$ -- 0
-newline$ -- 278
-num.names$ -- 579
-pop$ -- 3813
+newline$ -- 317
+num.names$ -- 667
+pop$ -- 4513
 preamble$ -- 1
-purify$ -- 258
+purify$ -- 276
 quote$ -- 0
-skip$ -- 2168
+skip$ -- 2485
 stack$ -- 0
-substring$ -- 10300
-swap$ -- 1289
-text.length$ -- 231
+substring$ -- 12094
+swap$ -- 1467
+text.length$ -- 265
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 396
+type$ -- 464
 warning$ -- 0
-while$ -- 795
+while$ -- 936
 width$ -- 0
-write$ -- 267
-(There was 1 warning)
+write$ -- 304
+(There was 1 error message)
