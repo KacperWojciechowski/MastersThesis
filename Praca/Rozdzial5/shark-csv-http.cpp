@@ -18,7 +18,7 @@ if (!fs::exists(data_path))
 
 // odczytaj dane z pliku do ciągu znakowego
 std::ifstream data_file(data_path);
-std::string train_data_str((std::istreambuf_iterator<char>(data_file)), 
+std::string train_data_str(std::istreambuf_iterator<char>(data_file), 
                            std::istreambuf_iterator<char>());
 
 // usuń wiersz zawierający etykiety

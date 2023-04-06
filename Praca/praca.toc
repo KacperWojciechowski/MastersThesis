@@ -24,7 +24,6 @@
 \contentsline {subsection}{\numberline {4.3.2}Redukcja wymiarowości}{19}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Regularyzacja L1 i L2}{19}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}Sprawdzian krzyżowy K-fold}{19}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Przeszukiwanie siatki}{19}{subsection.4.3.5}%
 \contentsline {section}{\numberline {4.4}Modele uczenia maszynowego}{19}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Regresja liniowa}{19}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Liniowa analiza dyskryminacyjna}{19}{subsection.4.4.2}%
@@ -58,8 +57,6 @@
 \contentsline {subsubsection}{\numberline {5.3.2.2}Liniowa analiza dyskryminacyjna}{24}{subsubsection.5.3.2.2}%
 \contentsline {subsection}{\numberline {5.3.3}Regularyzacja L1}{26}{subsection.5.3.3}%
 \contentsline {subsection}{\numberline {5.3.4}Regularyzacja L2}{26}{subsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.3.5}Sprawdzian krzyżowy K-fold}{26}{subsection.5.3.5}%
-\contentsline {subsection}{\numberline {5.3.6}Przeszukiwanie siatki}{26}{subsection.5.3.6}%
 \contentsline {section}{\numberline {5.4}Modele uczenia maszynowego}{26}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Regresja liniowa}{26}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}Regresja logistyczna}{28}{subsection.5.4.2}%
@@ -67,38 +64,37 @@
 \contentsline {subsection}{\numberline {5.4.4}Algorytm K najbliższych sąsiadów}{32}{subsection.5.4.4}%
 \contentsline {subsection}{\numberline {5.4.5}Algorytm zbiorowy}{33}{subsection.5.4.5}%
 \contentsline {subsection}{\numberline {5.4.6}Sieć neuronowa}{34}{subsection.5.4.6}%
-\contentsline {subsection}{\numberline {5.4.7}Neuronowa sieć splotowa}{34}{subsection.5.4.7}%
-\contentsline {section}{\numberline {5.5}Metody analizy modeli}{34}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Funkcje straty}{34}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Metryka $R^2$ i adjusted $R^2$}{35}{subsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.5.3}Metryka AUC-ROC}{36}{subsection.5.5.3}%
-\contentsline {section}{\numberline {5.6}Dostępność dokumentacji i źródeł wiedzy}{36}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Przykłady testowe}{36}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Regresja logistyczna}{36}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Maszyna wektorów nośnych}{36}{subsection.5.7.2}%
-\contentsline {subsection}{\numberline {5.7.3}Sieć neuronowa}{36}{subsection.5.7.3}%
-\contentsline {chapter}{\numberline {6}Biblioteka Dlib}{37}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Wprowadzenie}{37}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Formaty źródeł danych}{37}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Metody przetwarzania i eksploracji danych}{38}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Normalizacja}{38}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Redukcja wymiarowości}{38}{subsection.6.3.2}%
-\contentsline {subsubsection}{\numberline {6.3.2.1}PCA}{38}{subsubsection.6.3.2.1}%
-\contentsline {subsubsection}{\numberline {6.3.2.2}Liniowa analiza dyskryminacyjna}{38}{subsubsection.6.3.2.2}%
-\contentsline {subsubsection}{\numberline {6.3.2.3}Mapowanie Sammona}{38}{subsubsection.6.3.2.3}%
-\contentsline {subsection}{\numberline {6.3.3}Sprawdzian krzyżowy K-fold}{38}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}Przeszukiwanie siatki}{38}{subsection.6.3.4}%
-\contentsline {section}{\numberline {6.4}Modele uczenia maszynowego}{38}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Regresja liniowa}{38}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Brzegowa regresja jądra}{38}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Maszyna wektorów nośnych}{38}{subsection.6.4.3}%
-\contentsline {subsection}{\numberline {6.4.4}Sieci neuronowe}{38}{subsection.6.4.4}%
-\contentsline {section}{\numberline {6.5}Metody analizy modeli}{38}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Dostępność dokumentacji i źródeł wiedzy}{39}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Przykłady testowe}{39}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Maszyna wektorów nośnych}{39}{subsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.7.2}Sieć neuronowa}{39}{subsection.6.7.2}%
-\contentsline {chapter}{\numberline {7}Zestawienie zbiorcze i podsumowanie}{40}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Oferowane funkcjonalności}{40}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Wymagany nakład pracy}{40}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Jakość i ilość dostępnych źródeł referencyjnych}{40}{section.7.3}%
+\contentsline {section}{\numberline {5.5}Metody analizy modeli}{36}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Funkcje straty}{36}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Metryka $R^2$ i adjusted $R^2$}{37}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Metryka AUC-ROC}{37}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}Sprawdzian krzyżowy K-fold}{37}{subsection.5.5.4}%
+\contentsline {section}{\numberline {5.6}Dostępność dokumentacji i źródeł wiedzy}{39}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Przykłady testowe}{39}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Regresja logistyczna}{41}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Maszyna wektorów nośnych}{41}{subsection.5.7.2}%
+\contentsline {subsection}{\numberline {5.7.3}Sieć neuronowa}{41}{subsection.5.7.3}%
+\contentsline {chapter}{\numberline {6}Biblioteka Dlib}{42}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Wprowadzenie}{42}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Formaty źródeł danych}{42}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Metody przetwarzania i eksploracji danych}{43}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Normalizacja}{43}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Redukcja wymiarowości}{43}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}PCA}{43}{subsubsection.6.3.2.1}%
+\contentsline {subsubsection}{\numberline {6.3.2.2}Liniowa analiza dyskryminacyjna}{43}{subsubsection.6.3.2.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.3}Mapowanie Sammona}{43}{subsubsection.6.3.2.3}%
+\contentsline {subsection}{\numberline {6.3.3}Sprawdzian krzyżowy K-fold}{43}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Modele uczenia maszynowego}{43}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Regresja liniowa}{43}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Brzegowa regresja jądra}{43}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Maszyna wektorów nośnych}{43}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Sieci neuronowe}{43}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.5}Metody analizy modeli}{43}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Dostępność dokumentacji i źródeł wiedzy}{43}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Przykłady testowe}{44}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Maszyna wektorów nośnych}{44}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Sieć neuronowa}{44}{subsection.6.7.2}%
+\contentsline {chapter}{\numberline {7}Zestawienie zbiorcze i podsumowanie}{45}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Oferowane funkcjonalności}{45}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Wymagany nakład pracy}{45}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Jakość i ilość dostępnych źródeł referencyjnych}{45}{section.7.3}%

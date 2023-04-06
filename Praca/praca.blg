@@ -19,53 +19,49 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: praca-blx.bib
 Database file #2: Bibliografia/bibliografia.bib
-I was expecting a `,' or a `}'---line 225 of file Bibliografia/bibliografia.bib
- :  author = {The Shark developer team}
- :                                     .
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "dlib:home"
 Biblatex version: 3.19
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 14 entries,
+You've used 15 entries,
             6399 wiz_defined-function locations,
-            1264 strings with 10629 characters,
-and the built_in function-call counts, 81761 in all, are:
-= -- 6473
-> -- 1260
-< -- 364
-+ -- 1841
-- -- 389
-* -- 5322
-:= -- 8535
+            1269 strings with 10875 characters,
+and the built_in function-call counts, 87850 in all, are:
+= -- 6944
+> -- 1342
+< -- 380
++ -- 1973
+- -- 418
+* -- 5757
+:= -- 9178
 add.period$ -- 0
-call.type$ -- 14
-change.case$ -- 228
+call.type$ -- 15
+change.case$ -- 237
 chr.to.int$ -- 42
-cite$ -- 26
-duplicate$ -- 7753
-empty$ -- 7702
-format.name$ -- 663
-if$ -- 17320
+cite$ -- 28
+duplicate$ -- 8346
+empty$ -- 8296
+format.name$ -- 714
+if$ -- 18590
 int.to.chr$ -- 0
-int.to.str$ -- 39
+int.to.str$ -- 43
 missing$ -- 0
-newline$ -- 317
-num.names$ -- 667
-pop$ -- 4513
+newline$ -- 346
+num.names$ -- 711
+pop$ -- 4848
 preamble$ -- 1
-purify$ -- 276
+purify$ -- 288
 quote$ -- 0
-skip$ -- 2485
+skip$ -- 2643
 stack$ -- 0
-substring$ -- 12094
-swap$ -- 1467
-text.length$ -- 265
+substring$ -- 12998
+swap$ -- 1591
+text.length$ -- 282
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 464
+type$ -- 498
 warning$ -- 0
-while$ -- 936
+while$ -- 1008
 width$ -- 0
-write$ -- 304
-(There was 1 error message)
+write$ -- 332
+(There was 1 warning)

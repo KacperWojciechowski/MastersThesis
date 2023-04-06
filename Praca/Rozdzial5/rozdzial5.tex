@@ -6,7 +6,7 @@ Shark-ML to biblioteka uczenia maszynowego dedykowana dla języka C++. Posiada o
 
 \section{Formaty źródeł danych}
 
-Biblioteka operuje na własnych reprezentacjach macierzy i wektorów, które tworzone są poprzez opakowywanie surowych tablic za pomocą specjalnych adapterów, jak np. \textit{remora::dense\char`_matrix\char`_adaptor<>()}. Mechanizm ten jest identyczny jak w przypadku pozostałych z omawianych bibliotek, co daje użytkownikowi dużą dowolność co do sposobu przechowywania danych i mechanizmu ich odczytywania. Posiada ona także dedykowany parser dla plików w formacie CSV, lecz zakłada on obecność w pliku jedynie danych numerycznych. Do jego użycia należy użyć klasy kontenera \textit{ClassificationDataset} oraz metody \textit{importCSV} która zapisuje odczytane dane do wcześniej wspomnianego obiektu poprzez mechanizm zwracania przez parametr. Jeden z argumentów funkcji określa która z kolumn zawiera zmienną decyzyjną, dzięki czemu biblioteka jest w stanie od razu oddzielić dane wejściowe od kolumny oczekiwanych wartości. Artykuł ,,Classification with Shark-ML machine learning library''\cite{shark:http} dostępny na platformie GitHub pokazuje także, jak pobrać dane w postaci formatu CSV z internetu z pomocą API biblioteki \textit{curl}, i przetworzyć je do formy akceptowanej przez Shark-ML, co zostało przedstawione na listingu \ref{shark:http}. W aktualnej wersji biblioteki znalazły się także wbudowane funkcje pobierania danych współpracujące z protokołem HTTP.
+Biblioteka operuje na własnych reprezentacjach macierzy i wektorów, które tworzone są poprzez opakowywanie surowych tablic za pomocą specjalnych adapterów, jak np. \textit{remora::dense\char`_matrix\char`_adaptor<>()} lub za pomocą kontenerów biblioteki standardowej C++ i funkcji \textit{createDataFromRange()}. Mechanizm ten jest identyczny jak w przypadku pozostałych z omawianych bibliotek, co daje użytkownikowi dużą dowolność co do sposobu przechowywania danych i mechanizmu ich odczytywania. Posiada ona także dedykowany parser dla plików w formacie CSV, lecz zakłada on obecność w pliku jedynie danych numerycznych. Do jego użycia należy użyć klasy kontenera \textit{ClassificationDataset} oraz metody \textit{importCSV} która zapisuje odczytane dane do wcześniej wspomnianego obiektu poprzez mechanizm zwracania przez parametr. Jeden z argumentów funkcji określa która z kolumn zawiera zmienną decyzyjną, dzięki czemu biblioteka jest w stanie od razu oddzielić dane wejściowe od kolumny oczekiwanych wartości. Artykuł ,,Classification with Shark-ML machine learning library''\cite{shark:http} dostępny na platformie GitHub pokazuje także, jak pobrać dane w postaci formatu CSV z internetu z pomocą API biblioteki \textit{curl}, i przetworzyć je do formy akceptowanej przez Shark-ML, co zostało przedstawione na listingu \ref{shark:http}. W aktualnej wersji biblioteki znalazły się także wbudowane funkcje pobierania danych współpracujące z protokołem HTTP.
 
 \newpage
 \cppcode{Rozdzial5/shark-csv-http.cpp}{Pobranie danych do uczenia z serwera HTTP \cite{shark:http}}{shark:http}
@@ -53,11 +53,6 @@ Biblioteka Shark, w przeciwieństwie do Shogun nie posiada ściśle określonych
 
 Podobnie jak w przypadku metody Lasso, wykorzystanie regularyzacji L2 w trenowanym modelu opiera się na wstrzyknięciu obiektu regularyzatora do obiektu klasy trenera. Dla metody L2 jest to obiekt klasy \textit{shark::TwoNormRegularizer}.
 
-\subsection{Sprawdzian krzyżowy K-fold}
-
-
-
-\subsection{Przeszukiwanie siatki}
 
 \section{Modele uczenia maszynowego}
 
@@ -125,11 +120,9 @@ Biblioteka Shogun-ML oprócz powszechnie znanych algorytmów udostępnia także 
 
 \subsection{Sieć neuronowa}
 
-DO ZROBIENIA !!!
+Skonstruowanie sieci neuronowej w bibliotece Shark-ML wykorzystuje pewne mechanizmy oferowane przez klasę \textit{LinearModel<>}. Pozwala ona na określenie typu i ilości wejść, wyjść, oraz zastosowania biasu. Każda warstwa składa się z pojedynczego obiektu modelu liniowego, gdzie ilość wyjść określa liczbę neuronów zawartych w warstwie. Konfiguracja funkcji aktywacji neuronu odbywa się na etapie przekazania typów do szablonu modelu. Pełną listę dostępnych funkcji aktywacji znaleźć można w dokumentacji biblioteki \cite{shark:activation}. Kolejnym krokiem jest przygotowanie obiektu klasy \textit{ErrorFunction<>} w oparciu o jedną z dostępnych funkcji strat, która zostanie skonfigurowana do wykorzystania przez optymalizator przeprowadzający uczenie. Po przygotowaniu funkcji straty, należy zainicjować sieć losowymi wagami i utworzyć oraz skonfigurować wybrany obiekt klasy optymalizatora. Na tym etapie, sieć jest gotowa do przeprowadzenia procesu uczenia. Polega ono na iteracyjnym wykonywaniu kroków za pomocą funkcji \textit{step()} obiektu optymalizatora. W międzyczasie możliwe jest także pobranie wartości funkcji straty na każdej epoce uczenia. Z racji konieczności użycia zwykłej pętli zdefiniowanej przez użytkownika, istnieje możliwość określenia własnych warunków stopu ewaluowanych po każdej epoce, jak np. liczba epok lub przekroczenie określonego progu przez uzyskaną wartość funkcji straty. Wewnątrz pętli iterującej po epokach należy umieścić kolejną pętlę, której zadaniem będzie przejście przez wszystkie batche, wykonując na nich krok optymalizatora. Po zakończeniu uczenia, należy skonfigurować obiekt modelu przekazując mu wagi ustalone przez optymalizer, uzyskując w ten sposób gotową instancję wyszkolonej sieci neuronowej. Listing \ref{shark:neural} przedstawia kod realizujący cały proces, stanowiący przykład z książki ,,Hands On Machine Learning with C++''.
 
-\subsection{Neuronowa sieć splotowa}
-
-Biblioteka Shark-ML oprócz omówionych wyżej modeli, wspiera także modele do przetwarzania grafiki w postaci neuronowych sieci splotowych. Leżą jednak one poza zakresem niniejszej pracy, w związku z czym nie zostaną one dokładnie omówione.
+\cppcode{Rozdzial5/shark-neural.cpp}{Przykład trójwarstwowej sieci neuronowej \cite{handsOnMachineLearning}}{shark:neural}
 
 \section{Metody analizy modeli}
 
@@ -167,12 +160,40 @@ AUC-ROC stanowi jedną z często wykorzystywanych metryk poprawności predykcji 
 
 \cppcode{Rozdzial5/shark-roc.cpp}{Przykład użycia klasy \textit{NegativeAUC} do obliczenia pola pod funkcją ROC}{shark:roc} 
 
+\subsection{Sprawdzian krzyżowy K-fold}
+
+Proces poszukiwania najlepszych wartości hiperparametrów w Shark-ML uwzględnia przeprowadzenie wewnętrznie uczenia danego modelu, lecz skupia się na porównaniu uzyskiwanych wyników, w związku z czym jego opis zamieszczony został w tej sekcji. Użycie implementacji metody sprawdzianu krzyżowego K-fold w wymaga wykorzystania trzech klas. Pierwszą z nich stanowi \textit{CVFolds}, której zadaniem jest przechowanie zestawu danych podzielonego na odpowiednią ilość fragmentów. Drugą jest klasa \textit{CrossValidationError} stanowiąca szablon przyjmujący typ modelu, dla którego określany będzie błąd walidacji, oraz obiekt klasy błędu, który ma zostać wyliczony. Ostatnią klasą jest \textit{GridSearch}, którego zadaniem jest iteracyjny wybór fragmentów do uczenia i wyliczenie wartości hiperparametrów dla modelu. Wynikiem procesu jest uzyskanie najlepszego zestawu hiperparametrów do procedury szkolenia - użytkownik musi zawołać metodę \textit{step()} klasy \textit{GridSearch} tylko jeden raz. Listing \ref{shark:cv} przedstawia przykład zawarty w książce ,,Hands On Machine Learning with C++'' \cite{handsOnMachineLearning}, w którym autor przedstawia proces wykorzystania powyższych klas na własnoręcznie zaimplementowanym modelu regresji wielomianowej. 
+
+\cppcode{Rozdzial5/shark-cv.cpp}{Przykład realizacji sprawdzianu krzyżowego K-fold w Shark-ML}{shark:cv}
 
 \section{Dostępność dokumentacji i źródeł wiedzy}
 
 Biblioteka Shark-ML posiada skróconą dokumentację dostępną na głównej stronie internetowej projektu, wraz z przykładowymi plikami źródłowymi dołączonymi do repozytorium. Jest ona także wspomniana w książce ,,Hands-On Machine Learning with C++'', przedstawiającej sposoby użycia wybranych funkcjonalności. Kwestią wyróżniającą ją natomiast na tle pozostałych bibliotek omówionych w ramach niniejszej pracy jest fakt, że jest ona dedykowana dla języka C++, w związku z czym dużo łatwiej dostępne są wątki społecznościowe i artykuły omawiające realizację różnorodnych typów modeli z jej użyciem, oraz oferując przykładowy kod źródłowy.
 
 \section{Przykłady testowe}
+
+Niniejszy rozdział przedstawia sposób praktycznego wykorzystania omówionych wcześniej metod wraz z porównaniem uzyskiwanych przez nie wyników na przykładzie problemu omówionego w rozdziale 3. Odczyt danych realizowany jest z pliku .csv za pomocą funkcji dostępnej w bibliotece Shark-ML, natomiast sam plik uległ takiemu samemu przetwarzaniu wstępnemu jak opisano w niniejszej sekcji w rozdziale 4. Podobnie jak poprzednio każdy z modeli zawarty został w osobnej funkcji, pozwalając na wywołanie wszystkich poniższych przykładów z poziomu pojedynczego programu o funkcji \textit{main()} przedstawionej na listingu \ref{shark:res-main.cpp}.
+
+PONIŻSZY KOD PRZETESTOWAĆ I SKOMPILOWAĆ
+
+\cppcode{Result/test.cpp}{Napisany dotychczasowo kod}{label}
+
+%\cppcode{Rozdzial5/shark-res-main.cpp}{Funkcja main() programu testowego}{shark:res-main.cpp}
+
 \subsection{Regresja logistyczna}
+
+KOD DO PRZETESTOWANIA
+
+%\cppcode{Rozdzial5/shark-res-logistic.cpp}{Kod realizujący uczenie z wykorzystaniem regresji logistycznej}{shark:res-logistic}
+
 \subsection{Maszyna wektorów nośnych}
+
+KOD DO PRZETESTOWANIA
+
+%\cppcode{Rozdzial5/shark-res-svm.cpp}{Kod realizujący uczenie z wykorzystaniem maszyny wektorów nośnych}{shark:res-svm}
+
 \subsection{Sieć neuronowa}
+
+KOD DO PRZETESTOWANIA
+
+%\cppcode{Rozdzial5/shark-res-neural.cpp}{Kod realizujący uczenie z wykorzystaniem sieci neuronowej}{shark:res-neural}

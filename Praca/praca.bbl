@@ -272,6 +272,35 @@
     \strng{namehash}{tTSd1}
     \strng{fullhash}{tTSd1}
     \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Nearest Neighbor Classification}
+    \verb{url}
+    \verb http://image.diku.dk/shark/sphinx_pages/build/html/rest_sources/tutor
+    \verb ials/algorithms/nearestNeighbor.html
+    \endverb
+    \field{year}{2018}
+  \endentry
+
+  \entry{shark:activation}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=dtTS}{%
+         prefix={developer},
+         prefixi={d\bibinitperiod},
+         family={team},
+         familyi={t\bibinitperiod},
+         given={The\bibnamedelima Shark},
+         giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{tTSd1}
+    \strng{fullhash}{tTSd1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Neuron activation functions}
+    \verb{url}
+    \verb https://www.shark-ml.org/doxygen_pages/html/group__activations.html
+    \endverb
+    \field{year}{2018}
   \endentry
 
   \entry{shark:loss}{misc}{}
