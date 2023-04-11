@@ -21,26 +21,63 @@ Do odczytu i parsowania danych z pliku CSV wykorzystywana jest klasa \textit{sho
 \cppcode{Rozdzial4/shogun-csv.cpp}{Przykładowy program do odczytu i przygotowania danych z pliku CSV dla biblioteki Shogun \cite{handsOnMachineLearning}}{shogun:csv}
 
 \section{Metody przetwarzania i eksploracji danych}
-     
-Biblioteka dostarcza możliwość normalizacji typu min-max, zapewniając że dane mieścić się będą w przedziale jednostkowym, za pomocą klasy \textit{shogun::CRescaleFeatu-res}. Zastosowanie innych transformacji na danych, jak np. transformacji logarytmicznej, wymaga przygotowania własnego kodu. W przypadku niektórych algorytmów oferowanych przez Shogun, normalizacja jest jednym z pierwszych wykonywanych kroków, w związku z czym nie zawsze jest potrzeba wykonania jej we wstępnym przetwarzaniu.
 
 \subsection{Normalizacja}
+
+     
+Biblioteka dostarcza możliwość normalizacji typu min-max, zapewniając że dane mieścić się będą w przedziale jednostkowym, za pomocą klasy \textit{shogun::CRescaleFeatu-res}. W przypadku niektórych algorytmów oferowanych przez Shogun, normalizacja jest jednym z pierwszych wykonywanych kroków, w związku z czym nie zawsze jest potrzeba wykonania jej we wstępnym przetwarzaniu. Informacja o takim przypadku powinna być zawarta w dokumentacji danej metody. Klasa pozwala na ponowne wykorzystanie dla danych o tych samych nauczonych zmiennych statystycznych. Klasa \textit{shogun::CReslaceFeatures} posiada dwie główne metody:
+
+\begin{itemize}
+	\item \textit{fit()} - pozwalającą na nauczenie normalizatora statystyk danych;
+	\item \textit{transform()} - pozwalającą na normalizację obserwacji.
+\end{itemize}
+
+Listing \ref{shogun:normalizer} pokazuje jak wykorzystać wyżej wspomnianą klasę do zrealizowania normalizacji.
+
+\cppcode{Rozdzial4/shogun-normalizer.cpp}{Przykład wykonania normalizacji \cite{handsOnMachineLearning}}{shogun:normalizer}
+
 \subsection{Redukcja wymiarowości}
+
+Shark udostępnia użytkownikowi kilka rodzajów algorytmów redukcji wymiarowości, realizowane przez następujące klasy \cite{handsOnMachineLearning}:
+
+\begin{itemize}
+	\item \textbf{PCA} - klasa \textit{CPCA};
+	\item \textbf{Kernel PCA} - klasa \textit{CKernelPCA};
+	\item \textbf{MDS} - klasa \textit{MultidimensionalScaling};
+	\item \textbf{IsoMap} - klasa \textit{CIsoMap};
+	\item \textbf{ICA} - klasa \textit{CFastICA};
+	\item \textbf{Factor analysis} - klasa \textit{CFactorAnalysis};
+	\item \textbf{t-SNE} - klasa \textit{CTDistributedStochasticNeighborEmbedding}.
+\end{itemize}
+
+Każda z powyższych klas operuje poprzez poprzednie nauczenie się parametrów danych uczących metodą \textit{fit()} oraz ustawienie docelowej ilości wymiarów (z wyjątkiem kernel PCA i ISA). Nauczony obiekt reduktora można wykorzystać do redukcji wymiarowości danych poprzez metodę \textit{transform()}, której wynik należy zrzutować na wskaźnik na CDenseFeatures. Listing \ref{shogun:reduction} przedstawia sposób wykonania redukcji na przykładzie klasy \textit{CKernelPCA}.
+
+\cppcode{Rozdzial4/shogun-kernelpca.cpp}{Przykład redukcji wymiarowości z wykorzystaniem metody Kernel PCA \cite{handsOnMachineLearning}}{shogun:reduction}
+
 \subsection{Regularyzacja L1 i L2}
 
 W przypadku biblioteki Shogun, regularyzacja stanowi integralną część modelu, co oznacza że występuje ona zawsze podczas wykorzystania danego typu modelu uczenia maszynowego, oraz nie ma możliwości zmiany typu regularyzacji używanej przez docelowy model.
 
-\subsection{Sprawdzian krzyżowy K-fold}
-
 \section{Modele uczenia maszynowego}
+\subsection{Regresja liniowa}
+Jednym z podstawowych algorytmów uczenia maszynowego udostępnianych przez bibliotekę Shogun jest regresja liniowa, realizowana za pomocą klasy \textit{CLinearRidgeRegression}. Polega ona na dekompozycji macierzy Choleskiego \cite{handsOnMachineLearning}, wykorzystując podejście nie-iteracyjne. Jak wskazuje nazwa, metoda ta posiada wbudowaną regularyzację L2 (Ridge), której konfiguracja odbywa się podczas tworzenia obiektu modelu. Listing \ref{shogun:linear} przedstawia sposób wykonania regresji liniowej z pomocą Shogun.
 
-\subsection{Regresja liniowa}
-\subsection{Liniowa analiza dyskryminacyjna}
-\subsection{Regresja liniowa}
+\cppcode{Rozdzial4/shogun-linear.cpp}{Przykład regresji liniowej w Shogun \cite{handsOnMachineLearning}}{shogun:linear}
+
+\subsection{Regresja logistyczna}
+Biblioteka Shogun zawiera implementację wieloklasowej regresji logistycznej w postaci gotowego obiektu klasy \textit{CMulticlassLogisticRegression}. Posiada ona wbudowaną konfigurowalną regularyzację. Listing \ref{shogun:logistic} przedstawia sposób użycia wspomnianej klasy opisany w książce ,,Hands On Machine Learning'' \cite{handsOnMachineLearning}, wykorzystując dodatkowo mechanizm sprawdzianu krzyżowego do wyboru hiperparametrów, który opisany jest w dalszej części pracy.
+
+\cppcode{Rozdzial4/shogun-logistic.cpp}{Przykład regresji logistycznej z użyciem sprawdzianu krzyżowego \cite{handsOnMachineLearning}}{shogun:logistic}
+
 \subsection{Maszyna wektorów nośnych}
+Podobnie jak w przypadku regresji logistycznej, w bibliotece shogun dostępna jest implementacja wieloklasowej klasyfikacji z wykorzystaniem maszyny wektorów nośnych, w postaci klasy \textit{CMulticlassLibSVM}. Posiada ona szereg dostępnych do konfiguracji parametrów, i umożliwia wybór zastosowanego jądra użytkownikowi. Listing \ref{shogun:svm} prezentuje jak wykorzystać wymienioną klasę wraz z doborem parametrów \cite{handsOnMachineLearning}.
+
+\cppcode{Rozdzial4/shogun-svm.cpp}{Przykład użycia maszyny wektorów nośnych \cite{handsOnMachineLearning}}{shogun:svm}
+
 \subsection{Algorytm K najbliższych sąsiadów}
 \subsection{Algorytm zbiorowy}
 \subsection{Sieć neuronowa}
+\subsection{Brzegowa regresja jądra ?}
 
 \section{Metody analizy modeli}
 
@@ -59,6 +96,9 @@ Obliczenie błędu średniokwadratowego w bibliotece Shogun sprowadza się do ut
 \subsection{Precyzja i pamięć (recall)}
 \subsection{Metryka F-score}
 \subsection{Metryki AUC i ROC}
+
+\subsection{Sprawdzian krzyżowy K-krotny}
+
 
 \section{Dostępność dokumentacji i źródeł wiedzy}
 

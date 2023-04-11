@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  6 APR 2023 02:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  11 APR 2023 05:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1350,13 +1350,9 @@ Overfull \hbox (9.45137pt too wide) in paragraph at lines 10--11
 -ko-rzy-stu-j¡-cego sztuczn¡
  []
 
+[1
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
-
-])
-(./Rozdzial2/rozdzial2.tex [2]
+]) (./Rozdzial2/rozdzial2.tex [2]
 Rozdzia\l  2.
 
 Overfull \hbox (6.8981pt too wide) in paragraph at lines 2--2
@@ -1550,46 +1546,56 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 (./Rozdzial4/shogun-csv.cpp)
-Overfull \hbox (2.96196pt too wide) in paragraph at lines 25--26
+Overfull \hbox (2.96196pt too wide) in paragraph at lines 28--29
 \T1/lmr/m/n/12 mie-±ci¢ si¦ b¦d¡ w prze-dziale jed-nost-ko-wym, za po-moc¡ klas
 y \T1/lmr/m/it/12 shogun::CRescaleFeatu-
  []
 
-[18] (./Rozdzial4/shogun-mse.cpp [19])
+[18] (./Rozdzial4/shogun-normalizer.cpp) [19] (./Rozdzial4/shogun-kernelpca.cpp
+) [20] (./Rozdzial4/shogun-linear.cpp) (./Rozdzial4/shogun-logistic.cpp
+[21]) (./Rozdzial4/shogun-svm.cpp [22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23])
+(./Rozdzial4/shogun-mse.cpp)
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 56.
+(Font)              <14.4> on input line 93.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 56.
+(Font)              <10> on input line 93.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 56.
+(Font)              <7> on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 56.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 56.
+(hyperref)                removing `superscript' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 56.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 57.
+(hyperref)                removing `math shift' on input line 94.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 57.
+(hyperref)                removing `superscript' on input line 94.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 57.
+(hyperref)                removing `math shift' on input line 94.
 
-) (./Rozdzial5/rozdzial5.tex [20]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24])
+(./Rozdzial5/rozdzial5.tex [25]
 Rozdzia\l  5.
-[21
+[26
 
 ] (./Rozdzial5/shark-csv-http.cpp)
 Overfull \hbox (9.5257pt too wide) in paragraph at lines 14--15
@@ -1597,17 +1603,17 @@ Overfull \hbox (9.5257pt too wide) in paragraph at lines 14--15
 ó-rych prze-ka-zy-wany jest wska¹-
  []
 
-(./Rozdzial5/shark-adaptor.cpp) [22] (./Rozdzial5/shark-preprocessing.cpp)
-[23] (./Rozdzial5/shark-dimension-reduction.cpp) (./Rozdzial5/shark-lda-red.cpp
-[24]) (./Rozdzial5/shark-lda.cpp)
+(./Rozdzial5/shark-adaptor.cpp) [27] (./Rozdzial5/shark-preprocessing.cpp)
+[28] (./Rozdzial5/shark-dimension-reduction.cpp) (./Rozdzial5/shark-lda-red.cpp
+[29]) (./Rozdzial5/shark-lda.cpp)
 Underfull \vbox (badness 2653) has occurred while \output is active []
 
- [25]
-(./Rozdzial5/shark-linear.cpp [26]) (./Rozdzial5/shark-linear2.cpp) [27]
-(./Rozdzial5/shark-logistic.cpp [28]) (./Rozdzial5/shark-logistic2.cpp)
-[29] (./Rozdzial5/shark-svm.cpp [30]) (./Rozdzial5/shark-svm2.cpp [31])
-(./Rozdzial5/shark-knn.cpp [32]) [33] (./Rozdzial5/shark-rf.cpp)
-(./Rozdzial5/shark-neural.cpp [34]
+ [30]
+(./Rozdzial5/shark-linear.cpp [31]) (./Rozdzial5/shark-linear2.cpp) [32]
+(./Rozdzial5/shark-logistic.cpp [33]) (./Rozdzial5/shark-logistic2.cpp)
+[34] (./Rozdzial5/shark-svm.cpp [35]) (./Rozdzial5/shark-svm2.cpp [36])
+(./Rozdzial5/shark-knn.cpp [37]) [38] (./Rozdzial5/shark-rf.cpp)
+(./Rozdzial5/shark-neural.cpp [39]
 Overfull \hbox (5.03394pt too wide) in paragraph at lines 59--60
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][] 
@@ -1616,7 +1622,7 @@ Overfull \hbox (5.03394pt too wide) in paragraph at lines 59--60
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35]
+ [40]
 (./Rozdzial5/shark-mse.cpp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1644,10 +1650,10 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 155.
-[36] (./Rozdzial5/shark-r2.cpp) (./Rozdzial5/shark-roc.cpp) [37]
-(./Rozdzial5/shark-cv.cpp [38])
+[41] (./Rozdzial5/shark-r2.cpp) (./Rozdzial5/shark-roc.cpp) [42]
+(./Rozdzial5/shark-cv.cpp [43])
 
-LaTeX Warning: Reference `shark:res-main.cpp' on page 39 undefined on input lin
+LaTeX Warning: Reference `shark:res-main.cpp' on page 44 undefined on input lin
 e 175.
 
 
@@ -1656,30 +1662,30 @@ Overfull \hbox (4.7214pt too wide) in paragraph at lines 175--176
 zy-sta-nia omó-wio-nych wcze-
  []
 
-(./Result/test.cpp [39]
+(./Result/test.cpp [44]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40]))
-(./Rozdzial6/rozdzial6.tex [41]
+ [45]))
+(./Rozdzial6/rozdzial6.tex [46]
 Rozdzia\l  6.
-(./Rozdzial6/csv.cpp [42
+(./Rozdzial6/csv.cpp [47
 
 ])
 
-LaTeX Warning: Citation 'dlib:home' on page 43 undefined on input line 40.
+LaTeX Warning: Citation 'dlib:home' on page 48 undefined on input line 37.
 
-[43]) (./Rozdzial7/rozdzial7.tex [44]
+[48]) (./Rozdzial7/rozdzial7.tex [49]
 Rozdzia\l  7.
-) [45
+) [50
 
-] [46
+] [51
 
-] (./praca.aux)
+] [52] (./praca.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: 45F90B3A2FB906E9E34D4A404262FBC8;18182.
+(rerunfilecheck)             Checksum: 0C2D49C3E12684F6BDEFF0BD51B5CD34;18209.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                praca
@@ -1690,10 +1696,10 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33533 strings out of 476017
- 605649 string characters out of 5789275
- 1930660 words of memory out of 5000000
- 52357 multiletter control sequences out of 15000+600000
+ 33911 strings out of 476017
+ 612205 string characters out of 5789275
+ 1933660 words of memory out of 5000000
+ 52520 multiletter control sequences out of 15000+600000
  600993 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,12n,109p,2262b,2368s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1713,10 +1719,10 @@ ts/type1/public/lm/lmtt12.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/
 public/lm/lmtti10.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/c
 m-super/sfxc1728.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/cm
 -super/sfxc2074.pfb>
-Output written on praca.pdf (54 pages, 850530 bytes).
+Output written on praca.pdf (60 pages, 868024 bytes).
 PDF statistics:
- 2009 PDF objects out of 2073 (max. 8388607)
- 1861 compressed objects within 19 object streams
- 963 named destinations out of 1000 (max. 500000)
+ 2291 PDF objects out of 2487 (max. 8388607)
+ 2129 compressed objects within 22 object streams
+ 1163 named destinations out of 1200 (max. 500000)
  873 words of extra memory for PDF output out of 10000 (max. 10000000)
 

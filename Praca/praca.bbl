@@ -326,6 +326,26 @@
     \field{year}{2018}
   \endentry
 
+  \entry{Dlib09}{article}{}
+    \name{author}{1}{}{%
+      {{hash=KDE}{%
+         family={King},
+         familyi={K\bibinitperiod},
+         given={Davis\bibnamedelima E.},
+         giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KDE1}
+    \strng{fullhash}{KDE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{1755\bibrangedash 1758}
+    \field{title}{Dlib-ml: A Machine Learning Toolkit}
+    \field{volume}{10}
+    \field{journaltitle}{Journal of Machine Learning Research}
+    \field{year}{2009}
+  \endentry
+
   \entry{dlib:license}{misc}{}
     \name{author}{1}{}{%
       {{hash=tD}{%

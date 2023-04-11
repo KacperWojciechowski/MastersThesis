@@ -160,7 +160,7 @@ AUC-ROC stanowi jedną z często wykorzystywanych metryk poprawności predykcji 
 
 \cppcode{Rozdzial5/shark-roc.cpp}{Przykład użycia klasy \textit{NegativeAUC} do obliczenia pola pod funkcją ROC}{shark:roc} 
 
-\subsection{Sprawdzian krzyżowy K-fold}
+\subsection{Sprawdzian krzyżowy K-krotny}
 
 Proces poszukiwania najlepszych wartości hiperparametrów w Shark-ML uwzględnia przeprowadzenie wewnętrznie uczenia danego modelu, lecz skupia się na porównaniu uzyskiwanych wyników, w związku z czym jego opis zamieszczony został w tej sekcji. Użycie implementacji metody sprawdzianu krzyżowego K-fold w wymaga wykorzystania trzech klas. Pierwszą z nich stanowi \textit{CVFolds}, której zadaniem jest przechowanie zestawu danych podzielonego na odpowiednią ilość fragmentów. Drugą jest klasa \textit{CrossValidationError} stanowiąca szablon przyjmujący typ modelu, dla którego określany będzie błąd walidacji, oraz obiekt klasy błędu, który ma zostać wyliczony. Ostatnią klasą jest \textit{GridSearch}, którego zadaniem jest iteracyjny wybór fragmentów do uczenia i wyliczenie wartości hiperparametrów dla modelu. Wynikiem procesu jest uzyskanie najlepszego zestawu hiperparametrów do procedury szkolenia - użytkownik musi zawołać metodę \textit{step()} klasy \textit{GridSearch} tylko jeden raz. Listing \ref{shark:cv} przedstawia przykład zawarty w książce ,,Hands On Machine Learning with C++'' \cite{handsOnMachineLearning}, w którym autor przedstawia proces wykorzystania powyższych klas na własnoręcznie zaimplementowanym modelu regresji wielomianowej. 
 
