@@ -4,20 +4,28 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Schemat perceptronu \kern 0sp\discretionary {-}{-}{-}\penalty 10000\hskip 0sp\relax {} Simplelearn\relax }}{4}{figure.caption.2}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Multithreading in modern C++ - Modernes C++\relax }}{5}{figure.caption.3}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Histogram rozkładu zmiennej odpowiedzi\relax }}{8}{figure.caption.4}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Przykłady histogramów zmiennych decyzyjnych\relax }}{9}{figure.caption.5}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Przykład analizy obserwacji odstających dla poszczególnych klas zmiennej odpowiedzi\relax }}{9}{figure.caption.6}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Porównanie rozkładu danych przed i po transformacji logarytmicznej.\relax }}{10}{figure.caption.7}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Porównanie rozkładów danych przed i po zastosowaniu transformacji pierwiastkiem sześciennym.\relax }}{11}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Histogram rozkładu zmiennej odpowiedzi\relax }}{9}{figure.caption.4}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Przykłady histogramów zmiennych decyzyjnych\relax }}{10}{figure.caption.5}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Przykład analizy obserwacji odstających dla poszczególnych klas zmiennej odpowiedzi\relax }}{10}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Porównanie rozkładu danych przed i po transformacji logarytmicznej.\relax }}{11}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Porównanie rozkładów danych przed i po zastosowaniu transformacji pierwiastkiem sześciennym.\relax }}{12}{figure.caption.8}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Porównanie uzyskanych rozkładów danych przed i po odwrotnej transformacji Arrheniusa.\relax }}{12}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Wykres p-wartości dla całego zestawu zmiennych decyzyjnych.\relax }}{13}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Wykres i p-wartości istotnych zmiennych decyzyjnych\relax }}{14}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Krzywa charakterystyczna odbiornika (ROC) dla modelu regresji logistycznej\relax }}{14}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Schemat struktury sieci\relax }}{15}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Krzywa charakterysty-czna odbiornika dla zestawu testowego\relax }}{15}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Krzywa charakterysty-czna odbiornika dla danych walidacyjnych\relax }}{15}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Krzywa charakterystycz-na odbiornika dla danych uczących modelu SVM\relax }}{16}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Krzywa charakterystycz-na odbiornika dla danych walidacyjnych modelu SVM\relax }}{16}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Wykres rozkładu zmiennej odpowiedzi dla zestawu regresyjnego\relax }}{13}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Przykłady rozkładu zmiennej decyzyjnej cz. 1\relax }}{13}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Przykład rozkładu zmiennej decyzyjnej cz. 2\relax }}{14}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Rozkład zmiennej Gender\relax }}{14}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Wpływ transformacji logarytmicznej na rozkład zmiennej odpowiedzi\relax }}{15}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Normalizacja rozkładu za pomocą transformacji pierwiastkiem kwadratowym.\relax }}{16}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Wykres p-wartości dla całego zestawu zmiennych decyzyjnych.\relax }}{17}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Wykres i p-wartości istotnych zmiennych decyzyjnych\relax }}{18}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Krzywa charakterystyczna odbiornika (ROC) dla modelu regresji logistycznej\relax }}{18}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Schemat struktury sieci\relax }}{19}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Krzywa charakterysty-czna odbiornika dla zestawu testowego\relax }}{19}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Krzywa charakterysty-czna odbiornika dla danych walidacyjnych\relax }}{19}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Krzywa charakterystycz-na odbiornika dla danych uczących modelu SVM\relax }}{20}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Krzywa charakterystycz-na odbiornika dla danych walidacyjnych modelu SVM\relax }}{20}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Wykres p-wartości dla wszystkich zmiennych\relax }}{21}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Wykres p-wartości dla zmiennych wybranych do procesu uczenia\relax }}{21}{figure.caption.25}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

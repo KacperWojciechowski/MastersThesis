@@ -1,7 +1,11 @@
 \chapter{Inżynieria danych eksperymentalnych i testowe szablony modeli}
 \section{Omówienie danych eksperymentalnych}
+
+W celu zestawienia funkcjonalnego bibliotek uczenia maszynowego w języku C++ i przedstawienia przykładów konieczne było wybranie danych eksperymentalnych możliwych do wykorzystania jako porównawczy punkt odniesienia. W tym celu, dla pełnego przetestowania wybranych funkcjonalności przygotowano zestaw danych do problemu klasyfikacji binarnej oraz zadania regresji.
+
+\subsection{Dane klasyfikacyjne}
 	
-	W celu zestawienia funkcjonalnego bibliotek uczenia maszynowego w języku C++ i przedstawienia przykładów konieczne było wybranie danych eksperymentalnych możliwych do wykorzystania jako porównawczy punkt odniesienia. Jako w/w dane wybrano bazę dotyczącą diagnostyki raka piersi ,,\textit{Wisconsin Diagnostic Breast Cancer}'' z listopada 1995 roku, w której zamieszczono wyniki obrazowania określone w sposób liczbowy. Autorami zestawu są Dr. Wiliam H. Wolberg, W. Nick Street oraz Olvi L. Mangasarian z Uniwersytetu Wisconsin \cite{wisconsin}. Baza ta jest dostępna do pobrania z repozytorium Uniwersytetu Californii \cite{Dua:2019}. Dane mają następującą strukturę:
+	 Jako dane klasyfikacyjne wybrano bazę dotyczącą diagnostyki raka piersi ,,\textit{Wisconsin Diagnostic Breast Cancer}'' z listopada 1995 roku, w której zamieszczono wyniki obrazowania określone w sposób liczbowy. Autorami zestawu są Dr. Wiliam H. Wolberg, W. Nick Street oraz Olvi L. Mangasarian z Uniwersytetu Wisconsin \cite{wisconsin}. Baza ta jest dostępna do pobrania z repozytorium Uniwersytetu Californii \cite{Dua:2019}. Dane mają następującą strukturę:
 	
 	\begin{enumerate}
 		\item [1)] ID - numer identyfikacyjny pacjentki;
@@ -23,11 +27,31 @@
 	
 	Dla każdej ze zmiennych odpowiedzi została zebrana średnia wartość, odcyhelenie standardowe oraz średnia trzech największych pomiarów, gdzie każdy zestaw ustawiony jest sekwencyjnie (np. kolumna 3 - średni promień, kolumna 12 - odchylenie standardowe promienia, kolumna 22 - średnia trzech największych pomiarów promienia). Każda ze zmiennych ma charakter ciągły. Zredukowany zestaw danych, zawierający jedynie zmienne decyzyjne informujące o średnich wartościach znaleźć można jako dodatek do książki ,,\textit{Biostatistics Using JMP: A Practical Guide}'' autorstwa Trevora Bihla \cite{biostatisticsJMP}.
 	
+\subsection{Dane regresyjne}
+
+	Do demonstracji problemu regresji wykorzystano zestaw danych ,,IronGlutathione'' dołączony do książki ,,Biostatistics Using JMP - A Practical Guide'' autorstwa Trevora Bihla \cite{biostatisticsJMP}, dotyczące badań nad związkiem między zawartością żelaza, a $\alpha$- i $\pi$-glutathonine-s-transferase w organiźmie człowieka. Obserwacje pochodzą z badań z 2012 roku. Zestaw posiada 90 obserwacji i składa się z 10 zmiennych:
+	
+	\begin{enumerate}
+		\item \textit{Age} - wiek badanej osoby;
+		\item \textit{Gender} - płeć osoby;
+		\item \textit{Alpha GST (ng/L)} - zawartość transferazy glutatoninowej typu $\alpha$;
+		\item \textit{pi GST (mg/L)} - zawartość transferazy glutatoninowej typi $\pi$;
+		\item \textit{transferrin (mg/mL)} - zawartość transferyny;
+		\item \textit{sTfR (mg/mL)} - zawartość rozpuszczalnego receptora transferyny;
+		\item \textit{Iron (mg/dL)} - zawartość żelaza;
+		\item \textit{TIBC (mg/dL)} - całkowita zdolność wiązania żelaza;
+		\item \textit{\%ISAF (Iron / TIBC)} - współczynnik nasycenia transferyny;
+		\item \textit{Ferritin (ng/dL)} - zawartość ferrytyny;
+	\end{enumerate} 
+	
+	Z racji na większą swobode w wyborze zmiennej odpowiedzi w przypadku danych regresyjnych, zdecydowano się na wybór ostatniej zmiennej (\textit{Ferritin (ng/dL)}) jako przewidywaną zmienną odpowiedzi. 
+	
 \section{Charakterystyka i przetwarzenie danych}
 
 	W celu przeprowadzenia procesu uczenia maszynowego, jednym z najistotniejszych kroków jakie należy podjąć jest wstępne zaznajomienie się z zestawem danych i jego analiza pod kątem rozkładu poszczególnych zmiennych oraz prawdopodobieństw. W tym celu wykorzystane zostało oprogramowanie JMP. 
 
-	\subsection{Analiza rozkładu danych}
+	\subsection{Dane klasyfikacyjne}
+	\subsubsection{Analiza rozkładu danych}
 		
 	Proces analizy rozkładu rozpoczęty został od przyjrzenia się zmiennej odpowiedzi (\textit{Diagnosis}). Rysunek \ref{fig:diagnosisdistribution} przedstawia uzyskany histogram, wraz z tabelą określającą ilość obserwacji danej klasy i współczynnik prawdopodobieństwa przynależności odpowiedzi do danej klasy. Zauważyć można, że dla użytego zestawu danych ilość zarejestrowano 357 obserwacji łagodnego raka piersi, a jego prawdopodobieństwo przynależności do klasy \textit{Benign} wynosi $\approx$ 62,7\%, natomiast do klasy \textit{Malignant} przynależało 212 obserwacji z prawodpodobieństwem $\approx$ 37,3\%.
 		
@@ -48,7 +72,7 @@
 	\end{figure}
 	
 	
-	\subsection{Czyszczenie i normalizacja rozkładu danych}
+	\subsubsection{Czyszczenie i normalizacja rozkładu danych}
 	
 	Na pełny zestaw danych składa się 569 obserwacji. Podczas wstępnej analizy stwierdzono istnienie 13 brakujących wartości dla regresora \textit{Std err concave points}, dla których przyjęto wartość średnią z całej kolumny. Głównym problemem okazały się obserwacje odstające oraz skośności rozkładu. Do analizy obserwacji odstających wykorzystano wykresy okienkowe, gdzie oś Y reprezentowała zmienną odpowiedzi, natomiast oś X czyszczoną zmienną decyzyjną. Przykładowy wykres został przedstawiony na rysunku \ref{fig:boxgraph}. Ze względu na bardzo małą ilość obserwacji zdecydowano się rozpocząć proces przystosowywania danych do uczenia poprzez normalizację ich rozkładu, aby zminimalizować lub wyeliminować konieczność usunięcia danych odstających. 
 	
@@ -85,8 +109,6 @@
 		\caption{Porównanie rozkładu danych przed i po transformacji logarytmicznej.}
 		\label{fig:log}
 	\end{figure}
-	
-	\newpage
 
 	W drugim kroku podjęto próbę wykorzystania transformacji pierwiastkiem sześciennym dla pozostałych zmiennych decyzyjych, ze względu na jej skuteczność dla danych o rozkładzie prawoskośnym. Rysunek \ref{fig:cuberoot}. przedstawia porównanie rozkładu zmiennej \textit{Mean concavity} przed i po transfromacji pierwiastkiem sześciennym. Pomyślnie znormalizowano rozkład następujących zmiennych:
 	
@@ -110,7 +132,6 @@
 
 	Ostatecznym krokiem okazało się zastosownie odwrotnej transformacji Arrheniusa, Niestety część z uzyskanych zmodyfikowanych zmiennych decyzyjnych zachowała częściowy skośny rozkład, jednak inne przetestowane transformacje, jak m.in. pierwiastek kwadratowy, potęga kwadratowa, logarytm x+1, logarytm dziesiętny, funkcja potęgowa, funkcja wykładnicza, przyniosły rezultaty porównywalne lub gorsze od uzyskanego w wyniku w/w odwrotnej transformacji Arrheniusa. Rysunek \ref{fig:arrhenius} przedstawia porównanie uzyskanych rozkładów.
 	
-	\newpage
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=0.7\linewidth]{Rysunki/Rozdzial3/arrhenius}
@@ -118,15 +139,101 @@
 		\label{fig:arrhenius}
 	\end{figure}
 	
-	Ze względu na bardzo małą ilość obserwacji, zdecydowano się na zachowanie wszystkich obserwacji odstających, aby zapobiec utracie informacji i zmianie uzyskanych w procesie normalizacji rozkładów.
+	Ze względu na bardzo małą ilość obserwacji, zdecydowano się na zachowanie wszystkich obserwacji odstających, aby zapobiec utracie informacji i zmianie uzyskanych w procesie normalizacji rozkładów. W celu zachowania kompatybilności z bibliotekami omawianymi w niniejszej pracy, przekodowano zmienną odpowiedzi na wartości liczbowe.
+
+	\subsection{Dane regresyjne}
+	
+	\subsubsection{Analiza rozkładu danych}
+	
+	Podobnie jak w przypadku danych klasyfikacyjnych, analizę rozpoczęto od zapoznania się z rozkładem wybranej zmiennej odpowiedzi. Zauważono że posiada ona rozkład skrajnie prawostronny, co przedstawiono na rysunku \ref{fig:ferritin}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=0.5\linewidth]{Rozdzial3/ferritin}
+		\caption{Wykres rozkładu zmiennej odpowiedzi dla zestawu regresyjnego}
+		\label{fig:ferritin}
+	\end{figure}
+	
+	Na wykresie okienkowym zawartym nad histogramem rozkładu zauważyć można wystąpienie dwóch obserwacji odstających. Podczas dalszej analizy, spostrzeżono podobny problem w przypadku zmiennych \textit{\%ISAF}, \textit{Iron}, \textit{sTfR}, \textit{Transferrin} oraz szczególnie \textit{Alpha GST}. Pozostałe zmienne charakteryzują się rozkładem zbliżonym do krzywej Gaussa, nie posiadając obserwacji zaklasyfikowanych jako odstające. Rysunek \ref{fig:decision} przedstawia dwa przykładowe histogramy rozkładów zmiennych decyzyjnych.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=0.6\linewidth]{Rozdzial3/decision}
+		\caption{Przykłady rozkładu zmiennej decyzyjnej cz. 1}
+		\label{fig:decision}
+	\end{figure}
+
+	\newpage
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=0.6\linewidth]{Rozdzial3/decision1}
+		\caption{Przykład rozkładu zmiennej decyzyjnej cz. 2}
+		\label{fig:decision1}
+	\end{figure}
+
+	Pojedyncza zmienna - \textit{Gender} - posiada dychotomiczny charakter, aczkolwiek okazuje się relatywnie bardzo zrównoważona, posiadając rozkład na poziomie przynależności w 46,7\% do klasy F reprezentującej kobiety oraz 53,3\% do klasy M odpowiadającej mężczyznom. Rozkład tej zmiennej przedstawiono na rysunku \ref{fig:mnf}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=0.6\linewidth]{Rozdzial3/mnf}
+		\caption{Rozkład zmiennej Gender}
+		\label{fig:mnf}
+	\end{figure}
+	
+	\subsubsection{Czyszczenie i normalizacja rozkładu danych}
+	
+	W trakcie przeglądu obserwacji, zauważono pojedynczą obserwację z brakującą wartością zmiennej \textit{Ferritin}. Ze względu na wystąpienie tylko jednego takiego wpisu na 85 obserwacji, zdecydowano się na usunięcie jej. Pozostałymi kwestiami wymagającymi zaadresowania okazała się normalizacja rozkładu części zmiennych i decyzja o działaniu względem wartości odstających.
+	
+	W celu zmniejszenia ilości obserwacji odstających, postanowiono rozpocząć następny etap od problemu normalizacji rozkładu. Następujące zmienne, ze względu na ich obecną charakterystykę nie zostały poddane żadnym przekształceniom:
+	
+	\begin{enumerate}
+		\item \textit{Age};
+		\item \textit{Gender};
+		\item \textit{TIBC}.
+	\end{enumerate}
+
+	Dla pozostałych zmiennych decyzyjnych zastosowano trzy rodzaje transformacji opisanych w sekcji omawiających dane klasyfikacyjne. Pierwszą z nich była obliczenie logarytmu z wartości zmiennej, które przyniosło zadowalający efekt dla zmiennych:
+	
+	\begin{enumerate}
+		\item \textit{alpha GST};
+		\item \textit{pi GST};
+		\item \textit{sTfR};
+		\item \textit{Ferritin} (zmienna odpowiedzi).
+	\end{enumerate}
+
+	Rysunek \ref{fig:log2} przedstawia przykład uzyskanej zmiany rozkładu dla zmiennej odpowiedzi.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Rozdzial3/log2}
+		\caption{Wpływ transformacji logarytmicznej na rozkład zmiennej odpowiedzi}
+		\label{fig:log2}
+	\end{figure}
+
+	Drugą transformacją o zadowalających wynikach okazało się zastosowanie pierwiastka kwadratowego, co pokazano na rysunku \ref{fig:cube2}. Wykorzystano ją do normalizacji rozkładu zmiennych:
+	
+	\begin{enumerate}
+		\item \textit{Transferrin};
+		\item \textit{Iron};
+		\item \textit{\%ISAF}.
+	\end{enumerate}
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{Rozdzial3/cube2}
+		\caption{Normalizacja rozkładu za pomocą transformacji pierwiastkiem kwadratowym.}
+		\label{fig:cube2}
+	\end{figure}
+
+	Transformacja odwrotnym wzorem Arrheniusa okazała się nieskuteczna na wszystkich zmiennych, uzyskując gorsze efekty niż pozostałe przedstawione wyżej metody. Z racji na niewielką ilość obserwacji, oraz stosunkowo małą liczbę wartości odstających, zdecydowano się na pozostawienie ich do procesu uczenia. W celu kompatybilności z omawianymi bibliotekami, przekodowano zmienną dychotomiczną na wartości liczbowe.
 
 \section{Szablony docelowych modeli dla zadanych danych eksperymentalnych}
 
-Ze względu na dychotomiczny charakter zmiennej odpowiedzi, wybrany został przedstawiony poniżej zestaw metod dla których wykonano i przedstawiono testy praktyczne. Szablony struktury rozwiązań, takie jak np. wybór zmiennych uczestniczących w procesie uczenia, lub struktura sieci neuronowej zostały ustalone w sposób empiryczny z wykorzystaniem programu do uczenia maszynowego JMP. 
+W trakcie analizy zestawów danych wybrany został przedstawiony poniżej zestaw metod dla których wykonano i podsumowano testy praktyczne. Szablony struktury rozwiązań, takie jak np. wybór zmiennych uczestniczących w procesie uczenia, lub struktura sieci neuronowej zostały ustalone w sposób empiryczny z wykorzystaniem programu do uczenia maszynowego JMP. 
 
 \subsection{Regresja logistyczna}
 
-Badanie zależności w modelu regresji logistycznej odbyło się z wykorzystaniem wykresu wpływu zmiennej decyzyjnej na zmienną odpowiedzi opartego o p-wartość. Jako próg pozwalający na odrzucenie hipotezy zerowej (hipotezy o braku wypływu zmiennej na odpowiedź) przyjęto 0.05 jednostek. Rysunek \ref{fig:pvalue1} przedstawia w/w wykres wraz z p-wartościami dla poszczególnych zmiennych. Zauważyć można, że dla części zmiennych nie została wyznaczona p-wartość -- oznacza to, że część zmiennych jest ze sobą skorelowanych.
+Badanie zależności w modelu regresji logistycznej odbyło się z wykorzystaniem wykresu wpływu zmiennej decyzyjnej na zmienną odpowiedzi opartego o p-wartość. Jako próg pozwalający na odrzucenie hipotezy zerowej (hipotezy o braku wypływu zmiennej na odpowiedź) przyjęto 0,05 jednostek. Rysunek \ref{fig:pvalue1} przedstawia w/w wykres wraz z p-wartościami dla poszczególnych zmiennych. Zauważyć można, że dla części zmiennych nie została wyznaczona p-wartość -- oznacza to, że część zmiennych jest ze sobą skorelowanych.
 
 Pierwszym krokiem w wybraniu istotnych zmiennych było usunięcie zmiennych skorelowanych, drugim natomiast stopniowe usuwanie zmiennych o p-wartości powyżej określonego progu. Rysunek \ref{fig:pvalue2} przedstawia listę wraz z wykresem kolumnowym istotnych regresorów. Ich lista, wraz z odpowiadającymi im p-wartościami została umieszczona w tabeli \ref{lin_reg:1}.
 
@@ -258,3 +365,58 @@ Do predykcji diagnozy wykorzystano ten sam zestaw regresorów, zawartych w tabel
 \end{figure}
 
 Utworzony w ten sposób model posiada generalizowaną statystykę $R^{2}$ na poziomie 0.97161 dla zestawu walidacyjnego, i uzyskał wskaźnik błędnej klasyfikacji wynoszący 0\% dla danych testowych, oraz 1,3\% dla danych uczących. Tabela \ref{svm:1} przedstawia wartości X dla poszczególnych regresorów. Rysunki \ref{fig:rocsvm1test} oraz \ref{fig:rocsvm1val} przedstawiają krzywe charakterystyczne odbiornika dla uzyskanego modelu.
+
+\subsection{Regresja liniowa}
+
+Podobnie jak w przypadku regresji logistycznej, do ustalenia które z regresorów mają największy wpływ na zmienną odpowiedzi zastosowano wykres wpływu poszczególnych zmiennych oparty o p-wartość. Jako próg zaakceptowania parametru do procesu uczenia zdecydowano się na wybranie p-wartości wynoszących poniżej 0,05 jednostek. Rysunek \ref{fig:pvalue3} przedstawia wykres dla wszystkich zmiennych, natomiast rysunek \ref{fig:pvalue4} ukazuje wykres zawierający jedynie wybrane zmienne. 
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\linewidth]{Rozdzial3/pvalue3}
+	\caption{Wykres p-wartości dla wszystkich zmiennych}
+	\label{fig:pvalue3}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\linewidth]{Rozdzial3/pvalue4}
+	\caption{Wykres p-wartości dla zmiennych wybranych do procesu uczenia}
+	\label{fig:pvalue4}
+\end{figure}
+
+W procesie eliminacji regresorów o p-wartości przekraczającej wybrany próg akceptacji, wybrano następujące zmienne do procesu uczenia:
+
+\begin{table}[!ht]
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\begin{tabular}{l|c}
+			Nazwa zmiennej & p-wartość \\
+			\hline
+			\textit{Gender} & 0.00002 \\
+			\textit{TIBC} & 0.00066 \\
+			\textit{Cube Root Iron} & 0.00667 \\
+			\textit{Cube Root \%ISAF} & 0.01223 \\
+			\textit{Age} & 0.02059
+		\end{tabular}
+		\caption{Wybrane zmienne decyzyjne i ich p-wartości}
+		\label{pvalue}
+	\end{minipage}%
+	\hspace{0.04\textwidth}
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\begin{tabular}{l|c}
+			Nazwa zmiennej & waga \\
+			\hline
+			\textit{Intercept} & 8,498959 \\
+			\textit{Age} & 0.0201022 \\
+			\textit{Gender[F - M]} & -0.959795 \\
+			\textit{Cube Root Iron} & 2,9461861 \\
+			\textit{TIBC} & -0.014182 \\
+			\textit{Cube Root \%ISAF} & -4,356345
+		\end{tabular}
+		\caption{wartości wag zmiennych decyzyjnych}
+		\label{weights}		
+	\end{minipage}
+\end{table}
+
+W wyniku uczenia uzyskano model którego wartość metryki \textit{$R^2$} wyniosła 0.4654525, co sugeruje że dane są słabo aproksymowalne liniowo. Tabela \ref{weights} przedstawia nauczone wagi poszczególnych regresorów.
