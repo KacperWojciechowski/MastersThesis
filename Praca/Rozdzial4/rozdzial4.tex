@@ -16,25 +16,27 @@ Podstawową klasą pozwalającą na załadowanie danych do biblioteki Shogun jes
 	\item \textbf{Liczby rzeczywiste powinny być zapisywane z użyciem kropki jako separatora dziesiętnego} - wynika to ze specyfiki języka C++ (jak i wielu innych języków), że domyślne mechanizmy wymuszają użycie kropki jako separatora dziesiętnego, i oczekują jej w przypadku parsowania liczby rzeczywistej z postaci ciągu znakowego odczytanego z pliku, do postaci wartości liczbowej.
 \end{itemize} 
 
-Do odczytu i parsowania danych z pliku CSV wykorzystywana jest klasa \textit{shogun::CCSVFile}, której wynik następnie ładowany jest do klasy \textit{shogun::SGMatrix}. Ze względu na zapis odczytanych danych w kolejności według kolumn. do wykorzystania ich w procesie uczenia konieczna jest transpozycja, a następnie rozdzielenie macierzy na dwie części, z których jedna zawiera regresory, a druga wartości zmiennej odpowiedzi. Przykładowy fragment kodu realizujący to zadanie zamieszczony został na listingu \ref{shogun:csv}.
+Do odczytu i parsowania danych z pliku CSV wykorzystywana jest klasa \textit{shogun::CCSVFile}, której wynik następnie ładowany jest do klasy \textit{shogun::SGMatrix}. Ze względu na zapis odczytanych danych w kolejności według kolumn. do wykorzystania ich w procesie uczenia konieczna jest transpozycja, a następnie rozdzielenie macierzy na dwie części, z których jedna zawiera regresory, a druga wartości zmiennej odpowiedzi. Przykładowy fragment kodu realizujący to zadanie zamieszczony został na listingu \ref{shogun:csv}. Po prawidłowym rozgraniczeniu fragmentów danych, należy przeprowadzić ponowną transpozycję do postaci akceptowalnej przez algorytmy uczenia, oraz obudować dane klasami na których operują docelowe metody uczenia, takimi jak \textit{CDenseFeatures}, \textit{CMulticlassLabels} czy \textit{CRegressionLabels}, co zostało ukazane na listingu \ref{shogun:csv2}.
 
-\cppcode{Rozdzial4/shogun-csv.cpp}{Przykładowy program do odczytu i przygotowania danych z pliku CSV dla biblioteki Shogun \cite{handsOnMachineLearning}}{shogun:csv}
+\cppcode{Result/inc/shogun/csv.hpp}{Przykładowa funkcja do odczytu i przygotowania danych z pliku CSV dla biblioteki Shogun}{shogun:csv}
+
+\cppcode{Result/inc/shogun/shogunModels.hpp}{Funkcja przepakowujące dane do kontenerów docelowych}{shogun:csv2}
 
 \section{Metody przetwarzania i eksploracji danych}
 
 \subsection{Normalizacja}
 
      
-Biblioteka dostarcza możliwość normalizacji typu min-max, zapewniając że dane mieścić się będą w przedziale jednostkowym, za pomocą klasy \textit{shogun::CRescaleFeatu-res}. W przypadku niektórych algorytmów oferowanych przez Shogun, normalizacja jest jednym z pierwszych wykonywanych kroków, w związku z czym nie zawsze jest potrzeba wykonania jej we wstępnym przetwarzaniu. Informacja o takim przypadku powinna być zawarta w dokumentacji danej metody. Klasa pozwala na ponowne wykorzystanie dla danych o tych samych nauczonych zmiennych statystycznych. Klasa \textit{shogun::CReslaceFeatures} posiada dwie główne metody:
+Biblioteka dostarcza możliwość normalizacji typu min-max, zapewniając że dane mieścić się będą w przedziale jednostkowym, za pomocą klasy \textit{shogun::CRescaleFeatu-res}. Klasa pozwala na ponowne wykorzystanie dla danych o tych samych nauczonych zmiennych statystycznych. Posiada ona dwie główne metody:
 
 \begin{itemize}
 	\item \textit{fit()} - pozwalającą na nauczenie normalizatora statystyk danych;
 	\item \textit{transform()} - pozwalającą na normalizację obserwacji.
 \end{itemize}
 
-Listing \ref{shogun:normalizer} pokazuje jak wykorzystać wyżej wspomnianą klasę do zrealizowania normalizacji.
+W przypadku niektórych algorytmów oferowanych przez Shogun, normalizacja jest jednym z pierwszych wykonywanych kroków, w związku z czym nie zawsze jest potrzeba wykonania jej we wstępnym przetwarzaniu. Informacja o takim przypadku powinna być zawarta w dokumentacji danej metody. Listing \ref{shogun:normalizer} pokazuje jak wykorzystać wyżej wspomnianą klasę do zrealizowania normalizacji. Zarówno przedstawiona klasa jak i funkcja zawarta na listingu realizują normalizację w miejscu zapisu macierzy regresorów, w związku z czym nie ma potrzeby nadpisywania elementy ją przechowującego.
 
-\cppcode{Rozdzial4/shogun-normalizer.cpp}{Przykład wykonania normalizacji \cite{handsOnMachineLearning}}{shogun:normalizer}
+\cppcode{Result/inc/shogun/rescale.hpp}{Przykład funkcji wykonującej normalizację}{shogun:normalizer}
 
 \subsection{Redukcja wymiarowości}
 
@@ -50,9 +52,9 @@ Shark udostępnia użytkownikowi kilka rodzajów algorytmów redukcji wymiarowo�
 	\item \textbf{t-SNE} - klasa \textit{CTDistributedStochasticNeighborEmbedding}.
 \end{itemize}
 
-Każda z powyższych klas operuje poprzez poprzednie nauczenie się parametrów danych uczących metodą \textit{fit()} oraz ustawienie docelowej ilości wymiarów (z wyjątkiem kernel PCA i ISA). Nauczony obiekt reduktora można wykorzystać do redukcji wymiarowości danych poprzez metodę \textit{transform()}, której wynik należy zrzutować na wskaźnik na CDenseFeatures. Listing \ref{shogun:reduction} przedstawia sposób wykonania redukcji na przykładzie klasy \textit{CKernelPCA}.
+Każda z powyższych klas operuje poprzez poprzednie nauczenie się parametrów danych uczących metodą \textit{fit()} oraz ustawienie docelowej ilości wymiarów (z wyjątkiem ICA). Nauczony obiekt reduktora można wykorzystać do redukcji wymiarowości danych poprzez metodę \textit{apply\char`_to\char`_feature\char`_vector()} zwracającą przetworzony wektor, lub w przypadku ICA, Analizy Składowych oraz t-SNE metodę \textit{transform()}, której wynik należy zrzutować na wskaźnik na CDenseFeatures. Niestety wykorzystanie któregokolwiek z reduktorów wiąże się z koniecznością utworzenia nowej kopii obiektu w procesie transformacji, zamiast wykonania przekształceń w miejscu. Listing \ref{shogun:reduction} przedstawia sposób wykonania redukcji na przykładzie klasy \textit{CKernelPCA}.
 
-\cppcode{Rozdzial4/shogun-kernelpca.cpp}{Przykład redukcji wymiarowości z wykorzystaniem metody Kernel PCA \cite{handsOnMachineLearning}}{shogun:reduction}
+\cppcode{Result/inc/shogun/pca_reduction.hpp}{Przykład redukcji wymiarowości z wykorzystaniem metody Kernel PCA \cite{handsOnMachineLearning}}{shogun:reduction}
 
 \subsection{Regularyzacja L1 i L2}
 
