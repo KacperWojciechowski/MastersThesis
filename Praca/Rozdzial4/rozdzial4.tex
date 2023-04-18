@@ -64,23 +64,23 @@ W przypadku biblioteki Shogun, regularyzacja stanowi integralną część modelu
 \subsection{Regresja liniowa}
 Jednym z podstawowych algorytmów uczenia maszynowego udostępnianych przez bibliotekę Shogun jest regresja liniowa, realizowana za pomocą klasy \textit{CLinearRidgeRegression}. Polega ona na dekompozycji macierzy Choleskiego \cite{handsOnMachineLearning}, wykorzystując podejście nie-iteracyjne. Jak wskazuje nazwa, metoda ta posiada wbudowaną regularyzację L2 (Ridge), której konfiguracja odbywa się podczas tworzenia obiektu modelu. Listing \ref{shogun:linear} przedstawia sposób wykonania regresji liniowej z pomocą Shogun.
 
-\cppcode{Rozdzial4/shogun-linear.cpp}{Przykład regresji liniowej w Shogun \cite{handsOnMachineLearning}}{shogun:linear}
+\cppcode{Result/inc/shogun/linear.hpp}{Przykład regresji liniowej w Shogu}{shogun:linear}
 
 \subsection{Regresja logistyczna}
-Biblioteka Shogun zawiera implementację wieloklasowej regresji logistycznej w postaci gotowego obiektu klasy \textit{CMulticlassLogisticRegression}. Posiada ona wbudowaną konfigurowalną regularyzację. Listing \ref{shogun:logistic} przedstawia sposób użycia wspomnianej klasy opisany w książce ,,Hands On Machine Learning'' \cite{handsOnMachineLearning}, wykorzystując dodatkowo mechanizm sprawdzianu krzyżowego do wyboru hiperparametrów, który opisany jest w dalszej części pracy.
+Biblioteka Shogun zawiera implementację wieloklasowej regresji logistycznej w postaci gotowego obiektu klasy \textit{CMulticlassLogisticRegression}. Posiada ona wbudowaną konfigurowalną regularyzację. Listing \ref{shogun:logistic} przedstawia sposób użycia wspomnianej klasy.
 
-\cppcode{Rozdzial4/shogun-logistic.cpp}{Przykład regresji logistycznej z użyciem sprawdzianu krzyżowego \cite{handsOnMachineLearning}}{shogun:logistic}
+\cppcode{Result/inc/shogun/logistic.hpp}{Przykład regresji logistycznej}{shogun:logistic}
 
 \subsection{Maszyna wektorów nośnych}
-Podobnie jak w przypadku regresji logistycznej, w bibliotece Shogun dostępna jest implementacja wieloklasowej klasyfikacji z wykorzystaniem maszyny wektorów nośnych, w postaci klasy \textit{CMulticlassLibSVM}. Posiada ona szereg dostępnych do konfiguracji parametrów, i umożliwia wybór zastosowanego jądra użytkownikowi. Listing \ref{shogun:svm} prezentuje jak wykorzystać wymienioną klasę wraz z doborem parametrów \cite{handsOnMachineLearning}.
+Podobnie jak w przypadku regresji logistycznej, w bibliotece Shogun dostępna jest implementacja wieloklasowej klasyfikacji z wykorzystaniem maszyny wektorów nośnych, w postaci klasy \textit{CMulticlassLibSVM}. Posiada ona szereg dostępnych do konfiguracji parametrów, i umożliwia wybór zastosowanego jądra użytkownikowi. Listing \ref{shogun:svm} prezentuje jak wykorzystać wymienioną klasę.
 
-\cppcode{Rozdzial4/shogun-svm.cpp}{Przykład użycia maszyny wektorów nośnych \cite{handsOnMachineLearning}}{shogun:svm}
+\cppcode{Result/inc/shogun/svm.hpp}{Przykład użycia maszyny wektorów nośnych}{shogun:svm}
 
 \subsection{Algorytm K najbliższych sąsiadów}
 
 Algorytm K najbliższych sąsiadów dostępny jest pod postacią klasy \textit{CKNN}. Umożliwia on wybranie sposobu obliczania dystansu poprzez przekazanie obiektu odpowiedniej klasy, oraz ilości najbliższych sąsiadów. Głównymi z dostępnych typów dystansów są dystans Euklidesa, Hamminga, Manhatanu oraz podobieństwo kosinusowe. W porównaniu do poprzednich metod, nie wymaga on ustawiania hiperparametrów, dzięki czemu można z niego bezproblemowo korzystać bez sprawdzianu krzyżowego. Listing \ref{shogun:knn} pokazuje przykład konfiguracji i użycia algorytmu kNN z użyciem dystansu Euklidesa.
 
-\cppcode{Rozdzial4/shogun-knn.cpp}{Przykład algorytmu kNN w Shogun \cite{handsOnMachineLearning}}{shogun:knn}
+\cppcode{Result/inc/shogun/knn.hpp}{Przykład algorytmu kNN w Shogun}{shogun:knn}
 
 \subsection{Algorytm zbiorowy}
 \subsubsection{Wzmacnianie gradientu}
@@ -96,7 +96,7 @@ Implementacja algorytmu zbiorowego z wykorzystaniem metody wzmacniania gradientu
 
 Listing \ref{shogun:gb} przedstawia sposób implementacji powyższej metody z wykorzystaniem binarnego drzewa decyzyjnego regresji i klasyfikacji (implementowanego przez klasę \textit{CCARTree}) jako algorytm bazowy. 
 
-\cppcode{Rozdzial4/shogun-gb.cpp}{Przykład użycia metody wzmacniania gradientu \cite{handsOnMachineLearning}}{shogun:gb}
+\cppcode{Result/inc/shogun/gb.hpp}{Przykład użycia metody wzmacniania gradientu}{shogun:gb}
 
 \subsubsection{Losowy las}
 Metoda losowego lasu dostępna jest w bibliotece Shogun poprzez użycie klasy \textit{CRandomForest}. W przeciwieństwie do wzmacniania gradientu, implementacja tej metody pozwala także na wykonywanie klasyfikacji. Do głównych konfigurowalnych parametrów należą:
@@ -128,11 +128,9 @@ Pierwszym krokiem tworzenia sieci neuronowej dla niniejszej biblioteki jest skon
 
 Kolejność wywoływania powyższych metod jest istotna, ponieważ decyduje ona o kolejności warstw w modelu. Po zakończeniu konfiguracji, możliwe jest utworzenie obiektu zatwierdzonej architektury za pomocą funkcji \textit{done()}, a następnie wykorzystanie go do inicjalizacji klasy \textit{CNeuralNetwork}. W celu połączenia warstw, należy wywołać na obiekcie sieci neuronowej funkcję \textit{quick\char`_connect} oraz zainicjalizować wagi metodą \textit{initialize\char`_neural\char`_network}. Może ona przyjąć parametr określający rozkład Gaussa używany do inicjalizacji parametrów.
 
-Następnym krokiem jest skonfigurowanie optymalizatora za pomocą metody \textit{set\char`_optimization}. Klasa \textit{CNeuralNetwork} wspiera optymalizację z wykorzystaniem metody spadku gradientu oraz Broydena-Fletchera-Goldfarba-Shannona. Sieć neuronowa posiada wbudowaną regularyzację L2, którą można skonfigurować, podobnie jak pozostałe parametry takie jak współczynnik uczenia, ilość epok, kryterium zbieżności dla funkcji straty, czy wielkość zestawów \textit{batch}. Niestety, niemożliwy jest wybór funkcji straty, gdyż jest on dokonywany automatycznie na podstawie typu zmiennej odpowiedzi. Listing \ref{shogun:nn} przedstawia pełny proces budowania, konfiguracji oraz uczenia sieci.
+Następnym krokiem jest skonfigurowanie optymalizatora za pomocą metody \textit{set-\char`_optimization}. Klasa \textit{CNeuralNetwork} wspiera optymalizację z wykorzystaniem metody spadku gradientu oraz Broydena-Fletchera-Goldfarba-Shannona. Sieć neuronowa posiada wbudowaną regularyzację L2, którą można skonfigurować, podobnie jak pozostałe parametry takie jak współczynnik uczenia, ilość epok, kryterium zbieżności dla funkcji straty, czy wielkość zestawów \textit{batch}. Niestety, niemożliwy jest wybór funkcji straty, gdyż jest on dokonywany automatycznie na podstawie typu zmiennej odpowiedzi. Listing \ref{shogun:nn} przedstawia pełny proces budowania, konfiguracji oraz uczenia sieci.
 
 \cppcode{Rozdzial4/shogun-nn.cpp}{Przykład użycia sieci neurnowej \cite{handsOnMachineLearning}}{shogun:nn}
-
-\subsection{Brzegowa regresja jądra ?}
 
 \section{Metody analizy modeli}
 

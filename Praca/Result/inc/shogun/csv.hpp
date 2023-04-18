@@ -45,7 +45,7 @@ inline Dataset readShogunCsvData(std::string filename, LabelPos labelPos)
     };
     // ponowna transpozycja do positaci docelowej dla algorytmów uczących
     // (operowanie na wierszach)
-    Matrix::transpose_matrix(ret.inputs.matrix, ret.inputs.num_rows, 
+    Matrix::transpose_matrix(ret.inputs.matrix, ret.inputs.num_rows,
                              ret.inputs.num_cols);
     return ret;
 }
