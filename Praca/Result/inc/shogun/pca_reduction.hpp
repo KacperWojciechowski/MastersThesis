@@ -1,7 +1,8 @@
 #pragma once
 
-inline void KernelPCA(shogun::Some<CDenseFeatures<float64_t>> inputs,
-                      const int target_dim)
+inline void KernelPCA(
+    shogun::Some<shogun::CDenseFeatures<float64_t>> inputs,
+    const int target_dim)
 {
     using namespace shogun;
 

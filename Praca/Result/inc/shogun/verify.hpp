@@ -40,7 +40,7 @@ inline auto shogunVerifyModel(auto predictions, auto targets, Task task)
     std::cout << "R^2 = " << r_square << std::endl << std::endl;
     if (task == CLASSIFICATION)
     {
-        auto roc = some<ROCEvaluation>();
+        auto roc = some<CROCEvaluation>();
         roc->evaluate(predictions, targets);
         std::cout << "AUC ROC = " << roc->get_auROC() << std::endl;
     }

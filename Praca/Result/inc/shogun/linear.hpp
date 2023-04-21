@@ -9,8 +9,9 @@
 #include <shogun/labels/RegressionLabels.h>
 #include <shogun/regression/LinearRidgeRegression.h>
 
-inline void shogunLinear(shogun::Some<CDenseFeatures<float64_t>>& inputs,
-                         shogun::Some<CRegressionLabels>& outputs)
+inline void shogunLinear(
+    shogun::Some<shogun::CDenseFeatures<float64_t>>& inputs,
+    shogun::Some<shogun::CRegressionLabels>& outputs)
 {
     using namespace shogun;
 

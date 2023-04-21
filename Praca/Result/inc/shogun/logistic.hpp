@@ -9,8 +9,9 @@
 #include <shogun/multiclass/MulticlassLogisticRegression.h>
 
 
-inline void shogunLogistic(shogun::Some<CDenseFeatures>& inputs,
-                           shogun::Some<CMulticlassLabels>& outputs)
+inline void shogunLogistic(
+    shogun::Some<shogun::CDenseFeatures>& inputs,
+    shogun::Some<shogun::CBinaryLabels>& outputs)
 {
     using namespace shogun;
 

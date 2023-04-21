@@ -12,8 +12,9 @@
 #include <shogun/machine/StochasticGBMachine.h>
 #include <shogun/multiclass/tree/CARTree.h>
 
-inline void shogunGradientBoost(shogun::Some<CDenseFeatures>& inputs,
-                                shogun::Some<CMulticlassLabels>& outputs)
+inline void shogunGradientBoost(
+    shogun::Some<shogun::CDenseFeatures>& inputs,
+    shogun::Some<shogun::CMulticlassLabels>& outputs)
 {
     using namespace shogun;
 

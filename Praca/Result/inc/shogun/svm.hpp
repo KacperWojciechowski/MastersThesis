@@ -9,8 +9,8 @@
 #include <shogun/kernel/GaussianKernel.h>
 #include <shogun/multiclass/MulticlassLibSVM.h>
 
-inline void shogunSVM(shogun::Some<CDenseFeatures>& inputs,
-                      shogun::Some<CMulticlassLabels>& outputs)
+inline void shogunSVM(shogun::Some<shogun::CDenseFeatures>& inputs,
+                      shogun::Some<shogun::CBinaryLabels>& outputs)
 {
     using namespace shogun;
 
@@ -36,10 +36,10 @@ inline void shogunSVM(shogun::Some<CDenseFeatures>& inputs,
     // ewaluacja modelu
     std::cout << "----- Shogun SVM -----" << std::endl;
     std::cout << "Train:" << std::endl;
-    auto prediction = wrap(svm->apply_multiclass(trainInputs));
+    auto prediction = wrap(svm->apply_binary(trainInputs));
     shogunVerifyModel(prediction, trainOutputs, Task::CLASSIFICATION);
 
     std::cout << "Test:" << std::endl;
-    prediction = wrap(svm->apply_multiclass(testInputs));
+    prediction = wrap(svm->apply_binary(testInputs));
     shogunVerifyModel(prediction, testOutputs, Task::CLASSIFICATION);
 }

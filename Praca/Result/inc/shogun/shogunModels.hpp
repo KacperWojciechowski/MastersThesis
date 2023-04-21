@@ -21,8 +21,8 @@ inline void shogunModels()
         some<CDenseFeatures<float64_t>>(
             classificationDatasetTemp.inputs);
     auto classificationLabels =
-        wrap(new CMulticlassLabels(
-            classificationDatasetTemp.outputs.get_column(0)));
+        some<CBinaryLabels>(
+            classificationDatasetTemp.outputs);
     auto regressionFeatures =
         some<CDesneFeatures<float64_t>>(
             regressionDatasetTemp.inputs);
