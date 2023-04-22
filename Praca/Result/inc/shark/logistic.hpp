@@ -1,23 +1,26 @@
 #pragma once
 
-inline void sharkLogisticRegression(const shark::ClassificationDataset& trainData,
-                             const shark::ClassificationDataset& testData)
+#include <iostream>
+
+inline void sharkLogistic(const shark::ClassificationDataset& trainData,
+                          const shark::ClassificationDataset& testData)
 {
+    using namespace shark;
+
     // utworzenie modelu
-    shark::LinearClassifier<RealVector> logisticModel;
-    shark::LogisticRegression<RealVector> trainer;
-    
-    // wytrenowanie
+    LinearClassifier<RealVector> logisticModel;
+    LogisticRegression<RealVector> trainer;
+    // trening
     trainer.train(logisticModel, trainData);
-
     // ewaluacja
-    auto trainPredictions = logisticModel(trainData.inputs());
-    auto testPredictions = logisticModel(testData.inputs());
-
     std::cout << "-----Shark Logistic Regression-----" << std::endl;
     std::cout << "Train data model evaluation:" << std::endl;
-    printSharkModelEvaluation(trainData.labels(), trainPredictions);
+    auto predictions = logisticModel(trainData.inputs());
+    printSharkModelEvaluation(
+        trainData.labels(), predictions, Task::CLASSIFICATION);
 
     std::cout << "Test data model evaluation:" << std::endl;
-    printSharkModelEvaluation(testData.labels(), testPredictions); 
+    predictions = logisticModel(testData.inputs());
+    printSharkModelEvaluation(
+        testData.labels(), predictions, Task::CLASSIFICATION); 
 }

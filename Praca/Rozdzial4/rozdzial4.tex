@@ -148,7 +148,9 @@ Realizacja obliczania średniego błędu absolutnego dla biblioteki Shogun dokon
 
 \subsection{Logarytmiczna funkcja straty}
 
+Logarytmiczna funkcja straty jest możliwa do obliczenia z wykorzystaniem biblioteki Shogun przy użyciu klasy \textit{CLogLoss}, jednak udostępniane przez nią metody wskazują że powinna być wykorzystywana przez model, a nie bezpośrednio przez użytkownika. Udostępnia ona metodę \textit{get\char`_square\char`_grad()} pozwalającą na obliczenie kwadratu gradientu między zadaną predykcją a docelowym wynikiem. Sposób użycia tej metody zaprezentowano na listingu \ref{shogun:log}
 
+\cppcode{Rozdzial4/shogun-log.cpp}{Przykład użycia klasy \textit{CLogLoss}}{shogun:log}
 
 \subsection{Metryka $R^2$}
 

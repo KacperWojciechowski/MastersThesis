@@ -6,10 +6,10 @@ Shark-ML to biblioteka uczenia maszynowego dedykowana dla języka C++. Posiada o
 
 \section{Formaty źródeł danych}
 
-Biblioteka operuje na własnych reprezentacjach macierzy i wektorów, które tworzone są poprzez opakowywanie surowych tablic za pomocą specjalnych adapterów, jak np. \textit{remora::dense\char`_matrix\char`_adaptor<>()} lub za pomocą kontenerów biblioteki standardowej C++ i funkcji \textit{createDataFromRange()}. Mechanizm ten jest identyczny jak w przypadku pozostałych z omawianych bibliotek, co daje użytkownikowi dużą dowolność co do sposobu przechowywania danych i mechanizmu ich odczytywania. Posiada ona także dedykowany parser dla plików w formacie CSV, lecz zakłada on obecność w pliku jedynie danych numerycznych. Do jego użycia należy użyć klasy kontenera \textit{ClassificationDataset} oraz metody \textit{importCSV} która zapisuje odczytane dane do wcześniej wspomnianego obiektu poprzez mechanizm zwracania przez parametr. Jeden z argumentów funkcji określa która z kolumn zawiera zmienną decyzyjną, dzięki czemu biblioteka jest w stanie od razu oddzielić dane wejściowe od kolumny oczekiwanych wartości. Artykuł ,,Classification with Shark-ML machine learning library''\cite{shark:http} dostępny na platformie GitHub pokazuje także, jak pobrać dane w postaci formatu CSV z internetu z pomocą API biblioteki \textit{curl}, i przetworzyć je do formy akceptowanej przez Shark-ML, co zostało przedstawione na listingu \ref{shark:http}. W aktualnej wersji biblioteki znalazły się także wbudowane funkcje pobierania danych współpracujące z protokołem HTTP.
+Biblioteka operuje na własnych reprezentacjach macierzy i wektorów, które tworzone są poprzez opakowywanie surowych tablic za pomocą specjalnych adapterów, jak np. \textit{remora::dense\char`_matrix\char`_adaptor<>()} lub za pomocą kontenerów biblioteki standardowej C++ i funkcji \textit{createDataFromRange()}. Mechanizm ten jest identyczny jak w przypadku pozostałych z omawianych bibliotek, co daje użytkownikowi dużą dowolność co do sposobu przechowywania danych i mechanizmu ich odczytywania. Posiada ona także dedykowany parser dla plików w formacie CSV, lecz zakłada on obecność w pliku jedynie danych numerycznych. Do jego użycia należy użyć klasy kontenera \textit{ClassificationDataset} lub \textit{RegressionDataset} oraz metody \textit{importCSV} która zapisuje odczytane dane do wcześniej wspomnianego obiektu poprzez mechanizm zwracania przez parametr. Jeden z argumentów funkcji określa która z kolumn zawiera zmienną decyzyjną, dzięki czemu biblioteka jest w stanie od razu oddzielić dane wejściowe od kolumny oczekiwanych wartości. Artykuł ,,Classification with Shark-ML machine learning library''\cite{shark:http} dostępny na platformie GitHub pokazuje także, jak pobrać dane w postaci formatu CSV z internetu z pomocą API biblioteki \textit{curl}, i przetworzyć je do formy akceptowanej przez Shark-ML. W aktualnej wersji biblioteki znalazły się także wbudowane funkcje pobierania danych współpracujące z protokołem HTTP. Listing \ref{shark:csv} ukazuje jak odczytać dane z pliku .csv znajdującego się na dysku użytkownika.
 
 \newpage
-\cppcode{Rozdzial5/shark-csv-http.cpp}{Pobranie danych do uczenia z serwera HTTP \cite{shark:http}}{shark:http}
+\cppcode{Result/inc/shark/csv.hpp}{Odczytanie danych z pliku CSV}{shark:csv}
 
 W celu opakowania danych zawartych w kontenerach biblioteki standardowej języka C++ do obiektów akceptowanych przez bibliotekę Shark-ML, konieczne jest wykorzystanie specjalnych funkcji adaptorowych, do których przekazywany jest wskaźnik na dane w postaci surowej tablicy, wraz z oczekiwanymi wymiarami wynikowej macierzy / wektora. Sposób opakowania danych pokazano na listingu \ref{shark:adaptor}
 
@@ -29,11 +29,13 @@ Biblioteka Shark-ML implementuje normalizacje jako klasy treningowe dla modelu \
 
 Opierają się one o użycie metody \textit{train()} na obiekcie normalizera, aby odpowiednio go skonfigurować do przetwarzania zarówno danych testowych, jak i wszystkich innych danych które użytkownik ma zamiar wprowadzić do modelu. Dodatkowymi funkcjami jest możliwość przemieszania danych, i wydzielenia fragmentu jako dane testowe za pomocą metody \textit{shuffle()} klasy \textit{ClassificationDataset} oraz funkcji \textit{splitAtElement()}. Listing \ref{shark:http} pokazuje przykład wstępnego przetwarzania danych z wykorzystaniem normalizacji.
 
-\cppcode{Rozdzial5/shark-preprocessing.cpp}{Wstępne przetwarzanie danych do uczenia \cite{shark:http}}{shark:preprocessing}
+\cppcode{Result/inc/shark/normalization.hpp}{Wstępne przetwarzanie danych do uczenia \cite{shark:http}}{shark:preprocessing}
 
 \subsection{Redukcja wymiarowości}
 \subsubsection{PCA}
 Algorytm redukcji wymiarowości PCA implementowany jest w bibliotece Shark za pośrednictwem klasy \textit{PCA}. Wykorzystuje ona obiekt modelu liniowego w formie enkodera oraz przyjmuje oprócz niego w metodzie \textit{encoder} docelowy wymiar zestawu danych. Wynikiem działania wymienionej metody jest konfiguracja modelu liniowego do tworzenia zestawu danych o zredukowanym wymiarze. Listing \ref{shark:pca} przedstawia sposób wykorzystania klasy PCA.
+
+\newpage
 
 \cppcode{Rozdzial5/shark-dimension-reduction.cpp}{Redukcja wymiarowości danych z wykorzystaniem klasy PCA i enkodera}{shark:pca}
 
@@ -43,7 +45,6 @@ Algorytm redukcji wymiarowości PCA implementowany jest w bibliotece Shark za po
 Liniowa analizy dyskryminacyjnej (ang. \textit{Linear Discriminant Analysis, LDA}) w przypadku biblioteki Shark-ML opiera się o rozwiązanie analityczne, poprzez konfigurację klasy modelu \textit{LinearClassifier} przez klasę treningową \textit{LDA}, wykorzystując funkcję \textit{train()}. Możliwe jest także wykorzystanie LDA do zadania klasyfikacji, uzyskując predykcje dla zestawu danych za pomocą wywołania obiektu liniowego klasyfikatora jak funkcji (użycie operatora ()) przekazując mu dane uzyskane z ClassificationDataset za pomocą metody \textit{inputs()}. Szczegóły implementacyjne dla redukcji wymiarowości danych zamieszczone zostały na listingu \ref{shark:lda-red}, natomiast listing \ref{shark:lda} przedstawia sposób użycia LDA do zadania klasyfikacji.
 
 \cppcode{Rozdzial5/shark-lda-red.cpp}{Przykład redukcji zestawu danych z wykorzystaniem modelu LDA \cite{handsOnMachineLearning}}{shark:lda-red}
-\cppcode{Rozdzial5/shark-lda.cpp}{Przykład klasyfikacji z wykorzystaniem modelu LDA \cite{shark:lda}}{shark:lda}
 
 \subsection{Regularyzacja L1}
 
@@ -60,7 +61,7 @@ Podobnie jak w przypadku metody Lasso, wykorzystanie regularyzacji L2 w trenowan
 
 Jednym z podstawowych modeli oferowanych przez niniejszą bibliotekę jest regresja liniowa. Do celów jej reprezentacji dostępna jest klasa \textit{LinearModel}, oferująca rozwiązanie problemu w sposób analityczny za pomocą klasy trenera \textit{LinearRegression}, lub podejście iteracyjne implementowane przez klasę trenera \textit{LinearSAGTrainer}, wykorzystujące iteracyjną metodę gradientu średniej statystycznej (ang. \textit{Statistic Averagte Gradient, SAG}). W przypadku bardziej skompilowanych regresji, gdzie może nie istnieć rozwiązanie analityczne, istnieje możliwość zastosowania podejścia iteracyjnego z użyciem optymalizatora wybranego przez użytkownika. Metoda ta sprowadza się to uczenia optymalizatora z wykorzystaniem funkcji straty, a następnie załadowanie uzyskanych wag do modelu regresji. Parametry modelu możliwe są do odczytania z wykorzystaniem metod \textit{offset()} i \textit{matrix()} lub metody \textit{parameterVector()}. Na listingu \ref{shark:linear} ukazane zostało wykorzystanie podejścia iteracyjnego, natomiast listing \ref{shark:linear2} przedstawia metodę analityczną.
 
-\cppcode{Rozdzial5/shark-linear.cpp}{Przykład regresji liniowej z wykorzystaniem optymalizatora spadku gradientowego \cite{shark:linear}}{shark:linear}
+\cppcode{Result/inc/shark/linear.hpp}{Przykład regresji liniowej z wykorzystaniem optymalizatora spadku gradientowego}{shark:linear}
 
 \cppcode{Rozdzial5/shark-linear2.cpp}{Przykład regresji liniowej z wykorzystaniem trenera analitycznego \cite{handsOnMachineLearning}}{shark:linear2}
 
@@ -73,11 +74,11 @@ Mechanizm regresji logistycznej dostępny w bibliotece Shark-ML z natury rozwią
 	\label{multiclass}
 \end{equation}
 
-gdzie N oznacza ilość klas występujących w problemie. Utworzone klasyfikatory następnie są złączane w jeden za pomocą odpowiedniej konfiguracji obiektu \textit{OneVersusOneClassifier}, rozwiązując problem klasyfikacji wieloklasowej. W tym celu zestaw danych należy iteracyjnie podzielić na podproblemy o charakterystyce binarnej za pomocą wbudowanej funkcji \textit{binarySubProblem()} przyjmującej zestaw danych i klasy. Nauczanie poszczególnych modeli realizowane jest poprzez klasę trenera \textit{LogisticRegression}. Po zakończeniu trenowania okreslonej partii pomniejszych modeli, są one ładowane do głównego modelu. Wykorzystanie gotowego klasyfikatora wieloklasowego nie różni się od sposobu użycia modelu uzyskanego np. w klasyfikacji liniowej. Listing \ref{shark:logistic} prezentuje funkcję budującą model logistycznej regresji wieloklasowej, natomiast listing \ref{shark:logistic2} prezentuje sposób utworzenia prostego modelu dla problemu binarnego.
+gdzie N oznacza ilość klas występujących w problemie. Utworzone klasyfikatory następnie są złączane w jeden za pomocą odpowiedniej konfiguracji obiektu \textit{OneVersusOneClassifier}, rozwiązując problem klasyfikacji wieloklasowej. W tym celu zestaw danych należy iteracyjnie podzielić na podproblemy o charakterystyce binarnej za pomocą wbudowanej funkcji \textit{binarySubProblem()} przyjmującej zestaw danych i klasy. Nauczanie poszczególnych modeli realizowane jest poprzez klasę trenera \textit{LogisticRegression}. Po zakończeniu trenowania okreslonej partii pomniejszych modeli, są one ładowane do głównego modelu. Wykorzystanie gotowego klasyfikatora wieloklasowego nie różni się od sposobu użycia modelu uzyskanego np. w klasyfikacji liniowej. Listing \ref{shark:logistic} prezentuje funkcję budującą model logistycznej regresji wieloklasowej, natomiast listing \ref{shark:logistic2} pokazuje sposób utworzenia prostego modelu dla problemu binarnego.
 
 \cppcode{Rozdzial5/shark-logistic.cpp}{Przykład funkcji tworzącej model wieloklasowej regresji logistycznej \cite{handsOnMachineLearning}}{shark:logistic}
 
-\cppcode{Rozdzial5/shark-logistic2.cpp}{Przykład prostej binarnej regresji logistycznej}{shark:logistic2}
+\cppcode{Result/inc/shark/logistic.hpp}{Przykład prostej binarnej regresji logistycznej}{shark:logistic2}
 
 \subsection{Maszyna wektorów nośnych}
 
@@ -102,7 +103,7 @@ Do parametrów pozwalających na konfigurację modelu należą m.in.:
 
 Sposób użycia modelu jest identyczny jak w przypadku pozostałych modeli, poprzez operator wywołania funkcji - (). Listing \ref{shark:svm} ukazuje przykład utworzenia i skonfigurowania modelu na podstawie wpisów dostępnych w dokumentacji biblioteki, natomiast listing \ref{shark:svm} przedstawia sposób utworzenia maszyny wektorów nośnych dla problemów wieloklasowych wewnątrz funkcji przyjmującej zestawy danych uczących i testowych.
 
-\cppcode{Rozdzial5/shark-svm.cpp}{Przykład maszyny wektorów nośnych dla problemu binarnego \cite{shark:svm}}{shark:svm}
+\cppcode{Result/inc/shark/svm.hpp}{Przykład maszyny wektorów nośnych dla problemu binarnego}{shark:svm}
 
 \cppcode{Rozdzial5/shark-svm2.cpp}{Przykład maszyny wektorów nośnych dla problemu wieloklasowego \cite{handsOnMachineLearning}}{shark:svm2} 
 
@@ -110,7 +111,7 @@ Sposób użycia modelu jest identyczny jak w przypadku pozostałych modeli, popr
 
 Jedną z metod klasyfikacji oferowanych przez bibliotekę Shark-ML jest model najbliższych sąsiadów, który można wyposażyć w różne algorytmy, w tym w algorytm kNN (ang. \textit{K Nearest Neighbours}). Do reprezentacji modelu stworzona została klasa \textit{NearestNeighborModel}. Biblioteka umożliwia wykorzystanie rozwiązania naiwnego (ang. \textit{brute-force}) lub bazującego na podejściu drzew dzielnych (ang. \textit{space partitioning tree}) poprzez użycie klas \textit{KDTree} i \textit{TreeNearestNeighbors}. W przeciwieństwie do poprzednio wskazanych metod, wykonanie klasyfikacji wieloklasowej w tym przypadku nie wymaga tworzenia złożonych modeli lub podawania modelowi ilości klas. Jest on automatycznie konfigurowany na podstawie danych uczących. Listing \ref{shark:knn} przedstawia sposób przygotowania klasyfikatora kNN.
 
-\cppcode{Rozdzial5/shark-knn.cpp}{Przykład utworzenia klasyfikatora kNN \cite{sharkml:knn}}{shark:knn}
+\cppcode{Result/inc/shark/knn.hpp}{Przykład utworzenia klasyfikatora kNN}{shark:knn}
 
 \subsection{Algorytm zbiorowy}
 
@@ -122,7 +123,7 @@ Biblioteka Shogun-ML oprócz powszechnie znanych algorytmów udostępnia także 
 
 Skonstruowanie sieci neuronowej w bibliotece Shark-ML wykorzystuje pewne mechanizmy oferowane przez klasę \textit{LinearModel<>}. Pozwala ona na określenie typu i ilości wejść, wyjść, oraz zastosowania biasu. Każda warstwa składa się z pojedynczego obiektu modelu liniowego, gdzie ilość wyjść określa liczbę neuronów zawartych w warstwie. Konfiguracja funkcji aktywacji neuronu odbywa się na etapie przekazania typów do szablonu modelu. Pełną listę dostępnych funkcji aktywacji znaleźć można w dokumentacji biblioteki \cite{shark:activation}. Kolejnym krokiem jest przygotowanie obiektu klasy \textit{ErrorFunction<>} w oparciu o jedną z dostępnych funkcji strat, która zostanie skonfigurowana do wykorzystania przez optymalizator przeprowadzający uczenie. Po przygotowaniu funkcji straty, należy zainicjować sieć losowymi wagami i utworzyć oraz skonfigurować wybrany obiekt klasy optymalizatora. Na tym etapie, sieć jest gotowa do przeprowadzenia procesu uczenia. Polega ono na iteracyjnym wykonywaniu kroków za pomocą funkcji \textit{step()} obiektu optymalizatora. W międzyczasie możliwe jest także pobranie wartości funkcji straty na każdej epoce uczenia. Z racji konieczności użycia zwykłej pętli zdefiniowanej przez użytkownika, istnieje możliwość określenia własnych warunków stopu ewaluowanych po każdej epoce, jak np. liczba epok lub przekroczenie określonego progu przez uzyskaną wartość funkcji straty. Wewnątrz pętli iterującej po epokach należy umieścić kolejną pętlę, której zadaniem będzie przejście przez wszystkie batche, wykonując na nich krok optymalizatora. Po zakończeniu uczenia, należy skonfigurować obiekt modelu przekazując mu wagi ustalone przez optymalizer, uzyskując w ten sposób gotową instancję wyszkolonej sieci neuronowej. Listing \ref{shark:neural} przedstawia kod realizujący cały proces, stanowiący przykład z książki ,,Hands On Machine Learning with C++''.
 
-\cppcode{Rozdzial5/shark-neural.cpp}{Przykład trójwarstwowej sieci neuronowej \cite{handsOnMachineLearning}}{shark:neural}
+\cppcode{Result/inc/shark/neural.hpp}{Przykład sieci neuronowej o dwóch warstwach ukrytych do zadania klasyfikacji}{shark:neural}
 
 \section{Metody analizy modeli}
 
@@ -169,31 +170,3 @@ Proces poszukiwania najlepszych wartości hiperparametrów w Shark-ML uwzględni
 \section{Dostępność dokumentacji i źródeł wiedzy}
 
 Biblioteka Shark-ML posiada skróconą dokumentację dostępną na głównej stronie internetowej projektu, wraz z przykładowymi plikami źródłowymi dołączonymi do repozytorium. Jest ona także wspomniana w książce ,,Hands-On Machine Learning with C++'', przedstawiającej sposoby użycia wybranych funkcjonalności. Kwestią wyróżniającą ją natomiast na tle pozostałych bibliotek omówionych w ramach niniejszej pracy jest fakt, że jest ona dedykowana dla języka C++, w związku z czym dużo łatwiej dostępne są wątki społecznościowe i artykuły omawiające realizację różnorodnych typów modeli z jej użyciem, oraz oferując przykładowy kod źródłowy.
-
-\section{Przykłady testowe}
-
-Niniejszy rozdział przedstawia sposób praktycznego wykorzystania omówionych wcześniej metod wraz z porównaniem uzyskiwanych przez nie wyników na przykładzie problemu omówionego w rozdziale 3. Odczyt danych realizowany jest z pliku .csv za pomocą funkcji dostępnej w bibliotece Shark-ML, natomiast sam plik uległ takiemu samemu przetwarzaniu wstępnemu jak opisano w niniejszej sekcji w rozdziale 4. Podobnie jak poprzednio każdy z modeli zawarty został w osobnej funkcji, pozwalając na wywołanie wszystkich poniższych przykładów z poziomu pojedynczego programu o funkcji \textit{main()} przedstawionej na listingu \ref{shark:res-main.cpp}.
-
-PONIŻSZY KOD PRZETESTOWAĆ I SKOMPILOWAĆ
-
-\cppcode{Result/test.cpp}{Napisany dotychczasowo kod}{label}
-
-%\cppcode{Rozdzial5/shark-res-main.cpp}{Funkcja main() programu testowego}{shark:res-main.cpp}
-
-\subsection{Regresja logistyczna}
-
-KOD DO PRZETESTOWANIA
-
-%\cppcode{Rozdzial5/shark-res-logistic.cpp}{Kod realizujący uczenie z wykorzystaniem regresji logistycznej}{shark:res-logistic}
-
-\subsection{Maszyna wektorów nośnych}
-
-KOD DO PRZETESTOWANIA
-
-%\cppcode{Rozdzial5/shark-res-svm.cpp}{Kod realizujący uczenie z wykorzystaniem maszyny wektorów nośnych}{shark:res-svm}
-
-\subsection{Sieć neuronowa}
-
-KOD DO PRZETESTOWANIA
-
-%\cppcode{Rozdzial5/shark-res-neural.cpp}{Kod realizujący uczenie z wykorzystaniem sieci neuronowej}{shark:res-neural}

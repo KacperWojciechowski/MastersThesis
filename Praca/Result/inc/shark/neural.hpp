@@ -1,7 +1,68 @@
 #pragma once
 
 inline void sharkNN(const shark::ClassificationDataset& trainData,
-             const shark::ClassificationDataset& testData)
+                    const shark::ClassificationDataset& testData)
 {
+    using namespace shark;
+    
+    // zdefiniowanie warstw sieci
+    using DenseTanhLayer = LinearModel<RealVector, TanhNeuron>;
+    using DenseLinearLayer = LinearModel<RealVector>;
+    using DenseLogisticLayer = LinearModel<RealVector, LogisticNeuron>;
+    DenseLinearLayer layer1(inputDimension(trainData), 5, true);
+    DenseTanhLayer layer2(5, 5, true);
+    DenseTanhLayer layer3(5, 5, true);
+    DenseLogisticLayer output(5, 1, true);
+    // połączenie warstw
+    auto network = layer1 >> layer2 >> layer3 >> output;
+    // utworzenie i konfiguracja funkcji straty
+    DiscreteLoss<> loss;
+    ErrorFunction<> error(trainData, &network, &loss, true);
+    TwoNormRegularizer<> regularizer(error.numberOfVariables());
+    double weightDecay = 0.0001;
+    error.setRegularizer(weightDecay, &regularizer);
+    error.init();
+    // inicjalizacja wag sieci
+    initRandomNormal(network, 0.001);
+    // utworzenie i konfiguracja optymalizatora
+    SteepestDescent<> optimizer;
+    optimizer.setMomentum(0.5);
+    optimizer.setLearningRate(0.1);
+    optimizer.init(error);
+    // przeprowadzenie procesu uczenia
+    std::size_t epochs = 1000;
+    std::size_t iterations = trainData.numberOfBatches();
+    // pętla przechodząca poszczególne epoki
+    for (std::size_t epoch = 0; epoch != epochs; ++epoch)
+    {
+        double avgLoss = 0.0;
+        // pętla operująca na pojedynczych batch'ach
+        for (std::size_t i = 0; i != iterations; ++i)
+        {
+            // wykonanie kroku optymalizatora
+            optimizer.step(error);
+            // zapisanie częściowej wartości funkcji straty
+            if (i % 100 == 0)
+            {
+                avgLoss += optimizer.solution().value;
+            }
+        }
+        // wyliczenie średniej wartości funkcji straty
+        avgLoss /= iterations;
+        std::cout << "Epoch " << epoch << " | Avg. loss " << avgLoss 
+                  << std::endl;
+    }
+    // konfiguracja modelu docelowego
+    network.setParameterVector(optimizer.solution().point);
+    // walidacja
+    std::cout << "-----Shark Neural -----" << std::endl;
+    std::cout << "Train data:" << std::endl;
+    auto predictions = network(trainData.inputs());
+    printSharkModelEvaluation(
+        trainData.labels(), predictions, Task::CLASSIFICATION);
 
+    std::cout << "Test data:" << std::endl;
+    predictions = network(testData.inputs());
+    printSharkModelEvaluation(
+        testData.labels(), predictions, Task::CLASSIFICATION); 
 }

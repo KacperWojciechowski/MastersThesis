@@ -2,6 +2,9 @@
 
 #include <inc/shogun/csv.hpp>
 #include <inc/shogun/linear.hpp>
+#include <inc/shogun/logistic.hpp>
+#include <inc/shogun/svm.hpp>
+#include <inc/shogun/neural.hpp>
 
 #include <shogun/base/init.h>
 
@@ -32,6 +35,9 @@ inline void shogunModels()
 
     // wywołanie modeli
     shogunLinear(regressionFeatures, regressionLabels);
+    shogunLogistic(classificationFeatures, classificationLabels);
+    shogunSVM(classificationFeatures, classificationLabels);
+    sharkNeural(classificationFeatures, classificationLabels);
 
     exit_shogun();
 }
