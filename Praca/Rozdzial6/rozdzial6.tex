@@ -2,7 +2,7 @@
 
 \section{Wprowadzenie}
 
-Jest to biblioteka do uczenia maszynowego napisana w nowoczesnym C++, o zastosowaniu przemysłowym oraz naukowym \cite{Dlib09}. Podobnie jak poprzednio omawiane biblioteki, posiada ona otwarte źródło na licencji Boost Software Licence \cite{dlib:license}. Do dziedzin wykorzystujących wyżej wspomnianą bibliotekę należą robotyka, systemy wbudowane, telefony komórkowe oraz śrowodiska o dużej wydajności obliczeniowej. Kod źródłowy biblioteki opatrzony jest testami jednostkowymi, co pozwala na łatwiejsze utrzymanie jakości dostarczanego rozwiązania. Ciekawym aspektem jest fakt, że Dlib stanowi nie tylko bibliotekę, lecz zestaw narzędzi, oferujący funkcjonalności wykraczające także poza dziedzinę uczenia maszynowego.
+Jest to biblioteka do uczenia maszynowego napisana w nowoczesnym C++, o zastosowaniu przemysłowym oraz naukowym \cite{Dlib09}. Podobnie jak poprzednio omawiane biblioteki, posiada ona otwarte źródło na licencji Boost Software Licence \cite{dlib:license}. Do dziedzin wykorzystujących wyżej wspomnianą bibliotekę należą robotyka, systemy wbudowane, telefonia komórkowa oraz śrowodiska o dużej wydajności obliczeniowej. Kod źródłowy biblioteki opatrzony jest testami jednostkowymi, co pozwala na łatwiejsze utrzymanie jakości dostarczanego rozwiązania. Ciekawym aspektem jest fakt, że Dlib stanowi nie tylko bibliotekę, lecz zestaw narzędzi, oferujący funkcjonalności wykraczające także poza dziedzinę uczenia maszynowego.
 
 \section{Formaty źródeł danych}
 
@@ -13,7 +13,9 @@ Do reprezentacji wektora w bibliotece Dlib wykorzystywane są kontenery z biblio
 \section{Metody przetwarzania i eksploracji danych}
 
 \subsection{Normalizacja}
-Biblioteka udostępnia normalizację danych poprzez standaryzację, realizowaną przez klasę \textit{Dlib::vector\texttt{\char`_}normalizer}. Głównym warunkiem ograniczającym zastosowanie jej jest fakt, że nie można w niej umieścić całego zestawu danych treningowych na raz, co wymusza podział obserwacji na osobne wektory, a następnie umieszczenie ich w kontenerze \textit{std::vector} do dalszego przetwarzania.
+Biblioteka udostępnia normalizację danych poprzez standaryzację, realizowaną przez klasę \textit{Dlib::vector\texttt{\char`_}normalizer}. Głównym warunkiem ograniczającym zastosowanie jej jest fakt, że nie można w niej umieścić całego zestawu danych treningowych na raz, co wymusza podział obserwacji na osobne wektory, a następnie umieszczenie ich w kontenerze \textit{std::vector} do dalszego przetwarzania. Przykład funkcji normalizującej przedstawiono na listingu \ref{dlib:normalizer}.
+
+\cppcode{Result/inc/dlib/normalizer.hpp}{Funkcja normalizująca}{dlib:normalizer}
 
 \subsection{Redukcja wymiarowości}
 

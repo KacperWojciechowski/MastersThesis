@@ -77,18 +77,18 @@
 \contentsline {section}{\numberline {6.2}Formaty źródeł danych}{58}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Metody przetwarzania i eksploracji danych}{59}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Normalizacja}{59}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Redukcja wymiarowości}{59}{subsection.6.3.2}%
-\contentsline {subsubsection}{\numberline {6.3.2.1}PCA}{59}{subsubsection.6.3.2.1}%
-\contentsline {subsubsection}{\numberline {6.3.2.2}Liniowa analiza dyskryminacyjna}{59}{subsubsection.6.3.2.2}%
-\contentsline {subsubsection}{\numberline {6.3.2.3}Mapowanie Sammona}{59}{subsubsection.6.3.2.3}%
-\contentsline {section}{\numberline {6.4}Modele uczenia maszynowego}{59}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Regresja liniowa}{59}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Maszyna wektorów nośnych}{59}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Sieci neuronowe}{59}{subsection.6.4.3}%
-\contentsline {subsection}{\numberline {6.4.4}Brzegowa regresja jądra}{59}{subsection.6.4.4}%
-\contentsline {section}{\numberline {6.5}Metody analizy modeli}{59}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Sprawdzian krzyżowy K-krotny}{59}{subsection.6.5.1}%
-\contentsline {section}{\numberline {6.6}Dostępność dokumentacji i źródeł wiedzy}{59}{section.6.6}%
+\contentsline {subsection}{\numberline {6.3.2}Redukcja wymiarowości}{60}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}PCA}{60}{subsubsection.6.3.2.1}%
+\contentsline {subsubsection}{\numberline {6.3.2.2}Liniowa analiza dyskryminacyjna}{60}{subsubsection.6.3.2.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.3}Mapowanie Sammona}{60}{subsubsection.6.3.2.3}%
+\contentsline {section}{\numberline {6.4}Modele uczenia maszynowego}{60}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Regresja liniowa}{60}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Maszyna wektorów nośnych}{60}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Sieci neuronowe}{60}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Brzegowa regresja jądra}{60}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.5}Metody analizy modeli}{60}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Sprawdzian krzyżowy K-krotny}{60}{subsection.6.5.1}%
+\contentsline {section}{\numberline {6.6}Dostępność dokumentacji i źródeł wiedzy}{60}{section.6.6}%
 \contentsline {section}{\numberline {6.7}Przykłady testowe}{60}{section.6.7}%
 \contentsline {subsection}{\numberline {6.7.1}Maszyna wektorów nośnych}{60}{subsection.6.7.1}%
 \contentsline {subsection}{\numberline {6.7.2}Sieć neuronowa}{60}{subsection.6.7.2}%
