@@ -20,8 +20,22 @@ Biblioteka udostępnia normalizację danych poprzez standaryzację, realizowaną
 \subsection{Redukcja wymiarowości}
 
 \subsubsection{PCA}
+
+Implementacja metody PCA w bibliotece Dlib oferowana jest za pośrednictwem klasy \textit{dlib::vector\char`_normalizer\char`_pca}, która oprócz samej redukcji wymiarowości wykonuje także wcześniej automatycznie proces normalizacji danych. Bywa to przydatne, gwarantując że redukcja będzie przeprowadzana zawsze na odpowiednio przygotowanych wartościach obserwacji. Listing \ref{dlib:pca} przedstawia funkcję używającą wyżej wymienioną metodę.
+
+\cppcode{Result/inc/dlib/pca.hpp}{Przykład redukcji wymiarowości z użyciem metody PCA}{dlib:pca}
+
 \subsubsection{Liniowa analiza dyskryminacyjna}
+
+Drugim z oferowanych algorytmów redukcji wymiarowości zawartych w Dlib jest algorytm liniowej analizy dyskryminacyjnej. Jest on dostępny pod postacią funkcji \textit{dlib::compute\char`_lda\char`_transform}, która przekształca macierz zawierającą dane wejściowe do macierzy transformacji danych. Ze względu na nadzorowany charakter algorytmu, konieczne jest także przekazanie wartości zmiennych odpowiedzi, natomiast same dane, w przeciwieństwie do metody PCA, mogą być zawarte w pojedynczym obiekcie macierzy. Redukcja odbywa się poprzez wymnożenie otrzymanej macierzy przez transponowany wiersz zawierający próbkę. Szczegółowe zastosowanie algorytmu przedstawiono na listingu \ref{dlib:lda}
+
+\cppcode{Result/inc/dlib/lda.hpp}{Przykład redukcji wymiarowości z użyciem algorytmu LDA}{dlib:lda}
+
 \subsubsection{Mapowanie Sammona}
+
+Całość algorytmu mapowania Sammmona implementowana jest za pomocą klasy \textit{dlib::sammon\char`_projection}, i ogranicza się do utworzenia jej instancji. Wykorzystując metodę należy przekazać do utworzonego obiektu za pomocą operatora wywołania funkcji wektor danych, oraz oczekiwaną ilość wymiarów, otrzymując przekształcone dane. W związku z powyższym, funkcja realizująca redukcję z użyciem wyżej wymienionej metody sprowadza się do wykorzystania dwóch linii. Dokładny sposób jej użycia pokazano na listingu \ref{dlib:sammmon}
+
+\cppcode{Result/inc/dlib/sammon.hpp}{Przykład redykcji wymiarowości z użyciem mapowania Sammmona}{dlib:sammon}
 
 \section{Modele uczenia maszynowego}
 
@@ -37,8 +51,3 @@ Biblioteka udostępnia normalizację danych poprzez standaryzację, realizowaną
 \section{Dostępność dokumentacji i źródeł wiedzy}
 
 Dlib posiada zbiór przykładów w postaci listingów kodów źródłowych realizujących poszczególne mechanizmy, dostępnych na stronie głównej projektu \cite{dlib:home}. Jest ona także jedną z głównych bibliotek omawianych w ramach wspomnianej wcześniej książki ,,Hands-On Machine Learning with C++''. Niestety większość forów społecznościowych skupia się na pracy z Dlib z poziomu interfejsu języka Python, co może utrudnić szukanie rozwiązań dla specyficznych przypadków. Warto wspomnieć, że oprócz funkcjonalności uczenia maszynowego, Dlib realizuje także inne zadania, jak np. networking, co sprawia, że przykłady kodów źródłowych dla programów machine learningu zgrupowane są razem z innymi mechanizmami. 
-
-\section{Przykłady testowe}
-
-\subsection{Maszyna wektorów nośnych}
-\subsection{Sieć neuronowa}
