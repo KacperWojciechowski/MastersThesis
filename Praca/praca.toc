@@ -46,7 +46,7 @@
 \contentsline {subsection}{\numberline {4.5.4}Metryka $R^2$}{36}{subsection.4.5.4}%
 \contentsline {subsection}{\numberline {4.5.5}Dokładność}{37}{subsection.4.5.5}%
 \contentsline {subsection}{\numberline {4.5.6}Precyzja i pamięć (recall), oraz metryka F-score}{38}{subsection.4.5.6}%
-\contentsline {subsection}{\numberline {4.5.7}Metryka AUC ROC}{38}{subsection.4.5.7}%
+\contentsline {subsection}{\numberline {4.5.7}Pole pod wykresem krzywej operacyjnej}{38}{subsection.4.5.7}%
 \contentsline {subsection}{\numberline {4.5.8}Sprawdzian krzyżowy K-krotny}{38}{subsection.4.5.8}%
 \contentsline {section}{\numberline {4.6}Dostępność dokumentacji i źródeł wiedzy}{40}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Biblioteka Shark-ML}{41}{chapter.5}%
@@ -69,7 +69,7 @@
 \contentsline {section}{\numberline {5.5}Metody analizy modeli}{54}{section.5.5}%
 \contentsline {subsection}{\numberline {5.5.1}Funkcje straty}{54}{subsection.5.5.1}%
 \contentsline {subsection}{\numberline {5.5.2}Metryka $R^2$ i adjusted $R^2$}{55}{subsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.5.3}Metryka AUC-ROC}{55}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.3}Pole pod wykresem krzywej charakterystycznej odbiornika}{55}{subsection.5.5.3}%
 \contentsline {subsection}{\numberline {5.5.4}Sprawdzian krzyżowy K-krotny}{56}{subsection.5.5.4}%
 \contentsline {section}{\numberline {5.6}Dostępność dokumentacji i źródeł wiedzy}{57}{section.5.6}%
 \contentsline {chapter}{\numberline {6}Biblioteka Dlib}{58}{chapter.6}%
@@ -81,15 +81,16 @@
 \contentsline {subsubsection}{\numberline {6.3.2.1}PCA}{59}{subsubsection.6.3.2.1}%
 \contentsline {subsubsection}{\numberline {6.3.2.2}Liniowa analiza dyskryminacyjna}{60}{subsubsection.6.3.2.2}%
 \contentsline {subsubsection}{\numberline {6.3.2.3}Mapowanie Sammona}{61}{subsubsection.6.3.2.3}%
-\contentsline {section}{\numberline {6.4}Modele uczenia maszynowego}{62}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Regresja liniowa}{62}{subsection.6.4.1}%
+\contentsline {section}{\numberline {6.4}Modele uczenia maszynowego}{61}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Regresja liniowa}{61}{subsection.6.4.1}%
 \contentsline {subsection}{\numberline {6.4.2}Maszyna wektorów nośnych}{62}{subsection.6.4.2}%
 \contentsline {subsection}{\numberline {6.4.3}Sieci neuronowe}{62}{subsection.6.4.3}%
 \contentsline {subsection}{\numberline {6.4.4}Brzegowa regresja jądra}{62}{subsection.6.4.4}%
 \contentsline {section}{\numberline {6.5}Metody analizy modeli}{62}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Sprawdzian krzyżowy K-krotny}{62}{subsection.6.5.1}%
-\contentsline {section}{\numberline {6.6}Dostępność dokumentacji i źródeł wiedzy}{62}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Zestawienie zbiorcze i podsumowanie}{63}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Oferowane funkcjonalności}{63}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Wymagany nakład pracy}{63}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Jakość i ilość dostępnych źródeł referencyjnych}{63}{section.7.3}%
+\contentsline {subsection}{\numberline {6.5.1}Pole pod wykresem krzywej charakterystycznej odbiornika}{62}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Sprawdzian krzyżowy K-krotny}{64}{subsection.6.5.2}%
+\contentsline {section}{\numberline {6.6}Dostępność dokumentacji i źródeł wiedzy}{64}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Zestawienie zbiorcze i podsumowanie}{65}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Oferowane funkcjonalności}{65}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Wymagany nakład pracy}{65}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Jakość i ilość dostępnych źródeł referencyjnych}{65}{section.7.3}%

@@ -168,11 +168,11 @@ Do obliczenia dokładności w przypadku zadań regresji, biblioteka udostępnia 
 
 W książce \cite{handsOnMachineLearning} wspomniane zostały klasy \textit{CRecallMeasure} oraz \textit{CF1Measure} mające pozwolić obliczyć odpowiednio pamięć modelu oraz metrykę F-score, jednak w trakcie pracy z biblioteką nie znaleziono definicji tych klas, lub jakichkolwiek innych pełniących te funkcje, w związku z czym założono brak implementacji tych metod dla biblioteki Shogun. Zdecydowano się na wspomnienie o tym fakcie, w celu podkreślenia możliwoścy wystąpienia rozbieżności między źródłami wiedzy, a aktualnym stanem biblioteki.
 
-\subsection{Metryka AUC ROC}
+\subsection{Pole pod wykresem krzywej operacyjnej}
 
-Biblioteka Shogun posiada implementację klasyfikatora ROC, pozwalając obliczyć pole pod wykresem krzywej charakterystycznej odbiornika (Area Under Curve ROC), w postaci klasy \textit{CROCEvaluation}. Listing \ref{shogun:roc} przedstawia sposób jej użycia.
+Biblioteka Shogun posiada implementację obliczania pola pod wykresem krzywej charakterystycznej odbiornika, w postaci klasy \textit{CROCEvaluation}. Listing \ref{shogun:roc} przedstawia sposób jej użycia.
 
-\cppcode{Rozdzial4/shogun-roc.cpp}{Przykład obliczenia metryki AUC ROC}{shogun:roc}
+\cppcode{Rozdzial4/shogun-roc.cpp}{Przykład obliczenia pola pod wykresem funkcji ROC dla Shogun}{shogun:roc}
 
 \subsection{Sprawdzian krzyżowy K-krotny}
 

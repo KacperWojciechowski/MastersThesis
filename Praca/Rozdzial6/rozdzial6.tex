@@ -40,11 +40,21 @@ Całość algorytmu mapowania Sammmona implementowana jest za pomocą klasy \tex
 \section{Modele uczenia maszynowego}
 
 \subsection{Regresja liniowa}
+Biblioteka Dlib posiada pośrednią realizację modelu regresji liniowej. Wykorzystuje ona technikę brzegowej regresji jądra, przekazując w formie kernela jądro liniowe. Następnie przeprowadzany jest trening, zapisując docelowy model w postaci funkcji decyzyjnej. Listing \ref{dlib:linear} przedstawia szczegóły powyższego mechanizmu.
+
+\cppcode{Result/inc/dlib/linear.hpp}{Przykład regresji liniowej w Dlib}{dlib:linear}
+
 \subsection{Maszyna wektorów nośnych}
 \subsection{Sieci neuronowe}
 \subsection{Brzegowa regresja jądra}
 
 \section{Metody analizy modeli}
+
+\subsection{Pole pod wykresem krzywej charakterystycznej odbiornika}
+
+Biblioteka Dlib posiada implementację funkcji wyznaczającej krzywą ROC, jednak wymaga ona pewnego przetwarzania danych przed i po jej użyciu. W celu jej zastosowania należy podzielić dane sklasyfikowane prawidłowo i nieprawidłowo. Wynikiem funkcji jest wektor zawierający współrzędne poszczególnych punktów krzywej charakterystycznej odbiornika, które pozwalają na narysowanie wykresu na płaszczyźnie dwuwymiarowej. Obliczenie wartości pola pod wykresem należy dokonać ręcznie, wykorzystując np. jedną z numerycznych metod na obliczenie całki. Listing \ref{dlib:eval} przedstawia funkcję ewaluującą predykcje modelu, w tym obliczenie wartości pola pod wykresem krzywej charakterystycznej odbiornika dla zadania klasyfikacji.
+
+\cppcode{Result/inc/dlib/eval.hpp}{Obliczenie pola pod wykresem funkcji ROC dla Dlib}{dlib:eval}
 
 \subsection{Sprawdzian krzyżowy K-krotny}
 

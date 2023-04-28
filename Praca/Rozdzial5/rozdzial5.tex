@@ -155,11 +155,11 @@ Biblioteka Shark-ML nie oferuje bezpośredniej klasy reprezentującej metrykę $
 
 \cppcode{Rozdzial5/shark-r2.cpp}{Implementacja metryk $R^2$ oraz adjusted $R^2$}{shark:r2}
 
-\subsection{Metryka AUC-ROC}
+\subsection{Pole pod wykresem krzywej charakterystycznej odbiornika}
 
-AUC-ROC stanowi jedną z często wykorzystywanych metryk poprawności predykcji modelu, w związku z czym nie mogło jej zabraknąć w bibliotece Shark-ML. Jest ona dostępna za pośrednictwem klasy \textit{NegativeAUC}, wykorzystywanej w taki sam sposób jak pozostałe omówione wcześniej funkcje straty. W przeciwieństwie do standardowego podejścia, wspomniana klasa oblicza odwróconą wartość pola pod wykresem funkcji ROC, aby umożliwić wykorzystanie jej jako minimalizowanego celu w procesie uczenia. Listing \ref{shark:roc} przedstawia sposób obliczenia wartości wymienionej metryki.
+Pole pod wykresem krzywej charakterystycznej odbiornika stanowi jedną z często wykorzystywanych metryk poprawności predykcji modelu, w związku z czym nie mogło jej zabraknąć w bibliotece Shark-ML. Jest ona dostępna za pośrednictwem klasy \textit{NegativeAUC}, wykorzystywanej w taki sam sposób jak pozostałe omówione wcześniej funkcje straty. W przeciwieństwie do standardowego podejścia, wspomniana klasa oblicza odwróconą wartość pola pod wykresem funkcji ROC, aby umożliwić wykorzystanie jej jako minimalizowanego celu w procesie uczenia. Listing \ref{shark:roc} przedstawia sposób obliczenia wartości wymienionej metryki.
 
-\cppcode{Rozdzial5/shark-roc.cpp}{Przykład użycia klasy \textit{NegativeAUC} do obliczenia pola pod funkcją ROC}{shark:roc} 
+\cppcode{Rozdzial5/shark-roc.cpp}{Przykład obliczenia pola pod wykresem funkcji ROC dla Shark-ML}{shark:roc} 
 
 \subsection{Sprawdzian krzyżowy K-krotny}
 
