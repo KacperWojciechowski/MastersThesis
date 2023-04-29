@@ -45,8 +45,31 @@ Biblioteka Dlib posiada pośrednią realizację modelu regresji liniowej. Wykorz
 \cppcode{Result/inc/dlib/linear.hpp}{Przykład regresji liniowej w Dlib}{dlib:linear}
 
 \subsection{Maszyna wektorów nośnych}
+
+W celu realizacji wieloklasowej klasyfikacji z użyciem maszyny wektorów nośnych, biblioteka Dlib oferuje klasę funkcji decyzyjnej \textit{dlib::one\char`_vs\char`_one\char`_decision\char`_function}. Przechowuje ona wynikowy model uczenia algorytmem maszyny wektorów nośnych, zawarty w klasie \textit{one\char`_versus\char`_one}, do której przesłany zostaje trener SVM. Dokładny sposób użycia został przedstawiony na listingu \ref{dlib:svm}.
+
+\cppcode{Result/inc/dlib/svm.hpp}{Przykład użycia maszyny wektorów nośnych w Dlib}{dlib:svm}
+
 \subsection{Sieci neuronowe}
+
+Konstrukcja sieci neuronowej w przypadku biblioteki Dlib rozpoczyna się od zdefiniowania architektury sieci, za pomocą odpowiedniego łańcucha szablonów. Parametry tworzą sieć w kolejności od najbardziej zagnieżdżonego do najbardziej zewnętrznego. Dlib zapewnia użytkownikowi rozdzielność typu warsty od jej funkcji aktywacji, w związku z czym użytkownik może dokładnie dostosować działanie sieci. Niestety, sama składnia tworzonej architektury jest przez to zaciemniona, co utrudnia jej analizę. Po utworzeniu architektury, należy przygotować i skonfigurować solver. Najpopularniejszym z oferowanych przez bibliotekę jest algorytm stochastycznego spadku gradientowego, zaimplementowanego w postaci klasy \textit{dlib::sgd}. Trzeci krok stanowi konfiguracja trenera głębokich sieci neuronowych, oferowanego przez klasę \textit{dlib::dnn\char`_trainer}, poprzez ustawienie parametrów takich jak:
+
+\begin{itemize}
+	\item współczynnik uczenia;
+	\item współczynnik zmiany szybkości uczenia; 
+	\item rozmiar mini-batch'y;
+	\item maksymalna ilość epok.
+\end{itemize}
+
+Obiekt trenera w trakcie jego tworzenia przyjmuje referencję do architektury sieci oraz do obiektu solvera. Proces nauki odbywa się poprzez wywołanie funkcji \textit{train()}, natomiast wynikowy model zapisany zostaje w obiekcie architektury sieci. Listing \ref{dlib:neural} przedstawia przykład budowy sieci neuronowej z wykorzystaniem niniejszej biblioteki.
+
+\cppcode{Result/inc/dlib/neural.hpp}{Przykład sieci neuronowej w Dlib}{dlib:neural} 
+
 \subsection{Brzegowa regresja jądra}
+
+Przygotowanie wieloklasowego modelu brzegowej regresji jądra (ang. \textit{Kernel Ridge Regression}) w przypadku biblioteki Dlib wygląda prawie identycznie do sposobu realizacji wieloklasowej maszyny wektorów nośnych. Główną różnicą jest wykorzystany trener podstawowy, w tym wypadku stanowiący obiekt klasy \textit{dlib::krr\char`_trainer}. Możliwe jest także wykorzystanie tego samego typu jądra, co w przypadku maszyny wektorów nośnych. Listing \ref{dlib:krr} obrazuje szczegółowy sposób przygotowania modelu.
+
+\cppcode{Result/inc/dlib/krr.hpp}{Przykład użycia brzegowej regresji jądra w Dlib}{dlib:krr}
 
 \section{Metody analizy modeli}
 
@@ -58,6 +81,10 @@ Biblioteka Dlib posiada implementację funkcji wyznaczającej krzywą ROC, jedna
 
 \subsection{Sprawdzian krzyżowy K-krotny}
 
+Przeprowadzenie sprawdzianu krzyżowego z wykorzystaniem biblioteki Dlib stanowi złożony proces. Jest on realizowany wielofazowo, rozpoczynając od zdefiniowania własnej funkcji obliczającej interesujący użytkownika wynik metryki sprawdzianu, w oparciu o funkcję \textit{dlib::cross\char`_validate\char`_regression\char`_trainer()}. Zewnętrzna część ustalania docelowych wartości hiperparametrów dokonywana jest przez funkcję \textit{dlib::find\char`_min\char`_global()} przyjmującą adres stworzonej funkcji optymalizacyjnej, kontenery przechowujące informacje o minimalnych i maksymalnych dopuszczalnych wartościach poszczególnych hiperparametrów, oraz ilość dozwolonych wywołań funkcji optymalizacyjnej. Aby odczytać wynikowe wartości, należy sięgnąć do kolejnych pół składowej \textit{x} zwróconej przez funkcję \textit{find\char`_min\char`_global()} struktury. Szczegóły zostały zaprezentowane w oparciu o przykład z książki ,,Hands-On Machine Learning with C++'' \cite{handsOnMachineLearning} na listingu \ref{dlib:cross}.
+
+\cppcode{Result/inc/dlib/cross.hpp}{Przykład realizacji sprawdzianu krzyżowego}{dlib:cross}
+
 \section{Dostępność dokumentacji i źródeł wiedzy}
 
-Dlib posiada zbiór przykładów w postaci listingów kodów źródłowych realizujących poszczególne mechanizmy, dostępnych na stronie głównej projektu \cite{dlib:home}. Jest ona także jedną z głównych bibliotek omawianych w ramach wspomnianej wcześniej książki ,,Hands-On Machine Learning with C++''. Niestety większość forów społecznościowych skupia się na pracy z Dlib z poziomu interfejsu języka Python, co może utrudnić szukanie rozwiązań dla specyficznych przypadków. Warto wspomnieć, że oprócz funkcjonalności uczenia maszynowego, Dlib realizuje także inne zadania, jak np. networking, co sprawia, że przykłady kodów źródłowych dla programów machine learningu zgrupowane są razem z innymi mechanizmami. 
+Dlib posiada zbiór przykładów w postaci listingów kodów źródłowych realizujących poszczególne mechanizmy, dostępnych na stronie głównej projektu \cite{dlib:home}. Jest ona także jedną z głównych bibliotek omawianych w ramach wspomnianej wcześniej książki ,,Hands-On Machine Learning with C++''. Niestety większość forów społecznościowych skupia się na pracy z Dlib z poziomu interfejsu języka Python, co może utrudnić szukanie rozwiązań dla specyficznych przypadków. Warto wspomnieć, że oprócz funkcjonalności uczenia maszynowego, Dlib realizuje także inne zadania, jak np. networking, co sprawia, że nawigacja po stronie projektu jest lekko utrudniona przez obecność potencjalnie nieinteresujących użytkownika elementów.

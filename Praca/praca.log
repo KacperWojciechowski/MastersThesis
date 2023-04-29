@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  28 APR 2023 20:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  29 APR 2023 16:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1717,17 +1717,9 @@ Rozdzia\l  6.
 
 LaTeX Warning: Reference `dlib:sammmon' on page 61 undefined on input line 36.
 
-(./Result/inc/dlib/sammon.hpp) [61] (./Result/inc/dlib/linear.hpp
-Overfull \hbox (5.03394pt too wide) in paragraph at lines 21--22
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (20.78394pt too wide) in paragraph at lines 24--25
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-) [62] (./Result/inc/dlib/eval.hpp
+(./Result/inc/dlib/sammon.hpp) [61] (./Result/inc/dlib/linear.hpp) [62]
+(./Result/inc/dlib/svm.hpp) [63] (./Result/inc/dlib/neural.hpp [64])
+(./Result/inc/dlib/krr.hpp [65]) [66] (./Result/inc/dlib/eval.hpp
 Overfull \hbox (36.53394pt too wide) in paragraph at lines 42--43
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1737,22 +1729,26 @@ Overfull \hbox (41.78394pt too wide) in paragraph at lines 43--44
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[63])
+[67]) (./Result/inc/dlib/cross.hpp [68])
 
-LaTeX Warning: Citation 'dlib:home' on page 64 undefined on input line 63.
+LaTeX Warning: Citation 'dlib:home' on page 69 undefined on input line 90.
 
-) (./Rozdzial7/rozdzial7.tex [64]
+) (./Rozdzial7/rozdzial7.tex [69] [70]
 Rozdzia\l  7.
-) [65
+)
+Underfull \vbox (badness 2990) has occurred while \output is active []
 
-] [66
+ [71
+
+]
+[72] [73
 
 ] (./praca.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: 1B3466183E7FBE5FA255FAC5C47CB6FA;18291.
+(rerunfilecheck)             Checksum: 0E201F9825155244B1531E3B540C0D29;18355.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                praca
@@ -1763,10 +1759,10 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34703 strings out of 476017
- 625912 string characters out of 5789275
+ 35070 strings out of 476017
+ 632129 string characters out of 5789275
  1934660 words of memory out of 5000000
- 52852 multiletter control sequences out of 15000+600000
+ 52954 multiletter control sequences out of 15000+600000
  600993 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,12n,109p,2262b,2469s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1786,10 +1782,10 @@ ts/type1/public/lm/lmtt12.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/
 public/lm/lmtti10.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/c
 m-super/sfxc1728.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/cm
 -super/sfxc2074.pfb>
-Output written on praca.pdf (74 pages, 952946 bytes).
+Output written on praca.pdf (81 pages, 973589 bytes).
 PDF statistics:
- 2837 PDF objects out of 2984 (max. 8388607)
- 2657 compressed objects within 27 object streams
- 1575 named destinations out of 1728 (max. 500000)
+ 3176 PDF objects out of 3580 (max. 8388607)
+ 2986 compressed objects within 30 object streams
+ 1831 named destinations out of 2073 (max. 500000)
  881 words of extra memory for PDF output out of 10000 (max. 10000000)
 
