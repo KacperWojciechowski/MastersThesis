@@ -81,16 +81,17 @@
 \contentsline {subsubsection}{\numberline {6.3.2.1}PCA}{59}{subsubsection.6.3.2.1}%
 \contentsline {subsubsection}{\numberline {6.3.2.2}Liniowa analiza dyskryminacyjna}{60}{subsubsection.6.3.2.2}%
 \contentsline {subsubsection}{\numberline {6.3.2.3}Mapowanie Sammona}{61}{subsubsection.6.3.2.3}%
-\contentsline {section}{\numberline {6.4}Modele uczenia maszynowego}{61}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Regresja liniowa}{61}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Maszyna wektorów nośnych}{62}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.3.3}Regularyzacja L2}{61}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Modele uczenia maszynowego}{62}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Regresja liniowa}{62}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Maszyna wektorów nośnych}{63}{subsection.6.4.2}%
 \contentsline {subsection}{\numberline {6.4.3}Sieci neuronowe}{64}{subsection.6.4.3}%
 \contentsline {subsection}{\numberline {6.4.4}Brzegowa regresja jądra}{65}{subsection.6.4.4}%
-\contentsline {section}{\numberline {6.5}Metody analizy modeli}{66}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Pole pod wykresem krzywej charakterystycznej odbiornika}{66}{subsection.6.5.1}%
+\contentsline {section}{\numberline {6.5}Metody analizy modeli}{67}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Pole pod wykresem krzywej charakterystycznej odbiornika}{67}{subsection.6.5.1}%
 \contentsline {subsection}{\numberline {6.5.2}Sprawdzian krzyżowy K-krotny}{68}{subsection.6.5.2}%
-\contentsline {section}{\numberline {6.6}Dostępność dokumentacji i źródeł wiedzy}{69}{section.6.6}%
+\contentsline {section}{\numberline {6.6}Dostępność dokumentacji i źródeł wiedzy}{70}{section.6.6}%
 \contentsline {chapter}{\numberline {7}Zestawienie zbiorcze i podsumowanie}{71}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Oferowane funkcjonalności}{71}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Porównanie wyników dla zadanych przykładów}{71}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Wymagany nakład pracy i jakość źródeł}{71}{section.7.3}%
+\contentsline {section}{\numberline {7.2}Porównanie wyników dla zadanych przykładów}{73}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Wymagany nakład pracy i jakość źródeł}{73}{section.7.3}%

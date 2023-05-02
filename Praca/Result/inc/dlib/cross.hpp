@@ -1,9 +1,7 @@
 #pragma once
-
 #include <dlib/global_optimization.h>
 #include <dlib/matrix.h>
 #include <dlib/svm.h>
-
 #include <cmath>
 
 inline void dlibCrossValidate(std::vector<dlib::matrix<double>> data,

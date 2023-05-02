@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  29 APR 2023 16:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  2 MAY 2023 15:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1139,13 +1139,19 @@ Package: xparse 2023-02-02 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 ))
-(./Ustawienia/ustawienia.tex)
+(./Ustawienia/ustawienia.tex
+(d:/Programy/texlive/2023/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen260
+\c@nlinenum=\count477
+\TeXr@lab=\toks43
+))
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count477
-\@quotereset=\count478
+\@quotelevel=\count478
+\@quotereset=\count479
 (./praca.aux)
 \openout1 = `praca.aux'.
 
@@ -1172,17 +1178,17 @@ LaTeX Font Info:    ... okay on input line 51.
 
 (d:/Programy/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count479
-\scratchdimen=\dimen260
+\scratchcounter=\count480
+\scratchdimen=\dimen261
 \scratchbox=\box70
-\nofMPsegments=\count480
-\nofMParguments=\count481
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count482
-\MPscratchDim=\dimen261
-\MPnumerator=\count483
-\makeMPintoPDFobject=\count484
-\everyMPtoPDFconversion=\toks44
+\nofMPsegments=\count481
+\nofMParguments=\count482
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count483
+\MPscratchDim=\dimen262
+\MPnumerator=\count484
+\makeMPintoPDFobject=\count485
+\everyMPtoPDFconversion=\toks45
 ) (d:/Programy/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1243,7 +1249,7 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count485
+\c@lstlisting=\count486
 Package biblatex Info: Trying to load language 'polish'...
 Package biblatex Info: ... file 'polish.lbx' found.
 
@@ -1341,7 +1347,7 @@ Overfull \hbox (0.96068pt too wide) in paragraph at lines 12--12
 \openout9 = `praca.lot'.
 
  [8]
-\c@licznikStron=\count486
+\c@licznikStron=\count487
  (./Rozdzial1/rozdzial1.tex
 Rozdzia\l  1.
 
@@ -1359,7 +1365,7 @@ Overfull \hbox (6.8981pt too wide) in paragraph at lines 2--2
 []\T1/lmr/bx/n/17.28 Problemy wspóª-cze-snego ucze-nia ma-szy-no-wego 
  []
 
-<Rysunki/Rozdzial2/perceptron.jpg, id=599, 523.35526pt x 195.129pt>
+<Rysunki/Rozdzial2/perceptron.jpg, id=606, 523.35526pt x 195.129pt>
 File: Rysunki/Rozdzial2/perceptron.jpg Graphic file (type jpg)
 <use Rysunki/Rozdzial2/perceptron.jpg>
 Package pdftex.def Info: Rysunki/Rozdzial2/perceptron.jpg  used on input line 1
@@ -1371,7 +1377,7 @@ Package pdftex.def Info: Rysunki/Rozdzial2/perceptron.jpg  used on input line 1
 Underfull \vbox (badness 4193) has occurred while \output is active []
 
  [4 <./Rysunki/Rozdzial2/perceptron.jpg>]
-<Rysunki/Rozdzial2/multithreading.jpg, id=610, 573.94424pt x 231.86626pt>
+<Rysunki/Rozdzial2/multithreading.jpg, id=617, 573.94424pt x 231.86626pt>
 File: Rysunki/Rozdzial2/multithreading.jpg Graphic file (type jpg)
 <use Rysunki/Rozdzial2/multithreading.jpg>
 Package pdftex.def Info: Rysunki/Rozdzial2/multithreading.jpg  used on input li
@@ -1383,21 +1389,21 @@ Rozdzia\l  3.
 [7
 
 ] [8]
-<Rysunki/Rozdzial2/diagnosis_distribution.png, id=649, 355.3275pt x 126.4725pt>
+<Rysunki/Rozdzial2/diagnosis_distribution.png, id=656, 355.3275pt x 126.4725pt>
 
 File: Rysunki/Rozdzial2/diagnosis_distribution.png Graphic file (type png)
 <use Rysunki/Rozdzial2/diagnosis_distribution.png>
 Package pdftex.def Info: Rysunki/Rozdzial2/diagnosis_distribution.png  used on 
 input line 62.
 (pdftex.def)             Requested size: 256.07741pt x 91.1489pt.
-<Rysunki/Rozdzial2/variable_distribution.png, id=651, 369.63094pt x 237.88875pt
+<Rysunki/Rozdzial2/variable_distribution.png, id=658, 369.63094pt x 237.88875pt
 >
 File: Rysunki/Rozdzial2/variable_distribution.png Graphic file (type png)
 <use Rysunki/Rozdzial2/variable_distribution.png>
 Package pdftex.def Info: Rysunki/Rozdzial2/variable_distribution.png  used on i
 nput line 69.
 (pdftex.def)             Requested size: 256.07741pt x 164.80766pt.
-<Rysunki/Rozdzial2/box_graph.png, id=653, 423.08063pt x 378.66469pt>
+<Rysunki/Rozdzial2/box_graph.png, id=660, 423.08063pt x 378.66469pt>
 File: Rysunki/Rozdzial2/box_graph.png Graphic file (type png)
 <use Rysunki/Rozdzial2/box_graph.png>
 Package pdftex.def Info: Rysunki/Rozdzial2/box_graph.png  used on input line 81
@@ -1406,19 +1412,19 @@ Package pdftex.def Info: Rysunki/Rozdzial2/box_graph.png  used on input line 81
  [9 <./Rysunki/Rozdzial2/diagnosis_distribution.png>] [10 <./Rysunki/Rozdzial2/
 variable_distribution.png (PNG copy)> <./Rysunki/Rozdzial2/box_graph.png (PNG c
 opy)>]
-<Rysunki/Rozdzial3/log.png, id=667, 368.1253pt x 258.9675pt>
+<Rysunki/Rozdzial3/log.png, id=674, 368.1253pt x 258.9675pt>
 File: Rysunki/Rozdzial3/log.png Graphic file (type png)
 <use Rysunki/Rozdzial3/log.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/log.png  used on input line 108.
 (pdftex.def)             Requested size: 298.75264pt x 210.18137pt.
  [11 <./Rysunki/Rozdzial3/log.png (PNG copy)>]
-<Rysunki/Rozdzial3/cube_root.png, id=689, 385.44pt x 251.43938pt>
+<Rysunki/Rozdzial3/cube_root.png, id=696, 385.44pt x 251.43938pt>
 File: Rysunki/Rozdzial3/cube_root.png Graphic file (type png)
 <use Rysunki/Rozdzial3/cube_root.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/cube_root.png  used on input line 12
 8.
 (pdftex.def)             Requested size: 298.75264pt x 194.8865pt.
-<Rysunki/Rozdzial3/arrhenius.png, id=691, 398.23781pt x 237.88875pt>
+<Rysunki/Rozdzial3/arrhenius.png, id=698, 398.23781pt x 237.88875pt>
 File: Rysunki/Rozdzial3/arrhenius.png Graphic file (type png)
 <use Rysunki/Rozdzial3/arrhenius.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/arrhenius.png  used on input line 13
@@ -1426,34 +1432,34 @@ Package pdftex.def Info: Rysunki/Rozdzial3/arrhenius.png  used on input line 13
 (pdftex.def)             Requested size: 298.75264pt x 178.46692pt.
  [12 <./Rysunki/Rozdzial3/cube_root.png (PNG copy)> <./Rysunki/Rozdzial3/arrhen
 ius.png (PNG copy)>]
-<Rozdzial3/ferritin.png, id=700, 247.67531pt x 180.675pt>
+<Rozdzial3/ferritin.png, id=707, 247.67531pt x 180.675pt>
 File: Rozdzial3/ferritin.png Graphic file (type png)
 <use Rozdzial3/ferritin.png>
 Package pdftex.def Info: Rozdzial3/ferritin.png  used on input line 152.
 (pdftex.def)             Requested size: 213.39568pt x 155.66968pt.
-<Rozdzial3/decision.png, id=702, 245.41687pt x 175.40532pt>
+<Rozdzial3/decision.png, id=709, 245.41687pt x 175.40532pt>
 File: Rozdzial3/decision.png Graphic file (type png)
 <use Rozdzial3/decision.png>
 Package pdftex.def Info: Rozdzial3/decision.png  used on input line 161.
 (pdftex.def)             Requested size: 256.07741pt x 183.03012pt.
 [13 <./Rozdzial3/ferritin.png (PNG copy)> <./Rozdzial3/decision.png>]
-<Rozdzial3/decision1.png, id=708, 238.64156pt x 174.6525pt>
+<Rozdzial3/decision1.png, id=715, 238.64156pt x 174.6525pt>
 File: Rozdzial3/decision1.png Graphic file (type png)
 <use Rozdzial3/decision1.png>
 Package pdftex.def Info: Rozdzial3/decision1.png  used on input line 169.
 (pdftex.def)             Requested size: 256.07741pt x 187.42531pt.
-<Rozdzial3/mnf.png, id=710, 218.31563pt x 124.21407pt>
+<Rozdzial3/mnf.png, id=717, 218.31563pt x 124.21407pt>
 File: Rozdzial3/mnf.png Graphic file (type png)
 <use Rozdzial3/mnf.png>
 Package pdftex.def Info: Rozdzial3/mnf.png  used on input line 178.
 (pdftex.def)             Requested size: 256.07741pt x 145.69945pt.
  [14 <./Rozdzial3/decision1.png (PNG copy)> <./Rozdzial3/mnf.png (PNG copy)>]
-<Rozdzial3/log2.png, id=718, 353.06906pt x 237.13594pt>
+<Rozdzial3/log2.png, id=725, 353.06906pt x 237.13594pt>
 File: Rozdzial3/log2.png Graphic file (type png)
 <use Rozdzial3/log2.png>
 Package pdftex.def Info: Rozdzial3/log2.png  used on input line 208.
 (pdftex.def)             Requested size: 298.75264pt x 200.65465pt.
-<Rozdzial3/cube2.png, id=720, 376.40625pt x 240.14719pt>
+<Rozdzial3/cube2.png, id=727, 376.40625pt x 240.14719pt>
 File: Rozdzial3/cube2.png Graphic file (type png)
 <use Rozdzial3/cube2.png>
 Package pdftex.def Info: Rozdzial3/cube2.png  used on input line 223.
@@ -1465,7 +1471,7 @@ ie-sku-teczna na wszyst-
  []
 
 [15 <./Rozdzial3/log2.png (PNG copy)>]
-<Rysunki/Rozdzial3/pvalue1.png, id=736, 382.42876pt x 400.49625pt>
+<Rysunki/Rozdzial3/pvalue1.png, id=743, 382.42876pt x 400.49625pt>
 File: Rysunki/Rozdzial3/pvalue1.png Graphic file (type png)
 <use Rysunki/Rozdzial3/pvalue1.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/pvalue1.png  used on input line 263.
@@ -1473,18 +1479,18 @@ Package pdftex.def Info: Rysunki/Rozdzial3/pvalue1.png  used on input line 263.
 (pdftex.def)             Requested size: 384.1096pt x 402.27359pt.
  [16 <./Rozdzial3/cube2.png (PNG copy)>]
 [17 <./Rysunki/Rozdzial3/pvalue1.png>]
-<Rysunki/Rozdzial3/pvalue2.png, id=748, 377.15906pt x 156.585pt>
+<Rysunki/Rozdzial3/pvalue2.png, id=756, 377.15906pt x 156.585pt>
 File: Rysunki/Rozdzial3/pvalue2.png Graphic file (type png)
 <use Rysunki/Rozdzial3/pvalue2.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/pvalue2.png  used on input line 273.
 
 (pdftex.def)             Requested size: 298.75264pt x 124.0329pt.
-<Rysunki/Rozdzial3/roc.png, id=749, 287.57437pt x 286.06876pt>
+<Rysunki/Rozdzial3/roc.png, id=757, 287.57437pt x 286.06876pt>
 File: Rysunki/Rozdzial3/roc.png Graphic file (type png)
 <use Rysunki/Rozdzial3/roc.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/roc.png  used on input line 280.
 (pdftex.def)             Requested size: 213.39568pt x 212.28557pt.
-<Rysunki/Rozdzial3/neural_struct.png, id=753, 763.85374pt x 653.44125pt>
+<Rysunki/Rozdzial3/neural_struct.png, id=761, 763.85374pt x 653.44125pt>
 File: Rysunki/Rozdzial3/neural_struct.png Graphic file (type png)
 <use Rysunki/Rozdzial3/neural_struct.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/neural_struct.png  used on input lin
@@ -1492,7 +1498,7 @@ e 304.
 (pdftex.def)             Requested size: 256.07741pt x 219.05623pt.
  [18 <./Rysunki/Rozdzial3/pvalue2.png (PNG copy)> <./Rysunki/Rozdzial3/roc.png 
 (PNG copy)>]
-<Rysunki/Rozdzial3/roc_test.png, id=761, 397.485pt x 285.31593pt>
+<Rysunki/Rozdzial3/roc_test.png, id=768, 397.485pt x 285.31593pt>
 File: Rysunki/Rozdzial3/roc_test.png Graphic file (type png)
 <use Rysunki/Rozdzial3/roc_test.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/roc_test.png  used on input line 314
@@ -1508,7 +1514,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 315--315
 \T1/lmr/m/n/10.95 czna od-bior-nika dla
  []
 
-<Rysunki/Rozdzial3/roc_valid.png, id=762, 398.23781pt x 285.31593pt>
+<Rysunki/Rozdzial3/roc_valid.png, id=769, 398.23781pt x 285.31593pt>
 File: Rysunki/Rozdzial3/roc_valid.png Graphic file (type png)
 <use Rysunki/Rozdzial3/roc_valid.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/roc_valid.png  used on input line 32
@@ -1526,7 +1532,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 322--322
 
 [19 <./Rysunki/Rozdzial3/neural_struct.png> <./Rysunki/Rozdzial3/roc_test.png (
 PNG copy)> <./Rysunki/Rozdzial3/roc_valid.png (PNG copy)>]
-<Rysunki/Rozdzial3/roc_svm1_test.png, id=768, 402.00188pt x 281.55188pt>
+<Rysunki/Rozdzial3/roc_svm1_test.png, id=775, 402.00188pt x 281.55188pt>
 File: Rysunki/Rozdzial3/roc_svm1_test.png Graphic file (type png)
 <use Rysunki/Rozdzial3/roc_svm1_test.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/roc_svm1_test.png  used on input lin
@@ -1537,7 +1543,7 @@ Underfull \hbox (badness 2035) in paragraph at lines 355--355
 [][]|\T1/lmr/m/n/10.95 Krzywa charakterystycz-
  []
 
-<Rysunki/Rozdzial3/roc_svm1_val.png, id=769, 406.51875pt x 280.79906pt>
+<Rysunki/Rozdzial3/roc_svm1_val.png, id=776, 406.51875pt x 280.79906pt>
 File: Rysunki/Rozdzial3/roc_svm1_val.png Graphic file (type png)
 <use Rysunki/Rozdzial3/roc_svm1_val.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/roc_svm1_val.png  used on input line
@@ -1563,12 +1569,12 @@ Underfull \vbox (badness 3000) has occurred while \output is active []
 
  [20 <./Rysunki/Rozdzial3/roc_svm1_test.png (PNG copy)> <./Rysunki/Rozdzial3/ro
 c_svm1_val.png (PNG copy)>]
-<Rozdzial3/pvalue3.png, id=779, 374.90062pt x 134.75343pt>
+<Rozdzial3/pvalue3.png, id=786, 374.90062pt x 134.75343pt>
 File: Rozdzial3/pvalue3.png Graphic file (type png)
 <use Rozdzial3/pvalue3.png>
 Package pdftex.def Info: Rozdzial3/pvalue3.png  used on input line 375.
 (pdftex.def)             Requested size: 426.79135pt x 153.41489pt.
-<Rozdzial3/pvalue4.png, id=780, 366.61969pt x 82.80937pt>
+<Rozdzial3/pvalue4.png, id=787, 366.61969pt x 82.80937pt>
 File: Rozdzial3/pvalue4.png Graphic file (type png)
 <use Rozdzial3/pvalue4.png>
 Package pdftex.def Info: Rozdzial3/pvalue4.png  used on input line 382.
@@ -1718,8 +1724,12 @@ Rozdzia\l  6.
 LaTeX Warning: Reference `dlib:sammmon' on page 61 undefined on input line 36.
 
 (./Result/inc/dlib/sammon.hpp) [61] (./Result/inc/dlib/linear.hpp) [62]
-(./Result/inc/dlib/svm.hpp) [63] (./Result/inc/dlib/neural.hpp [64])
-(./Result/inc/dlib/krr.hpp [65]) [66] (./Result/inc/dlib/eval.hpp
+(./Result/inc/dlib/svm.hpp [63]) (./Result/inc/dlib/neural.hpp [64]) [65]
+(./Result/inc/dlib/krr.hpp)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [66]
+(./Result/inc/dlib/eval.hpp [67]
 Overfull \hbox (36.53394pt too wide) in paragraph at lines 42--43
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1729,26 +1739,31 @@ Overfull \hbox (41.78394pt too wide) in paragraph at lines 43--44
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[67]) (./Result/inc/dlib/cross.hpp [68])
+) (./Result/inc/dlib/cross.hpp [68])
 
-LaTeX Warning: Citation 'dlib:home' on page 69 undefined on input line 90.
+LaTeX Warning: Citation 'dlib:home' on page 69 undefined on input line 95.
 
-) (./Rozdzial7/rozdzial7.tex [69] [70]
+) (./Rozdzial7/rozdzial7.tex
+Underfull \vbox (badness 2409) has occurred while \output is active []
+
+ [69]
+[70]
 Rozdzia\l  7.
-)
-Underfull \vbox (badness 2990) has occurred while \output is active []
 
- [71
+Overfull \hbox (7.70227pt too wide) in alignment at lines 7--68
+ [] [] [] [] 
+ []
 
-]
-[72] [73
+[71
+
+] [72]) [73] [74] [75
 
 ] (./praca.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: 0E201F9825155244B1531E3B540C0D29;18355.
+(rerunfilecheck)             Checksum: 4686593A8245098038519EE103AFCAD6;18500.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                praca
@@ -1759,10 +1774,10 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35070 strings out of 476017
- 632129 string characters out of 5789275
- 1934660 words of memory out of 5000000
- 52954 multiletter control sequences out of 15000+600000
+ 35239 strings out of 476017
+ 634250 string characters out of 5789275
+ 1935660 words of memory out of 5000000
+ 53117 multiletter control sequences out of 15000+600000
  600993 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,12n,109p,2262b,2469s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1782,10 +1797,10 @@ ts/type1/public/lm/lmtt12.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/
 public/lm/lmtti10.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/c
 m-super/sfxc1728.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/cm
 -super/sfxc2074.pfb>
-Output written on praca.pdf (81 pages, 973589 bytes).
+Output written on praca.pdf (83 pages, 979148 bytes).
 PDF statistics:
- 3176 PDF objects out of 3580 (max. 8388607)
- 2986 compressed objects within 30 object streams
- 1831 named destinations out of 2073 (max. 500000)
- 881 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3191 PDF objects out of 3580 (max. 8388607)
+ 2999 compressed objects within 30 object streams
+ 1833 named destinations out of 2073 (max. 500000)
+ 889 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -11,7 +11,7 @@ inline void dlibLinear(std::vector<dlib::matrix<double>> data,
     using namespace dlib;
     // utworzenie oraz konfiguracja trenera i jądra
     using linearKernel = linear_kernel<matrix<double>>;
-    krr_trainer<matrix<double>> trainer;
+    rr_trainer<matrix<double>> trainer;
     trainer.set_kernel(linearKernel());
     // podział danych
     auto dataSplit = data.begin() + data.size() * 0.8;

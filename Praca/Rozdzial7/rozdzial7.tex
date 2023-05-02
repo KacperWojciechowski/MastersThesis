@@ -1,6 +1,76 @@
 \chapter{Zestawienie zbiorcze i podsumowanie}
 
 \section{Oferowane funkcjonalności}
+
+Omówione w ramach niniejszej pracy biblioteki różnią się typem i ilością oferowanych funkcjonalności. Tabela \ref{fun:sum} zbiorczo podsumowuje poszczególne omówione w poprzednich rozdziałach aspekty.
+
+\begin{longtable}{c | c | c | c}
+	\centering
+	\multirow{2}{*}{\makecell{Funkcjonalność}} & \multicolumn{3}{c}{Biblioteka} \\
+	\cline{2-4}
+	 &  Shogun & Shark-ML & Dlib \\
+	\hline
+	\makecell{Odczyt \\ danych} & \makecell{std::vector, \\ wsparcie dla \\ formatu CSV} & \makecell{surowe \\ tablice, \\ wsparcie dla \\ formatu CSV, \\ wsparcie \\ dla HTTP} & \makecell{std::vector, \\ wsparcie dla \\ formatu CSV} \\
+	\hline
+	{Normalizacja} & min-max & \makecell{przedział \\ jednostkowy, \\ jednostkowa \\ wariancja, \\ zerowa \\ średnia i \\ wybrana \\ wariancja} & standaryzacja \\
+	\hline
+	\makecell{Redukcja \\ wymiarowości} & \makecell{PCA, Kernel PCA, \\ MDS, IsoMap, \\ ICA, Factor analysis, \\t-SNE} & \makecell{PCA, Liniowa \\ analiza \\ dyskryminacyjna} & \makecell{PCA, Liniowa \\ analiza \\ dyskryminacyjna, \\ Mapowanie \\ Sammona} \\
+	\hline
+	\makecell{Regularyzacja} & \makecell{L1 i L2 \\ automatyczna} & \makecell{L1 i L2} & L2 \\
+	\hline
+	\makecell{Regresja \\ liniowa} & Tak & Tak & Tak \\
+	\hline
+	\makecell{Regresja \\ logistyczna} & Tak & Tak & Nie \\
+	\hline
+	\makecell{Maszyna \\ wektorów \\ nośnych} & Tak & Tak & Tak \\
+	\hline
+	\makecell{Algorytm \\ K-najbliższych \\ sąsiadów} & Tak & Tak & Nie \\
+	\hline
+	\makecell{Algorytm \\ zbiorowy} & \makecell{Wzmacnianie \\ gradientu, \\ losowy las} & \makecell{Losowy \\ las} & Nie \\
+	\hline
+	\makecell{Sieć \\ neuronowa} & Tak & Tak & Tak \\
+	\hline
+	\makecell{Brzegowa \\ regresja \\ jądra} & Nie & Nie & Tak \\
+	\hline
+	\makecell{Błąd \\ średniokwadratowy} & Tak & Tak & Nie \\
+	\hline
+	\makecell{Średni \\ błąd \\ absolutny} & Tak & Tak & Nie \\
+	\hline
+	\makecell{Błąd typu \\ zero-one} & Nie & Tak & Nie \\
+	\hline
+	\makecell{Błąd \\ dyskretny} & Nie & Tak & Nie \\
+	\hline
+	\makecell{Entropia \\ krzyżowa} & Nie & Tak & Nie \\
+	\hline
+	\makecell{Błąd typu \\ hinge} & Nie & Tak & Nie \\
+	\hline
+	\makecell{Średnio-\\kwadratowy \\ błąd typu \\ hinge} & Nie & Tak & Nie\\
+	\hline
+	\makecell{Błąd typu \\ hinge epsilon} & Nie & Tak & Nie\\
+	\hline
+	\makecell{Średnio-\\kwadratowy \\ błąd typu \\ hinge epsilon} & Nie & Tak & Nie\\
+	\hline
+	\makecell{Funkcja \\ straty \\ Hubera} & Nie & Tak & Nie\\
+	\hline
+	\makecell{Funkcja \\ straty \\ Tukeya} & Nie & Tak & Nie\\
+	\hline
+	\makecell{Logarytmiczna \\ funkcja \\ straty} & Tak & Nie & Nie\\
+	\hline
+	\makecell{Metryka $R^2$} & Tak & Tak & Nie\\
+	\hline
+	\makecell{Dokładność} & Tak & Nie & Tak \\
+	\hline
+	\makecell{Pole pod \\ wykresem \\ ROC} & Tak & Tak & Tak* \\
+	\hline
+	\makecell{Sprawdzian \\ krzyżowy \\ k-krotny} & Tak & Tak & Tak \\
+	\caption{Zbiorcze porównanie funkcjonalności bibliotek}
+	\label{fun:sum}
+\end{longtable} 
+
+* - konieczność przeliczenia pola na podstawie uzyskanych punktów pomiarowych wykresu funkcji.
+
+Analizując dane zebrane w tabeli \ref{fun:sum} zauważyć można, że biblioteki Shogun oraz Shark-ML są bardzo zbliżone do siebie typem i ilością dostępnych metod uczenia maszynowego, jednak Shark-ML posiada więcej rodzajów błędów możliwych do wykorzystania jako funkcje strat, pozwalając na większą swobodę względem dostosowywania procesu uczenia. Najmniejszą ilością funkcjonalności charakteryzuje się biblioteka Dlib, posiadająca jedynie podzbiór algorytmów dostępnych w innych projektach. Ponadto, posiada ona bardzo ubogie możliwości analizy sprawności modeli, wymagając od użytkownika napisania własnych procedur przetwarzania uzyskanych danych, jak np. procedura obliczania pola pod wykresem krzywej charakterystycznej odbiornika.
+
 \section{Porównanie wyników dla zadanych przykładów}
 \section{Wymagany nakład pracy i jakość źródeł}
 

@@ -35,6 +35,10 @@ Drugim z oferowanych algorytmów redukcji wymiarowości zawartych w Dlib jest al
 
 Całość algorytmu mapowania Sammmona implementowana jest za pomocą klasy \textit{dlib::sammon\char`_projection}, i ogranicza się do utworzenia jej instancji. Wykorzystując metodę należy przekazać do utworzonego obiektu za pomocą operatora wywołania funkcji wektor danych, oraz oczekiwaną ilość wymiarów, otrzymując przekształcone dane. W związku z powyższym, funkcja realizująca redukcję z użyciem wyżej wymienionej metody sprowadza się do wykorzystania dwóch linii. Dokładny sposób jej użycia pokazano na listingu \ref{dlib:sammmon}
 
+\subsection{Regularyzacja L2}
+
+Biblioteka Dlib posiada funkcję trenera pozwalającą na użycie brzegowej regresji, realizującą regularyzację L2, o nazwie \textit{rr\char`_trainer} dla regresji liniowej oraz \textit{krr\char`_trainer} dla regresji nieliniowej. Przykłady zastosowania poszczególnych wersji tego algorytmu zostały przedstawione w sekcji omawiającej model regresji liniowej, oraz brzegowej regresji jądra.
+
 \cppcode{Result/inc/dlib/sammon.hpp}{Przykład redykcji wymiarowości z użyciem mapowania Sammmona}{dlib:sammon}
 
 \section{Modele uczenia maszynowego}
@@ -69,6 +73,7 @@ Obiekt trenera w trakcie jego tworzenia przyjmuje referencję do architektury si
 
 Przygotowanie wieloklasowego modelu brzegowej regresji jądra (ang. \textit{Kernel Ridge Regression}) w przypadku biblioteki Dlib wygląda prawie identycznie do sposobu realizacji wieloklasowej maszyny wektorów nośnych. Główną różnicą jest wykorzystany trener podstawowy, w tym wypadku stanowiący obiekt klasy \textit{dlib::krr\char`_trainer}. Możliwe jest także wykorzystanie tego samego typu jądra, co w przypadku maszyny wektorów nośnych. Listing \ref{dlib:krr} obrazuje szczegółowy sposób przygotowania modelu.
 
+\newpage
 \cppcode{Result/inc/dlib/krr.hpp}{Przykład użycia brzegowej regresji jądra w Dlib}{dlib:krr}
 
 \section{Metody analizy modeli}
