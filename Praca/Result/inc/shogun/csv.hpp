@@ -1,7 +1,7 @@
 #pragma once
 
-#include <shogun/src/base/init.h>
-#include <shogun/src/base/some.h>
+#include <shogun/src/shogun/base/init.h>
+#include <shogun/src/shogun/base/some.h>
 #include <shogun/src/shogun/io/File.h>
 
 // pomocnicze pośrednie opakowanie na zestaw danych
