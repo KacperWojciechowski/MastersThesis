@@ -1,7 +1,6 @@
 #pragma once
 
 #include <inc/shark/csv.hpp>
-#include <inc/shark/knn.hpp>
 #include <inc/shark/logistic.hpp>
 #include <inc/shark/neural.hpp>
 #include <inc/shark/printEvaluation.hpp>
