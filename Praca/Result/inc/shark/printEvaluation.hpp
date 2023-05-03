@@ -32,7 +32,7 @@ inline void printSharkModelEvaluation(const auto& labels,
     if (task == Task::CLASSIFICATION)
     {
         constexpr bool invertToPositiveROC = true;
-        NegativeAUC roc(invertToPositiveROC);
+        NegativeAUC<> roc(invertToPositiveROC);
         auto auc_roc = roc(labels, predictions);
         std::cout << "AUC ROC: " << auc_roc << std::endl << std::endl;
     }
