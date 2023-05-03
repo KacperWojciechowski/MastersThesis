@@ -42,7 +42,7 @@ inline void printSharkModelEvaluation(
     auto squaredSum = 0.0;
     for (int i = 0; i < labels.numberOfElements(); i++)
     {
-        squaredSum += std::pow(static_cast<const int>(predictions.element(i)) - static_cast<const double>(labels.element(i).element(0)), 2);
+        squaredSum += std::pow(static_cast<const int>(predictions.element(i).element(0)) - static_cast<const double>(labels.element(i)), 2);
     }
     auto mse = std::sqrt(squaredSum / labels.numberOfElements());
 
