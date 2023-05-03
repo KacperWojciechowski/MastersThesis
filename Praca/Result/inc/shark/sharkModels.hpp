@@ -13,11 +13,13 @@ inline void sharkModels()
     using namespace shark;
 
     // odczytanie i podział danych
-    auto classificationTrainData = sharkReadCsvData("wdbc_data_with_labels.csv");
+    auto classificationTrainData = sharkReadCsvData<ClassificationDataset>(
+        "wdbc_data_with_labels.csv");
     auto classificationTestData = splitAtElement(
         classificationTrainData,
         static_cast<std::size_t>(0.8*classificationTrainData.numberOfElements()));
-    auto regressionTrainData = sharkReadCsvData("IronGlutathione.csv");
+    auto regressionTrainData = sharkReadCsvData<RegressionDataset>(
+        "IronGlutathione.csv");
     auto regressionTestData = splitAtElement(
         regressionTrainData,
         static_cast<std::size_t>(0.8*regressionTrainData.numberOfElements()));

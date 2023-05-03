@@ -7,7 +7,8 @@
 #include <shark/Data/Csv.h>
 #include <shark/Data/SparseData.h>
 
-inline auto sharkReadCsvData(std::string filePath, Task task)
+template<typename DatasetType>
+inline DatasetType sharkReadCsvData(std::string filePath, Task task)
 {
     using namespace shark;
 
@@ -16,13 +17,13 @@ inline auto sharkReadCsvData(std::string filePath, Task task)
 
     if (task == Task::CLASSIFICATION)
     {
-        ClassificationDataset trainData;
+        DatasetType trainData;
         importCSV(trainData, filePath.c_str(), FIRST_COLUMN, ',');
         return trainData;
     }
     else
     {
-        RegressionDataset trainData;
+        DatasetType trainData;
         importCSV(trainData, filePath.c_str(), LAST_COLUMN, ',');
         return trainData;
     }
