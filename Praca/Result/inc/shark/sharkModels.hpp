@@ -14,12 +14,12 @@ inline void sharkModels()
 
     // odczytanie i podział danych
     auto classificationTrainData = sharkReadCsvData<ClassificationDataset>(
-        "wdbc_data_with_labels.csv");
+        "wdbc_data_with_labels.csv", Task::CLASSIFICATION);
     auto classificationTestData = splitAtElement(
         classificationTrainData,
         static_cast<std::size_t>(0.8*classificationTrainData.numberOfElements()));
     auto regressionTrainData = sharkReadCsvData<RegressionDataset>(
-        "IronGlutathione.csv");
+        "IronGlutathione.csv", Task::REGRESSION);
     auto regressionTestData = splitAtElement(
         regressionTrainData,
         static_cast<std::size_t>(0.8*regressionTrainData.numberOfElements()));

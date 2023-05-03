@@ -11,29 +11,20 @@ inline void sharkLinear(const shark::RegressionDataset& trainData,
 {
     using namespace shark;
 
-    // przygotowanie modelu
-    LinearModel<> model(inputDimension(trainData), labelDimension(trainData));
-    SquaredLoss<> loss;
-    ErrorFunction errorFunction(trainData, &model, &loss);
-    // przygotowanie i wyszkolenie optymalizatora
-    CG optimizer;
-    errorFunction.init();
-    optimizer.init(errorFunction);
-    for (int i = 0; i < 100; ++i)
-    {
-        optimizer.step(errorFunction);
-    }
-    // zastosowanie wytrenowanych parametrów modelu
-    model.setParameterVector(optimizer.solution().point);
+    // przygotowanie modelu i trenera
+    LinearModel<> model;
+    LinearRegression trainer;
+    //trening
+    trainer.train(model, trainData);
     // ewaluacja
     std::cout << "----- Shark Linear -----" << std::endl;
     std::cout << "Train data:" << std::endl;
     auto predictions = model(trainData.inputs());
     printSharkModelEvaluation(
-        trainData.outputs(), predictions, Task::REGRESSION);
+        trainData.labels(), predictions, Task::REGRESSION);
 
     std::cout << "Test data:" << std::endl;
     predictions = model(testData.inputs());
     printSharkModelEvaluation(
-        trainData.outputs(), predictions, Task::REGRESSION);
+        trainData.labels(), predictions, Task::REGRESSION);
 }

@@ -7,6 +7,7 @@
 #include <shark/ObjectiveFunctions/ErrorFunction.h>
 #include <shark/ObjectiveFunctions/Loss/SquaredLoss.h>
 #include <shark/ObjectiveFunctions/Regularizer.h>
+#include <shark/ObjectiveFunctions/Loss/DiscreteLoss.h>
 
 inline void sharkNN(const shark::ClassificationDataset& trainData,
                     const shark::ClassificationDataset& testData)

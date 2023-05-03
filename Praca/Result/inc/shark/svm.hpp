@@ -22,7 +22,7 @@ inline void sharkSVM(const shark::ClassificationDataset& trainData,
     CSvmTrainer<RealVector, double> trainer(
         &kernel, regularization, bias);
     trainer.sparsify() = false;
-    trainer.stopCondition().minAccuracy=1e-6;
+    trainer.stoppingCondition().minAccuracy=1e-6;
     trainer.setCacheSize(0x1000000);
     // trening
     trainer.train(svm, trainData);
