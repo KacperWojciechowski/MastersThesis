@@ -13,8 +13,8 @@ enum class Task
 };
 
 template <typename DataType, 
-std::enable_if_t<std::is_base_of_v<
-    shark::Data<shark::RealVector>, DataType>, bool> = true> 
+std::enable_if_t<std::is_base_of<
+    shark::Data<shark::RealVector>, DataType>::value, bool> = true> 
 inline void printSharkModelEvaluation(
     const auto& labels, 
     const auto& predictions)
@@ -35,8 +35,8 @@ inline void printSharkModelEvaluation(
 
 
 template <typename DataType, 
-std::enable_if_t<std::is_base_of_v<
-    shark::Data<unsigned int>, DataType>, bool> = true> 
+std::enable_if_t<std::is_base_of<
+    shark::Data<unsigned int>, DataType>::value, bool> = true> 
 inline void printSharkModelEvaluation(
     const auto& labels, 
     const auto& predictions)

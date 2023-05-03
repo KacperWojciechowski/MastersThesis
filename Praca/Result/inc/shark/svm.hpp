@@ -1,6 +1,7 @@
 #pragma once
 
 #define SHARK_CV_VERBOSE 1
+#include <inc/shark/printEvaluation.hpp>
 #include <shark/Algorithms/KMeans.h>
 #include <shark/Algorithms/Trainers/CSvmTrainer.h>
 #include <shark/Data/Dataset.h>
