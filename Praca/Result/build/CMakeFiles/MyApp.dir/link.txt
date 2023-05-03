@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/MyApp.dir/test.cpp.o -o MyApp  -lShark 
+/usr/bin/c++ CMakeFiles/MyApp.dir/test.cpp.o -o MyApp  -lShogun 

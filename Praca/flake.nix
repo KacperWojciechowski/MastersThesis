@@ -45,7 +45,7 @@
         };
       in {
         packages = {
-          inherit testCpp;
+          inherit testCpp shogun;
         };
 
         devShells = {
