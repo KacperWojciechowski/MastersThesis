@@ -9,8 +9,6 @@ project(MyProject)
 #find_package(Shark REQUIRED)
 find_package(Shogun REQUIRED)
 
-find_package(Shogun REQUIRED)
-
 # Add the main.cpp source file to the project
 add_executable(MyApp test.cpp)
 
