@@ -18,9 +18,8 @@ inline void sharkNN(const shark::ClassificationDataset& trainData,
     using DenseTanhLayer = LinearModel<RealVector, TanhNeuron>;
     using DenseLinearLayer = LinearModel<RealVector>;
     using DenseLogisticLayer = LinearModel<RealVector, LogisticNeuron>;
-    DenseLinearLayer layer1(inputDimension(trainData), 5, true);
+    DenseTanhLayer layer1(inputDimension(trainData), 5, true);
     DenseTanhLayer layer2(5, 5, true);
-    DenseTanhLayer layer3(5, 5, true);
     DenseLogisticLayer output(5, 1, true);
     // połączenie warstw
     auto network = layer1 >> layer2 >> layer3 >> output;
