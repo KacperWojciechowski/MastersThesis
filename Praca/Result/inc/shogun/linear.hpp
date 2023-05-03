@@ -9,6 +9,8 @@
 #include <shogun/labels/RegressionLabels.h>
 #include <shogun/regression/LinearRidgeRegression.h>
 
+#include <vector>
+
 inline void shogunLinear(
     shogun::Some<shogun::CDenseFeatures<float64_t>>& inputs,
     shogun::Some<shogun::CRegressionLabels>& outputs)
@@ -20,23 +22,23 @@ inline void shogunLinear(
     auto linear =
         some<CLinearRidgeRegression>(tauRegularization, nullptr, nullptr);
     // podział danych na testowe i uczące
-    auto testSamples = static_cast<int>(0.8*inputs.get_num_vectors());
+    auto testSamples = static_cast<int>(0.8*inputs->get_num_vectors());
     std::vector<index_t> testIndeces(testSamples);
     std::iota(testIndeces.begin(), testIndeces.end(), 1);
     std::for_each(testIndeces.begin(), testIndeces.end(), [](auto& i) {return --i;});
-    auto trainInputs = inputs.copy_subset(testIndeces);
-    auto trainOutputs = outputs.copy_subset(testIndeces);
+    auto trainInputs = inputs->copy_subset(testIndeces);
+    auto trainOutputs = outputs->copy_subset(testIndeces);
     
-    std::vector<index_t> trainIndeces(inputs.get_num_vectors() - testSamples);
+    std::vector<index_t> trainIndeces(inputs->get_num_vectors() - testSamples);
     std::for_each(trainIndeces.begin(), trainIndeces.end(), [testSamples](auto& i) 
         {
             static int idx = testSamples;
             return idx++;
         });
     auto testInputs =
-        inputs.copy_subset(trainIndeces);
+        inputs->copy_subset(trainIndeces);
     auto testOutputs =
-        outputs.copy_subset(trainIndeces);
+        outputs->copy_subset(trainIndeces);
     // nauczanie
     linear->set_labels(trainOutputs);
     linear->train(trainInputs);

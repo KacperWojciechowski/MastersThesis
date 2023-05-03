@@ -16,13 +16,13 @@ inline void shogunLogistic(
     using namespace shogun;
 
     // podział danych na testowe i uczące
-    auto testSamples = static_cast<int>(0.8*inputs.num_cols());
-    auto trainInputs = inputs.submatrix(0, testSamples).clone();
-    auto trainOutputs = outputs.submatrix(0, testSamples).clone();
+    auto testSamples = static_cast<int>(0.8*inputs->num_cols());
+    auto trainInputs = inputs->submatrix(0, testSamples).clone();
+    auto trainOutputs = outputs->submatrix(0, testSamples).clone();
     auto testInputs =
-        inputs.submatrix(testSamples, inputs.num_cols()).clone();
+        inputs.submatrix(testSamples, inputs->num_cols()).clone();
     auto testOutputs =
-        outputs.submatrix(testSamples, outputs.num_cols()).clone();
+        outputs.submatrix(testSamples, outputs->num_cols()).clone();
 
     // utworzenie modelu
     auto logReg = some<CMulticlassLogisticRegression>();
