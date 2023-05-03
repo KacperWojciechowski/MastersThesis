@@ -32,7 +32,7 @@ inline void printSharkModelEvaluation(
 }
 
 inline void printSharkModelEvaluation(
-    const auto& labels, 
+    const shark::Data<unsigned int>& labels, 
     const shark::Data<shark::RealVector>& predictions)
 {
     using namespace shark;
