@@ -12,9 +12,10 @@ enum class Task
     REGRESSION
 };
 
-inline void printSharkModelEvaluation(const auto& labels, 
-                                      const auto& predictions,
-                                      Task task)
+inline void printSharkModelEvaluation(
+    const shark::Data<shark::RealVector>& labels, 
+    const shark::Data<shark::RealVector>& predictions,
+    Task task)
 {
     using namespace shark;
 
@@ -24,7 +25,7 @@ inline void printSharkModelEvaluation(const auto& labels,
     std::cout << "MSE: " << mse << std::endl;
     
     // metryka R^2
-    auto var = variance(labels);
+    auto var = Variance().statistics(labels);
     auto r_squared = 1 - mse / var(0);
     std::cout << "R^2: " << r_squared << std::endl;
 

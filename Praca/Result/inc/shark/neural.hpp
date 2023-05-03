@@ -22,7 +22,7 @@ inline void sharkNN(const shark::ClassificationDataset& trainData,
     DenseTanhLayer layer2(5, 5, true);
     DenseLogisticLayer output(5, 1, true);
     // połączenie warstw
-    auto network = layer1 >> layer2 >> layer3 >> output;
+    auto network = layer1 >> layer2 >> output;
     // utworzenie i konfiguracja funkcji straty
     SquaredLoss<> loss;
     ErrorFunction<> error(trainData, &network, &loss, true);
