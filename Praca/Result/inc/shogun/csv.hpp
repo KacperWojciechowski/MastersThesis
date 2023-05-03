@@ -3,6 +3,7 @@
 #include <shogun/base/init.h>
 #include <shogun/base/some.h>
 #include <shogun/io/File.h>
+#include <shogun/io/CSVFile.h>
 #include <shogun/labels/MulticlassLabels.h>
 #include <shogun/lib/SGMatrix.h>
 #include <shogun/lib/SGStringList.h>
@@ -41,11 +42,11 @@ inline Dataset readShogunCsvData(std::string filename, LabelPos labelPos)
     // podział macierzy na część regresorów i zmiennej odpowiedzi
     switch(labelPos)
     {
-        case FIRST:
+        case LabelPos::FIRST:
             ret.inputs = data.submatrix(1, data.num_cols).clone();
             ret.outputs = data.submatrix(0, 1).clone();
             break;
-        case LAST:
+        case LabelPos::LAST:
             ret.inputs = data.submatrix(0, data.num_cols - 1).clone();
             ret.outputs = 
                 data.submatrix(data.num_cols - 1, data.num_cols).clone();

@@ -20,13 +20,23 @@ inline void shogunLinear(
     auto linear =
         some<CLinearRidgeRegression>(tauRegularization, nullptr, nullptr);
     // podział danych na testowe i uczące
-    auto testSamples = static_cast<int>(0.8*inputs.num_cols());
-    auto trainInputs = inputs.submatrix(0, testSamples).clone();
-    auto trainOutputs = outputs.submatrix(0, testSamples).clone();
+    auto testSamples = static_cast<int>(0.8*inputs.get_num_vectors());
+    std::vector<index_t> testIndeces(testSamples);
+    std::iota(testIndeces.begin(), testIndeces.end(), 1);
+    std::for_each(testIndeces.begin(), testIndeces.end(), [](auto& i) {return --i;});
+    auto trainInputs = inputs.copy_subset(testIndeces);
+    auto trainOutputs = outputs.copy_subset(testIndeces);
+    
+    std::vector<index_t> trainIndeces(inputs.get_num_vectors() - testSamples);
+    std::for_each(trainIndeces.begin(), trainIndeces.end(), [testSamples](auto& i) 
+        {
+            static int idx = testSamples;
+            return idx++;
+        });
     auto testInputs =
-        inputs.submatrix(testSamples, inputs.num_cols()).clone();
+        inputs.copy_subset(trainIndeces);
     auto testOutputs =
-        outputs.submatrix(testSamples, outputs.num_cols()).clone();
+        outputs.copy_subset(trainIndeces);
     // nauczanie
     linear->set_labels(trainOutputs);
     linear->train(trainInputs);

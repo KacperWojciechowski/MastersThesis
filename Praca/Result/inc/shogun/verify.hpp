@@ -38,7 +38,7 @@ inline auto shogunVerifyModel(auto predictions, auto targets, Task task)
     // obliczenie metryki R^2
     auto r_square = 1.0 - mse / variance;
     std::cout << "R^2 = " << r_square << std::endl << std::endl;
-    if (task == CLASSIFICATION)
+    if (task == Task::CLASSIFICATION)
     {
         auto roc = some<CROCEvaluation>();
         roc->evaluate(predictions, targets);

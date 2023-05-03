@@ -10,7 +10,7 @@
 
 
 inline void shogunLogistic(
-    shogun::Some<shogun::CDenseFeatures>& inputs,
+    shogun::Some<shogun::CDenseFeatures<float64_t>>& inputs,
     shogun::Some<shogun::CBinaryLabels>& outputs)
 {
     using namespace shogun;
