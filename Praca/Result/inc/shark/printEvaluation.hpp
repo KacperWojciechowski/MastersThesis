@@ -25,7 +25,7 @@ inline void printSharkModelEvaluation(
     std::cout << "MSE: " << mse << std::endl;
     
     // metryka R^2
-    auto var = Variance().statistics(labels);
+    auto var = Variance().statistics(labels.elements());
     auto r_squared = 1 - mse / var(0);
     std::cout << "R^2: " << r_squared << std::endl;
 }
