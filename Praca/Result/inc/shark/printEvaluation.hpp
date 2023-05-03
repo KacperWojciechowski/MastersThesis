@@ -34,8 +34,7 @@ inline void printSharkModelEvaluation(
 }
 
 
-template <typename LabelType, typename PredType,
-std::enable_if_t<std::is_integral<typename LabelType::LabelT>::value, bool> = true>
+template <typename LabelType, typename PredType>
 inline void printSharkModelEvaluation(
     const LabelType& labels, 
     const PredType& predictions)
