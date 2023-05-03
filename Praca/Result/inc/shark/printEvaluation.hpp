@@ -14,7 +14,7 @@ enum class Task
 
 template <typename LabelType, typename PredType, 
 std::enable_if_t<std::is_base_of<
-    shark::Data<shark::RealVector>, PredType>::value, bool> = true> 
+    shark::Data<shark::RealVector>, LabelType>::value, bool> = true> 
 inline void printSharkModelEvaluation(
     const LabelType& labels, 
     const PredType& predictions)
