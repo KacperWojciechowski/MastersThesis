@@ -8,7 +8,6 @@
 #include <shogun/lib/SGStringList.h>
 #include <shogun/lib/SGVector.h>
 #include <shogun/preprocessor/RescaleFeatures.h>
-#include <shogun/util/factory.h>
 
 // pomocnicze pośrednie opakowanie na zestaw danych
 struct Dataset
