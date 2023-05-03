@@ -1,0 +1,3 @@
+/home/gerwant/MastersThesis/Praca/Result/build/CMakeFiles/MyApp.dir
+/home/gerwant/MastersThesis/Praca/Result/build/CMakeFiles/edit_cache.dir
+/home/gerwant/MastersThesis/Praca/Result/build/CMakeFiles/rebuild_cache.dir
