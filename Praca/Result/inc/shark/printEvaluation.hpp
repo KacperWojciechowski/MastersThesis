@@ -5,6 +5,7 @@
 #include <shark/ObjectiveFunctions/NegativeAUC.h>
 #include <shark/Statistics/Statistics.h>
 #include <type_traits>
+#include <cmath>
 
 enum class Task
 {
@@ -41,7 +42,7 @@ inline void printSharkModelEvaluation(
     auto squaredSum = 0.0;
     for (int i = 0; i < labels.numberOfElements(); i++)
     {
-        squaredSum += std::pow(predictions.element(i) - labels.element(i), 2);
+        squaredSum += std::pow(static_cast<unsigned int>(predictions.element(i)) - static_cast<unsigned int>(labels.element(i)), 2);
     }
     auto mse = std::sqrt(squaredSum / labels.numberOfElements());
 
