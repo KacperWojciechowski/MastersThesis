@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.5)
 project(MyProject)
 
 # Set the path to the Shark library
-#set(SHARK_ROOT_DIR "/usr/local/lib/libshark.a")
+set(SHARK_ROOT_DIR "/usr/local/lib/libshark.a")
 
 # Find the Shark package
 find_package(Shark REQUIRED)
