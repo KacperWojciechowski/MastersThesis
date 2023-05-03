@@ -25,7 +25,7 @@ inline void sharkNN(const shark::ClassificationDataset& trainData,
     // połączenie warstw
     auto network = layer1 >> layer2 >> layer3 >> output;
     // utworzenie i konfiguracja funkcji straty
-    DiscreteLoss loss;
+    SquaredLoss<> loss;
     ErrorFunction<> error(trainData, &network, &loss, true);
     TwoNormRegularizer<> regularizer(error.numberOfVariables());
     double weightDecay = 0.0001;
