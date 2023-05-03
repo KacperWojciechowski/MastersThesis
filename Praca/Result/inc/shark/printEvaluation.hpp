@@ -4,7 +4,7 @@
 #include <shark/ObjectiveFunctions/Loss/SquaredLoss.h>
 #include <shark/ObjectiveFunctions/NegativeAUC.h>
 #include <shark/Statistics/Statistics.h>
-
+#include <type_traits>
 
 enum class Task
 {
@@ -14,7 +14,7 @@ enum class Task
 
 template <typename DataType, 
 std::enable_if_t<std::is_base_of_v<
-    Data<RealVector>, DataType>, bool> = true> 
+    shark::Data<shark::RealVector>, DataType>, bool> = true> 
 inline void printSharkModelEvaluation(
     const auto& labels, 
     const auto& predictions)
@@ -36,7 +36,7 @@ inline void printSharkModelEvaluation(
 
 template <typename DataType, 
 std::enable_if_t<std::is_base_of_v<
-    Data<unsigned int>, DataType>, bool> = true> 
+    shark::Data<unsigned int>, DataType>, bool> = true> 
 inline void printSharkModelEvaluation(
     const auto& labels, 
     const auto& predictions)

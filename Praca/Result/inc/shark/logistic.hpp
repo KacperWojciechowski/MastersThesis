@@ -3,6 +3,7 @@
 #include <iostream>
 
 #define SHARK_CV_VERBOSE 1
+#include <inc/shark/printEvaluation.hpp>
 #include <shark/Algorithms/Trainers/LogisticRegression.h>
 #include <shark/Data/Dataset.h>
 #include <shark/Models/Classifier.h>
