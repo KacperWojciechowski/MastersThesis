@@ -37,6 +37,14 @@ inline void printSharkModelEvaluation(
     using namespace shark;
     using namespace shark::statistics;
 
+    // błąd średniokwadratowy
+    auto squaredSum = 0.0;
+    for (int i = 0; i < labels.numberOfElements(); i++)
+    {
+        squaredSum += std::pow(predictions.element(i) - labels.element(i), 2);
+    }
+    auto mse = std::sqrt(squaredSum / labels.numberOfElements());
+
     // metryka R^2
     auto var = Variance().statistics({labels.elements().begin(), labels.elements().end()});
     auto r_squared = 1 - mse / var(0);
