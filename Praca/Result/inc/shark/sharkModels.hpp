@@ -28,5 +28,4 @@ inline void sharkModels()
     sharkLinear(regressionTrainData, regressionTestData);
     sharkLogistic(classificationTrainData, classificationTestData);
     sharkSVM(classificationTrainData, classificationTestData);
-    sharkKNN(classificationTrainData, classificationTestData);
 }

@@ -33,7 +33,9 @@ inline void printSharkModelEvaluation(
     std::cout << "R^2: " << r_squared << std::endl;
 }
 
-template <typename LabelType, typename PredType>
+template <typename LabelType, typename PredType,
+std::enable_if_t<std::is_same<shark::RealVector, typename LabelType::LabelT>::value,
+    bool> = false> 
 inline void printSharkModelEvaluation(
     const LabelType& labels, 
     const PredType& predictions)
