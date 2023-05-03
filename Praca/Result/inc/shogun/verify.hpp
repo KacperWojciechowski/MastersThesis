@@ -4,7 +4,7 @@
 #include <cmath>
 
 #include <shogun/evaluation/MeanSquaredError.h>
-#include <shogun/evaluation/CMeanAbsoluteError.h>
+#include <shogun/evaluation/MeanAbsoluteError.h>
 #include <shogun/evaluation/ROCEvaluation.h>
 
 enum class Task

@@ -1,0 +1,1 @@
+/nix/store/b5mkki8bysygaf7a01jpj88zrxibkrv4-gcc-wrapper-12.2.0/bin/g++ CMakeFiles/MyApp.dir/test.cpp.o -o MyApp  -lShogun 

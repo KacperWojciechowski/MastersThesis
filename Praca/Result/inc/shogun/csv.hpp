@@ -1,8 +1,8 @@
 #pragma once
 
-#include <shogun/src/shogun/base/init.h>
-#include <shogun/src/shogun/base/some.h>
-#include <shogun/src/shogun/io/File.h>
+#include <shogun/base/init.h>
+#include <shogun/base/some.h>
+#include <shogun/io/File.h>
 
 // pomocnicze pośrednie opakowanie na zestaw danych
 struct Dataset

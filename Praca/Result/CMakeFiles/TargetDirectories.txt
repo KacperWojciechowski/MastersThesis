@@ -1,0 +1,3 @@
+/home/jaen/Projects/nix/gerwant2/Praca/Result/CMakeFiles/MyApp.dir
+/home/jaen/Projects/nix/gerwant2/Praca/Result/CMakeFiles/edit_cache.dir
+/home/jaen/Projects/nix/gerwant2/Praca/Result/CMakeFiles/rebuild_cache.dir
