@@ -1,8 +1,12 @@
 #pragma once
 
 #include <iostream>
+#include <shark/ObjectiveFunctions/Loss/SquaredLoss.h>
+#include <shark/ObjectiveFunctions/NegativeAUC.h>
+#include <shark/Statistics/Statistics.h>
 
-struct Task
+
+enum class Task
 {
     CLASSIFICATION,
     REGRESSION

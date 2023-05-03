@@ -1,6 +1,7 @@
 #pragma once
 
 #include <inc/shark/printEvaluation.hpp>
+#include <shark/Data/Dataset.h>
 
 inline auto sharkReadCsvData(std::string filePath, constexpr Task task)
 {
