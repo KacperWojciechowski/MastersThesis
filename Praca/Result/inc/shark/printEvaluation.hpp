@@ -12,12 +12,15 @@ enum class Task
     REGRESSION
 };
 
+template <typename DataType, 
+std::enable_if_t<std::is_base_of_v<
+    Data<RealVector>, DataType>, bool> = true> 
 inline void printSharkModelEvaluation(
-    const shark::Data<shark::RealVector>& labels, 
-    const shark::Data<shark::RealVector>& predictions,
-    Task task)
+    const auto& labels, 
+    const auto& predictions)
 {
     using namespace shark;
+    using namespace shark::statistics;
 
     // błąd średniokwadratowy
     SquaredLoss<> loss;
@@ -28,13 +31,22 @@ inline void printSharkModelEvaluation(
     auto var = Variance().statistics(labels);
     auto r_squared = 1 - mse / var(0);
     std::cout << "R^2: " << r_squared << std::endl;
+}
+
+
+template <typename DataType, 
+std::enable_if_t<std::is_base_of_v<
+    Data<unsigned int>, DataType>, bool> = true> 
+inline void printSharkModelEvaluation(
+    const auto& labels, 
+    const auto& predictions)
+{
+    using namespace shark;
+    using namespace shark::statistics;
 
     // wartość krzywej ROC
-    if (task == Task::CLASSIFICATION)
-    {
-        constexpr bool invertToPositiveROC = true;
-        NegativeAUC<> roc(invertToPositiveROC);
-        auto auc_roc = roc(labels, predictions);
-        std::cout << "AUC ROC: " << auc_roc << std::endl << std::endl;
-    }
-}
+    constexpr bool invertToPositiveROC = true;
+    NegativeAUC<> roc(invertToPositiveROC);
+    auto auc_roc = roc(labels, predictions);
+    std::cout << "AUC ROC: " << auc_roc << std::endl << std::endl;
+}    

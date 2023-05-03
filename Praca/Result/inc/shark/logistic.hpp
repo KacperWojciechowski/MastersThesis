@@ -23,10 +23,10 @@ inline void sharkLogistic(const shark::ClassificationDataset& trainData,
     std::cout << "Train data model evaluation:" << std::endl;
     auto predictions = logisticModel(trainData.inputs());
     printSharkModelEvaluation(
-        trainData.labels(), predictions, Task::CLASSIFICATION);
+        trainData.labels(), predictions);
 
     std::cout << "Test data model evaluation:" << std::endl;
     predictions = logisticModel(testData.inputs());
     printSharkModelEvaluation(
-        testData.labels(), predictions, Task::CLASSIFICATION); 
+        testData.labels(), predictions); 
 }

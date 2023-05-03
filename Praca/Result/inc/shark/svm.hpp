@@ -31,10 +31,10 @@ inline void sharkSVM(const shark::ClassificationDataset& trainData,
     std::cout << "Train data:" << std::endl;
     auto predictions = svm(trainData.inputs());
     printSharkModelEvaluation(
-        trainData.labels(), predictions, Task::CLASSIFICATION);
+        trainData.labels(), predictions);
 
     std::cout << "Test data:" << std::endl;
     predictions = svm(testData.inputs());
     printSharkModelEvaluation(
-        testData.labels(), predictions, Task::CLASSIFICATION);
+        testData.labels(), predictions);
 }
