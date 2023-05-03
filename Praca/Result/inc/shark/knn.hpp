@@ -29,7 +29,7 @@ inline void sharkKNN(const shark::ClassificationDataset& trainData,
     std::cout << "Train data :" << std::endl;
     auto predictions = KNN(trainData.inputs());
     printSharkModelEvaluation(
-        trainData.labels(), predictions);
+        static_cast<Data<unsigned int>>(trainData.labels()), predictions);
 
     std::cout << "Test data:" << std::endl;
     predictions = KNN(testData.inputs());
