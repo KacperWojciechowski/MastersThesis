@@ -33,8 +33,7 @@ inline void printSharkModelEvaluation(
     std::cout << "R^2: " << r_squared << std::endl;
 }
 
-template <typename LabelType, typename PredType>
-    bool> = false> 
+template <typename LabelType, typename PredType> 
 inline void printSharkModelEvaluation(
     const LabelType& labels, 
     const PredType& predictions)
