@@ -1,6 +1,6 @@
 #pragma once
 
-#include <shogun/stc/base/init.h>
+#include <shogun/src/base/init.h>
 #include <shogun/src/base/some.h>
 #include <shogun/src/shogun/io/File.h>
 
