@@ -13,10 +13,10 @@ enum class Task
 };
 
 template <typename LabelType, typename PredType,
-std::enable_if_t<std::is_same<shark::RealVector, LabelType::LabelT>::value,
+std::enable_if_t<std::is_same<shark::RealVector, typename LabelType::LabelT>::value,
     bool> = true> 
 inline void printSharkModelEvaluation(
-    const Label& labels, 
+    const LabelType& labels, 
     const PredType& predictions)
 {
     using namespace shark;
