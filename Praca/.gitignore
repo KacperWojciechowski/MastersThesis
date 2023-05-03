@@ -1,0 +1,5 @@
+Result/build/
+Result/CMakeFiles/
+Result/Makefile
+Result/cmake_install.cmake
+Result/CMakeCache.txt
