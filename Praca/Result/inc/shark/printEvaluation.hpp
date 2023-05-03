@@ -13,7 +13,8 @@ enum class Task
 };
 
 inline void printSharkModelEvaluation(
-    const shark::Data<shark::RealVector>& labels, 
+    //const shark::Data<shark::RealVector>& labels, 
+    const auto& labels,
     const auto& predictions)
 {
     using namespace shark;
@@ -29,17 +30,3 @@ inline void printSharkModelEvaluation(
     auto r_squared = 1 - mse / var(0);
     std::cout << "R^2: " << r_squared << std::endl;
 }
-
-inline void printSharkModelEvaluation(
-    const auto& labels, 
-    const auto& predictions)
-{
-    using namespace shark;
-    using namespace shark::statistics;
-
-    // wartość krzywej ROC
-    constexpr bool invertToPositiveROC = true;
-    NegativeAUC<> roc(invertToPositiveROC);
-    auto auc_roc = roc(labels, predictions);
-    std::cout << "AUC ROC: " << auc_roc << std::endl << std::endl;
-}    
