@@ -13,19 +13,17 @@ inline auto sharkReadCsvData(std::string filePath, Task task)
 
     // odczytaj zawartość pliku
     std::ifstream file(filePath);
-    std::string trainDataString(std::istreambuf_iterator<char>(file), 
-                                std::istreambuf_iterator<char>());
 
     if (task == Task::CLASSIFICATION)
     {
         ClassificationDataset trainData;
-        csvStringToData(trainData, trainDataString, FIRST_COLUMN, ',');
+        importCSV(trainData, filePath.c_str(), FIRST_COLUMN, ',');
         return trainData;
     }
     else
     {
         RegressionDataset trainData;
-        csvStringToData(trainData, trainDataString, LAST_COLUMN, ',');
+        importCSV(trainData, filePath.c_str(), LAST_COLUMN, ',');
         return trainData;
     }
 }
