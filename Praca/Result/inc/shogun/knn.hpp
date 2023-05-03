@@ -9,19 +9,13 @@
 #include <shogun/multiclass/KNN.h>
 #include <shogun/distance/EuclideanDistance.h>
 
-inline void shogunKNN(shogun::Some<shogun::CDenseFeatures>& inputs,
-                      shogun::Some<shogun::CMulticlassLabels>& outputs)
+inline void shogunKNN(shogun::Some<shogun::CDenseFeatures>& trainInputs,
+                      shogun::Some<shogun::CDenseFeatures>& testInputs,
+                      shogun::Some<shogun::CMulticlassLabels>& trainOutputs,
+                      shogun::Some<shogun::CMulticlassLabels>& testOutputs)
 {
     using namespace shogun;
 
-    // podział danych na testowe i uczące
-    auto testSamples = static_cast<int>(0.8*inputs.num_cols());
-    auto trainInputs = inputs.submatrix(0, testSamples).clone();
-    auto trainOutputs = outputs.submatrix(0, testSamples).clone();
-    auto testInputs =
-        inputs.submatrix(testSamples, inputs.num_cols()).clone();
-    auto testOutputs =
-        outputs.submatrix(testSamples, outputs.num_cols()).clone();
     // przygotowanie dystansu
     auto distance = some<CEuclideanDistance>(trainInputs, trainInputs);
     // przygotowanie modelu

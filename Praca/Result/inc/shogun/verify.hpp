@@ -27,14 +27,14 @@ inline auto shogunVerifyModel(auto predictions, auto targets, Task task)
     // obliczenie średniej i wariancji
     for (index_t i = 0; i < targets.num_labels(); i++)
     {
-        avg += (targets.get_label(i));
+        avg += (targets->get_label(i));
     }
-    avg /= targets.num_labels();
-    for (index_t i = 0; i < targets.num_labels(); i++)
+    avg /= targets->num_labels();
+    for (index_t i = 0; i < targets->num_labels(); i++)
     {
-        sum += std::pow(targets.get_label(i) - avg, 2);
+        sum += std::pow(targets->get_label(i) - avg, 2);
     }
-    auto variance = (1.0/targets.num_labels()) * sum;
+    auto variance = (1.0/targets->num_labels()) * sum;
     // obliczenie metryki R^2
     auto r_square = 1.0 - mse / variance;
     std::cout << "R^2 = " << r_square << std::endl << std::endl;

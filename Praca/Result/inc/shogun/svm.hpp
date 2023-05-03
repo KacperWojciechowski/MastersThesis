@@ -9,19 +9,12 @@
 #include <shogun/kernel/GaussianKernel.h>
 #include <shogun/multiclass/MulticlassLibSVM.h>
 
-inline void shogunSVM(shogun::Some<shogun::CDenseFeatures>& inputs,
-                      shogun::Some<shogun::CBinaryLabels>& outputs)
+inline void shogunSVM(shogun::Some<shogun::CDenseFeatures>& trainInputs,
+                      shogun::Some<shogun::CDenseFeatures>& testInputs,
+                      shogun::Some<shogun::CBinaryLabels>& trainOutputs,
+                      shogun::Some<shogun::CBinaryLabels>& testOutputs)
 {
     using namespace shogun;
-
-    // podział danych na testowe i uczące
-    auto testSamples = static_cast<int>(0.8*inputs.num_cols());
-    auto trainInputs = inputs.submatrix(0, testSamples).clone();
-    auto trainOutputs = outputs.submatrix(0, testSamples).clone();
-    auto testInputs =
-        inputs.submatrix(testSamples, inputs.num_cols()).clone();
-    auto testOutputs =
-        outputs.submatrix(testSamples, outputs.num_cols()).clone();
 
     // utworzenie jądra
     auto kernel = some<CGaussianKernel>(trainInputs, trainInputs, 5);

@@ -1,19 +1,13 @@
 #pragma once
 
 inline void shogunCrossValidLogistic(
-    shogun::Some<shogun::CDenseFeatures<float64_t>> inputs,
-    shogun::Some<shogun::CMulticlassLabels> outputs)
+    shogun::Some<shogun::CDenseFeatures<float64_t>>& trainInputs,
+    shogun::Some<shogun::CDenseFeatures<float64_t>>& testInputs
+    shogun::Some<shogun::CMulticlassLabels> trainOutputs,
+    shogun::Some<shogun::CMulticlassLabels> testOutputs)
 {
     using namespace shogun;
 
-    // podział danych na testowe i uczące
-    auto testSamples = static_cast<int>(0.8*inputs.num_cols());
-    auto trainInputs = inputs.submatrix(0, testSamples).clone();
-    auto trainOutputs = outputs.submatrix(0, testSamples).clone();
-    auto testInputs =
-        inputs.submatrix(testSamples, inputs.num_cols()).clone();
-    auto testOutputs =
-        outputs.submatrix(testSamples, outputs.num_cols()).clone();
     // utworzenie drzewa parametrów
     auto root = some<CModelSelectionParameters>();
     // współczynnik regularyzacji

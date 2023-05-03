@@ -9,19 +9,13 @@
 #include <shogun/base/some.h>
 
 inline void sharkNeural(
-    shogun::Some<shogun::CDenseFeatures<float64_t>> inputs,
-    shogun::Some<shogun::CBinaryLabels> outputs)
+    shogun::Some<shogun::CDenseFeatures<float64_t>> trainInputs,
+    shogun::Some<shogun::CDenseFeatures<float64_t>> testInputs,
+    shogun::Some<shogun::CBinaryLabels> trainOutputs,
+    shogun::Some<shogun::CBinaryLabels> testOutputs)
 {
     using namespace shogun;   
 
-    // podział danych na testowe i uczące
-    auto testSamples = static_cast<int>(0.8*inputs.num_cols());
-    auto trainInputs = inputs.submatrix(0, testSamples).clone();
-    auto trainOutputs = outputs.submatrix(0, testSamples).clone();
-    auto testInputs =
-        inputs.submatrix(testSamples, inputs.num_cols()).clone();
-    auto testOutputs =
-        outputs.submatrix(testSamples, outputs.num_cols()).clone();
     // konstrukcja architektury sieci
     auto dimensions = trainInputs.get_num_features();
     auto layers = some<CNeuralLayers>();
@@ -48,10 +42,10 @@ inline void sharkNeural(
     // walidacja
     std::cout << "----- Shogun Neural Network -----" << std::endl;
     std::cout << "Train data:" << std::endl;
-    auto predictions = network->apply_binary(trainInputs);
+    auto predictions = network->apply_multiclass(trainInputs);
     shogunVerifyModel(predictions, trainOutputs, Task::CLASSIFICATION);
 
     std::cout << "Test data:" << std::endl;
-    predictions = network->apply_binary(testInputs);
+    predictions = network->apply_multiclass(testInputs);
     shogunVerifyModel(predictions, testOutputs, Task::CLASSIFICATION);
 }

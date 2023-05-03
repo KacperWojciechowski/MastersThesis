@@ -20,24 +20,52 @@ inline void shogunModels()
     auto regressionDatasetTemp =
         readShogunCsvData("IronGlutathione.csv", LabelPos::LAST);
     // rozdzielenie danych na regresory i zmienne odpowiedzi
-    auto classificationFeatures =
+    auto classificationTrainFeatures =
         some<CDenseFeatures<float64_t>>(
-            classificationDatasetTemp.inputs);
-    auto classificationLabels =
-        some<CBinaryLabels>(
-            classificationDatasetTemp.outputs);
-    auto regressionFeatures =
-        some<CDesneFeatures<float64_t>>(
-            regressionDatasetTemp.inputs);
-    auto regressionLabels =
+            classificationDatasetTemp.trainInputs);
+    auto classificationTestFeatures =
+        some<CDenseFeatures<float64_t>>(
+            classificationDatasetTemp.testInputs);
+    auto classificationTrainLabels =
+        some<CMulticlassLabels>(
+            classificationDatasetTemp.trainOutputs);
+    auto classificationTestLabels =
+        some<CMulticlassLabels>(
+            classificationDatasetTemp.testOutputs);
+    auto regressionTrainFeatures =
+        some<CDenseFeatures<float64_t>>(
+            regressionDatasetTemp.trainInputs);
+    auto regressionTestFeatures =
+        some<CDenseFeatures<float64_t>>(
+            regressionDatasetTemp.testInputs);
+    auto regressionTrainLabels =
         some<CRegressionLabels>(
-            regressionDatasetTemp.outputs);
-
+            regressionDatasetTemp.trainOutputs);
+    auto regressionTestLabels =
+        some<CRegressionLabels>(
+            regressionDatasetTemp.testOutputs);
+    
     // wywołanie modeli
-    shogunLinear(regressionFeatures, regressionLabels);
-    shogunLogistic(classificationFeatures, classificationLabels);
-    shogunSVM(classificationFeatures, classificationLabels);
-    sharkNeural(classificationFeatures, classificationLabels);
+    shogunLinear(
+        regressionTrainFeatures, 
+        regressionTestFeatures, 
+        regressionTrainLabels, 
+        regressionTestLabels);
+    shogunLogistic(
+        classificationTrainFeatures, 
+        classificationTestFeatures, 
+        classificationTrainLabels, 
+        classificationTestLabels);
+    shogunSVM(
+        classificationTrainFeatures, 
+        classificationTestFeatures, 
+        classificationTrainLabels, 
+        classificationTestLabels);
+    sharkNeural(
+        classificationTrainFeatures, 
+        classificationTestFeatures, 
+        classificationTrainLabels, 
+        classificationTestLabels);
 
     exit_shogun();
 }

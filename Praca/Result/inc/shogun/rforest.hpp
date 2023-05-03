@@ -10,19 +10,13 @@
 #include <shogun/machine/RandomForest.h>
 
 inline void shogunRandomForest(
-    shogun::Some<shogun::CDenseFeatures<DataType>> inputs,
-    shogun::Some<shogun::CRegressionLabels> outputs)
+    shogun::Some<shogun::CDenseFeatures<DataType>> trainInputs,
+    shogun::Some<shogun::CDenseFeatures<DataType>> testInputs,
+    shogun::Some<shogun::CRegressionLabels> trainOutputs,
+    shogun::Some<shogun::CRegressionLabels> testOutputs)
 {
     using namespace shogun;
 
-    // podział danych na testowe i uczące
-    auto testSamples = static_cast<int>(0.8*inputs.num_cols());
-    auto trainInputs = inputs.submatrix(0, testSamples).clone();
-    auto trainOutputs = outputs.submatrix(0, testSamples).clone();
-    auto testInputs =
-        inputs.submatrix(testSamples, inputs.num_cols()).clone();
-    auto testOutputs =
-        outputs.submatrix(testSamples, outputs.num_cols()).clone();
     // utworzenie i konfiguracja modelu
     constexpr std::int32_t numRandFeats = 1;
     constexpr std::int32_t numBags = 10;
