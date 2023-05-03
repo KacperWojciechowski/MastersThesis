@@ -14,8 +14,8 @@ enum class Task
 };
 
 inline void printSharkModelEvaluation(
-    const auto& labels, 
-    const shark::Data<shark::RealVector>& predictions)
+    const shark::Data<shark::RealVector>& labels, 
+    const auto& predictions)
 {
     using namespace shark;
     using namespace shark::statistics;
@@ -31,7 +31,7 @@ inline void printSharkModelEvaluation(
     std::cout << "R^2: " << r_squared << std::endl;
 }
 
-/*inline void printSharkModelEvaluation(
+inline void printSharkModelEvaluation(
     const auto& labels, 
     const shark::Data<shark::RealVector>& predictions)
 {
@@ -39,15 +39,18 @@ inline void printSharkModelEvaluation(
     using namespace shark::statistics;
 
     // błąd średniokwadratowy
-    SquaredLoss<> loss;
-    auto mse = loss(labels, predictions);
-    std::cout << "MSE: " << mse << std::endl;
-    
+    auto squaredSum = 0.0;
+    for (int i = 0; i < labels.numberOfElements(); i++)
+    {
+        squaredSum += std::pow(static_cast<const int>(predictions.element(i)) - static_cast<const double>(labels.element(i).element(0)), 2);
+    }
+    auto mse = std::sqrt(squaredSum / labels.numberOfElements());
+
     // metryka R^2
     auto var = Variance().statistics({labels.elements().begin(), labels.elements().end()});
     auto r_squared = 1 - mse / var(0);
     std::cout << "R^2: " << r_squared << std::endl;
-}*/
+}
 
 inline void printSharkModelEvaluation(
     const auto& labels, 
