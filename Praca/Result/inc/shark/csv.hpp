@@ -1,5 +1,7 @@
 #pragma once
 
+#include <inc/shark/printEvaluation.hpp>
+
 #include <shark/Data/Dataset.h>
 #include <shark/Data/DataDistribution.h>
 #include <shark/Data/Csv.h>
