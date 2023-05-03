@@ -1,5 +1,13 @@
 #pragma once
 
+#include <iostream>
+#include <shark/Algorithms/GradientDescent/SteepestDescent.h>
+#include <shark/Models/ConcatenatedModel.h>
+#include <shark/Models/LinearModel.h>
+#include <shark/ObjectiveFunctions/ErrorFunction.h>
+#include <shark/ObjectiveFunctions/Loss/SquaredLoss.h>
+#include <shark/ObjectiveFunctions/Regularizer.h>
+
 inline void sharkNN(const shark::ClassificationDataset& trainData,
                     const shark::ClassificationDataset& testData)
 {

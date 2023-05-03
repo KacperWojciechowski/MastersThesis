@@ -1,8 +1,10 @@
 #pragma once
 
 #include <iostream>
-
 #include <inc/shark/printEvaluation.hpp>
+#include <shark/Algorithms/Trainers/LinearRegression.h>
+#include <shark/Models/LinearModel.h>
+#include <shark/ObjectiveFunctions/Loss/SquaredLoss.h>
 
 inline void sharkLinear(const shark::RegressionDataset& trainData,
                         const shark::RegressionDataset& testData)

@@ -1,5 +1,12 @@
 #pragma once
 
+#define SHARK_CV_VERBOSE 1
+#include <shark/Algorithms/KMeans.h>
+#include <shark/Algorithms/Trainers/CSvmTrainer.h>
+#include <shark/Data/Dataset.h>
+#include <shark/Models/Classifier.h>
+#include <shark/Models/Kernels/GaussianRbfKernel.h>
+
 inline void sharkSVM(const shark::ClassificationDataset& trainData,
                      const shark::ClassificationDataset& testData)
 {

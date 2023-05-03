@@ -1,5 +1,12 @@
 #pragma once
 
+#define SHARK_CV_VERBOSE 1
+#include <shark/Algorithms/KMeans.h>
+#include <shark/Algorithms/NearestNeighbors/TreeNearestNeighbors.h>
+#include <shark/Data/Dataset.h>
+#include <shark/Models/Classifier.h>
+#include <shark/Models/NearestNeighborModel.h>
+#include <shark/Models/Trees/KDTree.h>
 #include <iostream>
 
 inline void sharkKNN(const shark::ClassificationDataset& trainData,
