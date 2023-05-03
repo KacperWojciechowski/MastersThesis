@@ -18,10 +18,10 @@ inline void sharkNN(const shark::ClassificationDataset& trainData,
     
     // zdefiniowanie warstw sieci
     using DenseTanhLayer = LinearModel<RealVector, TanhNeuron>;
-    using DenseLogisticLayer = LinearClassifier<RealVector>;
+    using DenseLogisticLayer = LinearModel<RealVector, LogisticNeuron>;
     DenseTanhLayer layer1(inputDimension(trainData), 5, true);
     DenseTanhLayer layer2(5, 5, true);
-    DenseLogisticLayer output(5, 2, true);
+    DenseLogisticLayer output(5, 1, true);
     // połączenie warstw
     auto network = layer1 >> layer2 >> output;
     // utworzenie i konfiguracja funkcji straty
@@ -63,15 +63,17 @@ inline void sharkNN(const shark::ClassificationDataset& trainData,
     }
     // konfiguracja modelu docelowego
     network.setParameterVector(optimizer.solution().point);
+    Classifier<ConcatenatedModel<RealVector, unsigned int>> model(network);
+
     // walidacja
     std::cout << "-----Shark Neural -----" << std::endl;
     std::cout << "Train data:" << std::endl;
-    auto predictions = network(trainData.inputs());
+    auto predictions = model(trainData.inputs());
     printSharkModelEvaluation(
         trainData.labels(), predictions);
 
     std::cout << "Test data:" << std::endl;
-    predictions = network(testData.inputs());
+    predictions = model(testData.inputs());
     printSharkModelEvaluation(
         testData.labels(), predictions); 
 }
