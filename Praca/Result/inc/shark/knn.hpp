@@ -22,7 +22,7 @@ inline void sharkKNN(const shark::ClassificationDataset& trainData,
 
     // konfiguracja modelu
     const unsigned int K = 2; // ilość sąsiadów dla algorytmu kNN
-    NearestNeighborModel<RealVector, RealVector> KNN(&algorithm, K);
+    NearestNeighborModel<RealVector, unsigned int> KNN(&algorithm, K);
 
     // ewaluacja modelu
     std::cout << "-----Shark KNN-----" << std::endl;
