@@ -12,8 +12,8 @@ enum class Task
     REGRESSION
 };
 
-template <typename LabelType, typename PredType,
-std::enable_if_t<std::is_same<shark::RealVector, typename LabelType::LabelT>::value,
+template <template <typename A> LabelType, typename PredType,
+std::enable_if_t<std::is_same<shark::RealVector, typename A>::value,
     bool> = true> 
 inline void printSharkModelEvaluation(
     const LabelType& labels, 
@@ -33,8 +33,7 @@ inline void printSharkModelEvaluation(
     std::cout << "R^2: " << r_squared << std::endl;
 }
 
-template <typename LabelType, typename PredType,
-std::enable_if_t<std::is_same<shark::RealVector, typename LabelType::LabelT>::value,
+template <typename LabelType, typename PredType>
     bool> = false> 
 inline void printSharkModelEvaluation(
     const LabelType& labels, 
