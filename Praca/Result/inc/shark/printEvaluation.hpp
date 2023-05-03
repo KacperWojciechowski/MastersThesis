@@ -43,7 +43,7 @@ inline void printSharkModelEvaluation(
 
     // wartość krzywej ROC
     constexpr bool invertToPositiveROC = true;
-    NegativeAUC<unsigned int, unsigned int> roc(invertToPositiveROC);
+    NegativeAUC<> roc(invertToPositiveROC);
     auto auc_roc = roc(labels, predictions);
     std::cout << "AUC ROC: " << auc_roc << std::endl << std::endl;
 }    

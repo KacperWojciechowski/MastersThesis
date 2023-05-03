@@ -63,17 +63,17 @@ inline void sharkNN(const shark::ClassificationDataset& trainData,
     }
     // konfiguracja modelu docelowego
     network.setParameterVector(optimizer.solution().point);
-    Classifier<ConcatenatedModel<RealVector>> model(network);
+    //Classifier<ConcatenatedModel<RealVector>> model(network);
 
     // walidacja
     std::cout << "-----Shark Neural -----" << std::endl;
     std::cout << "Train data:" << std::endl;
-    auto predictions = model(trainData.inputs());
+    auto predictions = network(trainData.inputs());
     printSharkModelEvaluation(
         trainData.labels(), predictions);
 
     std::cout << "Test data:" << std::endl;
-    predictions = model(testData.inputs());
+    predictions = network(testData.inputs());
     printSharkModelEvaluation(
         testData.labels(), predictions); 
 }
