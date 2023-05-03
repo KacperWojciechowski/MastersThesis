@@ -3,6 +3,12 @@
 #include <shogun/base/init.h>
 #include <shogun/base/some.h>
 #include <shogun/io/File.h>
+#include <shogun/labels/MulticlassLabels.h>
+#include <shogun/lib/SGMatrix.h>
+#include <shogun/lib/SGStringList.h>
+#include <shogun/lib/SGVector.h>
+#include <shogun/preprocessor/RescaleFeatures.h>
+#include <shogun/util/factory.h>
 
 // pomocnicze pośrednie opakowanie na zestaw danych
 struct Dataset
