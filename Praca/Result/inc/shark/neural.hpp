@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <inc/shark/printEvaluation.hpp>
 #include <shark/Algorithms/GradientDescent/SteepestDescent.h>
 #include <shark/Models/ConcatenatedModel.h>
 #include <shark/Models/LinearModel.h>

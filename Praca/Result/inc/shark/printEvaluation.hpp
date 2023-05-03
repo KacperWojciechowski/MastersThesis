@@ -34,9 +34,7 @@ inline void printSharkModelEvaluation(
 }
 
 
-template <typename DataType, 
-std::enable_if_t<std::is_base_of<
-    shark::Data<unsigned int>, DataType>::value, bool> = true> 
+template <typename DataType>
 inline void printSharkModelEvaluation(
     const auto& labels, 
     const auto& predictions)

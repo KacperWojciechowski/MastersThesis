@@ -20,4 +20,5 @@ target_link_libraries(MyApp Shark)
 
 # Set the include directories
 target_include_directories(MyApp PRIVATE ${SHARK_INCLUDE_DIRS})
-set_property(TARGET MyApp PROPERTY CXX_STANDARD 14)
+#set_property(TARGET MyApp PROPERTY CXX_STANDARD 14)
+set_property(TARGET MyApp PROPERTY CXX_STANDARD 20)
