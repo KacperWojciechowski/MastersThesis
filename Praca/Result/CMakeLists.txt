@@ -12,7 +12,7 @@ find_package(Shogun REQUIRED)
 # Add the main.cpp source file to the project
 add_executable(MyApp test.cpp)
 
-target_include_directories(MyApp ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(MyApp PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Link against the Shark library
 target_link_libraries(MyApp Shogun)
