@@ -37,27 +37,33 @@ inline void printSharkModelEvaluation(
     std::cout << "R^2: " << r_squared << std::endl;
 }
 
+std::vector<shark::RealVector> repackToRealVectorRange(const auto& dataContainer)
+{
+    using namespace shark;
+
+    std::vector<RealVector> v;
+    std::for_each(dataContainer.elements().begin(), dataContainer.elements().end(), [&](const auto e){RealVector rv(1); rv(0) = static_cast<double>(e); v.emplace_back(rv); });
+    return v;
+}
+
 inline void printSharkModelEvaluation(
-    const shark::Data<unsigned int>& labels, 
+    const shark::Data<unsigned int>& labels,
     const shark::Data<shark::RealVector>& predictions)
 {
     using namespace shark;
     using namespace shark::statistics;
 
+    // przepakowanie danych
+    auto labelsRange = repackToRealVectorRange(labels);
+    auto labelsRvData = createDataFromRange(labelsRange);
+
     // błąd średniokwadratowy
-    auto squaredSum = 0.0;
-    for (int i = 0; i < labels.numberOfElements(); i++)
-    {
-        squaredSum += std::pow(static_cast<const int>(predictions.element(i)[0]) - static_cast<const double>(labels.element(i)), 2);
-    }
-    auto mse = std::sqrt(squaredSum / labels.numberOfElements());
+    SquaredLoss<> loss;
+    auto mse = loss(labelsRvData, predictions);
     std::cout << "MSE: " << mse << std::endl;
 
     // metryka R^2
-    std::vector<RealVector> tmp;
-    std::for_each(labels.elements().begin(), labels.elements().end(), [&](const auto e){ RealVector rv(1); rv(0) = e; tmp.emplace_back(rv);});
-    auto var = Variance().statistics(tmp);
-    std::cout << var(0) << std::endl;
+    auto var = Variance().statistics(labelsRange);
     auto r_squared = 1 - mse / var(0);
     std::cout << "R^2: " << r_squared << std::endl;
 }
@@ -69,20 +75,19 @@ inline void printSharkModelEvaluation(
     using namespace shark;
     using namespace shark::statistics;
 
+    // przepakowanie danych
+    auto labelsRange = repackToRealVectorRange(labels);
+    auto labelsRvData = createDataFromRange(labelsRange);
+    auto predictionsRange = repackToRealVectorRange(predictions);
+    auto predictionsRvData = createDataFromRange(predictionsRange);
+
     // błąd średniokwadratowy
-    auto squaredSum = 0.0;
-    for (int i = 0; i < labels.numberOfElements(); i++)
-    {
-        squaredSum += std::pow(static_cast<const int>(predictions.element(i)) - static_cast<const int>(labels.element(i)), 2);
-    }
-    auto mse = std::sqrt(squaredSum / labels.numberOfElements());
+    SquaredLoss<> loss;
+    auto mse = loss(labelsRvData, predictionsRvData);
     std::cout << "MSE: " << mse << std::endl;
 
     // metryka R^2
-    std::vector<RealVector> tmp;
-    std::for_each(labels.elements().begin(), labels.elements().end(), [&](const auto e){RealVector rv(1); rv(0) = e; tmp.emplace_back(rv);});
-    auto var = Variance().statistics(tmp);
-    std::cout << var(0) << std::endl;
+    auto var = Variance().statistics(labelsRange);
     auto r_squared = 1 - mse / var(0);
     std::cout << "R^2: " << r_squared << std::endl;
 }
