@@ -11,19 +11,7 @@ inline DatasetType sharkReadCsvData(std::string filePath, Task task)
 {
     using namespace shark;
 
-    // odczytaj zawartość pliku
-    std::ifstream file(filePath);
-
-    if (task == Task::CLASSIFICATION)
-    {
-        DatasetType trainData;
-        importCSV(trainData, filePath.c_str(), FIRST_COLUMN, ',');
-        return trainData;
-    }
-    else
-    {
-        DatasetType trainData;
-        importCSV(trainData, filePath.c_str(), LAST_COLUMN, ',');
-        return trainData;
-    }
+    DatasetType trainData;
+    importCSV(trainData, filePath.c_str(), LAST_COLUMN, ',');
+    return trainData;
 }
