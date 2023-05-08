@@ -6,6 +6,10 @@
 #include <shark/Statistics/Statistics.h>
 #include <type_traits>
 #include <cmath>
+#include <vector>
+#include <algorithm>
+#include <iterator>
+#include <shark/LinAlg/Base.h>
 
 enum class Task
 {
@@ -14,7 +18,7 @@ enum class Task
 };
 
 inline void printSharkModelEvaluation(
-    const shark::Data<shark::RealVector>& labels, 
+    const shark::Data<shark::RealVector>& labels,
     const auto& predictions)
 {
     using namespace shark;
@@ -24,9 +28,11 @@ inline void printSharkModelEvaluation(
     SquaredLoss<> loss;
     auto mse = loss(labels, predictions);
     std::cout << "MSE: " << mse << std::endl;
-    
+
     // metryka R^2
-    auto var = Variance().statistics({labels.elements().begin(), labels.elements().end()});
+    std::vector<RealVector> tmp;
+    std::for_each(labels.elements().begin(), labels.elements().end(), [&](const auto e){ tmp.emplace_back(e); });
+    auto var = Variance().statistics(tmp);
     auto r_squared = 1 - mse / var(0);
     std::cout << "R^2: " << r_squared << std::endl;
 }
@@ -45,15 +51,19 @@ inline void printSharkModelEvaluation(
         squaredSum += std::pow(static_cast<const int>(predictions.element(i)[0]) - static_cast<const double>(labels.element(i)), 2);
     }
     auto mse = std::sqrt(squaredSum / labels.numberOfElements());
+    std::cout << "MSE: " << mse << std::endl;
 
     // metryka R^2
-    auto var = Variance().statistics({labels.elements().begin(), labels.elements().end()});
+    std::vector<RealVector> tmp;
+    std::for_each(labels.elements().begin(), labels.elements().end(), [&](const auto e){ RealVector rv(1); rv(0) = e; tmp.emplace_back(rv);});
+    auto var = Variance().statistics(tmp);
+    std::cout << var(0) << std::endl;
     auto r_squared = 1 - mse / var(0);
     std::cout << "R^2: " << r_squared << std::endl;
 }
 
 inline void printSharkModelEvaluation(
-    const auto& labels, 
+    const auto& labels,
     const auto& predictions)
 {
     using namespace shark;
@@ -66,9 +76,13 @@ inline void printSharkModelEvaluation(
         squaredSum += std::pow(static_cast<const int>(predictions.element(i)) - static_cast<const int>(labels.element(i)), 2);
     }
     auto mse = std::sqrt(squaredSum / labels.numberOfElements());
+    std::cout << "MSE: " << mse << std::endl;
 
     // metryka R^2
-    auto var = Variance().statistics({labels.elements().begin(), labels.elements().end()});
+    std::vector<RealVector> tmp;
+    std::for_each(labels.elements().begin(), labels.elements().end(), [&](const auto e){RealVector rv(1); rv(0) = e; tmp.emplace_back(rv);});
+    auto var = Variance().statistics(tmp);
+    std::cout << var(0) << std::endl;
     auto r_squared = 1 - mse / var(0);
     std::cout << "R^2: " << r_squared << std::endl;
 }

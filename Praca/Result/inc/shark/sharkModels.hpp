@@ -25,6 +25,7 @@ inline void sharkModels()
 
     // wywołanie modeli
     sharkLinear(regressionTrainData, regressionTestData);
-    sharkLogistic(classificationTrainData, classificationTestData);
+    //sharkLogistic(classificationTrainData, classificationTestData);
     sharkSVM(classificationTrainData, classificationTestData);
+    sharkNN(classificationTrainData, classificationTestData);
 }

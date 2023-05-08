@@ -15,9 +15,11 @@ inline void sharkLogistic(const shark::ClassificationDataset& trainData,
     using namespace shark;
 
     // utworzenie modelu
+    std::cout << "Start logistic\n";
     LinearClassifier<RealVector> logisticModel;
     LogisticRegression<RealVector> trainer;
     // trening
+    std::cout << "Training\n";
     trainer.train(logisticModel, trainData);
     // ewaluacja
     std::cout << "-----Shark Logistic Regression-----" << std::endl;

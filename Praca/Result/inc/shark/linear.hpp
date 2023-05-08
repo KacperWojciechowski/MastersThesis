@@ -26,5 +26,5 @@ inline void sharkLinear(const shark::RegressionDataset& trainData,
     std::cout << "Test data:" << std::endl;
     predictions = model(testData.inputs());
     printSharkModelEvaluation(
-        trainData.labels(), predictions);
+        testData.labels(), predictions);
 }
