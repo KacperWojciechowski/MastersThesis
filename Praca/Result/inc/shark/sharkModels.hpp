@@ -13,19 +13,19 @@ inline void sharkModels()
 
     // odczytanie i podział danych
     auto classificationTrainData = sharkReadCsvData<ClassificationDataset>(
-        "wdbc_data_with_labels.csv", Task::CLASSIFICATION);
+        "wdbc_data_with_labels.csv");
     auto classificationTestData = splitAtElement(
         classificationTrainData,
         static_cast<std::size_t>(0.8*classificationTrainData.numberOfElements()));
     auto regressionTrainData = sharkReadCsvData<RegressionDataset>(
-        "IronGlutathione.csv", Task::REGRESSION);
+        "IronGlutathione.csv");
     auto regressionTestData = splitAtElement(
         regressionTrainData,
         static_cast<std::size_t>(0.8*regressionTrainData.numberOfElements()));
 
     // wywołanie modeli
     sharkLinear(regressionTrainData, regressionTestData);
-    //sharkLogistic(classificationTrainData, classificationTestData);
+    sharkLogistic(classificationTrainData, classificationTestData);
     sharkSVM(classificationTrainData, classificationTestData);
     sharkNN(classificationTrainData, classificationTestData);
 }

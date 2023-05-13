@@ -11,12 +11,6 @@
 #include <iterator>
 #include <shark/LinAlg/Base.h>
 
-enum class Task
-{
-    CLASSIFICATION,
-    REGRESSION
-};
-
 inline void printSharkModelEvaluation(
     const shark::Data<shark::RealVector>& labels,
     const auto& predictions)

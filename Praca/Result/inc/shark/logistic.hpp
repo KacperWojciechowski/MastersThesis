@@ -31,5 +31,5 @@ inline void sharkLogistic(const shark::ClassificationDataset& trainData,
     std::cout << "Test data model evaluation:" << std::endl;
     predictions = logisticModel(testData.inputs());
     printSharkModelEvaluation(
-        testData.labels(), predictions); 
+        testData.labels(), predictions);
 }

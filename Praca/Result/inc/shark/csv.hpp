@@ -7,7 +7,7 @@
 #include <shark/Data/SparseData.h>
 
 template<typename DatasetType>
-inline DatasetType sharkReadCsvData(std::string filePath, Task task)
+inline DatasetType sharkReadCsvData(std::string filePath)
 {
     using namespace shark;
 
