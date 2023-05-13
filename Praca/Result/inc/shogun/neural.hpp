@@ -29,7 +29,7 @@ inline void sharkNeural(
     network->quick_connect();
     network->initialize_neural_network();
     // konfiguracja sieci
-    network->set_pptimization_method(NNOM_GRADIENT_DESCENT);
+    network->set_optimization_method(NNOM_GRADIENT_DESCENT);
     network->set_gd_mini_batch_size(64);
     network->set_l2_coefficient(0.0001);
     network->set_max_num_epochs(500);

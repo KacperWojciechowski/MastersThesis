@@ -29,7 +29,7 @@ inline auto shogunVerifyModel(auto predictions, auto targets, Task task)
     {
         avg += (targets->get_label(i));
     }
-    avg /= targets->num_labels();
+    avg /= targets->get_num_labels();
     for (index_t i = 0; i < targets->get_num_labels(); i++)
     {
         sum += std::pow(targets->get_label(i) - avg, 2);
