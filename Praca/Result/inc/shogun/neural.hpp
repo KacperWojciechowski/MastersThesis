@@ -17,7 +17,7 @@ inline void sharkNeural(
     using namespace shogun;   
 
     // konstrukcja architektury sieci
-    auto dimensions = trainInputs.get_num_features();
+    auto dimensions = trainInputs->get_num_features();
     auto layers = some<CNeuralLayers>();
     layers = wrap(layers->input(dimensions));
     layers = wrap(layers->rectified_linear(5));

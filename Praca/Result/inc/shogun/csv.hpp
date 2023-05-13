@@ -35,10 +35,10 @@ inline Dataset readShogunCsvData(std::string filename, LabelPos labelPos)
 
     // odczytanie surowej zawartości pliku csv i sparsowanie jej do
     // macierzy
-    auto csvFile = some<CCSVFile>(filename);
+    auto csvFile = some<CCSVFile>(filename.c_str());
     Matrix data;
     data.load(csvFile);
-    // transpozycja do postaci docelowej dla człowieka 
+    // transpozycja do postaci docelowej dla człowieka
     // (działanie na kolumnach)
     Matrix::transpose_matrix(data.matrix, data.num_rows, data.num_cols);
     // podział macierzy na część regresorów i zmiennej odpowiedzi
@@ -50,7 +50,7 @@ inline Dataset readShogunCsvData(std::string filename, LabelPos labelPos)
             break;
         case LabelPos::LAST:
             ret.trainInputs = data.submatrix(0, data.num_cols - 1).clone();
-            ret.trainOutputs = 
+            ret.trainOutputs =
                 data.submatrix(data.num_cols - 1, data.num_cols).clone();
             break;
     };

@@ -9,10 +9,10 @@
 #include <shogun/kernel/GaussianKernel.h>
 #include <shogun/multiclass/MulticlassLibSVM.h>
 
-inline void shogunSVM(shogun::Some<shogun::CDenseFeatures>& trainInputs,
-                      shogun::Some<shogun::CDenseFeatures>& testInputs,
-                      shogun::Some<shogun::CBinaryLabels>& trainOutputs,
-                      shogun::Some<shogun::CBinaryLabels>& testOutputs)
+inline void shogunSVM(shogun::Some<shogun::CDenseFeatures<float64_t>>& trainInputs,
+                      shogun::Some<shogun::CDenseFeatures<float64_t>>& testInputs,
+                      shogun::Some<shogun::CMulticlassLabels>& trainOutputs,
+                      shogun::Some<shogun::CMulticlassLabels>& testOutputs)
 {
     using namespace shogun;
 
@@ -29,10 +29,10 @@ inline void shogunSVM(shogun::Some<shogun::CDenseFeatures>& trainInputs,
     // ewaluacja modelu
     std::cout << "----- Shogun SVM -----" << std::endl;
     std::cout << "Train:" << std::endl;
-    auto prediction = wrap(svm->apply_binary(trainInputs));
+    auto prediction = wrap(svm->apply_multiclass(trainInputs));
     shogunVerifyModel(prediction, trainOutputs, Task::CLASSIFICATION);
 
     std::cout << "Test:" << std::endl;
-    prediction = wrap(svm->apply_binary(testInputs));
+    prediction = wrap(svm->apply_multiclass(testInputs));
     shogunVerifyModel(prediction, testOutputs, Task::CLASSIFICATION);
 }
