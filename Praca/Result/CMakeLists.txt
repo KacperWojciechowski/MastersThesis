@@ -16,7 +16,7 @@ target_include_directories(MyApp PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Link against the Shark library
 #target_link_libraries(MyApp Shark)
-target_link_libraries(MyApp Shogun)
+target_link_libraries(MyApp shogun)
 
 # Set the include directories
 target_include_directories(MyApp PRIVATE ${SHOGUN_INCLUDE_DIRS})
