@@ -60,16 +60,16 @@ inline Dataset readShogunCsvData(std::string filename, LabelPos labelPos)
                              ret.trainInputs.num_cols);
     // podział danych na część treningową i testową
     auto temp = ret.testInputs = ret.trainInputs.submatrix(
-        static_cast<long>(0.8 * ret.trainInputs.num_cols), ret.trainInputs.num_cols).clone();
+        static_cast<long>(0.8 * ret.trainInputs.num_cols), ret.trainInputs.num_cols-1).clone();
     ret.testInputs = std::move(temp);
-    temp = ret.trainInputs.submatrix(
+    auto temp2 = ret.trainInputs.submatrix(
         0, static_cast<long>(0.8 * ret.trainInputs.num_cols)).clone();
-    ret.trainInputs = std::move(temp);
-    temp = ret.trainOutputs.submatrix(
-        static_cast<long>(0.8 * ret.trainOutputs.num_cols), ret.trainInputs.num_cols).clone();
-    ret.testOutputs = std::move(temp);
-    temp = ret.trainOutputs.submatrix(
+    ret.trainInputs = std::move(temp2);
+    auto temp3 = ret.trainOutputs.submatrix(
+        static_cast<long>(0.8 * ret.trainOutputs.num_cols), ret.trainInputs.num_cols-1).clone();
+    ret.testOutputs = std::move(temp3);
+    auto temp4 = ret.trainOutputs.submatrix(
         0, static_cast<long>(0.8 * ret.trainOutputs.num_cols)).clone();
-    ret.trainOutputs = std::move(temp);
+    ret.trainOutputs = std::move(temp4);
     return ret;
 }
