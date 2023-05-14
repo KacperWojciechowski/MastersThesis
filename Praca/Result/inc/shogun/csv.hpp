@@ -61,6 +61,8 @@ inline Dataset readShogunCsvData(std::string filename, LabelPos labelPos)
     // (operowanie na wierszach)
     Matrix::transpose_matrix(ret.trainInputs.matrix, ret.trainInputs.num_rows,
                              ret.trainInputs.num_cols);
+    Matrix::transpose_matrix(ret.trainOutputs.matrix, ret.trainOutputs.num_rows,
+                             ret.trainOutputs.num_cols);
     // podział danych na część treningową i testową
     std::cout << "Test1\n";
     auto temp = ret.testInputs = ret.trainInputs.submatrix(
@@ -74,7 +76,7 @@ inline Dataset readShogunCsvData(std::string filename, LabelPos labelPos)
     ret.trainInputs = std::move(temp2);
     std::cout << "Test5\n";
     auto temp3 = ret.trainOutputs.submatrix(
-        static_cast<long>(0.8 * ret.trainOutputs.num_cols), ret.trainInputs.num_cols).clone();
+        static_cast<long>(0.8 * ret.trainOutputs.num_cols), ret.trainOutputs.num_cols).clone();
     std::cout << "Test6\n";
     ret.testOutputs = std::move(temp3);
     std::cout << "Test7\n";
