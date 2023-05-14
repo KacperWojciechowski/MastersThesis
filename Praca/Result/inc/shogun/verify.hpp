@@ -13,7 +13,7 @@ enum class Task
     REGRESSION
 };
 
-inline auto shogunVerifyModel(auto predictions, auto targets, Task task)
+inline auto shogunVerifyModel(const auto& predictions, const auto& targets, Task task)
 {
     using namespace shogun;
 

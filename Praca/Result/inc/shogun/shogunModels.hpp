@@ -16,7 +16,7 @@ inline void shogunModels()
 
     // odczytanie danych we własnym pośrednim typie danych
     auto classificationDatasetTemp =
-        readShogunCsvData("wdbc_data_with_labels.csv", LabelPos::FIRST);
+        readShogunCsvData("wdbc_data_with_labels.csv", LabelPos::LAST);
     auto regressionDatasetTemp =
         readShogunCsvData("IronGlutathione.csv", LabelPos::LAST);
     // rozdzielenie danych na regresory i zmienne odpowiedzi
