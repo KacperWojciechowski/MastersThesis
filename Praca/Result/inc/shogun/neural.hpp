@@ -43,9 +43,9 @@ inline void sharkNeural(
     std::cout << "----- Shogun Neural Network -----" << std::endl;
     std::cout << "Train data:" << std::endl;
     auto predictions = network->apply_multiclass(trainInputs);
-    shogunVerifyModel(predictions, trainOutputs, Task::CLASSIFICATION);
+    shogunVerifyModel(predictions, trainOutputs);
 
     std::cout << "Test data:" << std::endl;
     auto predictions2 = network->apply_multiclass(testInputs);
-    shogunVerifyModel(predictions, testOutputs, Task::CLASSIFICATION);
+    shogunVerifyModel(predictions2, testOutputs);
 }

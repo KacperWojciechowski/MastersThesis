@@ -30,9 +30,9 @@ inline void shogunSVM(shogun::Some<shogun::CDenseFeatures<float64_t>>& trainInpu
     std::cout << "----- Shogun SVM -----" << std::endl;
     std::cout << "Train:" << std::endl;
     auto prediction = wrap(svm->apply_multiclass(trainInputs));
-    shogunVerifyModel(prediction, trainOutputs, Task::CLASSIFICATION);
+    shogunVerifyModel(prediction, trainOutputs);
 
     std::cout << "Test:" << std::endl;
     auto prediction2 = wrap(svm->apply_multiclass(testInputs));
-    shogunVerifyModel(prediction, testOutputs, Task::CLASSIFICATION);
+    shogunVerifyModel(prediction2, testOutputs);
 }

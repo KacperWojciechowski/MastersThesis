@@ -28,9 +28,9 @@ inline void shogunLinear(
     std::cout << "----- Shogun Linear -----" << std::endl;
     std::cout << "Train data: " << std::endl;
     auto predictions = wrap(linear->apply_regression(trainInputs));
-    shogunVerifyModel(predictions, trainOutputs, Task::REGRESSION);
+    shogunVerifyModel(predictions, trainOutputs);
 
     std::cout << "Test data: " << std::endl;
     auto predictions2 = wrap(linear->apply_regression(testInputs));
-    shogunVerifyModel(predictions, testOutputs, Task::REGRESSION);
+    shogunVerifyModel(predictions2, testOutputs);
 }

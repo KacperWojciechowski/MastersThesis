@@ -7,13 +7,9 @@
 #include <shogun/evaluation/MeanAbsoluteError.h>
 #include <shogun/evaluation/ROCEvaluation.h>
 
-enum class Task
-{
-    CLASSIFICATION,
-    REGRESSION
-};
-
-inline auto shogunVerifyModel(const auto& predictions, const auto& targets, Task task)
+template<template<typename A> typename B, 
+    std::enable_if<std::is_same<A, shogun::CRegressionLabels>::value, bool> = true>
+inline auto shogunVerifyModel(const T& predictions, const T& targets)
 {
     using namespace shogun;
 
@@ -38,10 +34,31 @@ inline auto shogunVerifyModel(const auto& predictions, const auto& targets, Task
     // obliczenie metryki R^2
     auto r_square = 1.0 - mse / variance;
     std::cout << "R^2 = " << r_square << std::endl << std::endl;
-    if (task == Task::CLASSIFICATION)
+}
+
+inline auto shogunVerifyModel(const auto& predictions, const auto& targets)
+{
+    using namespace shogun;
+
+    std::vector<float64_t> predVec;
+    predVec.reserve(predictions->get_num_labels());
+    for (auto pred : predictions)
     {
-        auto roc = some<CROCEvaluation>();
-        roc->evaluate(predictions, targets);
-        std::cout << "AUC ROC = " << roc->get_auROC() << std::endl;
+        if (pred.get_multiclass_confidences()[1] > 0.7) predVec.emplace_back(1.0);
+        else predVec.emplace_back(0.0);
     }
+    std::vector<float64_t> targetVec;
+    targetVec.reserve(targets->get_num_labels());
+    for (auto pred : targets)
+    {
+        if (pred.get_multiclass_confidences()[1] > 0.7) targetVec.emplace_back(1.0);
+        else targetVec.emplace_back(0.0);
+    }
+    auto predReg = some<CRegressionLabels>(predVec.begin(), predVec.end());
+    auto targetReg = some<CRegressionLabels>(targetVec.begin(), targetVec.end());
+    shogunVerifyModel(predReg, targetReg);
+
+    auto roc = some<CROCEvaluation>();
+    roc->evaluate(predictions.get_binary_for_class(1), targets.get_binary_for_class(1));
+    std::cout << "AUC ROC = " << roc->get_auROC() << std::endl;
 }

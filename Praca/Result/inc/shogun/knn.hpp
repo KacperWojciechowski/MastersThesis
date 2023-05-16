@@ -25,9 +25,9 @@ inline void shogunKNN(shogun::Some<shogun::CDenseFeatures>& trainInputs,
     std::cout << "----- Shogun KNN -----" << std::endl;
     std::cout << "Train:" << std::endl;
     auto prediction = wrap(knn->apply_multiclass(trainInputs));
-    shogunVerifyModel(prediction, trainOutputs, Task::CLASSIFICATION);
+    shogunVerifyModel(prediction, trainOutputs);
 
     std::cout << "Test:" << std::endl;
     auto prediction2 = wrap(knn->apply_multiclass(testInputs));
-    shogunVerifyModel(prediction, testOutputs, Task::CLASSIFICATION);
+    shogunVerifyModel(prediction2, testOutputs);
 }

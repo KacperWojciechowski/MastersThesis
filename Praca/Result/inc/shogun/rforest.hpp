@@ -36,9 +36,9 @@ inline void shogunRandomForest(
     std::cout << "----- Shogun Random Forest -----" << std::endl;
     std::cout << "Train data:" << std::endl;
     auto predictions = wrap(randForest->apply_regression(trainInputs));
-    shogunVerifyModel(predictions, trainOutputs, Task::REGRESSION);
+    shogunVerifyModel(predictions, trainOutputs);
 
     std::cout << "Test data:" << std::endl;
     auto predictions2 = wrap(randForest->apply_regression(testInputs));
-    shogunVerifyModel(predictions, testOutputs, Task::REGRESSION);
+    shogunVerifyModel(predictions2, testOutputs);
 }

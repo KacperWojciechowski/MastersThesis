@@ -44,9 +44,9 @@ inline void shogunGradientBoost(
     std::cout << "----- Shogun Gradient Boost -----" << std::endl;
     std::cout << "Train:" << std::endl;
     auto prediction = wrap(model->apply_multiclass(trainInputs));
-    shogunVerifyModel(prediction, trainOutputs, Task::CLASSIFICATION);
+    shogunVerifyModel(prediction, trainOutputs);
 
     std::cout << "Test:" << std::endl;
     auto prediction2 = wrap(model->apply_multiclass(testInputs));
-    shogunVerifyModel(prediction, testOutputs, Task::CLASSIFICATION);
+    shogunVerifyModel(prediction2, testOutputs);
 }

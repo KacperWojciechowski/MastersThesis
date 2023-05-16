@@ -28,9 +28,13 @@ inline void shogunLogistic(
     std::cout << "----- Shogun Logistic -----" << std::endl;
     std::cout << "Train:" << std::endl;
     auto prediction = wrap(logReg->apply_multiclass(trainInputs));
-    shogunVerifyModel(prediction, trainOutputs, Task::CLASSIFICATION);
+    shogunVerifyModel(prediction, trainOutputs);
 
     std::cout << "Test:" << std::endl;
     auto prediction2 = wrap(logReg->apply_multiclass(testInputs));
+<<<<<<< HEAD
     shogunVerifyModel(prediction, testOutputs, Task::CLASSIFICATION);
+=======
+    shogunVerifyModel(prediction2, testOutputs);
+>>>>>>> f338d8d (.)
 }
