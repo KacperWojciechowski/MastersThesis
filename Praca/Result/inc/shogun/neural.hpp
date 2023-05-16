@@ -46,6 +46,6 @@ inline void sharkNeural(
     shogunVerifyModel(predictions, trainOutputs, Task::CLASSIFICATION);
 
     std::cout << "Test data:" << std::endl;
-    predictions = network->apply_multiclass(testInputs);
+    auto predictions2 = network->apply_multiclass(testInputs);
     shogunVerifyModel(predictions, testOutputs, Task::CLASSIFICATION);
 }

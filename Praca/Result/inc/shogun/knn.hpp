@@ -28,6 +28,6 @@ inline void shogunKNN(shogun::Some<shogun::CDenseFeatures>& trainInputs,
     shogunVerifyModel(prediction, trainOutputs, Task::CLASSIFICATION);
 
     std::cout << "Test:" << std::endl;
-    prediction = wrap(knn->apply_multiclass(testInputs));
+    auto prediction2 = wrap(knn->apply_multiclass(testInputs));
     shogunVerifyModel(prediction, testOutputs, Task::CLASSIFICATION);
 }

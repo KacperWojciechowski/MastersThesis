@@ -31,6 +31,6 @@ inline void shogunLinear(
     shogunVerifyModel(predictions, trainOutputs, Task::REGRESSION);
 
     std::cout << "Test data: " << std::endl;
-    predictions = wrap(linear->apply_regression(testInputs));
+    auto predictions2 = wrap(linear->apply_regression(testInputs));
     shogunVerifyModel(predictions, testOutputs, Task::REGRESSION);
 }

@@ -31,6 +31,6 @@ inline void shogunLogistic(
     shogunVerifyModel(prediction, trainOutputs, Task::CLASSIFICATION);
 
     std::cout << "Test:" << std::endl;
-    prediction = wrap(logReg->apply_multiclass(testInputs));
+    auto prediction2 = wrap(logReg->apply_multiclass(testInputs));
     shogunVerifyModel(prediction, testOutputs, Task::CLASSIFICATION);
 }
