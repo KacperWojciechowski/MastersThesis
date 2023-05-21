@@ -2,14 +2,14 @@
 
 #include <iostream>
 #include <cmath>
-
+#include <vector>
 #include <shogun/evaluation/MeanSquaredError.h>
 #include <shogun/evaluation/MeanAbsoluteError.h>
 #include <shogun/evaluation/ROCEvaluation.h>
 
-template<template<typename A> typename B, 
+template<typename A, template<typename> typename B,
     std::enable_if<std::is_same<A, shogun::CRegressionLabels>::value, bool> = true>
-inline auto shogunVerifyModel(const T& predictions, const T& targets)
+inline auto shogunVerifyModel(const B<A>& predictions, const B<A>& targets)
 {
     using namespace shogun;
 
@@ -42,16 +42,16 @@ inline auto shogunVerifyModel(const auto& predictions, const auto& targets)
 
     std::vector<float64_t> predVec;
     predVec.reserve(predictions->get_num_labels());
-    for (auto pred : predictions)
+    for (auto itr = std::begin(predictions); itr != std::end(predictions); ++itr)
     {
-        if (pred.get_multiclass_confidences()[1] > 0.7) predVec.emplace_back(1.0);
+        if (itr->get_multiclass_confidences()[1] >= 0.7) predVec.emplace_back(1.0);
         else predVec.emplace_back(0.0);
     }
     std::vector<float64_t> targetVec;
     targetVec.reserve(targets->get_num_labels());
-    for (auto pred : targets)
+    for (auto itr = std::begin(targets); itr != std::end(targets); ++itr)
     {
-        if (pred.get_multiclass_confidences()[1] > 0.7) targetVec.emplace_back(1.0);
+        if (itr->get_multiclass_confidences()[1] >= 0.7) targetVec.emplace_back(1.0);
         else targetVec.emplace_back(0.0);
     }
     auto predReg = some<CRegressionLabels>(predVec.begin(), predVec.end());
@@ -59,6 +59,6 @@ inline auto shogunVerifyModel(const auto& predictions, const auto& targets)
     shogunVerifyModel(predReg, targetReg);
 
     auto roc = some<CROCEvaluation>();
-    roc->evaluate(predictions.get_binary_for_class(1), targets.get_binary_for_class(1));
+    roc->evaluate(predictions->get_binary_for_class(1), targets->get_binary_for_class(1));
     std::cout << "AUC ROC = " << roc->get_auROC() << std::endl;
 }

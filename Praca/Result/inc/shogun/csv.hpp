@@ -54,7 +54,7 @@ inline Dataset readShogunCsvData(std::string filename, LabelPos labelPos)
             ret.trainInputs = data.submatrix(0, data.num_cols - 1).clone();
             ret.trainOutputs =
                 data.submatrix(data.num_cols - 1, data.num_cols).clone();
-            std::cout << "Test0_2\n"
+            std::cout << "Test0_2\n";
             break;
     };
     // ponowna transpozycja do positaci docelowej dla algorytmów uczących
