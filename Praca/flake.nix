@@ -20,7 +20,7 @@
 
         pkgs = nixpkgs.legacyPackages.${system};
         mkShell = pkgs.mkShell;
-        shogun = (pkgs.shogun.overrideAttrs (_: { doCheck = false; }));
+        shogun = pkgs.enableDebugging (pkgs.shogun.overrideAttrs (_: { doCheck = false; }));
 
         buildDeps = with pkgs; [ 
           pkgconfig
@@ -50,9 +50,10 @@
 
         devShells = {
           default = mkShell {
+	    CMAKE_C_FLAGS = "-g2";
+	    CMAKE_CXX_FLAGS = "-g2";
             buildInputs = with pkgs; [
-              cmake
-              extra-cmake-modules
+              gdb
             ]
               ++ buildDeps
               ++ appDeps;
