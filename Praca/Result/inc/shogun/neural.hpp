@@ -11,8 +11,8 @@
 inline void sharkNeural(
     shogun::Some<shogun::CDenseFeatures<float64_t>> trainInputs,
     shogun::Some<shogun::CDenseFeatures<float64_t>> testInputs,
-    shogun::Some<shogun::CBinaryLabels> trainOutputs,
-    shogun::Some<shogun::CBinaryLabels> testOutputs)
+    shogun::Some<shogun::CMulticlassLabels> trainOutputs,
+    shogun::Some<shogun::CMulticlassLabels> testOutputs)
 {
     using namespace shogun;   
 
