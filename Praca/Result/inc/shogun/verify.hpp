@@ -9,7 +9,7 @@
 
 inline void shogunVerifyModel(
     const shogun::Some<shogun::CRegressionLabels>& predictions, 
-    const shogun::Some<shogun::CregressionLabels>& targets)
+    const shogun::Some<shogun::CRegressionLabels>& targets)
 {
     using namespace shogun;
 
@@ -38,7 +38,7 @@ inline void shogunVerifyModel(
 
 inline void shogunVerifyModel(
     const shogun::Some<shogun::CMulticlassLabels>& predictions, 
-    const shogun::Some<shogun::CmulticlassLabels>& targets)
+    const shogun::Some<shogun::CMulticlassLabels>& targets)
 {
     using namespace shogun;
 
@@ -46,7 +46,7 @@ inline void shogunVerifyModel(
     predVec.reserve(predictions->get_num_labels());
     for (index_t i = 0; i < predictions->get_num_labels(); ++i)
     {
-        if (predictions->get_label(i).get_multiclass_confidences()[1] >= 0.7) 
+        if (predictions->get_label(i)) 
 	    predVec.emplace_back(1.0);
         else predVec.emplace_back(0.0);
     }
