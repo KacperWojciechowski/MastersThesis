@@ -6,6 +6,8 @@
 #include <shogun/evaluation/MeanSquaredError.h>
 #include <shogun/evaluation/MeanAbsoluteError.h>
 #include <shogun/evaluation/ROCEvaluation.h>
+#include <shogun/labels/RegressionLabels.h>
+#include <shogun/labels/MulticlassLabels.h>
 
 inline void shogunVerifyModel(
     const shogun::Some<shogun::CRegressionLabels>& predictions, 
@@ -54,7 +56,7 @@ inline void shogunVerifyModel(
     targetVec.reserve(targets->get_num_labels());
     for (index_t i = 0; i < targets->get_num_labels(); ++i)
     {
-        if (targets->get_label(i).get_multiclass_confidences()[1] >= 0.7) 
+        if (targets->get_label(i)) 
 	    targetVec.emplace_back(1.0);
         else targetVec.emplace_back(0.0);
     }
