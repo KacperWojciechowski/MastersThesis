@@ -7,9 +7,9 @@
 #include <shogun/evaluation/MeanAbsoluteError.h>
 #include <shogun/evaluation/ROCEvaluation.h>
 
-template<typename A, template<typename> typename B,
-    std::enable_if<std::is_same<A, shogun::CRegressionLabels>::value, bool> = true>
-inline auto shogunVerifyModel(const B<A>& predictions, const B<A>& targets)
+inline void shogunVerifyModel(
+    const shogun::Some<shogun::CRegressionLabels>& predictions, 
+    const shogun::Some<shogun::CregressionLabels>& targets)
 {
     using namespace shogun;
 
@@ -36,22 +36,26 @@ inline auto shogunVerifyModel(const B<A>& predictions, const B<A>& targets)
     std::cout << "R^2 = " << r_square << std::endl << std::endl;
 }
 
-inline auto shogunVerifyModel(const auto& predictions, const auto& targets)
+inline void shogunVerifyModel(
+    const shogun::Some<shogun::CMulticlassLabels>& predictions, 
+    const shogun::Some<shogun::CmulticlassLabels>& targets)
 {
     using namespace shogun;
 
     std::vector<float64_t> predVec;
     predVec.reserve(predictions->get_num_labels());
-    for (auto itr = std::begin(predictions); itr != std::end(predictions); ++itr)
+    for (index_t i = 0; i < predictions->get_num_labels(); ++i)
     {
-        if (itr->get_multiclass_confidences()[1] >= 0.7) predVec.emplace_back(1.0);
+        if (predictions->get_label(i).get_multiclass_confidences()[1] >= 0.7) 
+	    predVec.emplace_back(1.0);
         else predVec.emplace_back(0.0);
     }
     std::vector<float64_t> targetVec;
     targetVec.reserve(targets->get_num_labels());
-    for (auto itr = std::begin(targets); itr != std::end(targets); ++itr)
+    for (index_t i = 0; i < targets->get_num_labels(); ++i)
     {
-        if (itr->get_multiclass_confidences()[1] >= 0.7) targetVec.emplace_back(1.0);
+        if (targets->get_label(i).get_multiclass_confidences()[1] >= 0.7) 
+	    targetVec.emplace_back(1.0);
         else targetVec.emplace_back(0.0);
     }
     auto predReg = some<CRegressionLabels>(predVec.begin(), predVec.end());
@@ -59,6 +63,7 @@ inline auto shogunVerifyModel(const auto& predictions, const auto& targets)
     shogunVerifyModel(predReg, targetReg);
 
     auto roc = some<CROCEvaluation>();
-    roc->evaluate(predictions->get_binary_for_class(1), targets->get_binary_for_class(1));
+    roc->evaluate(predictions->get_binary_for_class(1), 
+		  targets->get_binary_for_class(1));
     std::cout << "AUC ROC = " << roc->get_auROC() << std::endl;
 }
