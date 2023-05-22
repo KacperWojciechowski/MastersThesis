@@ -60,8 +60,44 @@ inline void shogunVerifyModel(
 	    targetVec.emplace_back(1.0);
         else targetVec.emplace_back(0.0);
     }
-    auto predReg = some<CRegressionLabels>(predVec.begin(), predVec.end());
-    auto targetReg = some<CRegressionLabels>(targetVec.begin(), targetVec.end());
+    SGVector<float64_t> predTemp(predVec.begin(), predVec.end());
+    SGVector<float64_t> targetTemp(targetVec.begin(), targetVec.end());
+    auto predReg = some<CRegressionLabels>(predTemp);
+    auto targetReg = some<CRegressionLabels>(targetTemp);
+    shogunVerifyModel(predReg, targetReg);
+
+    auto roc = some<CROCEvaluation>();
+    roc->evaluate(predictions->get_binary_for_class(1), 
+		  targets->get_binary_for_class(1));
+    std::cout << "AUC ROC = " << roc->get_auROC() << std::endl;
+}
+
+inline void shogunVerifyModel(
+    const auto predictions, 
+    const shogun::Some<shogun::CMulticlassLabels>& targets)
+{
+    using namespace shogun;
+
+    std::vector<float64_t> predVec;
+    predVec.reserve(predictions->get_num_labels());
+    for (index_t i = 0; i < predictions->get_num_labels(); ++i)
+    {
+        if (predictions->get_label(i)) 
+	    predVec.emplace_back(1.0);
+        else predVec.emplace_back(0.0);
+    }
+    std::vector<float64_t> targetVec;
+    targetVec.reserve(targets->get_num_labels());
+    for (index_t i = 0; i < targets->get_num_labels(); ++i)
+    {
+        if (targets->get_label(i)) 
+	    targetVec.emplace_back(1.0);
+        else targetVec.emplace_back(0.0);
+    }
+    SGVector<float64_t> predTemp(predVec.begin(), predVec.end());
+    SGVector<float64_t> targetTemp(targetVec.begin(), targetVec.end());
+    auto predReg = some<CRegressionLabels>(predTemp);
+    auto targetReg = some<CRegressionLabels>(targetTemp);
     shogunVerifyModel(predReg, targetReg);
 
     auto roc = some<CROCEvaluation>();
