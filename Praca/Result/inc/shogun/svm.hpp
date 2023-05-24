@@ -8,6 +8,12 @@
 #include <shogun/labels/MulticlassLabels.h>
 #include <shogun/kernel/GaussianKernel.h>
 #include <shogun/multiclass/MulticlassLibSVM.h>
+#include <shogun/evaluation/MulticlassAccuracy.h>
+#include <shogun/evaluation/StratifiedCrossValidationSplitting.h>
+#include <shogun/modelselection/ModelSelection.h>
+#include <shogun/modelselection/ModelSelectionParameters.h>
+#include <shogun/modelselection/GridSearchModelSelection.h>
+#include <shogun/modelselection/ParameterCombination.h>
 
 inline void shogunSVM(shogun::Some<shogun::CDenseFeatures<float64_t>>& trainInputs,
                       shogun::Some<shogun::CDenseFeatures<float64_t>>& testInputs,
@@ -17,10 +23,33 @@ inline void shogunSVM(shogun::Some<shogun::CDenseFeatures<float64_t>>& trainInpu
     using namespace shogun;
 
     // utworzenie jądra
-    auto kernel = some<CGaussianKernel>(trainInputs, trainInputs, 5);
+    auto kernel = some<CGaussianKernel>();
+    kernel.init(trainInputs, trainInputs);
     // utworzenie i konfiguracja modelu
-    auto svm = some<CMulticlassLibSVM>();
+    auto svm = some<CMulticlassLibSVM>(LIBSVM_C_SVC);
     svm->set_kernel(kernel);
+
+    // poszukiwanie hiperparametrów
+    auto root = some<CmodelSelectionParameters>();
+    // stopień unikania missklasyfikacji
+    /CModelSelectionParameters* c = new CModelSelectionParameters("C");
+    root->append_child(c);
+    c->build_values(1.0, 1000.0, R_LINEAR, 100.);
+    auto paramsKernel = some<CmodelSelectionParameters>("kernel", kernel);
+    root->append_child(paramsKernel);
+    auto paramsKernelWidth = some<CModelSelectionParameters>("combined_kernel_weight");
+    paramsKernelWidth->build_values(0.1, 10.0, R_LINEAR, 0.5);
+    paramsKernel->append_child(paramsKernelWidth);
+    index_t k = 3;
+    CStatifiedCrossValidationSplitting* splitting =
+	    new CStatifiedCrossValidationSplitting(trainOutputs, k);
+    auto evalCriterium = some<CMulticlassAccuracy>();
+    auto cross =
+	    some<CCrossValidation>(svm, trainInputs, trainOutputs, splitting, evalCriterium);
+    cross->set_num_runs(1);
+    auto modelSelection = some<CGridSearchModelSelection>(cross, root);
+    CParameterCombination* bestParams = wrap(modelSelection->select_model(false));
+    bestParams->apply_to_machine(svm);
 
     // trening
     svm->set_labels(trainOutputs);
