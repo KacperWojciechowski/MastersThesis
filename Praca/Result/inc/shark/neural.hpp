@@ -10,6 +10,7 @@
 #include <shark/ObjectiveFunctions/Loss/SquaredLoss.h>
 #include <shark/ObjectiveFunctions/Regularizer.h>
 #include <shark/ObjectiveFunctions/Loss/DiscreteLoss.h>
+#include <shark/ObjectiveFunctions/Loss/HingeLoss.h>
 
 inline void sharkNN(const shark::ClassificationDataset& trainData,
                     const shark::ClassificationDataset& testData)
@@ -21,12 +22,12 @@ inline void sharkNN(const shark::ClassificationDataset& trainData,
     using DenseLogisticLayer = LinearModel<RealVector, LogisticNeuron>;
     DenseTanhLayer layer1(inputDimension(trainData), 5, true);
     DenseTanhLayer layer2(5, 5, true);
-    DenseLogisticLayer output(5, 1, true);
+    DenseLogisticLayer output(5, 2, true);
     // połączenie warstw
     auto network = layer1 >> layer2 >> output;
     // utworzenie i konfiguracja funkcji straty
-    SquaredLoss<RealVector, unsigned int> loss;
-    ErrorFunction<> error(trainData, &network, &loss, true);
+    HingeLoss loss;
+    ErrorFunction<> error(trainData, &network, &loss);
     TwoNormRegularizer<> regularizer(error.numberOfVariables());
     double weightDecay = 0.0001;
     error.setRegularizer(weightDecay, &regularizer);
@@ -58,8 +59,8 @@ inline void sharkNN(const shark::ClassificationDataset& trainData,
         }
         // wyliczenie średniej wartości funkcji straty
         avgLoss /= iterations;
-        std::cout << "Epoch " << epoch << " | Avg. loss " << avgLoss 
-                  << std::endl;
+        //std::cout << "Epoch " << epoch << " | Avg. loss " << avgLoss 
+        //          << std::endl;
     }
     // konfiguracja modelu docelowego
     network.setParameterVector(optimizer.solution().point);
@@ -68,7 +69,9 @@ inline void sharkNN(const shark::ClassificationDataset& trainData,
     // walidacja
     std::cout << "-----Shark Neural -----" << std::endl;
     std::cout << "Train data:" << std::endl;
+    std::cout << "trainData.numberOfBatches() = " << trainData.numberOfBatches() << std::endl;
     auto predictions = network(trainData.inputs());
+    std::cout << "predictions.numberOfBatches() = " << predictions.numberOfBatches();
     printSharkModelEvaluation(
         trainData.labels(), predictions);
 

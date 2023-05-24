@@ -12,6 +12,8 @@ find_package(Boost 1.74 REQUIRED serialization)
 find_package(Shark REQUIRED)
 find_package(OpenMP)
 
+set(USE_OPENMP 1)
+
 add_library(openblas STATIC IMPORTED)
 
 if (OPENMP_FOUND)
