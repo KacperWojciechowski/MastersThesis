@@ -5,11 +5,12 @@
 #include <iostream>
 #include <shogun/base/some.h>
 #include <shogun/features/DenseFeatures.h>
+#include <shogun/evaluation/CrossValidation.h>
 #include <shogun/labels/MulticlassLabels.h>
 #include <shogun/kernel/GaussianKernel.h>
 #include <shogun/multiclass/MulticlassLibSVM.h>
 #include <shogun/evaluation/MulticlassAccuracy.h>
-#include <shogun/evaluation/StratifiedCrossValidationSplitting.h>
+#include <shogun/evaluation/StatifiedCrossValidationSplitting.h>
 #include <shogun/modelselection/ModelSelection.h>
 #include <shogun/modelselection/ModelSelectionParameters.h>
 #include <shogun/modelselection/GridSearchModelSelection.h>
@@ -24,18 +25,18 @@ inline void shogunSVM(shogun::Some<shogun::CDenseFeatures<float64_t>>& trainInpu
 
     // utworzenie jądra
     auto kernel = some<CGaussianKernel>();
-    kernel.init(trainInputs, trainInputs);
+    kernel->init(trainInputs, trainInputs);
     // utworzenie i konfiguracja modelu
     auto svm = some<CMulticlassLibSVM>(LIBSVM_C_SVC);
     svm->set_kernel(kernel);
 
     // poszukiwanie hiperparametrów
-    auto root = some<CmodelSelectionParameters>();
+    auto root = some<CModelSelectionParameters>();
     // stopień unikania missklasyfikacji
-    /CModelSelectionParameters* c = new CModelSelectionParameters("C");
+    CModelSelectionParameters* c = new CModelSelectionParameters("C");
     root->append_child(c);
     c->build_values(1.0, 1000.0, R_LINEAR, 100.);
-    auto paramsKernel = some<CmodelSelectionParameters>("kernel", kernel);
+    auto paramsKernel = some<CModelSelectionParameters>("kernel", kernel);
     root->append_child(paramsKernel);
     auto paramsKernelWidth = some<CModelSelectionParameters>("combined_kernel_weight");
     paramsKernelWidth->build_values(0.1, 10.0, R_LINEAR, 0.5);
