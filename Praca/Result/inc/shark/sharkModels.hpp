@@ -2,8 +2,8 @@
 
 #include <iostream>
 #include <inc/shark/csv.hpp>
-#include <inc/shark/logistic.hpp>
-#include <inc/shark/neural.hpp>
+//#include <inc/shark/logistic.hpp>
+//#include <inc/shark/neural.hpp>
 #include <inc/shark/printEvaluation.hpp>
 #include <inc/shark/svm.hpp>
 #include <inc/shark/linear.hpp>
@@ -30,5 +30,5 @@ inline void sharkModels()
     std::cout << "Test1" << std::endl;
     sharkSVM(classificationTrainData, classificationTestData);
     std::cout << "Test2" << std::endl;
-    sharkNN(classificationTrainData, classificationTestData);
+    //sharkNN(classificationTrainData, classificationTestData);
 }

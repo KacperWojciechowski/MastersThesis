@@ -35,6 +35,7 @@ std::vector<shark::RealVector> repackToRealVectorRange(const auto& dataContainer
 {
     using namespace shark;
 
+    // przepakowanie danych z typu unsigned int na typ RealVector
     std::vector<RealVector> v;
     std::for_each(dataContainer.elements().begin(), dataContainer.elements().end(), [&](const auto e){RealVector rv(1); rv(0) = static_cast<double>(e); v.emplace_back(rv); });
     return v;
@@ -42,46 +43,18 @@ std::vector<shark::RealVector> repackToRealVectorRange(const auto& dataContainer
 
 inline void printSharkModelEvaluation(
     const shark::Data<unsigned int>& labels,
-    const shark::Data<shark::RealVector>& predictions)
-{
-    using namespace shark;
-    using namespace shark::statistics;
-
-    // przepakowanie danych
-    auto labelsRange = repackToRealVectorRange(labels);
-    auto labelsRvData = createDataFromRange(labelsRange);
-
-    // błąd średniokwadratowy
-    SquaredLoss<> loss;
-    auto mse = loss(labelsRvData, predictions);
-    std::cout << "MSE: " << mse << std::endl;
-
-    // metryka R^2
-    auto var = Variance().statistics(labelsRange);
-    auto r_squared = 1 - mse / var(0);
-    std::cout << "R^2: " << r_squared << std::endl;
-}
-
-inline void printSharkModelEvaluation(
-    const auto& labels,
     const auto& predictions)
 {
     using namespace shark;
-    using namespace shark::statistics;
 
+    // przygotowanie solvera pola pod wykresem ROC
+    constexpr bool invert = false;
+    NegativeAUC<unsigned int, RealVector> auc(invert);
+ 
     // przepakowanie danych
-    auto labelsRange = repackToRealVectorRange(labels);
-    auto labelsRvData = createDataFromRange(labelsRange);
-    auto predictionsRange = repackToRealVectorRange(predictions);
-    auto predictionsRvData = createDataFromRange(predictionsRange);
-
-    // błąd średniokwadratowy
-    SquaredLoss<> loss;
-    auto mse = loss(labelsRvData, predictionsRvData);
-    std::cout << "MSE: " << mse << std::endl;
-
-    // metryka R^2
-    auto var = Variance().statistics(labelsRange);
-    auto r_squared = 1 - mse / var(0);
-    std::cout << "R^2: " << r_squared << std::endl;
+    auto predVec = repackToRealVectorRange(predictions);
+    auto predData = createDataFromRange(predVec);
+    // obliczenie AUC ROC
+    auto roc = auc(labels, predData);
+    std::cout << "ROC: " << (-1 * roc) << std::endl << std::endl;
 }
