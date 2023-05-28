@@ -25,19 +25,26 @@ inline void printSharkModelEvaluation(
 
     // metryka R^2
     std::vector<RealVector> tmp;
-    std::for_each(labels.elements().begin(), labels.elements().end(), [&](const auto e){ tmp.emplace_back(e); });
+    std::for_each(labels.elements().begin(), labels.elements().end(), 
+		    [&](const auto e){ tmp.emplace_back(e); });
     auto var = Variance().statistics(tmp);
     auto r_squared = 1 - mse / var(0);
     std::cout << "R^2: " << r_squared << std::endl;
 }
 
-std::vector<shark::RealVector> repackToRealVectorRange(const auto& dataContainer)
+std::vector<shark::RealVector> repackToRealVectorRange(
+		const auto& dataContainer)
 {
     using namespace shark;
 
     // przepakowanie danych z typu unsigned int na typ RealVector
     std::vector<RealVector> v;
-    std::for_each(dataContainer.elements().begin(), dataContainer.elements().end(), [&](const auto e){RealVector rv(1); rv(0) = static_cast<double>(e); v.emplace_back(rv); });
+    std::for_each(dataContainer.elements().begin(), 
+		    dataContainer.elements().end(), 
+		    [&](const auto e){
+		    	RealVector rv(1); 
+		    	rv(0) = static_cast<double>(e); 
+		    	v.emplace_back(rv); });
     return v;
 }
 

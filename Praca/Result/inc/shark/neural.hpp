@@ -69,9 +69,11 @@ inline void sharkNN(const shark::ClassificationDataset& trainData,
     // walidacja
     std::cout << "-----Shark Neural -----" << std::endl;
     std::cout << "Train data:" << std::endl;
-    std::cout << "trainData.numberOfBatches() = " << trainData.numberOfBatches() << std::endl;
+    std::cout << "trainData.numberOfBatches() = " << 
+	    trainData.numberOfBatches() << std::endl;
     auto predictions = network(trainData.inputs());
-    std::cout << "predictions.numberOfBatches() = " << predictions.numberOfBatches();
+    std::cout << "predictions.numberOfBatches() = " << 
+	    predictions.numberOfBatches();
     printSharkModelEvaluation(
         trainData.labels(), predictions);
 
