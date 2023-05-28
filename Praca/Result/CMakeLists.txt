@@ -7,7 +7,8 @@ project(MyProject)
 
 # Find the Shark package
 #find_package(Shark REQUIRED)
-find_package(Shogun REQUIRED)
+#find_package(Shogun REQUIRED)
+find_package(Dlib REQUIRED)
 
 # Add the main.cpp source file to the project
 add_executable(MyApp test.cpp)
@@ -16,8 +17,8 @@ target_include_directories(MyApp PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Link against the Shark library
 #target_link_libraries(MyApp Shark)
-target_link_libraries(MyApp shogun)
+target_link_libraries(MyApp dlib)
 
 # Set the include directories
-target_include_directories(MyApp PRIVATE ${SHOGUN_INCLUDE_DIRS})
+target_include_directories(MyApp PRIVATE ${DLIB_INCLUDE_DIRS})
 set_property(TARGET MyApp PROPERTY CXX_STANDARD 14)
