@@ -1,5 +1,15 @@
 #pragma once
 
+#include <iostream>
+#include <inc/shark/printEvaluation.hpp>
+#include <shark/Algorithms/GradientDescent/SteepestDescent.h>
+#include <shark/Models/ConcatenatedModel.h>
+#include <shark/Models/LinearModel.h>
+#include <shark/Data/Dataset.h>
+#include <shark/ObjectiveFunctions/ErrorFunction.h>
+#include <shark/ObjectiveFunctions/Regularizer.h>
+#include <shark/ObjectiveFunctions/Loss/CrossEntropy.h>
+
 inline void sharkNN(const shark::ClassificationDataset& trainData,
                     const shark::ClassificationDataset& testData)
 {
@@ -7,20 +17,18 @@ inline void sharkNN(const shark::ClassificationDataset& trainData,
     
     // zdefiniowanie warstw sieci
     using DenseTanhLayer = LinearModel<RealVector, TanhNeuron>;
-    using DenseLinearLayer = LinearModel<RealVector>;
     using DenseLogisticLayer = LinearModel<RealVector, LogisticNeuron>;
-    DenseLinearLayer layer1(inputDimension(trainData), 5, true);
+    DenseTanhLayer layer1(inputDimension(trainData), 5, true);
     DenseTanhLayer layer2(5, 5, true);
-    DenseTanhLayer layer3(5, 5, true);
-    DenseLogisticLayer output(5, 1, true);
+    DenseLogisticLayer output(5, numberOfClasses(trainData), true);
     // połączenie warstw
-    auto network = layer1 >> layer2 >> layer3 >> output;
+    auto network = layer1 >> layer2 >> output;
     // utworzenie i konfiguracja funkcji straty
-    DiscreteLoss<> loss;
+    CrossEntropy<unsigned int, RealVector> loss;
     ErrorFunction<> error(trainData, &network, &loss, true);
-    TwoNormRegularizer<> regularizer(error.numberOfVariables());
-    double weightDecay = 0.0001;
-    error.setRegularizer(weightDecay, &regularizer);
+    //TwoNormRegularizer<> regularizer(error.numberOfVariables());
+    double weightDecay = 0.01;
+    //error.setRegularizer(weightDecay, &regularizer);
     error.init();
     // inicjalizacja wag sieci
     initRandomNormal(network, 0.001);
@@ -42,10 +50,10 @@ inline void sharkNN(const shark::ClassificationDataset& trainData,
             // wykonanie kroku optymalizatora
             optimizer.step(error);
             // zapisanie częściowej wartości funkcji straty
-            if (i % 100 == 0)
-            {
+            //if (i % 100 == 0)
+            //{
                 avgLoss += optimizer.solution().value;
-            }
+            //}
         }
         // wyliczenie średniej wartości funkcji straty
         avgLoss /= iterations;
@@ -54,15 +62,21 @@ inline void sharkNN(const shark::ClassificationDataset& trainData,
     }
     // konfiguracja modelu docelowego
     network.setParameterVector(optimizer.solution().point);
+    std::cout << "In Shape=" << network.inputShape() << std::endl;
+    std::cout << "Out Shape=" << network.outputShape() << std::endl;
+    //Classifier<ConcatenatedModel<RealVector>> model(network);
+
     // walidacja
     std::cout << "-----Shark Neural -----" << std::endl;
     std::cout << "Train data:" << std::endl;
+    std::cout << "trainData.numberOfBatches() = " << trainData.numberOfBatches() << std::endl;
     auto predictions = network(trainData.inputs());
+    std::cout << "predictions.numberOfBatches() = " << predictions.numberOfBatches();
     printSharkModelEvaluation(
-        trainData.labels(), predictions, Task::CLASSIFICATION);
+        trainData.labels(), predictions);
 
     std::cout << "Test data:" << std::endl;
     predictions = network(testData.inputs());
     printSharkModelEvaluation(
-        testData.labels(), predictions, Task::CLASSIFICATION); 
+        testData.labels(), predictions); 
 }

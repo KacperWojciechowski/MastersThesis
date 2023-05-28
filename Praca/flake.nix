@@ -32,6 +32,7 @@
           shogun
           shogun.dev
 	  dlib
+	  blas
 	 ];
 
         testCpp = stdenv.mkDerivation {

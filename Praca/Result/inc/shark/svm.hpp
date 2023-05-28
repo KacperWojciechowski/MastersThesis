@@ -1,5 +1,13 @@
 #pragma once
 
+#define SHARK_CV_VERBOSE 1
+#include <inc/shark/printEvaluation.hpp>
+#include <shark/Algorithms/KMeans.h>
+#include <shark/Algorithms/Trainers/CSvmTrainer.h>
+#include <shark/Data/Dataset.h>
+#include <shark/Models/Classifier.h>
+#include <shark/Models/Kernels/GaussianRbfKernel.h>
+
 inline void sharkSVM(const shark::ClassificationDataset& trainData,
                      const shark::ClassificationDataset& testData)
 {
@@ -15,7 +23,7 @@ inline void sharkSVM(const shark::ClassificationDataset& trainData,
     CSvmTrainer<RealVector, double> trainer(
         &kernel, regularization, bias);
     trainer.sparsify() = false;
-    trainer.stopCondition().minAccuracy=1e-6;
+    trainer.stoppingCondition().minAccuracy=1e-6;
     trainer.setCacheSize(0x1000000);
     // trening
     trainer.train(svm, trainData);
@@ -24,10 +32,10 @@ inline void sharkSVM(const shark::ClassificationDataset& trainData,
     std::cout << "Train data:" << std::endl;
     auto predictions = svm(trainData.inputs());
     printSharkModelEvaluation(
-        trainData.labels(), predictions, Task::CLASSIFICATION);
+        trainData.labels(), predictions);
 
     std::cout << "Test data:" << std::endl;
     predictions = svm(testData.inputs());
     printSharkModelEvaluation(
-        testData.labels(), predictions, Task::CLASSIFICATION);
+        testData.labels(), predictions);
 }

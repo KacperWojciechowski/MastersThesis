@@ -1,5 +1,13 @@
 #pragma once
 
+#define SHARK_CV_VERBOSE 1
+#include <inc/shark/printEvaluation.hpp>
+#include <shark/Algorithms/KMeans.h>
+#include <shark/Algorithms/NearestNeighbors/TreeNearestNeighbors.h>
+#include <shark/Data/Dataset.h>
+#include <shark/Models/Classifier.h>
+#include <shark/Models/NearestNeighborModel.h>
+#include <shark/Models/Trees/KDTree.h>
 #include <iostream>
 
 inline void sharkKNN(const shark::ClassificationDataset& trainData,
@@ -9,7 +17,7 @@ inline void sharkKNN(const shark::ClassificationDataset& trainData,
 
     // utworzenie i konfiguracja drzewa oraz algorytmu
     KDTree<RealVector> tree(trainData.inputs());
-    TreeNearestNeighbors<RealVector,unsigned int> algorithm(
+    TreeNearestNeighbors<RealVector, unsigned int> algorithm(
         trainData, &tree);
 
     // konfiguracja modelu
@@ -21,10 +29,10 @@ inline void sharkKNN(const shark::ClassificationDataset& trainData,
     std::cout << "Train data :" << std::endl;
     auto predictions = KNN(trainData.inputs());
     printSharkModelEvaluation(
-        trainData.labels(), predictions, Task::CLASSIFICATION);
+        trainData.labels(), predictions);
 
     std::cout << "Test data:" << std::endl;
     predictions = KNN(testData.inputs());
     printSharkModelEvaluation(
-        testData.labels(), predictions, Task::CLASSIFICATION);
+        testData.labels(), predictions);
 }
