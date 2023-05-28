@@ -9,10 +9,11 @@
 #include <shogun/multiclass/KNN.h>
 #include <shogun/distance/EuclideanDistance.h>
 
-inline void shogunKNN(shogun::Some<shogun::CDenseFeatures>& trainInputs,
-                      shogun::Some<shogun::CDenseFeatures>& testInputs,
-                      shogun::Some<shogun::CMulticlassLabels>& trainOutputs,
-                      shogun::Some<shogun::CMulticlassLabels>& testOutputs)
+inline void shogunKNN(
+		shogun::Some<shogun::CDenseFeatures>& trainInputs,
+                shogun::Some<shogun::CDenseFeatures>& testInputs,
+                shogun::Some<shogun::CMulticlassLabels>& trainOutputs,
+                shogun::Some<shogun::CMulticlassLabels>& testOutputs)
 {
     using namespace shogun;
 

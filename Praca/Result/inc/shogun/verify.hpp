@@ -31,7 +31,8 @@ inline void shogunVerifyModel(
     for (index_t i = 0; i < targets->get_num_labels(); i++)
     {
         sumFromAvg += std::pow(targets->get_label(i) - avg, 2);
-	sumFromErr += std::pow(targets->get_label(i) - predictions->get_label(i), 2);
+	sumFromErr += 
+		std::pow(targets->get_label(i) - predictions->get_label(i), 2);
     }
     // obliczenie metryki R^2
     auto r_square = 1 - (sumFromErr / sumFromAvg);
@@ -44,6 +45,7 @@ inline void shogunVerifyModel(
 {
     using namespace shogun;
 
+    // obliczenie pola pod wykresem ROC
     auto roc = some<CROCEvaluation>();
     roc->evaluate(predictions->get_binary_for_class(1), 
 		  targets->get_binary_for_class(1));
