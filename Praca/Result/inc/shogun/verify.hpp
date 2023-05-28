@@ -20,21 +20,21 @@ inline void shogunVerifyModel(
     std::cout << "MSE = " << mse << std::endl;
     // metryka R^2
     float64_t avg = 0.0;
-    float64_t sum = 0.0;
+    float64_t sumFromErr = 0.0;
+    float64_t sumFromAvg = 0.0;
     // obliczenie średniej i wariancji
     for (index_t i = 0; i < targets->get_num_labels(); i++)
     {
-        avg += predictions->get_label(i);
+        avg += targets->get_label(i);
     }
-    avg /= predictions->get_num_labels();
+    avg /= targets->get_num_labels();
     for (index_t i = 0; i < targets->get_num_labels(); i++)
     {
-        sum += std::pow(predictions->get_label(i) - avg, 2);
+        sumFromAvg += std::pow(targets->get_label(i) - avg, 2);
+	sumFromErr += std::pow(targets->get_label(i) - predictions->get_label(i), 2);
     }
-    auto variance = sum/predictions->get_num_labels();
-    std::cout << "Variance: " << variance << std::endl;
     // obliczenie metryki R^2
-    auto r_square = mse / variance;
+    auto r_square = 1 - (sumFromErr / sumFromAvg);
     std::cout << "R^2 = " << r_square << std::endl << std::endl;
 }
 
