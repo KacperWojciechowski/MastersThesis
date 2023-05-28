@@ -16,17 +16,13 @@
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Rozkład zmiennej Gender\relax }}{14}{figure.caption.13}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Wpływ transformacji logarytmicznej na rozkład zmiennej odpowiedzi\relax }}{15}{figure.caption.14}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Normalizacja rozkładu za pomocą transformacji pierwiastkiem kwadratowym.\relax }}{16}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Wykres p-wartości dla całego zestawu zmiennych decyzyjnych.\relax }}{17}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Wykres i p-wartości istotnych zmiennych decyzyjnych\relax }}{18}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Krzywa charakterystyczna odbiornika (ROC) dla modelu regresji logistycznej\relax }}{18}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Schemat struktury sieci\relax }}{19}{figure.caption.21}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Krzywa charakterysty-czna odbiornika dla zestawu testowego\relax }}{19}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Krzywa charakterysty-czna odbiornika dla danych walidacyjnych\relax }}{19}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Krzywa charakterystycz-na odbiornika dla danych uczących modelu SVM\relax }}{20}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Krzywa charakterystycz-na odbiornika dla danych walidacyjnych modelu SVM\relax }}{20}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Wykres p-wartości dla wszystkich zmiennych\relax }}{21}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Wykres p-wartości dla zmiennych wybranych do procesu uczenia\relax }}{21}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Krzywa charakterystycz-na odbiornika dla danych uczących modelu SVM\relax }}{17}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Krzywa charakterystycz-na odbiornika dla danych walidacyjnych modelu SVM\relax }}{17}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Wykres p-wartości dla wszystkich zmiennych\relax }}{17}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Wykres p-wartości dla zmiennych wybranych do procesu uczenia\relax }}{18}{figure.caption.18}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Wynik działania programu dla biblioteki Shogun\relax }}{74}{figure.caption.20}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Wynik działania programu dla biblioteki Shark\relax }}{74}{figure.caption.20}%

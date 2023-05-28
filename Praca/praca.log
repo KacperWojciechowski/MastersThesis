@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  2 MAY 2023 15:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  28 MAY 2023 15:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1365,7 +1365,7 @@ Overfull \hbox (6.8981pt too wide) in paragraph at lines 2--2
 []\T1/lmr/bx/n/17.28 Problemy wspóª-cze-snego ucze-nia ma-szy-no-wego 
  []
 
-<Rysunki/Rozdzial2/perceptron.jpg, id=606, 523.35526pt x 195.129pt>
+<Rysunki/Rozdzial2/perceptron.jpg, id=583, 523.35526pt x 195.129pt>
 File: Rysunki/Rozdzial2/perceptron.jpg Graphic file (type jpg)
 <use Rysunki/Rozdzial2/perceptron.jpg>
 Package pdftex.def Info: Rysunki/Rozdzial2/perceptron.jpg  used on input line 1
@@ -1377,7 +1377,7 @@ Package pdftex.def Info: Rysunki/Rozdzial2/perceptron.jpg  used on input line 1
 Underfull \vbox (badness 4193) has occurred while \output is active []
 
  [4 <./Rysunki/Rozdzial2/perceptron.jpg>]
-<Rysunki/Rozdzial2/multithreading.jpg, id=617, 573.94424pt x 231.86626pt>
+<Rysunki/Rozdzial2/multithreading.jpg, id=594, 573.94424pt x 231.86626pt>
 File: Rysunki/Rozdzial2/multithreading.jpg Graphic file (type jpg)
 <use Rysunki/Rozdzial2/multithreading.jpg>
 Package pdftex.def Info: Rysunki/Rozdzial2/multithreading.jpg  used on input li
@@ -1389,21 +1389,21 @@ Rozdzia\l  3.
 [7
 
 ] [8]
-<Rysunki/Rozdzial2/diagnosis_distribution.png, id=656, 355.3275pt x 126.4725pt>
+<Rysunki/Rozdzial2/diagnosis_distribution.png, id=632, 355.3275pt x 126.4725pt>
 
 File: Rysunki/Rozdzial2/diagnosis_distribution.png Graphic file (type png)
 <use Rysunki/Rozdzial2/diagnosis_distribution.png>
 Package pdftex.def Info: Rysunki/Rozdzial2/diagnosis_distribution.png  used on 
 input line 62.
 (pdftex.def)             Requested size: 256.07741pt x 91.1489pt.
-<Rysunki/Rozdzial2/variable_distribution.png, id=658, 369.63094pt x 237.88875pt
+<Rysunki/Rozdzial2/variable_distribution.png, id=634, 369.63094pt x 237.88875pt
 >
 File: Rysunki/Rozdzial2/variable_distribution.png Graphic file (type png)
 <use Rysunki/Rozdzial2/variable_distribution.png>
 Package pdftex.def Info: Rysunki/Rozdzial2/variable_distribution.png  used on i
 nput line 69.
 (pdftex.def)             Requested size: 256.07741pt x 164.80766pt.
-<Rysunki/Rozdzial2/box_graph.png, id=660, 423.08063pt x 378.66469pt>
+<Rysunki/Rozdzial2/box_graph.png, id=636, 423.08063pt x 378.66469pt>
 File: Rysunki/Rozdzial2/box_graph.png Graphic file (type png)
 <use Rysunki/Rozdzial2/box_graph.png>
 Package pdftex.def Info: Rysunki/Rozdzial2/box_graph.png  used on input line 81
@@ -1412,19 +1412,19 @@ Package pdftex.def Info: Rysunki/Rozdzial2/box_graph.png  used on input line 81
  [9 <./Rysunki/Rozdzial2/diagnosis_distribution.png>] [10 <./Rysunki/Rozdzial2/
 variable_distribution.png (PNG copy)> <./Rysunki/Rozdzial2/box_graph.png (PNG c
 opy)>]
-<Rysunki/Rozdzial3/log.png, id=674, 368.1253pt x 258.9675pt>
+<Rysunki/Rozdzial3/log.png, id=651, 368.1253pt x 258.9675pt>
 File: Rysunki/Rozdzial3/log.png Graphic file (type png)
 <use Rysunki/Rozdzial3/log.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/log.png  used on input line 108.
 (pdftex.def)             Requested size: 298.75264pt x 210.18137pt.
  [11 <./Rysunki/Rozdzial3/log.png (PNG copy)>]
-<Rysunki/Rozdzial3/cube_root.png, id=696, 385.44pt x 251.43938pt>
+<Rysunki/Rozdzial3/cube_root.png, id=673, 385.44pt x 251.43938pt>
 File: Rysunki/Rozdzial3/cube_root.png Graphic file (type png)
 <use Rysunki/Rozdzial3/cube_root.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/cube_root.png  used on input line 12
 8.
 (pdftex.def)             Requested size: 298.75264pt x 194.8865pt.
-<Rysunki/Rozdzial3/arrhenius.png, id=698, 398.23781pt x 237.88875pt>
+<Rysunki/Rozdzial3/arrhenius.png, id=675, 398.23781pt x 237.88875pt>
 File: Rysunki/Rozdzial3/arrhenius.png Graphic file (type png)
 <use Rysunki/Rozdzial3/arrhenius.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/arrhenius.png  used on input line 13
@@ -1432,34 +1432,34 @@ Package pdftex.def Info: Rysunki/Rozdzial3/arrhenius.png  used on input line 13
 (pdftex.def)             Requested size: 298.75264pt x 178.46692pt.
  [12 <./Rysunki/Rozdzial3/cube_root.png (PNG copy)> <./Rysunki/Rozdzial3/arrhen
 ius.png (PNG copy)>]
-<Rozdzial3/ferritin.png, id=707, 247.67531pt x 180.675pt>
+<Rozdzial3/ferritin.png, id=684, 247.67531pt x 180.675pt>
 File: Rozdzial3/ferritin.png Graphic file (type png)
 <use Rozdzial3/ferritin.png>
 Package pdftex.def Info: Rozdzial3/ferritin.png  used on input line 152.
 (pdftex.def)             Requested size: 213.39568pt x 155.66968pt.
-<Rozdzial3/decision.png, id=709, 245.41687pt x 175.40532pt>
+<Rozdzial3/decision.png, id=686, 245.41687pt x 175.40532pt>
 File: Rozdzial3/decision.png Graphic file (type png)
 <use Rozdzial3/decision.png>
 Package pdftex.def Info: Rozdzial3/decision.png  used on input line 161.
 (pdftex.def)             Requested size: 256.07741pt x 183.03012pt.
 [13 <./Rozdzial3/ferritin.png (PNG copy)> <./Rozdzial3/decision.png>]
-<Rozdzial3/decision1.png, id=715, 238.64156pt x 174.6525pt>
+<Rozdzial3/decision1.png, id=692, 238.64156pt x 174.6525pt>
 File: Rozdzial3/decision1.png Graphic file (type png)
 <use Rozdzial3/decision1.png>
 Package pdftex.def Info: Rozdzial3/decision1.png  used on input line 169.
 (pdftex.def)             Requested size: 256.07741pt x 187.42531pt.
-<Rozdzial3/mnf.png, id=717, 218.31563pt x 124.21407pt>
+<Rozdzial3/mnf.png, id=694, 218.31563pt x 124.21407pt>
 File: Rozdzial3/mnf.png Graphic file (type png)
 <use Rozdzial3/mnf.png>
 Package pdftex.def Info: Rozdzial3/mnf.png  used on input line 178.
 (pdftex.def)             Requested size: 256.07741pt x 145.69945pt.
  [14 <./Rozdzial3/decision1.png (PNG copy)> <./Rozdzial3/mnf.png (PNG copy)>]
-<Rozdzial3/log2.png, id=725, 353.06906pt x 237.13594pt>
+<Rozdzial3/log2.png, id=702, 353.06906pt x 237.13594pt>
 File: Rozdzial3/log2.png Graphic file (type png)
 <use Rozdzial3/log2.png>
 Package pdftex.def Info: Rozdzial3/log2.png  used on input line 208.
 (pdftex.def)             Requested size: 298.75264pt x 200.65465pt.
-<Rozdzial3/cube2.png, id=727, 376.40625pt x 240.14719pt>
+<Rozdzial3/cube2.png, id=704, 376.40625pt x 240.14719pt>
 File: Rozdzial3/cube2.png Graphic file (type png)
 <use Rozdzial3/cube2.png>
 Package pdftex.def Info: Rozdzial3/cube2.png  used on input line 223.
@@ -1470,133 +1470,68 @@ Overfull \hbox (6.4146pt too wide) in paragraph at lines 228--229
 ie-sku-teczna na wszyst-
  []
 
-[15 <./Rozdzial3/log2.png (PNG copy)>]
-<Rysunki/Rozdzial3/pvalue1.png, id=743, 382.42876pt x 400.49625pt>
-File: Rysunki/Rozdzial3/pvalue1.png Graphic file (type png)
-<use Rysunki/Rozdzial3/pvalue1.png>
-Package pdftex.def Info: Rysunki/Rozdzial3/pvalue1.png  used on input line 263.
-
-(pdftex.def)             Requested size: 384.1096pt x 402.27359pt.
- [16 <./Rozdzial3/cube2.png (PNG copy)>]
-[17 <./Rysunki/Rozdzial3/pvalue1.png>]
-<Rysunki/Rozdzial3/pvalue2.png, id=756, 377.15906pt x 156.585pt>
-File: Rysunki/Rozdzial3/pvalue2.png Graphic file (type png)
-<use Rysunki/Rozdzial3/pvalue2.png>
-Package pdftex.def Info: Rysunki/Rozdzial3/pvalue2.png  used on input line 273.
-
-(pdftex.def)             Requested size: 298.75264pt x 124.0329pt.
-<Rysunki/Rozdzial3/roc.png, id=757, 287.57437pt x 286.06876pt>
-File: Rysunki/Rozdzial3/roc.png Graphic file (type png)
-<use Rysunki/Rozdzial3/roc.png>
-Package pdftex.def Info: Rysunki/Rozdzial3/roc.png  used on input line 280.
-(pdftex.def)             Requested size: 213.39568pt x 212.28557pt.
-<Rysunki/Rozdzial3/neural_struct.png, id=761, 763.85374pt x 653.44125pt>
-File: Rysunki/Rozdzial3/neural_struct.png Graphic file (type png)
-<use Rysunki/Rozdzial3/neural_struct.png>
-Package pdftex.def Info: Rysunki/Rozdzial3/neural_struct.png  used on input lin
-e 304.
-(pdftex.def)             Requested size: 256.07741pt x 219.05623pt.
- [18 <./Rysunki/Rozdzial3/pvalue2.png (PNG copy)> <./Rysunki/Rozdzial3/roc.png 
-(PNG copy)>]
-<Rysunki/Rozdzial3/roc_test.png, id=768, 397.485pt x 285.31593pt>
-File: Rysunki/Rozdzial3/roc_test.png Graphic file (type png)
-<use Rysunki/Rozdzial3/roc_test.png>
-Package pdftex.def Info: Rysunki/Rozdzial3/roc_test.png  used on input line 314
-.
-(pdftex.def)             Requested size: 194.61449pt x 139.69719pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
-[][]|\T1/lmr/m/n/10.95 Krzywa charakterysty-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
-\T1/lmr/m/n/10.95 czna od-bior-nika dla
- []
-
-<Rysunki/Rozdzial3/roc_valid.png, id=769, 398.23781pt x 285.31593pt>
-File: Rysunki/Rozdzial3/roc_valid.png Graphic file (type png)
-<use Rysunki/Rozdzial3/roc_valid.png>
-Package pdftex.def Info: Rysunki/Rozdzial3/roc_valid.png  used on input line 32
-1.
-(pdftex.def)             Requested size: 194.61449pt x 139.43161pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 322--322
-[][]|\T1/lmr/m/n/10.95 Krzywa charakterysty-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 322--322
-\T1/lmr/m/n/10.95 czna od-bior-nika dla
- []
-
-[19 <./Rysunki/Rozdzial3/neural_struct.png> <./Rysunki/Rozdzial3/roc_test.png (
-PNG copy)> <./Rysunki/Rozdzial3/roc_valid.png (PNG copy)>]
-<Rysunki/Rozdzial3/roc_svm1_test.png, id=775, 402.00188pt x 281.55188pt>
+[15 <./Rozdzial3/log2.png (PNG copy)>] [16 <./Rozdzial3/cube2.png (PNG copy)>]
+<Rysunki/Rozdzial3/roc_svm1_test.png, id=721, 402.00188pt x 281.55188pt>
 File: Rysunki/Rozdzial3/roc_svm1_test.png Graphic file (type png)
 <use Rysunki/Rozdzial3/roc_svm1_test.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/roc_svm1_test.png  used on input lin
-e 354.
+e 353.
 (pdftex.def)             Requested size: 200.75998pt x 140.60373pt.
 
-Underfull \hbox (badness 2035) in paragraph at lines 355--355
+Underfull \hbox (badness 2035) in paragraph at lines 354--354
 [][]|\T1/lmr/m/n/10.95 Krzywa charakterystycz-
  []
 
-<Rysunki/Rozdzial3/roc_svm1_val.png, id=776, 406.51875pt x 280.79906pt>
+<Rysunki/Rozdzial3/roc_svm1_val.png, id=722, 406.51875pt x 280.79906pt>
 File: Rysunki/Rozdzial3/roc_svm1_val.png Graphic file (type png)
 <use Rysunki/Rozdzial3/roc_svm1_val.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/roc_svm1_val.png  used on input line
- 361.
+ 360.
 (pdftex.def)             Requested size: 200.75998pt x 138.67247pt.
 
-Underfull \hbox (badness 2035) in paragraph at lines 362--362
+Underfull \hbox (badness 2035) in paragraph at lines 361--361
 [][]|\T1/lmr/m/n/10.95 Krzywa charakterystycz-
  []
 
 
-Underfull \hbox (badness 4872) in paragraph at lines 362--362
+Underfull \hbox (badness 4872) in paragraph at lines 361--361
 \T1/lmr/m/n/10.95 na od-bior-nika dla da-
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 362--362
+Underfull \hbox (badness 1394) in paragraph at lines 361--361
 \T1/lmr/m/n/10.95 nych wa-li-da-cyj-nych mo-
  []
 
-
-Underfull \vbox (badness 3000) has occurred while \output is active []
-
- [20 <./Rysunki/Rozdzial3/roc_svm1_test.png (PNG copy)> <./Rysunki/Rozdzial3/ro
-c_svm1_val.png (PNG copy)>]
-<Rozdzial3/pvalue3.png, id=786, 374.90062pt x 134.75343pt>
+<Rozdzial3/pvalue3.png, id=728, 374.90062pt x 134.75343pt>
 File: Rozdzial3/pvalue3.png Graphic file (type png)
 <use Rozdzial3/pvalue3.png>
-Package pdftex.def Info: Rozdzial3/pvalue3.png  used on input line 375.
+Package pdftex.def Info: Rozdzial3/pvalue3.png  used on input line 374.
 (pdftex.def)             Requested size: 426.79135pt x 153.41489pt.
-<Rozdzial3/pvalue4.png, id=787, 366.61969pt x 82.80937pt>
+<Rozdzial3/pvalue4.png, id=729, 366.61969pt x 82.80937pt>
 File: Rozdzial3/pvalue4.png Graphic file (type png)
 <use Rozdzial3/pvalue4.png>
-Package pdftex.def Info: Rozdzial3/pvalue4.png  used on input line 382.
+Package pdftex.def Info: Rozdzial3/pvalue4.png  used on input line 381.
 (pdftex.def)             Requested size: 426.79135pt x 96.4064pt.
-
-Overfull \hbox (2.60454pt too wide) in paragraph at lines 390--420
+[17 <./Rysunki/Rozdzial3/roc_svm1_test.png (PNG copy)> <./Rysunki/Rozdzial3/roc
+_svm1_val.png (PNG copy)> <./Rozdzial3/pvalue3.png (PNG copy)>]
+Overfull \hbox (2.60454pt too wide) in paragraph at lines 389--419
 []$[]$  $[]$ 
  []
 
 ) (./Rozdzial4/rozdzial4.tex
-Overfull \hbox (11.19873pt too wide) in paragraph at lines 422--1
+Overfull \hbox (11.19873pt too wide) in paragraph at lines 421--1
 []\T1/lmr/m/n/12 W wy-niku ucze-nia uzy-skano mo-del któ-rego war-to±¢ me-tryki
  $\OML/lmm/m/it/12 R[]$ \T1/lmr/m/n/12 wy-nio-sªa 0.4654525,
  []
 
-[21 <./Rozdzial3/pvalue3.png (PNG copy)> <./Rozdzial3/pvalue4.png (PNG copy)>]
+[18 <./Rozdzial3/pvalue4.png (PNG copy)>]
 Rozdzia\l  4.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 2.
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [22
+) [19
 
 {d:/Programy/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -1616,18 +1551,21 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-(./Result/inc/shogun/csv.hpp [23]) (./Result/inc/shogun/shogunModels.hpp
-[24])
+(./Result/inc/shogun/csv.hpp [20]) (./Result/inc/shogun/shogunModels.hpp
+[21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22])
 Overfull \hbox (2.96196pt too wide) in paragraph at lines 30--31
 \T1/lmr/m/n/12 mie-±ci¢ si¦ b¦d¡ w prze-dziale jed-nost-ko-wym, za po-moc¡ klas
 y \T1/lmr/m/it/12 shogun::CRescaleFeatu-
  []
 
-(./Result/inc/shogun/rescale.hpp) [25] (./Result/inc/shogun/pca_reduction.hpp)
-[26] (./Result/inc/shogun/linear.hpp [27]) (./Result/inc/shogun/logistic.hpp
-[28]) (./Result/inc/shogun/svm.hpp [29]) (./Result/inc/shogun/knn.hpp [30])
-(./Result/inc/shogun/gb.hpp [31]) (./Result/inc/shogun/rforest.hpp [32])
-[33] (./Result/inc/shogun/neural.hpp [34]) [35] (./Rozdzial4/shogun-mse.cpp)
+(./Result/inc/shogun/rescale.hpp) [23] (./Result/inc/shogun/pca_reduction.hpp)
+[24] (./Result/inc/shogun/linear.hpp [25]) (./Result/inc/shogun/logistic.hpp)
+[26] (./Result/inc/shogun/svm.hpp [27]) (./Result/inc/shogun/knn.hpp [28])
+(./Result/inc/shogun/gb.hpp [29]) [30] (./Result/inc/shogun/rforest.hpp)
+[31] (./Result/inc/shogun/neural.hpp [32]) [33] (./Rozdzial4/shogun-mse.cpp)
 (./Rozdzial4/shogun-mae.cpp) (./Rozdzial4/shogun-log.cpp)
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 155.
@@ -1654,16 +1592,18 @@ Overfull \hbox (3.44022pt too wide) in paragraph at lines 157--158
 ji dla me-tryki $\OML/lmm/m/it/12 R[]$ \T1/lmr/m/n/12 w zwi¡zku
  []
 
+[34]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 159.
-[36] (./Result/inc/shogun/verify.hpp) [37] (./Rozdzial4/shogun-acc.cpp)
-(./Rozdzial4/shogun-roc.cpp) (./Result/inc/shogun/cross.hpp [38]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ (./Result/inc/shogun/verify.hpp
+Overfull \hbox (5.03394pt too wide) in paragraph at lines 35--36
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
- [39]))
-(./Rozdzial5/rozdzial5.tex [40]
+[35]) (./Rozdzial4/shogun-acc.cpp) (./Rozdzial4/shogun-roc.cpp) [36]
+(./Result/inc/shogun/cross.hpp [37])) (./Rozdzial5/rozdzial5.tex [38]
 Rozdzia\l  5.
-[41
+[39
 
 ] (./Result/inc/shark/csv.hpp)
 Overfull \hbox (9.5257pt too wide) in paragraph at lines 14--15
@@ -1671,49 +1611,63 @@ Overfull \hbox (9.5257pt too wide) in paragraph at lines 14--15
 ó-rych prze-ka-zy-wany jest wska¹-
  []
 
-(./Rozdzial5/shark-adaptor.cpp) [42]
+(./Rozdzial5/shark-adaptor.cpp)
 
-LaTeX Warning: Reference `shark:http' on page 43 undefined on input line 30.
+LaTeX Warning: Reference `shark:http' on page 40 undefined on input line 30.
 
-(./Result/inc/shark/normalization.hpp) [43]
+[40] (./Result/inc/shark/normalization.hpp)
 (./Rozdzial5/shark-dimension-reduction.cpp)
 
-LaTeX Warning: Reference `shark:lda' on page 44 undefined on input line 45.
+LaTeX Warning: Reference `shark:lda' on page 41 undefined on input line 43.
 
-(./Rozdzial5/shark-lda-red.cpp) [44] (./Result/inc/shark/linear.hpp [45])
-(./Rozdzial5/shark-linear2.cpp)
+[41] (./Rozdzial5/shark-lda-red.cpp)
+Underfull \vbox (badness 4995) has occurred while \output is active []
+
+ [42]
+(./Result/inc/shark/linear.hpp [43]) (./Rozdzial5/shark-linear2.cpp) [44]
+(./Rozdzial5/shark-logistic.cpp) (./Result/inc/shark/logistic.hpp [45])
+[46] (./Result/inc/shark/svm.hpp [47]) (./Rozdzial5/shark-svm2.cpp)
+Underfull \vbox (badness 2653) has occurred while \output is active []
+
+ [48]
+(./Result/inc/shark/knn.hpp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
-(./Rozdzial5/shark-logistic.cpp [47]) (./Result/inc/shark/logistic.hpp)
-[48] (./Result/inc/shark/svm.hpp [49]) (./Rozdzial5/shark-svm2.cpp) [50]
-(./Result/inc/shark/knn.hpp) [51] (./Rozdzial5/shark-rf.cpp) [52]
-(./Result/inc/shark/neural.hpp [53]) [54] (./Rozdzial5/shark-mse.cpp)
+ [49]
+(./Rozdzial5/shark-rf.cpp) [50] (./Result/inc/shark/neural.hpp [51])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52]
+(./Rozdzial5/shark-mse.cpp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 152.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 152.
+(hyperref)                removing `math shift' on input line 150.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 152.
+(hyperref)                removing `superscript' on input line 150.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 152.
+(hyperref)                removing `math shift' on input line 150.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 152.
+(hyperref)                removing `math shift' on input line 150.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 152.
+(hyperref)                removing `superscript' on input line 150.
 
-(./Rozdzial5/shark-r2.cpp) [55] (./Rozdzial5/shark-roc.cpp)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 150.
+
+[53] (./Rozdzial5/shark-r2.cpp) (./Result/inc/shark/printEvaluation.hpp
+[54])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55]
 (./Rozdzial5/shark-cv.cpp [56])) (./Rozdzial6/rozdzial6.tex [57]
 Rozdzia\l  6.
 (./Rozdzial6/csv.cpp [58
@@ -1756,14 +1710,71 @@ Overfull \hbox (7.70227pt too wide) in alignment at lines 7--68
 
 [71
 
-] [72]) [73] [74] [75
+] [72]
+
+LaTeX Warning: Reference `fig:dlib_linear_svm' on page 73 undefined on input li
+ne 76.
+
+[73]
+<Rozdzial7/shogun.png, id=2819, 151.3153pt x 182.18062pt>
+File: Rozdzial7/shogun.png Graphic file (type png)
+<use Rozdzial7/shogun.png>
+Package pdftex.def Info: Rozdzial7/shogun.png  used on input line 96.
+(pdftex.def)             Requested size: 136.57635pt x 164.43639pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+[][]|\T1/lmr/m/n/10.95 Wy-nik
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+\T1/lmr/m/n/10.95 dzia-ªa-nia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+\T1/lmr/m/n/10.95 pro-gramu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+\T1/lmr/m/n/10.95 dla bi-blio-
+ []
+
+<Rozdzial7/shark.png, id=2820, 150.5625pt x 271.0125pt>
+File: Rozdzial7/shark.png Graphic file (type png)
+<use Rozdzial7/shark.png>
+Package pdftex.def Info: Rozdzial7/shark.png  used on input line 103.
+(pdftex.def)             Requested size: 95.60303pt x 172.09102pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+[][]|\T1/lmr/m/n/10.95 Wy-nik
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\T1/lmr/m/n/10.95 dzia-ªa-nia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\T1/lmr/m/n/10.95 pro-gramu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\T1/lmr/m/n/10.95 dla bi-blio-
+ []
+
+) [74 <./Rozdzial7/shogun.png (PNG copy)> <./Rozdzial7/shark.png>] [75]
+[76
 
 ] (./praca.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: 4686593A8245098038519EE103AFCAD6;18500.
+(rerunfilecheck)             Checksum: B0652263EFCE5EF37E60F94E9D51C0F7;18148.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                praca
@@ -1774,13 +1785,13 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35239 strings out of 476017
- 634250 string characters out of 5789275
- 1935660 words of memory out of 5000000
- 53117 multiletter control sequences out of 15000+600000
+ 35441 strings out of 476017
+ 636802 string characters out of 5789275
+ 1934660 words of memory out of 5000000
+ 53178 multiletter control sequences out of 15000+600000
  600993 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,12n,109p,2262b,2469s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,12n,109p,2262b,2479s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><d:/Pro
 gramy/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/Programy/tex
 live/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><d:/Programy/texlive/202
@@ -1797,10 +1808,10 @@ ts/type1/public/lm/lmtt12.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/
 public/lm/lmtti10.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/c
 m-super/sfxc1728.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/cm
 -super/sfxc2074.pfb>
-Output written on praca.pdf (83 pages, 979148 bytes).
+Output written on praca.pdf (84 pages, 837107 bytes).
 PDF statistics:
- 3191 PDF objects out of 3580 (max. 8388607)
- 2999 compressed objects within 30 object streams
- 1833 named destinations out of 2073 (max. 500000)
- 889 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3344 PDF objects out of 3580 (max. 8388607)
+ 3154 compressed objects within 32 object streams
+ 1978 named destinations out of 2073 (max. 500000)
+ 853 words of extra memory for PDF output out of 10000 (max. 10000000)
 

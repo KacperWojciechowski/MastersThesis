@@ -2,11 +2,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Lista istotnych regresorów\relax }}{17}{table.caption.16}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Struktura modelu sieci neuronowej\relax }}{19}{table.caption.20}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Wartości składowych X modelu dla poszczególnych zmiennych decyzyjnych\relax }}{20}{table.3.3}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Wybrane zmienne decyzyjne i ich p-wartości\relax }}{21}{table.caption.26}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces wartości wag zmiennych decyzyjnych\relax }}{21}{table.caption.26}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Wartości składowych X modelu dla poszczególnych zmiennych decyzyjnych\relax }}{17}{table.3.1}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Wybrane zmienne decyzyjne i ich p-wartości\relax }}{18}{table.caption.19}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces wartości wag zmiennych decyzyjnych\relax }}{18}{table.caption.19}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

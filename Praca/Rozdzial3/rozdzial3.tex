@@ -231,100 +231,99 @@ W celu zestawienia funkcjonalnego bibliotek uczenia maszynowego w języku C++ i 
 
 W trakcie analizy zestawów danych wybrany został przedstawiony poniżej zestaw metod dla których wykonano i podsumowano testy praktyczne. Szablony struktury rozwiązań, takie jak np. wybór zmiennych uczestniczących w procesie uczenia, lub struktura sieci neuronowej zostały ustalone w sposób empiryczny z wykorzystaniem programu do uczenia maszynowego JMP. 
 
-\subsection{Regresja logistyczna}
+%\subsection{Regresja logistyczna}
 
-Badanie zależności w modelu regresji logistycznej odbyło się z wykorzystaniem wykresu wpływu zmiennej decyzyjnej na zmienną odpowiedzi opartego o p-wartość. Jako próg pozwalający na odrzucenie hipotezy zerowej (hipotezy o braku wypływu zmiennej na odpowiedź) przyjęto 0,05 jednostek. Rysunek \ref{fig:pvalue1} przedstawia w/w wykres wraz z p-wartościami dla poszczególnych zmiennych. Zauważyć można, że dla części zmiennych nie została wyznaczona p-wartość -- oznacza to, że część zmiennych jest ze sobą skorelowanych.
+%Badanie zależności w modelu regresji logistycznej odbyło się z wykorzystaniem wykresu wpływu zmiennej decyzyjnej na zmienną odpowiedzi opartego o p-wartość. Jako próg pozwalający na odrzucenie hipotezy zerowej (hipotezy o braku wypływu zmiennej na odpowiedź) przyjęto 0,05 jednostek. Rysunek \ref{fig:pvalue1} przedstawia w/w wykres wraz z p-wartościami dla poszczególnych zmiennych. Zauważyć można, że dla części zmiennych nie została wyznaczona p-wartość -- oznacza to, że część zmiennych jest ze sobą skorelowanych.
 
-Pierwszym krokiem w wybraniu istotnych zmiennych było usunięcie zmiennych skorelowanych, drugim natomiast stopniowe usuwanie zmiennych o p-wartości powyżej określonego progu. Rysunek \ref{fig:pvalue2} przedstawia listę wraz z wykresem kolumnowym istotnych regresorów. Ich lista, wraz z odpowiadającymi im p-wartościami została umieszczona w tabeli \ref{lin_reg:1}.
+%Pierwszym krokiem w wybraniu istotnych zmiennych było usunięcie zmiennych skorelowanych, drugim natomiast stopniowe usuwanie zmiennych o p-wartości powyżej określonego progu. Rysunek \ref{fig:pvalue2} przedstawia listę wraz z wykresem kolumnowym istotnych regresorów. Ich lista, wraz z odpowiadającymi im p-wartościami została umieszczona w tabeli \ref{lin_reg:1}.
 
-\begin{table}
-	\centering
-	\begin{tabular}{l|c}
-		Nazwa zmiennej & p-wartość \\
-		\hline
-		\textit{Log mean largest texture} & 0,00000 \\
-		\textit{Log mean largest compactness} & 0,00000 \\
-		\textit{Cube root mean largest symmetry} & 0,00001 \\
-		\textit{Arrhenius inverse std err symmetry} & 0,00005 \\
-		\textit{Arrhenius inverse std err radius} & 0,00018 \\
-		\textit{Cube root mean concave points} & 0,00056 \\
-		\textit{Cube root mean largest concavity} & 0,00069 \\
-		\textit{Log std err texture} & 0,00252 \\
-		\textit{Cube root mean largest perimeter} & 0,00526 \\
-		\textit{Log mean smoothness} & 0,04867 \\
-		\textit{Log mean radius} & 0,04884
-	\end{tabular}
-	\caption{Lista istotnych regresorów}
-	\label{lin_reg:1}
-\end{table}
+%\begin{table}
+%	\centering
+%	\begin{tabular}{l|c}
+%		Nazwa zmiennej & p-wartość \\
+%		\hline
+%		\textit{Log mean largest texture} & 0,00000 \\
+%		\textit{Log mean largest compactness} & 0,00000 \\
+%		\textit{Cube root mean largest symmetry} & 0,00001 \\
+%		\textit{Arrhenius inverse std err symmetry} & 0,00005 \\
+%		\textit{Arrhenius inverse std err radius} & 0,00018 \\
+%		\textit{Cube root mean concave points} & 0,00056 \\
+%		\textit{Cube root mean largest concavity} & 0,00069 \\
+%		\textit{Log std err texture} & 0,00252 \\
+%		\textit{Cube root mean largest perimeter} & 0,00526 \\
+%		\textit{Log mean smoothness} & 0,04867 \\
+%		\textit{Log mean radius} & 0,04884
+%	\end{tabular}
+%	\caption{Lista istotnych regresorów}
+%	\label{lin_reg:1}
+%\end{table}
 
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=0.9\linewidth]{Rysunki/Rozdzial3/pvalue1}
-	\caption{Wykres p-wartości dla całego zestawu zmiennych decyzyjnych.}
-	\label{fig:pvalue1}
-\end{figure}
+%\begin{figure}[!ht]
+%	\centering
+%	\includegraphics[width=0.9\linewidth]{Rysunki/Rozdzial3/pvalue1}
+%	\caption{Wykres p-wartości dla całego zestawu zmiennych decyzyjnych.}
+%	\label{fig:pvalue1}
+%\end{figure}
 
-\newpage
-Dla wybranego zestawu zmiennych model osiągnął dokładność na poziomie $R^{2}$ = 0.9401. Zgodnie z macierzą pomyłek, 207 obserwacji typu \textit{Malignant} oraz 335 obserwacji \textit{Benign} zostało zaklasyfikowanych poprawnie. Oznacza to, że model uzyskał tylko 2 wyniki typu \textit{false-positive} (prawdopodobieństwo 0,6\%) i 5 wyników typu \textit{false-negative} (prawdopodobieństwo 2,4\%) dla danych treningowych. Ze względu na mały zestaw obserwacji, ryzyko przeuczenia jest znikome, w związku z czym nie wytypowano zestawu danych walidacyjnych. Rysunek \ref{fig:roc} przedstawia krzywą charakterystyczną odbiornika dla modelu. 
+%\newpage
+%Dla wybranego zestawu zmiennych model osiągnął dokładność na poziomie $R^{2}$ = 0.9401. Zgodnie z macierzą pomyłek, 207 obserwacji typu \textit{Malignant} oraz 335 obserwacji \textit{Benign} zostało zaklasyfikowanych poprawnie. Oznacza to, że model uzyskał tylko 2 wyniki typu \textit{false-positive} (prawdopodobieństwo 0,6\%) i 5 wyników typu \textit{false-negative} (prawdopodobieństwo 2,4\%) dla danych treningowych. Ze względu na mały zestaw obserwacji, ryzyko przeuczenia jest znikome, w związku z czym nie wytypowano zestawu danych walidacyjnych. Rysunek \ref{fig:roc} przedstawia krzywą charakterystyczną odbiornika dla modelu. 
 
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=0.7\linewidth]{Rysunki/Rozdzial3/pvalue2}
-	\caption{Wykres i p-wartości istotnych zmiennych decyzyjnych}
-	\label{fig:pvalue2}
-\end{figure}
+%\begin{figure}[!ht]
+%	\centering
+%	\includegraphics[width=0.7\linewidth]{Rysunki/Rozdzial3/pvalue2}
+%	\caption{Wykres i p-wartości istotnych zmiennych decyzyjnych}
+%	\label{fig:pvalue2}
+%\end{figure}
 
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=0.5\linewidth]{Rysunki/Rozdzial3/roc}
-	\caption{Krzywa charakterystyczna odbiornika (ROC) dla modelu regresji logistycznej}
-	\label{fig:roc}
-\end{figure}
+%\begin{figure}[!ht]
+%	\centering
+%	\includegraphics[width=0.5\linewidth]{Rysunki/Rozdzial3/roc}
+%	\caption{Krzywa charakterystyczna odbiornika (ROC) dla modelu regresji logistycznej}
+%	\label{fig:roc}
+%\end{figure}
 
-\subsection{Głęboka sieć neuronowa}
+%\subsection{Głęboka sieć neuronowa}
 
-Do przygotowania sieci neuronowej wykorzystano zestaw zmiennych zawartych w tabeli \ref{lin_reg:1}. Dane zostały losowo podzielony na dane uczące i walidacyjne w propocji 80\% do 20\%. W wyniku prób i błędów, optymalny model uzyskano przy strukturze przedstawionej w tabeli \ref{neural:1}. Graficzny schemat struktury został także przedstawiony na rysunku \ref{fig:neuralstruct}.
+%Do przygotowania sieci neuronowej wykorzystano zestaw zmiennych zawartych w tabeli \ref{lin_reg:1}. Dane zostały losowo podzielony na dane uczące i walidacyjne w propocji 80\% do 20\%. W wyniku prób i błędów, optymalny model uzyskano przy strukturze przedstawionej w tabeli \ref{neural:1}. Graficzny schemat struktury został także przedstawiony na rysunku \ref{fig:neuralstruct}.
 
-\begin{table}[!ht]
-	\centering
-	\begin{tabular}{c|c|c}
-		Typ warstwy & ilość neuronów & aktywacja \\
-		\hline
-		ukryta & 5 & tangens hiperboliczny \\
-		ukryta & 5 & tangens hiperboliczny \\
-		wyjściowa & 2 & ---	
-	\end{tabular}
-	\caption{Struktura modelu sieci neuronowej}
-	\label{neural:1}
-\end{table}
+%\begin{table}[!ht]
+%	\centering
+%	\begin{tabular}{c|c|c}
+%		Typ warstwy & ilość neuronów & aktywacja \\
+%		\hline
+%		ukryta & 5 & tangens hiperboliczny \\
+%		ukryta & 5 & tangens hiperboliczny \\
+%		wyjściowa & 2 & ---	
+%	\end{tabular}
+%	\caption{Struktura modelu sieci neuronowej}
+%	\label{neural:1}
+%\end{table}
 
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=0.6\linewidth]{Rysunki/Rozdzial3/neural_struct}
-	\caption{Schemat struktury sieci}
-	\label{fig:neuralstruct}
-\end{figure}
+%\begin{figure}[!ht]
+%	\centering
+%	\includegraphics[width=0.6\linewidth]{Rysunki/Rozdzial3/neural_struct}
+%	\caption{Schemat struktury sieci}
+%	\label{fig:neuralstruct}
+%\end{figure}
 
-Środowisko JMP nie udostępnia informacji o funkcji aktywacji warstwy wyjściowej, w związku z czym w tabeli 3.2 została ona pominięta. Dla ziarna o wartości 1234 uzyskano model którego statystyka $R^{2}$ dla danych treningowych wyniosła 0.966268, natomiast dla danych testowych 0.9924547. Trafność dla losowo wybranego zestawu testowego wyniosła 100\%, natomiast dla danych uczących napotkano 5 przypadków \textit{false-negative} (prawdopodobieństwo 3\%) oraz 1 przypadek \textit{false-positive} (prawdopodobieństwo 0,4\%). Rysunki \ref{fig:roctest} oraz \ref{fig:rocvalid} przedstawiają krzywe charakterystyczne odbiornika dla zestawu testowego i walidacyjnego.
+%Środowisko JMP nie udostępnia informacji o funkcji aktywacji warstwy wyjściowej, w związku z czym w tabeli 3.2 została ona pominięta. Dla ziarna o wartości 1234 uzyskano model którego statystyka $R^{2}$ dla danych treningowych wyniosła 0.966268, natomiast dla danych testowych 0.9924547. Trafność dla losowo wybranego zestawu testowego wyniosła 100\%, natomiast dla danych uczących napotkano 5 przypadków \textit{false-negative} (prawdopodobieństwo 3\%) oraz 1 przypadek \textit{false-positive} (prawdopodobieństwo 0,4\%). Rysunki \ref{fig:roctest} oraz \ref{fig:rocvalid} przedstawiają krzywe charakterystyczne odbiornika dla zestawu testowego i walidacyjnego.
 
-\begin{figure}[!ht]
-	\begin{minipage}{0.48\textwidth}
-			\centering
-			\includegraphics[width=0.95\linewidth]{Rysunki/Rozdzial3/roc_test}
-			\caption{Krzywa charakterysty-czna odbiornika dla zestawu testowego}
-			\label{fig:roctest}
-	\end{minipage}%
-	\hspace{8pt}
-	\begin{minipage}{0.48\textwidth}
-			\centering
-			\includegraphics[width=0.95\linewidth]{Rysunki/Rozdzial3/roc_valid}
-			\caption{Krzywa charakterysty-czna odbiornika dla danych walidacyjnych}
-			\label{fig:rocvalid}
-	\end{minipage}
-\end{figure}
+%\begin{figure}[!ht]
+%	\begin{minipage}{0.48\textwidth}
+%			\centering
+%			\includegraphics[width=0.95\linewidth]{Rysunki/Rozdzial3/roc_test}
+%			\caption{Krzywa charakterysty-czna odbiornika dla zestawu testowego}
+%			\label{fig:roctest}
+%	\end{minipage}%
+%	\hspace{8pt}
+%	\begin{minipage}{0.48\textwidth}
+%			\centering
+%			\includegraphics[width=0.95\linewidth]{Rysunki/Rozdzial3/roc_valid}
+%			\caption{Krzywa charakterysty-czna odbiornika dla danych walidacyjnych}
+%			\label{fig:rocvalid}
+%	\end{minipage}
+%\end{figure}
 
-\newpage
 \subsection{Maszyna wektorów nośnych}
 
 Do predykcji diagnozy wykorzystano ten sam zestaw regresorów, zawartych w tabeli 3.1. Ponownie w celu walidacji użyto metody wybrania losowego zestawu walidacyjnego spośród dostarczonych danych, w proporcji 80\% obserwacji uczących i 20\% testowych, z użyciem wartości 1234 dla ziarna generatora liczb pseudolosowych. Jako funkcję jądra maszyny wektorów nośnych (ang. Support Vector Machine, SVM) wybrano \textit{Radial Basis Function}, która jest domyślnym wyborem dla SVM w środowisku JMP. 
@@ -364,7 +363,7 @@ Do predykcji diagnozy wykorzystano ten sam zestaw regresorów, zawartych w tabel
 	\end{minipage}	
 \end{figure}
 
-Utworzony w ten sposób model posiada generalizowaną statystykę $R^{2}$ na poziomie 0.97161 dla zestawu walidacyjnego, i uzyskał wskaźnik błędnej klasyfikacji wynoszący 0\% dla danych testowych, oraz 1,3\% dla danych uczących. Tabela \ref{svm:1} przedstawia wartości X dla poszczególnych regresorów. Rysunki \ref{fig:rocsvm1test} oraz \ref{fig:rocsvm1val} przedstawiają krzywe charakterystyczne odbiornika dla uzyskanego modelu.
+Utworzony w ten sposób model posiada generalizowaną statystykę $R^{2}$ na poziomie 0.97161 dla zestawu walidacyjnego, i uzyskał wskaźnik błędnej klasyfikacji wynoszący 0\% dla danych testowych, oraz 1,3\% dla danych uczących. Tabela \ref{svm:1} przedstawia wartości X dla poszczególnych regresorów. Rysunki \ref{fig:rocsvm1test} oraz \ref{fig:rocsvm1val} przedstawiają krzywe charakterystyczne odbiornika dla uzyskanego modelu, pola pod którymi uzyskały wartość odpowiednio 0,9984 dla danych uczących i 1 dla danych testowych.
 
 \subsection{Regresja liniowa}
 

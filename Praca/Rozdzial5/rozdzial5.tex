@@ -35,8 +35,6 @@ Opierają się one o użycie metody \textit{train()} na obiekcie normalizera, ab
 \subsubsection{PCA}
 Algorytm redukcji wymiarowości PCA implementowany jest w bibliotece Shark za pośrednictwem klasy \textit{PCA}. Wykorzystuje ona obiekt modelu liniowego w formie enkodera oraz przyjmuje oprócz niego w metodzie \textit{encoder} docelowy wymiar zestawu danych. Wynikiem działania wymienionej metody jest konfiguracja modelu liniowego do tworzenia zestawu danych o zredukowanym wymiarze. Listing \ref{shark:pca} przedstawia sposób wykorzystania klasy PCA.
 
-\newpage
-
 \cppcode{Rozdzial5/shark-dimension-reduction.cpp}{Redukcja wymiarowości danych z wykorzystaniem klasy PCA i enkodera}{shark:pca}
 
 
@@ -159,7 +157,7 @@ Biblioteka Shark-ML nie oferuje bezpośredniej klasy reprezentującej metrykę $
 
 Pole pod wykresem krzywej charakterystycznej odbiornika stanowi jedną z często wykorzystywanych metryk poprawności predykcji modelu, w związku z czym nie mogło jej zabraknąć w bibliotece Shark-ML. Jest ona dostępna za pośrednictwem klasy \textit{NegativeAUC}, wykorzystywanej w taki sam sposób jak pozostałe omówione wcześniej funkcje straty. W przeciwieństwie do standardowego podejścia, wspomniana klasa oblicza odwróconą wartość pola pod wykresem funkcji ROC, aby umożliwić wykorzystanie jej jako minimalizowanego celu w procesie uczenia. Listing \ref{shark:roc} przedstawia sposób obliczenia wartości wymienionej metryki.
 
-\cppcode{Rozdzial5/shark-roc.cpp}{Przykład obliczenia pola pod wykresem funkcji ROC dla Shark-ML}{shark:roc} 
+\cppcode{Result/inc/shark/printEvaluation.hpp}{Przykład obliczenia pola pod wykresem funkcji ROC dla Shark-ML (trzecia funkcja)}{shark:roc} 
 
 \subsection{Sprawdzian krzyżowy K-krotny}
 

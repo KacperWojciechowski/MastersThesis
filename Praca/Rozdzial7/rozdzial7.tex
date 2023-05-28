@@ -72,6 +72,47 @@ Omówione w ramach niniejszej pracy biblioteki różnią się typem i ilością 
 Analizując dane zebrane w tabeli \ref{fun:sum} zauważyć można, że biblioteki Shogun oraz Shark-ML są bardzo zbliżone do siebie typem i ilością dostępnych metod uczenia maszynowego, jednak Shark-ML posiada więcej rodzajów błędów możliwych do wykorzystania jako funkcje strat, pozwalając na większą swobodę względem dostosowywania procesu uczenia. Najmniejszą ilością funkcjonalności charakteryzuje się biblioteka Dlib, posiadająca jedynie podzbiór algorytmów dostępnych w innych projektach. Ponadto, posiada ona bardzo ubogie możliwości analizy sprawności modeli, wymagając od użytkownika napisania własnych procedur przetwarzania uzyskanych danych, jak np. procedura obliczania pola pod wykresem krzywej charakterystycznej odbiornika.
 
 \section{Porównanie wyników dla zadanych przykładów}
+
+W celu przetestowania sprawności poszczególnych bibliotek, użyto ich do stworzenia i ewaluacji modeli regresji liniowej oraz maszyny wektorów nośnych dla zestawów danych opisanych w rozdziale 3. Dla każdego modelu użyto 80\% zestawu danych w celu treningu, oraz pozostałe 20\% jako dane testowe. Tabela \ref{tab:models} przedstawia zbiorcze zestawienie uzyskanych wyników ewaluacji. Wyjście programów zostało zaprezentowane na rysunkach \ref{fig:shogun_linear_svm}, \ref{fig:shark_linear_svm} oraz \ref{fig:dlib_linear_svm}.
+
+\begin{longtable}{c | c | c }
+	\centering
+	\multirow{2}{*}{\makecell{Biblioteka}} & \multicolumn{2}{c}{Metoda uczenia maszynowego} \\
+	\cline{2-3}
+	& Regresja liniowa & Maszyna wektorów nośnych \\
+	\hline
+	\makecell{Shogun} & \makecell{Dane treningowe: \\ MSE = 0,903031; $R^2$ = 0,407058 \\ Dane testowe: \\ MSE = 1,26897; $R^2$ = -0.127851} & \makecell{Dane treningowe: \\ AUC ROC: 1 \\ Dane testowe: \\ AUC ROC: 0,5} \\
+	\hline
+	\makecell{Shark} & \makecell{Dane treningowe: \\ MSE = 0,38728; $R^2$ = 0,745707 \\ Dane testowe: \\ MSE = 0,449118; $R^2$ = 0,60082} & \makecell{Dane treningowe: \\ AUC ROC: 1 \\ Dane testowe: \\ AUC ROC: 0,5} \\
+	\hline
+	\makecell{Dlib} & & 
+	\label{tab:models}
+\end{longtable} 
+
+\begin{figure}[!ht]
+	\centering
+	\begin{minipage}{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{Rozdzial7/shogun}
+		\caption{Wynik działania programu dla biblioteki Shogun}
+		\label{fig:shogun_linear_svm}		
+	\end{minipage}%
+    \hspace{0.02\textwidth}
+	\begin{minipage}{0.32\textwidth}
+		\centering
+		\includegraphics[width=0.7\linewidth]{Rozdzial7/shark}
+		\caption{Wynik działania programu dla biblioteki Shark}
+		\label{fig:shark_linear_svm}		
+	\end{minipage}
+\end{figure}
+
+DOPISAĆ DALEJ !!!!!
+
+\begin{figure}[!ht]
+	
+\end{figure}
+
+
 \section{Wymagany nakład pracy i jakość źródeł}
 
 W procesie pracy z poszczególnymi bibliotekami zauważono, że najmniejszą ilością potrzebnego wkładu pracy charakteryzowała się biblioteka Shark-ML. Wynika to z bardzo przyjaznej dla użytkownika składni, oraz dokładnej dokumentacji dostępnej na stronie internetowej projektu, wraz z przykładami wykorzystania poszczególnych metod. Biblioteka także bez jakichkolwiek problemów została zbudowana i zainstalowana na systemie operacyjnym Ubuntu 22.04 w środowisku WSL, pozwalając bardzo szybko przejść do docelowej pracy.
