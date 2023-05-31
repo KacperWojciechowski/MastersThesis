@@ -13,8 +13,8 @@ inline void dlibLinear(
 {
     using namespace dlib;
     // utworzenie oraz konfiguracja trenera i jądra
-    using linearKernel = linear_kernel<matrix<double>>;
-    rr_trainer<matrix<double>> trainer;
+    using linearKernel = linear_kernel<matrix<double, 11, 1>>;
+    krr_trainer<matrix<double, 11, 1>> trainer;
     trainer.set_kernel(linearKernel());
     // trening
     decision_function<linearKernel> model = trainer.train(

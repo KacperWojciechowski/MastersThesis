@@ -9,9 +9,9 @@ enum class Task
     REGRESSION
 };
 
-inline dlibEval(std::vector<double> predictions,
-                std::vector<double> labels,
-                Task task)
+inline void dlibEval(std::vector<double> predictions,
+                     std::vector<double> labels,
+                     Task task)
 {
     using namespace dlib;
 
