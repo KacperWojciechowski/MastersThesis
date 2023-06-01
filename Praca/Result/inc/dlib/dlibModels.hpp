@@ -65,4 +65,6 @@ inline void dlibModels()
 	        dlib::subm_clipped(regInputs, row, 0, 1, regData.nc())));
 	    regTrainLabels.emplace_back(regOutputs(row, 0));
     }
+    dlibLinear(regTrainSamples, regTestSamples, regTrainLabels, regTestLabels);
+    dlibSVM(classTrainSamples, classTestSamples, classTrainLabels, classTestLabels);
 }

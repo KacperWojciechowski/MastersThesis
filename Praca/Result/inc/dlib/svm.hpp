@@ -12,8 +12,8 @@ inline void dlibSVM(
     std::vector<double> testLabels)
 {
     using namespace dlib;
-    using OVOTrainer = one_vs_one_trainer<any_trainer<double>>;
-    using Kernel = radial_basis_kernel<double>;
+    using OVOTrainer = one_vs_one_trainer<any_trainer<matrix<double, 11, 1>>>;
+    using Kernel = radial_basis_kernel<matrix<double, 11, 1>>;
     // utworzenie trenera maszyny wektorów nośnych
     svm_nu_trainer<Kernel> svmTrainer;
     svmTrainer.set_kernel(Kernel(0.1));
