@@ -22,7 +22,8 @@ if (OPENMP_FOUND)
 	set (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
 endif()
 
-#find_package(Shogun REQUIRED)
+find_package(Shogun REQUIRED)
+find_package(dlib REQUIRED)
 
 # Add the main.cpp source file to the project
 add_executable(MyApp test.cpp)
@@ -32,11 +33,9 @@ target_include_directories(MyApp PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
 					 ${Shark_INCLUDE_DIRS})
 set_property(TARGET openblas PROPERTY IMPORTED_LOCATION "/usr/local/lib/libopenblas.a")
 				 
-# Link against the Shark library
-<<<<<<< HEAD
-#target_link_libraries(MyApp Shark)
-target_link_libraries(MyApp shogun)
+# Link against the libraries
+target_link_libraries(MyApp dlib Shark)
 
 # Set the include directories
-target_include_directories(MyApp PRIVATE ${SHOGUN_INCLUDE_DIRS})
+target_include_directories(MyApp PRIVATE ${DLIB_INCLUDE_DIRS})
 set_property(TARGET MyApp PROPERTY CXX_STANDARD 14)

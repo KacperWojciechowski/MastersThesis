@@ -7,21 +7,13 @@
 
 #include <vector>
 
-inline void dlibNeural(std::vector<dlib::matrix<double>> data,
-                    std::vector<double> labels)
+inline void dlibNeural(
+    std::vector<dlib::matrix<double>> trainData,
+    std::vector<dlib::matrix<double>> testData,
+    std::vector<double> trainLabels,
+    std::vector<double> testLabels)
 {
     using namespace dlib;
-    // podział danych
-    auto dataSplit = data.begin() + data.size() * 0.8;
-    auto trainData = std::vector<matrix<double>>(
-        data.begin(), dataSplit);
-    auto testData = std::vector<matrix<double>>(
-        dataSplit, data.end());
-    auto labelSplit = labels.begin() + labels.size() * 0.8;
-    auto trainLabels = std::vector<matrix<double>>(
-        labels.begin(), labelSplit);
-    auto testLabels = std::vector<matrix<double>>(
-        labelSplit, labels.end());   
     // zdefiniowanie architektury sieci
     using Architecture = loss_mean_squared<fc <1, 
                             htan<fc<5, 

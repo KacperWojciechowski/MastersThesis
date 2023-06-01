@@ -5,24 +5,15 @@
 #include <inc/dlib/eval.hpp>
 #include <vector>
 
-inline void dlibSVM(std::vector<dlib::matrix<double>> data,
-                    std::vector<double> labels)
+inline void dlibSVM(
+    std::vector<dlib::matrix<double, 11, 1>> trainData,
+    std::vector<dlib::matrix<double, 11, 1>> testData,
+    std::vector<double> trainLabels,
+    std::vector<double> testLabels)
 {
     using namespace dlib;
-    // podział danych
-    auto dataSplit = data.begin() + data.size() * 0.8;
-    auto trainData = std::vector<matrix<double>>(
-        data.begin(), dataSplit);
-    auto testData = std::vector<matrix<double>>(
-        dataSplit, data.end());
-    auto labelSplit = labels.begin() + labels.size() * 0.8;
-    auto trainLabels = std::vector<matrix<double>>(
-        labels.begin(), labelSplit);
-    auto testLabels = std::vector<matrix<double>>(
-        labelSplit, labels.end());   
-    
-    using OVOTrainer = one_vs_one_trainer<any_trainer<double>>;
-    using Kernel = radial_basis_kernel<double>;
+    using OVOTrainer = one_vs_one_trainer<any_trainer<matrix<double, 11, 1>>>;
+    using Kernel = radial_basis_kernel<matrix<double, 11, 1>>;
     // utworzenie trenera maszyny wektorów nośnych
     svm_nu_trainer<Kernel> svmTrainer;
     svmTrainer.set_kernel(Kernel(0.1));
