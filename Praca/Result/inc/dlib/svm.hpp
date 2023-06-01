@@ -6,8 +6,8 @@
 #include <vector>
 
 inline void dlibSVM(
-    std::vector<dlib::matrix<double>> trainData,
-    std::vector<dlib::matrix<double>> testData,
+    std::vector<dlib::matrix<double, 11, 1>> trainData,
+    std::vector<dlib::matrix<double, 11, 1>> testData,
     std::vector<double> trainLabels,
     std::vector<double> testLabels)
 {

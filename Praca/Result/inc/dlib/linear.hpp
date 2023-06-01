@@ -6,8 +6,8 @@
 #include <inc/dlib/eval.hpp>
 
 inline void dlibLinear(
-    std::vector<dlib::matrix<double>> trainData,
-    std::vector<dlib::matrix<double>> testData,
+    std::vector<dlib::matrix<double, 5, 1>> trainData,
+    std::vector<dlib::matrix<double, 5, 1>> testData,
     std::vector<double> trainLabels,
     std::vector<double> testLabels)
 {

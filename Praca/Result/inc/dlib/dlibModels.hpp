@@ -30,7 +30,7 @@ inline void dlibModels()
     auto classTrainSamplesCount = static_cast<long>(classData.nr() * 0.8);
     auto regTrainSamplesCount = static_cast<long>(regData.nr() * 0.8);
     // przepakowanie testowych danych klasyfikacyjnych
-    std::vector<classSampleType> classTestSamples;
+    std::vector<ClassSampleType> classTestSamples;
     std::vector<double> classTestLabels;
     for (int row = 0; row < classTrainSamplesCount; row++)
     {
@@ -39,7 +39,7 @@ inline void dlibModels()
 	classTestLabels.emplace_back(classOutputs(row, 0));
     }
     // przepakowanie treningowych danych klasyfikacyjnych
-    std::vector<classSampleType> classTrainSamples;
+    std::vector<ClassSampleType> classTrainSamples;
     std::vector<double> classTrainLabels;
     for (int row = classTrainSamplesCount; row < classInputs.nr(); ++row)
     {
@@ -48,7 +48,7 @@ inline void dlibModels()
 	    classTrainLabels.emplace_back(classOutputs(row, 0));
     }
     // przepakowanie testowych danych regresyjnych
-    std::vector<classSampleType> regTestSamples;
+    std::vector<RegSampleType> regTestSamples;
     std::vector<double> regTestLabels;
     for (int row = 0; row < regTrainSamplesCount; row++)
     {
@@ -57,7 +57,7 @@ inline void dlibModels()
 	    regTestLabels.emplace_back(regOutputs(row, 0));
     }
     // przepakowanie treningowych danych regresyjnych
-    std::vector<classSampleType> regTrainSamples;
+    std::vector<RegSampleType> regTrainSamples;
     std::vector<double> regTrainLabels;
     for (int row = regTrainSamplesCount; row < regInputs.nr(); ++row)
     {
