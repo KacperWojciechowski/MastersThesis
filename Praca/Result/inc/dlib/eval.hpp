@@ -37,11 +37,11 @@ inline void dlibEval(std::vector<double> predictions,
         double aucRoc = 0.0;
         for (int i = 0; i < roc.size() - 1; i++)
         {
-	    std::cout << "roc detection threshold=" << roc[i].detection_threshold << "; ";
-            auto avg = (roc[i+1].true_positive_rate - roc[i].true_positive_rate)/2.0;
-	    std::cout << "roc[i]={" << roc[i].true_positive_rate << ", " << roc[i].false_positive_rate << "}\n";
-            auto interval = roc[i+1].false_positive_rate - roc[i].false_positive_rate;
-            aucRoc += avg * interval;
+	    if (roc[i+1].false_positive_rate != 0.0)
+	    {
+		aucRoc += (roc[i].true_positive_rate + roc[i+1].true_positive_rate) 
+			* (roc[i+1].false_positive_rate - roc[i].false_positive_rate) / 2;
+	    }
         }
         std::cout << "AUC ROC: " << aucRoc << std::endl; 
     }
