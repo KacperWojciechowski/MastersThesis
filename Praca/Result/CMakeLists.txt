@@ -8,7 +8,7 @@ project(MyProject)
 # Find the Shark package
 #find_package(Shark REQUIRED)
 #find_package(Shogun REQUIRED)
-find_package(Dlib REQUIRED)
+find_package(dlib REQUIRED)
 
 # Add the main.cpp source file to the project
 add_executable(MyApp test.cpp)
