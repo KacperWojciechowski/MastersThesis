@@ -60,6 +60,194 @@
     \field{year}{2013}
   \endentry
 
+  \entry{handsOnMachineLearning}{book}{}
+    \name{author}{1}{}{%
+      {{hash=KK}{%
+         family={Kolodiazhnyi},
+         familyi={K\bibinitperiod},
+         given={Kirill},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Packt Publishing}%
+    }
+    \strng{namehash}{KK1}
+    \strng{fullhash}{KK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Hands-On Machine Learning with C++}
+    \field{year}{Maj 2020}
+  \endentry
+
+  \entry{shallow}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=MA}{%
+         family={Mahmoud},
+         familyi={M\bibinitperiod},
+         given={Ayman},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MA1}
+    \strng{fullhash}{MA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Introduction to Shallow Machine Learning}
+    \verb{url}
+    \verb https://www.linkedin.com/pulse/introduction-shallow-machine-learning-
+    \verb ayman-mahmoud/
+    \endverb
+    \field{year}{2019}
+  \endentry
+
+  \entry{tree}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=GP}{%
+         family={Gupta},
+         familyi={G\bibinitperiod},
+         given={Prashant},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GP1}
+    \strng{fullhash}{GP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Decision Trees in Machine Learning}
+    \verb{url}
+    \verb https://towardsdatascience.com/decision-trees-in-machine-learning-641
+    \verb b9c4e8052
+    \endverb
+    \field{year}{2017}
+  \endentry
+
+  \entry{mit_neural}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=HL}{%
+         family={Hardesty},
+         familyi={H\bibinitperiod},
+         given={Larry},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HL1}
+    \strng{fullhash}{HL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Explained: Neural Networks - Ballyhooed
+  artificial-intelligence technique known as ,,deep learning'' revives
+  70-years-old idea}
+    \verb{url}
+    \verb https://news.mit.edu/2017/explained-neural-networks-deep-learning-041
+    \verb 4
+    \endverb
+    \field{year}{2017}
+  \endentry
+
+  \entry{constrained}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=MR}{%
+         family={Madabushi},
+         familyi={M\bibinitperiod},
+         given={Raghuram},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MR1}
+    \strng{fullhash}{MR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Neural Network / Machine Learning in resource constrained
+  environments}
+    \verb{url}
+    \verb https://medium.com/@raghu.madabushi/neural-network-machine-learning-i
+    \verb n-resource-constrained-environments-c934ff1f522
+    \endverb
+    \field{year}{2018}
+  \endentry
+
+  \entry{cpp_char}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=FD}{%
+         family={Flair},
+         familyi={F\bibinitperiod},
+         given={Data},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FD1}
+    \strng{fullhash}{FD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Features of C++ | How Programmers use C++ in 10 Unbelievable
+  ways}
+    \verb{url}
+    \verb https://data-flair.training/blogs/features-of-c-plus-plus/
+    \endverb
+    \field{year}{2023}
+  \endentry
+
+  \entry{android_nna}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=dsAE}{%
+         prefix={dokumentacji\bibnamedelima systemu},
+         prefixi={d\bibinitperiod\bibinitdelim s\bibinitperiod},
+         family={Android},
+         familyi={A\bibinitperiod},
+         given={Edytorzy},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AEds1}
+    \strng{fullhash}{AEds1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Neural Networks API}
+    \verb{url}
+    \verb https://developer.android.com/ndk/guides/neuralnetworks
+    \endverb
+    \field{year}{2023}
+  \endentry
+
+  \entry{cpp_cuda}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=n}{%
+         family={nVidia},
+         familyi={n\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{n1}
+    \strng{fullhash}{n1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{CUDA C++ Programming Guide}
+    \verb{url}
+    \verb https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html
+    \endverb
+    \field{year}{2023}
+  \endentry
+
+  \entry{cpp_onnx}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=TOR}{%
+         family={Team},
+         familyi={T\bibinitperiod},
+         given={ONNX\bibnamedelima Runtime},
+         giveni={O\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TOR1}
+    \strng{fullhash}{TOR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Get started with ORT for C++}
+    \verb{url}
+    \verb https://onnxruntime.ai/docs/get-started/with-c.html
+    \endverb
+    \field{year}{2023}
+  \endentry
+
   \entry{wisconsin}{misc}{}
     \name{author}{1}{}{%
       {{hash=DWHWOLMWNS}{%
@@ -142,6 +330,51 @@
     \field{year}{2017}
   \endentry
 
+  \entry{jmp}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=DJS}{%
+         family={Discovery},
+         familyi={D\bibinitperiod},
+         given={JMP\bibnamedelima Statistical},
+         giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DJS1}
+    \strng{fullhash}{DJS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{JMP Pro - Predictive analytics software for scientists and
+  engineers}
+    \verb{url}
+    \verb https://www.jmp.com/en_nl/software/predictive-analytics-software.html
+    \endverb
+    \field{year}{2023}
+  \endentry
+
+  \entry{arr}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=LS}{%
+         family={Lower},
+         familyi={L\bibinitperiod},
+         given={Stephen},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LS1}
+    \strng{fullhash}{LS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Arrhenius Equation}
+    \verb{url}
+    \verb https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chem
+    \verb istry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Ch
+    \verb emistry)/Kinetics/06%3A_Modeling_Reaction_Kinetics/6.02%3A_Temperatur
+    \verb e_Dependence_of_Reaction_Rates/6.2.03%3A_The_Arrhenius_Law/6.2.3.01%3
+    \verb A_Arrhenius_Equation
+    \endverb
+    \field{year}{2023}
+  \endentry
+
   \entry{shogun:github}{misc}{}
     \name{author}{1}{}{%
       {{hash=st}{%
@@ -160,26 +393,6 @@
     \verb https://github.com/shogun-toolbox/shogun
     \endverb
     \field{year}{2020}
-  \endentry
-
-  \entry{handsOnMachineLearning}{book}{}
-    \name{author}{1}{}{%
-      {{hash=KK}{%
-         family={Kolodiazhnyi},
-         familyi={K\bibinitperiod},
-         given={Kirill},
-         giveni={K\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Packt Publishing}%
-    }
-    \strng{namehash}{KK1}
-    \strng{fullhash}{KK1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Hands-On Machine Learning with C++}
-    \field{year}{Maj 2020}
   \endentry
 
   \entry{shark}{article}{}

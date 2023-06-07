@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2022)
+This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: praca.aux
 The style file: biblatex.bst
@@ -20,48 +20,48 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: praca-blx.bib
 Database file #2: Bibliografia/bibliografia.bib
 Warning--I didn't find a database entry for "dlib:home"
-Biblatex version: 3.18
+Biblatex version: 3.19
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 15 entries,
+You've used 25 entries,
             6399 wiz_defined-function locations,
-            1278 strings with 10745 characters,
-and the built_in function-call counts, 82113 in all, are:
-= -- 6319
-> -- 1309
-< -- 380
-+ -- 1811
-- -- 404
-* -- 5313
-:= -- 8389
+            1320 strings with 12429 characters,
+and the built_in function-call counts, 125488 in all, are:
+= -- 9278
+> -- 2019
+< -- 540
++ -- 2717
+- -- 650
+* -- 8028
+:= -- 12627
 add.period$ -- 0
-call.type$ -- 15
-change.case$ -- 237
+call.type$ -- 25
+change.case$ -- 307
 chr.to.int$ -- 42
-cite$ -- 28
-duplicate$ -- 7953
-empty$ -- 7824
-format.name$ -- 692
-if$ -- 17433
+cite$ -- 48
+duplicate$ -- 12691
+empty$ -- 12199
+format.name$ -- 1132
+if$ -- 26589
 int.to.chr$ -- 0
-int.to.str$ -- 37
+int.to.str$ -- 57
 missing$ -- 0
-newline$ -- 338
-num.names$ -- 693
-pop$ -- 4800
+newline$ -- 546
+num.names$ -- 1073
+pop$ -- 8150
 preamble$ -- 1
-purify$ -- 288
+purify$ -- 388
 quote$ -- 0
-skip$ -- 2605
+skip$ -- 4066
 stack$ -- 0
-substring$ -- 11569
-swap$ -- 1595
-text.length$ -- 282
+substring$ -- 16516
+swap$ -- 2543
+text.length$ -- 452
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 498
+type$ -- 838
 warning$ -- 0
-while$ -- 933
+while$ -- 1443
 width$ -- 0
-write$ -- 324
+write$ -- 522
 (There was 1 warning)

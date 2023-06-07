@@ -6,55 +6,54 @@ Shogun to darmowa biblioteka do uczenia maszynowego o otwartym źródle, napisan
 
 \section{Formaty źródeł danych}
 
-Podstawową klasą pozwalającą na załadowanie danych do biblioteki Shogun jest klasa \textit{std::vector} z standardowej biblioteki szablonowej (ang. \textit{Standard Template Library, STL}) języka C++. W związku z tym, do pobrania danych dla programu realizującego nauczanie i pracę z modelem możliwe jest wykorzystanie dowolnego mechanizmu (np. odczytu z pliku, pobranie danych z sieci czy innego urządzenia) które finalnie przetworzy je do postaci wektora, lecz należy ten mechanizm dostarczyć we własnym zakresie. Popularnym wyborem do przechowywania informacji uczących jest plik o ustrukturyzowanym formacie CSV, dla którego biblioteka Shogun posiada dedykowane wsparcie \cite{handsOnMachineLearning}. Obwarowane jest ono jednak pewnymi wymaganiami:
+Podstawową klasą pozwalającą na załadowanie danych do biblioteki Shogun jest klasa \textit{std::vector} z standardowej biblioteki szablonowej (ang. \textit{Standard Template Library, STL}) języka C++. W związku z tym, do pobrania danych dla programu realizującego uczenie i pracę z modelem możliwe jest wykorzystanie dowolnego mechanizmu (np. odczytu z pliku, pobranie danych z sieci czy innego urządzenia) które finalnie przetworzy je do postaci wektora, lecz należy ten mechanizm dostarczyć we własnym zakresie. Popularnym wyborem do przechowywania informacji uczących jest plik o ustrukturyzowanym formacie CSV, dla którego biblioteka Shogun posiada dedykowane wsparcie \cite{handsOnMachineLearning}. Obwarowane jest ono jednak pewnymi wymaganiami:
 
 \begin{itemize}
-	\item \textbf{Plik musi zawierać jedynie dane numeryczne} - wprzypadku występowania wartości tekstowych, należy wykonać przetwarzanie wstępne mające na celu ich zamianę na wartości liczbowe (np. w przypadku klas decyzyjnych zmiennej odpowiedzi sugerowane jest zastosowanie kodowania \textit{one-hot}). Niestety ten wymóg nie pozwala na przechowywanie etykiet wraz z danymi.
+	\item \textbf{Plik musi zawierać jedynie dane numeryczne} - w przypadku występowania wartości tekstowych, należy wykonać przetwarzanie wstępne mające na celu ich zamianę na wartości liczbowe (np. w przypadku klas decyzyjnych zmiennej odpowiedzi sugerowane jest zastosowanie kodowania \textit{one-hot}). Niestety, ten wymóg nie pozwala na przechowywanie etykiet wraz z danymi.
 	
 	\item \textbf{Jako separator należy użyć przecinka} - mimo iż sam format, jak i wiele programów komercyjnych do pracy z danymi, jak np. Microsoft Excel, JMP, itp., pozwalają na zastosowanie innych separatorów, takich jak średnik, dla biblioteki Shogun należy zastosować w formie separatora przecinek;
 	
 	\item \textbf{Liczby rzeczywiste powinny być zapisywane z użyciem kropki jako separatora dziesiętnego} - wynika to ze specyfiki języka C++ (jak i wielu innych języków), że domyślne mechanizmy wymuszają użycie kropki jako separatora dziesiętnego, i oczekują jej w przypadku parsowania liczby rzeczywistej z postaci ciągu znakowego odczytanego z pliku, do postaci wartości liczbowej.
 \end{itemize} 
 
-Do odczytu i parsowania danych z pliku CSV wykorzystywana jest klasa \textit{shogun::CCSVFile}, której wynik następnie ładowany jest do klasy \textit{shogun::SGMatrix}. Ze względu na zapis odczytanych danych w kolejności według kolumn. do wykorzystania ich w procesie uczenia konieczna jest transpozycja, a następnie rozdzielenie macierzy na dwie części, z których jedna zawiera regresory, a druga wartości zmiennej odpowiedzi. Przykładowy fragment kodu realizujący to zadanie zamieszczony został na listingu \ref{shogun:csv}. Po prawidłowym rozgraniczeniu fragmentów danych, należy przeprowadzić ponowną transpozycję do postaci akceptowalnej przez algorytmy uczenia, oraz obudować dane klasami na których operują docelowe metody uczenia, takimi jak \textit{CDenseFeatures}, \textit{CMulticlassLabels} czy \textit{CRegressionLabels}, co zostało ukazane na listingu \ref{shogun:csv2}.
+Do odczytu i parsowania danych z pliku CSV wykorzystywana jest klasa \textit{shogun::CCSVFile}, której wynik następnie ładowany jest do klasy \textit{shogun::SGMatrix}. Ze względu na zapis odczytanych danych w kolejności według kolumn, do wykorzystania ich w procesie uczenia konieczna jest transpozycja, a następnie rozdzielenie macierzy na dwie części, z których jedna zawiera predyktory, a druga wartości zmiennej odpowiedzi. Przykładowy fragment kodu realizujący to zadanie zamieszczony został na listingu \ref{shogun:csv}. Po prawidłowym rozgraniczeniu fragmentów danych, należy przeprowadzić ponowną transpozycję do postaci akceptowalnej przez algorytmy uczenia, oraz obudować dane klasami na których operują docelowe metody uczenia, takimi jak \textit{CDenseFeatures}, \textit{CMulticlassLabels} czy \textit{CRegressionLabels}, co zostało ukazane na listingu \ref{shogun:csv2}.
 
-\cppcode{Result/inc/shogun/csv.hpp}{Przykładowa funkcja do odczytu i przygotowania danych z pliku CSV dla biblioteki Shogun}{shogun:csv}
+\cppcode{Result/inc/shogun/csv.hpp}{Przykładowa funkcja do odczytu i przygotowania danych z pliku CSV dla biblioteki Shogun.}{shogun:csv}
 
-\cppcode{Result/inc/shogun/shogunModels.hpp}{Funkcja przepakowujące dane do kontenerów docelowych}{shogun:csv2}
+\cppcode{Result/inc/shogun/shogunModels.hpp}{Funkcja przepakowujące dane do kontenerów docelowych.}{shogun:csv2}
 
 \section{Metody przetwarzania i eksploracji danych}
 
 \subsection{Normalizacja}
 
-     
-Biblioteka dostarcza możliwość normalizacji typu min-max, zapewniając że dane mieścić się będą w przedziale jednostkowym, za pomocą klasy \textit{shogun::CRescaleFeatu-res}. Klasa pozwala na ponowne wykorzystanie dla danych o tych samych nauczonych zmiennych statystycznych. Posiada ona dwie główne metody:
+Biblioteka dostarcza możliwość normalizacji typu min-max, zapewniając że dane mieścić się będą w przedziale jednostkowym, za pomocą klasy \textit{shogun::CRescaleFeatu-res}. Klasa pozwala na ponowne wykorzystanie dla danych o tych samych nauczonych zmiennych. Posiada ona dwie główne metody:
 
 \begin{itemize}
 	\item \textit{fit()} - pozwalającą na nauczenie normalizatora statystyk danych;
 	\item \textit{transform()} - pozwalającą na normalizację obserwacji.
 \end{itemize}
 
-W przypadku niektórych algorytmów oferowanych przez Shogun, normalizacja jest jednym z pierwszych wykonywanych kroków, w związku z czym nie zawsze jest potrzeba wykonania jej we wstępnym przetwarzaniu. Informacja o takim przypadku powinna być zawarta w dokumentacji danej metody. Listing \ref{shogun:normalizer} pokazuje jak wykorzystać wyżej wspomnianą klasę do zrealizowania normalizacji. Zarówno przedstawiona klasa jak i funkcja zawarta na listingu realizują normalizację w miejscu zapisu macierzy regresorów, w związku z czym nie ma potrzeby nadpisywania elementy ją przechowującego.
+W przypadku niektórych algorytmów oferowanych przez Shogun, normalizacja jest jednym z pierwszych wykonywanych kroków, w związku z czym nie zawsze zachodzi potrzeba wykonania jej we wstępnym przetwarzaniu. Informacja o takim przypadku powinna być zawarta w dokumentacji danej metody. Listing \ref{shogun:normalizer} pokazuje jak wykorzystać wyżej wspomnianą klasę do zrealizowania normalizacji. Zarówno przedstawiona klasa jak i funkcja zawarta na listingu realizują normalizację w miejscu zapisu macierzy regresorów, w związku z czym nie ma potrzeby nadpisywania elementu ją przechowującego.
 
-\cppcode{Result/inc/shogun/rescale.hpp}{Przykład funkcji wykonującej normalizację}{shogun:normalizer}
+\cppcode{Result/inc/shogun/rescale.hpp}{Przykład funkcji wykonującej normalizację.}{shogun:normalizer}
 
 \subsection{Redukcja wymiarowości}
 
-Shark udostępnia użytkownikowi kilka rodzajów algorytmów redukcji wymiarowości, realizowane przez następujące klasy \cite{handsOnMachineLearning}:
+Shogun udostępnia użytkownikowi kilka rodzajów algorytmów redukcji wymiarowości, realizowane przez następujące klasy \cite{handsOnMachineLearning}:
 
 \begin{itemize}
-	\item \textbf{PCA} - klasa \textit{CPCA};
-	\item \textbf{Kernel PCA} - klasa \textit{CKernelPCA};
-	\item \textbf{MDS} - klasa \textit{MultidimensionalScaling};
+	\item \textbf{analiza składowych głównych} - klasa \textit{CPCA};
+	\item \textbf{jądrowa analiza składowych głównych} - klasa \textit{CKernelPCA};
+	\item \textbf{skalowanie wielowymiarowe} - klasa \textit{MultidimensionalScaling};
 	\item \textbf{IsoMap} - klasa \textit{CIsoMap};
 	\item \textbf{ICA} - klasa \textit{CFastICA};
-	\item \textbf{Factor analysis} - klasa \textit{CFactorAnalysis};
+	\item \textbf{analiza czynnikowa} - klasa \textit{CFactorAnalysis};
 	\item \textbf{t-SNE} - klasa \textit{CTDistributedStochasticNeighborEmbedding}.
 \end{itemize}
 
-Każda z powyższych klas operuje poprzez poprzednie nauczenie się parametrów danych uczących metodą \textit{fit()} oraz ustawienie docelowej ilości wymiarów (z wyjątkiem ICA). Nauczony obiekt reduktora można wykorzystać do redukcji wymiarowości danych poprzez metodę \textit{apply\char`_to\char`_feature\char`_vector()} zwracającą przetworzony wektor, lub w przypadku ICA, Analizy Składowych oraz t-SNE metodę \textit{transform()}, której wynik należy zrzutować na wskaźnik na CDenseFeatures. Niestety wykorzystanie któregokolwiek z reduktorów wiąże się z koniecznością utworzenia nowej kopii obiektu w procesie transformacji, zamiast wykonania przekształceń w miejscu. Listing \ref{shogun:reduction} przedstawia sposób wykonania redukcji na przykładzie klasy \textit{CKernelPCA}.
+Każda z powyższych klas operuje poprzez uprzednie nauczenie się parametrów danych uczących metodą \textit{fit()} oraz ustawienie docelowej liczby wymiarów (z wyjątkiem ICA). Nauczony obiekt reduktora można wykorzystać do redukcji wymiarowości danych poprzez metodę \textit{apply\char`_to\char`_feature\char`_vector()} zwracającą przetworzony wektor, lub w przypadku ICA, Analizy Składowych oraz t-SNE metodę \textit{transform()}, której wynik należy zrzutować na wskaźnik na CDenseFeatures. Niestety, wykorzystanie któregokolwiek z reduktorów wiąże się z koniecznością utworzenia nowej kopii obiektu w procesie transformacji, zamiast wykonania przekształceń w miejscu. Listing \ref{shogun:reduction} przedstawia sposób wykonania redukcji na przykładzie klasy \textit{CKernelPCA}.
 
-\cppcode{Result/inc/shogun/pca_reduction.hpp}{Przykład redukcji wymiarowości z wykorzystaniem metody Kernel PCA \cite{handsOnMachineLearning}}{shogun:reduction}
+\cppcode{Result/inc/shogun/pca_reduction.hpp}{Przykład redukcji wymiarowości z wykorzystaniem metody Kernel PCA \cite{handsOnMachineLearning}.}{shogun:reduction}
 
 \subsection{Regularyzacja L1 i L2}
 
@@ -62,25 +61,25 @@ W przypadku biblioteki Shogun, regularyzacja stanowi integralną część modelu
 
 \section{Modele uczenia maszynowego}
 \subsection{Regresja liniowa}
-Jednym z podstawowych algorytmów uczenia maszynowego udostępnianych przez bibliotekę Shogun jest regresja liniowa, realizowana za pomocą klasy \textit{CLinearRidgeRegression}. Polega ona na dekompozycji macierzy Choleskiego \cite{handsOnMachineLearning}, wykorzystując podejście nie-iteracyjne. Jak wskazuje nazwa, metoda ta posiada wbudowaną regularyzację L2 (Ridge), której konfiguracja odbywa się podczas tworzenia obiektu modelu. Listing \ref{shogun:linear} przedstawia sposób wykonania regresji liniowej z pomocą Shogun.
+Jednym z podstawowych algorytmów uczenia maszynowego udostępnianych przez bibliotekę Shogun jest regresja liniowa, realizowana za pomocą klasy \textit{CLinearRidgeRegression}. Jak wskazuje nazwa, metoda ta posiada wbudowaną regresję grzbietową, której konfiguracja odbywa się podczas tworzenia obiektu modelu. Listing \ref{shogun:linear} przedstawia sposób dopasowania modelu regresji liniowej z pomocą biblioteki Shogun.
 
-\cppcode{Result/inc/shogun/linear.hpp}{Przykład regresji liniowej w Shogu}{shogun:linear}
+\cppcode{Result/inc/shogun/linear.hpp}{Przykład regresji liniowej w Shogun.}{shogun:linear}
 
 \subsection{Regresja logistyczna}
 Biblioteka Shogun zawiera implementację wieloklasowej regresji logistycznej w postaci gotowego obiektu klasy \textit{CMulticlassLogisticRegression}. Posiada ona wbudowaną konfigurowalną regularyzację. Listing \ref{shogun:logistic} przedstawia sposób użycia wspomnianej klasy.
 
-\cppcode{Result/inc/shogun/logistic.hpp}{Przykład regresji logistycznej}{shogun:logistic}
+\cppcode{Result/inc/shogun/logistic.hpp}{Przykład regresji logistycznej.}{shogun:logistic}
 
 \subsection{Maszyna wektorów nośnych}
 Podobnie jak w przypadku regresji logistycznej, w bibliotece Shogun dostępna jest implementacja wieloklasowej klasyfikacji z wykorzystaniem maszyny wektorów nośnych, w postaci klasy \textit{CMulticlassLibSVM}. Posiada ona szereg dostępnych do konfiguracji parametrów, i umożliwia wybór zastosowanego jądra użytkownikowi. Listing \ref{shogun:svm} prezentuje jak wykorzystać wymienioną klasę.
 
-\cppcode{Result/inc/shogun/svm.hpp}{Przykład użycia maszyny wektorów nośnych}{shogun:svm}
+\cppcode{Result/inc/shogun/svm.hpp}{Przykład użycia maszyny wektorów nośnych.}{shogun:svm}
 
 \subsection{Algorytm K najbliższych sąsiadów}
 
-Algorytm K najbliższych sąsiadów dostępny jest pod postacią klasy \textit{CKNN}. Umożliwia on wybranie sposobu obliczania dystansu poprzez przekazanie obiektu odpowiedniej klasy, oraz ilości najbliższych sąsiadów. Głównymi z dostępnych typów dystansów są dystans Euklidesa, Hamminga, Manhatanu oraz podobieństwo kosinusowe. W porównaniu do poprzednich metod, nie wymaga on ustawiania hiperparametrów, dzięki czemu można z niego bezproblemowo korzystać bez sprawdzianu krzyżowego. Listing \ref{shogun:knn} pokazuje przykład konfiguracji i użycia algorytmu kNN z użyciem dystansu Euklidesa.
+Algorytm K najbliższych sąsiadów dostępny jest pod postacią klasy \textit{CKNN}. Umożliwia on wybranie sposobu obliczania odległości poprzez przekazanie obiektu odpowiedniej klasy, oraz liczby najbliższych sąsiadów. Głównymi z dostępnych typów dystansów są odległość Euklidesa, Hamminga, Manhattanu oraz podobieństwo kosinusowe. W porównaniu do poprzednich metod, nie wymaga on ustawiania hiperparametrów, dzięki czemu można z niego bezproblemowo korzystać bez sprawdzianu krzyżowego. Listing \ref{shogun:knn} pokazuje przykład konfiguracji i użycia algorytmu kNN z użyciem odległości euklidesowej.
 
-\cppcode{Result/inc/shogun/knn.hpp}{Przykład algorytmu kNN w Shogun}{shogun:knn}
+\cppcode{Result/inc/shogun/knn.hpp}{Przykład algorytmu kNN w Shogun.}{shogun:knn}
 
 \subsection{Algorytm zbiorowy}
 \subsubsection{Wzmacnianie gradientu}
@@ -94,15 +93,15 @@ Implementacja algorytmu zbiorowego z wykorzystaniem metody wzmacniania gradientu
 	\item ułamek wektorów do losowego wybrania w każdej iteracji.
 \end{itemize}
 
-Listing \ref{shogun:gb} przedstawia sposób implementacji powyższej metody z wykorzystaniem binarnego drzewa decyzyjnego regresji i klasyfikacji (implementowanego przez klasę \textit{CCARTree}) jako algorytm bazowy. 
+Listing \ref{shogun:gb} przedstawia sposób implementacji powyższej metody z wykorzystaniem binarnego drzewa decyzyjnego regresji i klasyfikacji (implementowanego przez klasę \textit{CCARTree}) jako algorytmu bazowego. 
 
-\cppcode{Result/inc/shogun/gb.hpp}{Przykład użycia metody wzmacniania gradientu}{shogun:gb}
+\cppcode{Result/inc/shogun/gb.hpp}{Przykład użycia metody wzmacniania gradientu.}{shogun:gb}
 
-\subsubsection{Losowy las}
-Metoda losowego lasu dostępna jest w bibliotece Shogun poprzez użycie klasy \textit{CRandomForest}. W przeciwieństwie do wzmacniania gradientu, implementacja tej metody pozwala także na wykonywanie klasyfikacji. Do głównych konfigurowalnych parametrów należą:
+\subsubsection{Las losowy}
+Metoda lasu losowego jest dostępna w bibliotece Shogun poprzez użycie klasy \textit{CRandomForest}. W przeciwieństwie do wzmacniania gradientu, implementacja tej metody pozwala także na dokonywanie klasyfikacji. Do głównych konfigurowalnych parametrów należą:
 
 \begin{itemize}
-	\item ilość drzew;
+	\item liczba drzew;
 	\item liczba zbiorów na które powinny zostać podzielone dane;
 	\item algorytm wybrania końcowego wyniku;
 	\item typ rozwiązywanego problemu;
@@ -128,60 +127,60 @@ Pierwszym krokiem tworzenia sieci neuronowej dla niniejszej biblioteki jest skon
 
 Kolejność wywoływania powyższych metod jest istotna, ponieważ decyduje ona o kolejności warstw w modelu. Po zakończeniu konfiguracji, możliwe jest utworzenie obiektu zatwierdzonej architektury za pomocą funkcji \textit{done()}, a następnie wykorzystanie go do inicjalizacji klasy \textit{CNeuralNetwork}. W celu połączenia warstw, należy wywołać na obiekcie sieci neuronowej funkcję \textit{quick\char`_connect} oraz zainicjalizować wagi metodą \textit{initialize\char`_neural\char`_network}. Może ona przyjąć parametr określający rozkład Gaussa używany do inicjalizacji parametrów.
 
-Następnym krokiem jest skonfigurowanie optymalizatora za pomocą metody \textit{set-\char`_optimization}. Klasa \textit{CNeuralNetwork} wspiera optymalizację z wykorzystaniem metody spadku gradientu oraz Broydena-Fletchera-Goldfarba-Shannona. Sieć neuronowa posiada wbudowaną regularyzację L2, którą można skonfigurować, podobnie jak pozostałe parametry takie jak współczynnik uczenia, ilość epok, kryterium zbieżności dla funkcji straty, czy wielkość zestawów \textit{batch}. Niestety, niemożliwy jest wybór funkcji straty, gdyż jest on dokonywany automatycznie na podstawie typu zmiennej odpowiedzi. Listing \ref{shogun:nn} przedstawia pełny proces budowania, konfiguracji oraz uczenia sieci. Niestety ze względu na brak implementacji warstwy neuronu o aktywacji w postaci tangensa hiperbolicznego, na potrzeby prezentacji zastosowania zdecydowano się na wykorzystanie funkcji rectified linear, co ma wpływ na uzyskane wyniki.
+Następnym krokiem jest skonfigurowanie optymalizatora za pomocą metody \textit{set-\char`_optimization}. Klasa \textit{CNeuralNetwork} wspiera optymalizację z wykorzystaniem metody najszybszego spadku oraz Broydena-Fletchera-Goldfarba-Shannona. Sieć neuronowa posiada wbudowaną regularyzację L2, którą można skonfigurować, podobnie jak pozostałe parametry takie jak współczynnik uczenia, liczba epok, kryterium zbieżności dla funkcji straty, czy wielkość zestawów wsadowych. Niestety, niemożliwy jest wybór funkcji straty, gdyż jest on dokonywany automatycznie na podstawie typu zmiennej odpowiedzi. Listing \ref{shogun:nn} przedstawia pełny proces budowania, konfiguracji oraz uczenia sieci. Niestety ze względu na brak implementacji warstwy neuronu o aktywacji w postaci tangensa hiperbolicznego, na potrzeby prezentacji zastosowania zdecydowano się na wykorzystanie funkcji reLU, co ma wpływ na uzyskane wyniki.
 
-\cppcode{Result/inc/shogun/neural.hpp}{Przykład użycia sieci neurnowej}{shogun:nn}
+\cppcode{Result/inc/shogun/neural.hpp}{Przykład użycia sieci neuronowej.}{shogun:nn}
 
 \section{Metody analizy modeli}
 
 \subsection{Błąd średniokwadratowy}
 
-Obliczenie błędu średniokwadratowego w bibliotece Shogun sprowadza się do utworzenia obiektu wykorzystującego typ \textit{CMeanSquaredError} jako argument szablonu funkcji \textit{some<>()}. Jest on zwracany pod postacią wskaźnika. W celu otrzymania wartości błędu dla posiadanych danych, należy wywołać z jego pomocą funkcję evaluate, do której przekazany zostaje zestaw predykcji oraz oczekiwanych wartości. Listing \ref{shogun:mse} ukazuje sposób użycia wspomnianego mechanizmu.
+Obliczenie błędu średniokwadratowego w bibliotece Shogun sprowadza się do utworzenia obiektu wykorzystującego typ \textit{CMeanSquaredError} jako argument szablonu funkcji \textit{some<>()}. Jest on zwracany pod postacią wskaźnika. W celu otrzymania wartości błędu dla posiadanych danych, należy wywołać z jego pomocą funkcję \textit{evaluate}, do której przekazany zostaje zestaw predykcji modelu oraz zaobserwowanych wartości odpowiedzi. Listing \ref{shogun:mse} ukazuje sposób użycia wspomnianego mechanizmu.
 
 \cppcode{Rozdzial4/shogun-mse.cpp}{Przykład obliczenia wartości błędu średniokwadratowego \cite{handsOnMachineLearning}}{shogun:mse}
 
-\subsection{Średni błąd absolutny}
+\subsection{Średni błąd bezwzględny}
 
-Realizacja obliczania średniego błędu absolutnego dla biblioteki Shogun dokonywana jest za pomocą klasy \textit{CMeanAbsoluteError} pełniącej rolę ewaluatora. Tworzona jest ona poprzez wykorzystanie szablonu \textit{some<>} a następnie wykorzystywana do obliczeń wołając jej metodę \textit{evaluate} przekazując uzyskane oraz oczekiwane wyniki regresji lub klasyfikacji. Listing \ref{shogun:mae} przedstawia sposób użycia wyżej wymienionej klasy.
+Realizacja obliczania średniego błędu bezwzględnego dla biblioteki Shogun dokonywana jest za pomocą klasy \textit{CMeanAbsoluteError} pełniącej rolę ewaluatora. Tworzona jest ona poprzez wykorzystanie szablonu \textit{some<>} a następnie wykorzystywana do obliczeń wołając jej metodę \textit{evaluate} przekazując uzyskane oraz oczekiwane wyniki regresji lub klasyfikacji. Listing \ref{shogun:mae} przedstawia sposób użycia wyżej wymienionej klasy.
 
-\cppcode{Rozdzial4/shogun-mae.cpp}{Przykład obliczenia wartości średniego błędu absolutnego \cite{handsOnMachineLearning}}{shogun:mae}
+\cppcode{Rozdzial4/shogun-mae.cpp}{Przykład obliczenia wartości średniego błędu bezwzględnego \cite{handsOnMachineLearning}.}{shogun:mae}
 
 \subsection{Logarytmiczna funkcja straty}
 
 Logarytmiczna funkcja straty jest możliwa do obliczenia z wykorzystaniem biblioteki Shogun przy użyciu klasy \textit{CLogLoss}, jednak udostępniane przez nią metody wskazują że powinna być wykorzystywana przez model, a nie bezpośrednio przez użytkownika. Udostępnia ona metodę \textit{get\char`_square\char`_grad()} pozwalającą na obliczenie kwadratu gradientu między zadaną predykcją a docelowym wynikiem. Sposób użycia tej metody zaprezentowano na listingu \ref{shogun:log}
 
-\cppcode{Rozdzial4/shogun-log.cpp}{Przykład użycia klasy \textit{CLogLoss}}{shogun:log}
+\cppcode{Rozdzial4/shogun-log.cpp}{Przykład użycia klasy \textit{CLogLoss}.}{shogun:log}
 
 \subsection{Metryka $R^2$}
 
-Biblioteka Shogun nie posiada bezpośredniej implementacji dla metryki $R^2$ w związku z czym, pomimo możliwości wykorzystania wbudowanej metody obliczania błędu średniokwadratowego, wariancja potrzebna dla uzyskania wyniku musi zostać uzyskana przez własny mechanizm użytkownika. Listing \ref{shogun:verify} przedstawia funkcję weryfikującą poprawność modeli opisanych w poprzednich punktach, obliczającą wartość metryki $R^2$.
+Biblioteka Shogun nie posiada bezpośredniej implementacji dla metryki $R^2$ w związku z czym, pomimo możliwości wykorzystania wbudowanej metody obliczania błędu średniokwadratowego, wariancja odpowiedzi potrzebna dla uzyskania wyniku musi zostać uzyskana przez własny mechanizm użytkownika. Listing \ref{shogun:verify} przedstawia funkcję weryfikującą poprawność modeli opisanych w poprzednich punktach, obliczającą wartość metryki $R^2$.
 
-\cppcode{Result/inc/shogun/verify.hpp}{Przykład obliczenia metryki $R^2$}{shogun:verify}
+\cppcode{Result/inc/shogun/verify.hpp}{Przykład obliczenia metryki $R^2$.}{shogun:verify}
 
 \subsection{Dokładność}
 
-Do obliczenia dokładności w przypadku zadań regresji, biblioteka udostępnia klasę \textit{CMulticlassAccuracy}. Pozwala ona nie tylko na samą klasyfikację, lecz także oferuje metodę pobrania macierzy misklasyfikacji. Nie znaleziono natimiast klasy \textit{CAccuracyMeasure} wspomnianej przez autora ,,Hands-On Machine Learning with C++''\cite{handsOnMachineLearning}, co sugerowałoby jej usunięcie z biblioteki. Listing \ref{shogun:acc} pokazuje w jaki sposób należy użyć klasy \textit{CMulticlassAccuracy}.
+Do obliczenia dokładności w przypadku zadań regresji, biblioteka udostępnia klasę \textit{CMulticlassAccuracy}. Pozwala ona nie tylko na samą klasyfikację, lecz także oferuje metodę pobrania macierzy błędnych klasyfikacji. Nie znaleziono natomiast klasy \textit{CAccuracyMeasure} wspomnianej w pracy \cite{handsOnMachineLearning}, co sugerowałoby jej usunięcie z biblioteki. Listing \ref{shogun:acc} pokazuje w jaki sposób należy użyć klasy \textit{CMulticlassAccuracy}.
 
-\cppcode{Rozdzial4/shogun-acc.cpp}{Przykład obliczenia dokładności modelu}{shogun:acc} 
+\cppcode{Rozdzial4/shogun-acc.cpp}{Przykład obliczenia dokładności modelu.}{shogun:acc} 
 
-\subsection{Precyzja i pamięć (recall), oraz metryka F-score}
+\subsection{Precyzja i pełność (recall), oraz metryka F1}
 
-W książce \cite{handsOnMachineLearning} wspomniane zostały klasy \textit{CRecallMeasure} oraz \textit{CF1Measure} mające pozwolić obliczyć odpowiednio pamięć modelu oraz metrykę F-score, jednak w trakcie pracy z biblioteką nie znaleziono definicji tych klas, lub jakichkolwiek innych pełniących te funkcje, w związku z czym założono brak implementacji tych metod dla biblioteki Shogun. Zdecydowano się na wspomnienie o tym fakcie, w celu podkreślenia możliwoścy wystąpienia rozbieżności między źródłami wiedzy, a aktualnym stanem biblioteki.
+W podręczniku \cite{handsOnMachineLearning} wspomniane zostały klasy \textit{CRecallMeasure} oraz \textit{CF1Measure} mające pozwolić obliczyć odpowiednio pamięć modelu oraz metrykę F1, jednak w trakcie pracy z biblioteką nie znaleziono definicji tych klas, lub jakichkolwiek innych pełniących te funkcje, w związku z czym założono brak implementacji tych metod dla biblioteki Shogun. Zdecydowano się na wspomnienie o tym fakcie, w celu podkreślenia możliwoścy wystąpienia rozbieżności między źródłami wiedzy, a aktualnym stanem biblioteki.
 
 \subsection{Pole pod wykresem krzywej operacyjnej}
 
 Biblioteka Shogun posiada implementację obliczania pola pod wykresem krzywej charakterystycznej odbiornika, w postaci klasy \textit{CROCEvaluation}. Listing \ref{shogun:roc} przedstawia sposób jej użycia.
 
-\cppcode{Rozdzial4/shogun-roc.cpp}{Przykład obliczenia pola pod wykresem funkcji ROC dla Shogun}{shogun:roc}
+\cppcode{Rozdzial4/shogun-roc.cpp}{Przykład obliczenia pola pod wykresem funkcji ROC dla Shogun.}{shogun:roc}
 
-\subsection{Sprawdzian krzyżowy K-krotny}
+\subsection{K-krotny sprawdzian krzyżowy}
 
 Sprawdzian krzyżowy stanowi w bibliotece Shogun złożony mechanizm, do którego wykorzystania należy przygotować drzewo decyzyjne parametrów, reprezentowane przez klasę \textit{CModelSelectionParameters}. Użytkownik może wybrać model oraz kryterium ewaluacji modelu poprzez utworzenie odpowiednich klas, a następnie przekazanie ich w konstruktorze obiektu sprawdzianu krzyżowego, będącego instancją klasy \textit{CCrossValidation}. Kolejnym krokiem jest utworzenie instancji klasy \textit{CGridSearchModelSelection} która dokona wyboru parametrów. Ostatnim etapem jest konfiguracja docelowego modelu i przeprowadzenie procesu uczenia. Dokłady wygląd całego mechanizmu został przedstawiony na listingu \ref{shogun:cross}.
 
-\cppcode{Result/inc/shogun/cross.hpp}{Przygotowanie modelu wieloklasowej regresji liniowej z wykorzystaniem sprawdzianu krzyżowego}{shogun:cross}
+\cppcode{Result/inc/shogun/cross.hpp}{Przygotowanie modelu wieloklasowej regresji liniowej z wykorzystaniem sprawdzianu krzyżowego.}{shogun:cross}
 
 \section{Dostępność dokumentacji i źródeł wiedzy}
 
-Internetowe źródła informacji w postaci forów społecznościowych skupiają się na wykorzystaniu biblioteki Shark w innych językach, jak np. Python, lecz wraz z jej kodem źródłowym na platformie GitHub \cite{shogun:github} możliwe jest wygenerowanie przykładów jej wykorzystania także w języku C++ w folderze examples. Przykłady te należy zbudować za pomocą odpowiednego skryptu Pythona zawartego w repozytorium, powodując wygenerowanie listingów kodów w docelowym języku w plikach JSON. Niestety, okazują się one obrazować użycie biblioteki w nienaturalny, proceduralnie generowany sposób, sprawiając, że przy faktycznej próbie skorzystania z API projektu, stają się one bezużyteczne. Dodatkowo, jedyna forma dokumentacji projektu ogranicza się do komentarzy w kodzie, zmuszając użytkownika do błądzenia po repozytorum w poszukiwaniu potrzebnych informacji. 
+Internetowe źródła informacji w postaci forów społecznościowych skupiają się na wykorzystaniu biblioteki Shark w innych językach, jak np. Python, lecz wraz z jej kodem źródłowym na platformie GitHub \cite{shogun:github} możliwe jest wygenerowanie przykładów jej wykorzystania także w języku C++ w folderze \textit{examples}. Przykłady te należy zbudować za pomocą odpowiednego skryptu Pythona zawartego w repozytorium, powodując wygenerowanie listingów kodów w docelowym języku w plikach JSON. Niestety, okazują się one obrazować użycie biblioteki w nienaturalny, proceduralnie generowany sposób, sprawiając, że przy faktycznej próbie skorzystania z API projektu, stają się one bezużyteczne. Dodatkowo, jedyna forma dokumentacji projektu ogranicza się do komentarzy w kodzie, zmuszając użytkownika do błądzenia po repozytorum w poszukiwaniu potrzebnych informacji. 
 
-Shogun jest jedną z bibliotek opisaną w książce ,,\textit{Hands On Machine Learning with C++}'' autorstwa Kirilla Kolodiazhnyi \cite{handsOnMachineLearning}, wprowadzającej czytelnika zarówno do podstawowych funkcjonalności Shogun, jak i podsumowującej podstawy teorii uczenia maszynowego w kontekście ich zastosowania. Większość z przykładów realizacji poszczególnych typów modeli w tej książce posiada przedstawione główne fragmenty listingów dla biblioteki Shogun. Warto jednak zaznaczyć, że różnią się one od przykładów generowanych przez skrypt budujący, obrazując wykorzystanie faktycznie udostępnianego API biblioteki. W toku pracy nad niniejszym rozdziałem, książka ta okazała się jedynym wartościowym źródłem wiedzy jego temat.
+Shogun jest jedną z bibliotek opisaną w podręczniku \cite{handsOnMachineLearning}, wprowadzającym czytelnika zarówno do podstawowych funkcjonalności Shogun, jak i podsumowującej podstawy teorii uczenia maszynowego w kontekście ich zastosowania. Większość z przykładów realizacji poszczególnych typów modeli w tej książce posiada przedstawione główne fragmenty listingów dla biblioteki Shogun. Warto jednak zaznaczyć, że różnią się one od przykładów generowanych przez skrypt budujący, obrazując wykorzystanie faktycznie udostępnianego API biblioteki. W toku pracy nad niniejszym rozdziałem, książka ta okazała się jedynym wartościowym źródłem wiedzy na jego temat.
