@@ -17,6 +17,49 @@
 \endgroup
 
 \datalist[entry]{none/global//global/global}
+  \entry{expert}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MO}{%
+         family={M.},
+         familyi={M\bibinitperiod},
+         given={Owczarek},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MO1}
+    \strng{fullhash}{MO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{197 \bibrangedash  202}
+    \field{title}{Charakterystyka systemów ekspertowych i ich zastosowanie w
+  medycynie}
+    \verb{url}
+    \verb http://yadda.icm.edu.pl/yadda/element/bwmeta1.element.baztech-article
+    \verb -LOD4-0002-0067
+    \endverb
+    \field{volume}{5}
+    \field{journaltitle}{Mikroelektronika i informatyka - prace naukowe}
+    \field{year}{2005}
+  \endentry
+
+  \entry{tf_api}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=G}{%
+         family={Google},
+         familyi={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{G1}
+    \strng{fullhash}{G1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{TensorFlow - API Documentation}
+    \verb{url}
+    \verb https://www.tensorflow.org/api_docs
+    \endverb
+    \field{year}{2013}
+  \endentry
+
   \entry{wisconsin}{misc}{}
     \name{author}{1}{}{%
       {{hash=DWHWOLMWNS}{%

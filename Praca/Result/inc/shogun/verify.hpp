@@ -9,7 +9,7 @@
 #include <shogun/labels/MulticlassLabels.h>
 
 inline void shogunVerifyModel(
-    const shogun::Some<shogun::CRegressionLabels>& predictions, 
+    const shogun::Some<shogun::CRegressionLabels>& predictions,
     const shogun::Some<shogun::CRegressionLabels>& targets)
 {
     using namespace shogun;
@@ -20,34 +20,35 @@ inline void shogunVerifyModel(
     std::cout << "MSE = " << mse << std::endl;
     // metryka R^2
     float64_t avg = 0.0;
+    float64_t sum = 0.0;
     float64_t sumFromErr = 0.0;
     float64_t sumFromAvg = 0.0;
-    // obliczenie średniej i wariancji
+    // obliczenie średniej
     for (index_t i = 0; i < targets->get_num_labels(); i++)
     {
         avg += targets->get_label(i);
     }
     avg /= targets->get_num_labels();
+    // obliczenie wariancji
     for (index_t i = 0; i < targets->get_num_labels(); i++)
     {
-        sumFromAvg += std::pow(targets->get_label(i) - avg, 2);
-	sumFromErr += 
-		std::pow(targets->get_label(i) - predictions->get_label(i), 2);
+        sum += std::pow(targets->get_label(i), 2);
     }
+    float64_t variance = (sum / targets->get_num_labels()) - std::pow(avg, 2);
     // obliczenie metryki R^2
-    auto r_square = 1 - (sumFromErr / sumFromAvg);
+    auto r_square = 1 - (mse / variance);
     std::cout << "R^2 = " << r_square << std::endl << std::endl;
 }
 
 inline void shogunVerifyModel(
-    const shogun::Some<shogun::CMulticlassLabels>& predictions, 
+    const shogun::Some<shogun::CMulticlassLabels>& predictions,
     const shogun::Some<shogun::CMulticlassLabels>& targets)
 {
     using namespace shogun;
 
     // obliczenie pola pod wykresem ROC
     auto roc = some<CROCEvaluation>();
-    roc->evaluate(predictions->get_binary_for_class(1), 
+    roc->evaluate(predictions->get_binary_for_class(1),
 		  targets->get_binary_for_class(1));
     std::cout << "AUC ROC = " << roc->get_auROC() << std::endl;
 }
