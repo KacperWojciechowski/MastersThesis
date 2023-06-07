@@ -53,7 +53,7 @@
 \contentsline {section}{\numberline {5.3}Metody przetwarzania i eksploracji danych}{42}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}Normalizacja}{42}{subsection.5.3.1}%
 \contentsline {subsection}{\numberline {5.3.2}Redukcja wymiarowości}{43}{subsection.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.2.1}PCA}{43}{subsubsection.5.3.2.1}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}Analiza składowych głównych}{43}{subsubsection.5.3.2.1}%
 \contentsline {subsubsection}{\numberline {5.3.2.2}Liniowa analiza dyskryminacyjna}{44}{subsubsection.5.3.2.2}%
 \contentsline {subsection}{\numberline {5.3.3}Regularyzacja L1}{44}{subsection.5.3.3}%
 \contentsline {subsection}{\numberline {5.3.4}Regularyzacja L2}{45}{subsection.5.3.4}%
@@ -66,30 +66,30 @@
 \contentsline {subsection}{\numberline {5.4.6}Sieć neuronowa}{52}{subsection.5.4.6}%
 \contentsline {section}{\numberline {5.5}Metody analizy modeli}{55}{section.5.5}%
 \contentsline {subsection}{\numberline {5.5.1}Funkcje straty}{55}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Metryka $R^2$ i adjusted $R^2$}{56}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.2}Metryka $R^2$ i skorygowane $R^2$}{56}{subsection.5.5.2}%
 \contentsline {subsection}{\numberline {5.5.3}Pole pod wykresem krzywej charakterystycznej odbiornika}{56}{subsection.5.5.3}%
-\contentsline {subsection}{\numberline {5.5.4}Sprawdzian krzyżowy K-krotny}{58}{subsection.5.5.4}%
-\contentsline {section}{\numberline {5.6}Dostępność dokumentacji i źródeł wiedzy}{59}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Biblioteka Dlib}{60}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Wprowadzenie}{60}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Formaty źródeł danych}{60}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Metody przetwarzania i eksploracji danych}{61}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Normalizacja}{61}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Redukcja wymiarowości}{61}{subsection.6.3.2}%
-\contentsline {subsubsection}{\numberline {6.3.2.1}PCA}{61}{subsubsection.6.3.2.1}%
-\contentsline {subsubsection}{\numberline {6.3.2.2}Liniowa analiza dyskryminacyjna}{62}{subsubsection.6.3.2.2}%
-\contentsline {subsubsection}{\numberline {6.3.2.3}Mapowanie Sammona}{63}{subsubsection.6.3.2.3}%
-\contentsline {subsection}{\numberline {6.3.3}Regularyzacja L2}{63}{subsection.6.3.3}%
-\contentsline {section}{\numberline {6.4}Modele uczenia maszynowego}{64}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Regresja liniowa}{64}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {5.5.4}K-krotny sprawdzian krzyżowy}{57}{subsection.5.5.4}%
+\contentsline {section}{\numberline {5.6}Dostępność dokumentacji i źródeł wiedzy}{58}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Biblioteka Dlib}{59}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Wprowadzenie}{59}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Formaty źródeł danych}{59}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Metody przetwarzania i eksploracji danych}{60}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Normalizacja}{60}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Redukcja wymiarowości}{60}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}Analiza składowych głównych}{60}{subsubsection.6.3.2.1}%
+\contentsline {subsubsection}{\numberline {6.3.2.2}Liniowa analiza dyskryminacyjna}{61}{subsubsection.6.3.2.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.3}Mapowanie Sammona}{62}{subsubsection.6.3.2.3}%
+\contentsline {subsection}{\numberline {6.3.3}Regularyzacja L2}{62}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Modele uczenia maszynowego}{63}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Regresja liniowa}{63}{subsection.6.4.1}%
 \contentsline {subsection}{\numberline {6.4.2}Maszyna wektorów nośnych}{64}{subsection.6.4.2}%
 \contentsline {subsection}{\numberline {6.4.3}Sieci neuronowe}{65}{subsection.6.4.3}%
-\contentsline {subsection}{\numberline {6.4.4}Brzegowa regresja jądra}{67}{subsection.6.4.4}%
-\contentsline {section}{\numberline {6.5}Metody analizy modeli}{68}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Pole pod wykresem krzywej charakterystycznej odbiornika}{68}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Sprawdzian krzyżowy K-krotny}{70}{subsection.6.5.2}%
-\contentsline {section}{\numberline {6.6}Dostępność dokumentacji i źródeł wiedzy}{71}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Zestawienie zbiorcze i podsumowanie}{73}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Oferowane funkcjonalności}{73}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Porównanie wyników dla zadanych przykładów}{75}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Wymagany nakład pracy i jakość źródeł}{76}{section.7.3}%
+\contentsline {subsection}{\numberline {6.4.4}Brzegowa regresja jądrowa}{66}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.5}Metody analizy modeli}{67}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Pole pod wykresem krzywej charakterystycznej odbiornika}{67}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}K-krotny sprawdzian krzyżowy}{68}{subsection.6.5.2}%
+\contentsline {section}{\numberline {6.6}Dostępność dokumentacji i źródeł wiedzy}{70}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Zestawienie zbiorcze i podsumowanie}{71}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Oferowane funkcjonalności}{71}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Porównanie wyników dla zadanych przykładów}{73}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Wymagany nakład pracy i jakość źródeł}{74}{section.7.3}%

@@ -2,94 +2,93 @@
 
 \section{Wprowadzenie}
 
-Jest to biblioteka do uczenia maszynowego napisana w nowoczesnym C++, o zastosowaniu przemysłowym oraz naukowym \cite{Dlib09}. Podobnie jak poprzednio omawiane biblioteki, posiada ona otwarte źródło na licencji Boost Software Licence \cite{dlib:license}. Do dziedzin wykorzystujących wyżej wspomnianą bibliotekę należą robotyka, systemy wbudowane, telefonia komórkowa oraz śrowodiska o dużej wydajności obliczeniowej. Kod źródłowy biblioteki opatrzony jest testami jednostkowymi, co pozwala na łatwiejsze utrzymanie jakości dostarczanego rozwiązania. Ciekawym aspektem jest fakt, że Dlib stanowi nie tylko bibliotekę, lecz zestaw narzędzi, oferujący funkcjonalności wykraczające także poza dziedzinę uczenia maszynowego.
+Jest to biblioteka do uczenia maszynowego napisana w nowoczesnym C++, o zastosowaniu przemysłowym oraz naukowym \cite{Dlib09}. Podobnie jak poprzednio omawiane biblioteki, posiada ona otwarte źródło na licencji Boost Software Licence \cite{dlib:license}. Do dziedzin wykorzystujących wyżej wspomnianą bibliotekę należą robotyka, systemy wbudowane, telefonia komórkowa oraz oprogramowanie o dużej wydajności obliczeniowej. Kod źródłowy biblioteki opatrzony jest testami jednostkowymi, co pozwala na łatwiejsze utrzymanie jakości dostarczanego rozwiązania. Ciekawym aspektem jest fakt, że Dlib stanowi nie tylko bibliotekę, lecz zestaw narzędzi, oferujący funkcjonalności wykraczające także poza dziedzinę uczenia maszynowego.
 
 \section{Formaty źródeł danych}
 
 Do reprezentacji wektora w bibliotece Dlib wykorzystywane są kontenery z biblioteki szablonów STL języka C++. Dodatkowo, istnieje możliwość ich inicjalizacji za pomocą operatora przecinka, oraz opakowania surowej tablicy (ang. \textit{raw array}). Oznacza to, że podobnie jak w przypadku biblioteki Shogun, dane mogą być przekazywane do programu wykorzystującego Dlib w dowolny sposób zapewniający umieszczenie ich np. w surowej tablicy do późniejszego przetworzenia na obiekty akceptowane przez bibliotekę. Metoda ta działa także z kontenerami biblioteki STL, które pozwalają na dostęp do surowych danych przy użyciu metody \textit{data()}. Tak samo jak poprzednio, występuje tu wsparcie dla formatu CSV obwarowanego tymi samymi ograniczeniami co dla Shogun. Za wspomniane wsparcie odpowiada przeładowany operator strumienia współpracujący z klasą \textit{std::ifstream} biblioteki standardowej C++. Przykładowy kod wykorzystujący opisany mechanizm zamieszczony został na listingu \ref{dlib:csv}.
 
-\cppcode{Rozdzial6/csv.cpp}{Fragment kodu ilustrujący sposób odczytu z pliku w formacie CSV \cite{handsOnMachineLearning}}{dlib:csv}
+\cppcode{Rozdzial6/csv.cpp}{Fragment kodu ilustrujący sposób odczytu z pliku w formacie CSV \cite{handsOnMachineLearning}.}{dlib:csv}
 
 \section{Metody przetwarzania i eksploracji danych}
 
 \subsection{Normalizacja}
 Biblioteka udostępnia normalizację danych poprzez standaryzację, realizowaną przez klasę \textit{Dlib::vector\texttt{\char`_}normalizer}. Głównym warunkiem ograniczającym zastosowanie jej jest fakt, że nie można w niej umieścić całego zestawu danych treningowych na raz, co wymusza podział obserwacji na osobne wektory, a następnie umieszczenie ich w kontenerze \textit{std::vector} do dalszego przetwarzania. Przykład funkcji normalizującej przedstawiono na listingu \ref{dlib:normalizer}.
 
-\cppcode{Result/inc/dlib/normalizer.hpp}{Funkcja normalizująca}{dlib:normalizer}
+\cppcode{Result/inc/dlib/normalizer.hpp}{Funkcja normalizująca.}{dlib:normalizer}
 
 \subsection{Redukcja wymiarowości}
 
-\subsubsection{PCA}
+\subsubsection{Analiza składowych głównych}
 
 Implementacja metody PCA w bibliotece Dlib oferowana jest za pośrednictwem klasy \textit{dlib::vector\char`_normalizer\char`_pca}, która oprócz samej redukcji wymiarowości wykonuje także wcześniej automatycznie proces normalizacji danych. Bywa to przydatne, gwarantując że redukcja będzie przeprowadzana zawsze na odpowiednio przygotowanych wartościach obserwacji. Listing \ref{dlib:pca} przedstawia funkcję używającą wyżej wymienioną metodę.
 
-\cppcode{Result/inc/dlib/pca.hpp}{Przykład redukcji wymiarowości z użyciem metody PCA}{dlib:pca}
+\cppcode{Result/inc/dlib/pca.hpp}{Przykład redukcji wymiarowości z użyciem metody PCA.}{dlib:pca}
 
 \subsubsection{Liniowa analiza dyskryminacyjna}
 
 Drugim z oferowanych algorytmów redukcji wymiarowości zawartych w Dlib jest algorytm liniowej analizy dyskryminacyjnej. Jest on dostępny pod postacią funkcji \textit{dlib::compute\char`_lda\char`_transform}, która przekształca macierz zawierającą dane wejściowe do macierzy transformacji danych. Ze względu na nadzorowany charakter algorytmu, konieczne jest także przekazanie wartości zmiennych odpowiedzi, natomiast same dane, w przeciwieństwie do metody PCA, mogą być zawarte w pojedynczym obiekcie macierzy. Redukcja odbywa się poprzez wymnożenie otrzymanej macierzy przez transponowany wiersz zawierający próbkę. Szczegółowe zastosowanie algorytmu przedstawiono na listingu \ref{dlib:lda}
 
-\cppcode{Result/inc/dlib/lda.hpp}{Przykład redukcji wymiarowości z użyciem algorytmu LDA}{dlib:lda}
+\cppcode{Result/inc/dlib/lda.hpp}{Przykład redukcji wymiarowości z użyciem algorytmu LDA.}{dlib:lda}
 
 \subsubsection{Mapowanie Sammona}
 
-Całość algorytmu mapowania Sammmona implementowana jest za pomocą klasy \textit{dlib::sammon\char`_projection}, i ogranicza się do utworzenia jej instancji. Wykorzystując metodę należy przekazać do utworzonego obiektu za pomocą operatora wywołania funkcji wektor danych, oraz oczekiwaną ilość wymiarów, otrzymując przekształcone dane. W związku z powyższym, funkcja realizująca redukcję z użyciem wyżej wymienionej metody sprowadza się do wykorzystania dwóch linii. Dokładny sposób jej użycia pokazano na listingu \ref{dlib:sammmon}
+Jednym z algorytmów wyróżniających bibliotekę DLib na tle pozostałych, jest implementacja metody redukcji wymiarowości poprzez skalowanie wielowymiarowe z użyciem nieliniowego algorytmu tzw. mapowania Sammona \cite{sammon}. Całość wspomnianego algorytmu implementowana jest za pomocą klasy \textit{dlib::sammon\char`_projection}, i ogranicza się do utworzenia jej instancji. Wykorzystując metodę należy przekazać do utworzonego obiektu za pomocą operatora wywołania funkcji wektor danych, oraz oczekiwaną liczbę wymiarów, otrzymując przekształcone dane. W związku z powyższym, funkcja realizująca redukcję z użyciem wyżej wymienionej metody sprowadza się do wykorzystania dwóch linii. Dokładny sposób jej użycia pokazano na listingu \ref{dlib:sammon}
+
+\cppcode{Result/inc/dlib/sammon.hpp}{Przykład redykcji wymiarowości z użyciem mapowania Sammona}{dlib:sammon}
 
 \subsection{Regularyzacja L2}
 
-Biblioteka Dlib posiada funkcję trenera pozwalającą na użycie brzegowej regresji, realizującą regularyzację L2, o nazwie \textit{rr\char`_trainer} dla regresji liniowej oraz \textit{krr\char`_trainer} dla regresji nieliniowej. Przykłady zastosowania poszczególnych wersji tego algorytmu zostały przedstawione w sekcji omawiającej model regresji liniowej, oraz brzegowej regresji jądra.
-
-\cppcode{Result/inc/dlib/sammon.hpp}{Przykład redykcji wymiarowości z użyciem mapowania Sammmona}{dlib:sammon}
+Biblioteka Dlib posiada funkcję trenera pozwalającą na użycie brzegowej regresji, realizującą regularyzację L2, o nazwie \textit{rr\char`_trainer} dla regresji liniowej oraz \textit{krr\char`_trainer} dla regresji nieliniowej. Przykłady zastosowania poszczególnych wersji tego algorytmu zostały przedstawione w sekcji omawiającej model regresji liniowej, oraz grzbietowej regresji jądrowej.
 
 \section{Modele uczenia maszynowego}
 
 \subsection{Regresja liniowa}
-Biblioteka Dlib posiada pośrednią realizację modelu regresji liniowej. Wykorzystuje ona technikę brzegowej regresji jądra, przekazując w formie kernela jądro liniowe. Następnie przeprowadzany jest trening, zapisując docelowy model w postaci funkcji decyzyjnej. Listing \ref{dlib:linear} przedstawia szczegóły powyższego mechanizmu.
+Biblioteka Dlib posiada pośrednią realizację modelu regresji liniowej. Wykorzystuje ona technikę grzbietowej regresji jądrowej, przekazując jądro liniowe. Następnie przeprowadzane jest uczenie, zapisując docelowy model w postaci funkcji decyzyjnej. Listing \ref{dlib:linear} przedstawia szczegóły powyższego mechanizmu.
 
-\cppcode{Result/inc/dlib/linear.hpp}{Przykład regresji liniowej w Dlib}{dlib:linear}
+\cppcode{Result/inc/dlib/linear.hpp}{Przykład regresji liniowej w Dlib.}{dlib:linear}
 
 \subsection{Maszyna wektorów nośnych}
 
 W celu realizacji wieloklasowej klasyfikacji z użyciem maszyny wektorów nośnych, biblioteka Dlib oferuje klasę funkcji decyzyjnej \textit{dlib::one\char`_vs\char`_one\char`_decision\char`_function}. Przechowuje ona wynikowy model uczenia algorytmem maszyny wektorów nośnych, zawarty w klasie \textit{one\char`_versus\char`_one}, do której przesłany zostaje trener SVM. Dokładny sposób użycia został przedstawiony na listingu \ref{dlib:svm}.
 
-\cppcode{Result/inc/dlib/svm.hpp}{Przykład użycia maszyny wektorów nośnych w Dlib}{dlib:svm}
+\cppcode{Result/inc/dlib/svm.hpp}{Przykład użycia maszyny wektorów nośnych w Dlib.}{dlib:svm}
 
 \subsection{Sieci neuronowe}
 
-Konstrukcja sieci neuronowej w przypadku biblioteki Dlib rozpoczyna się od zdefiniowania architektury sieci, za pomocą odpowiedniego łańcucha szablonów. Parametry tworzą sieć w kolejności od najbardziej zagnieżdżonego do najbardziej zewnętrznego. Dlib zapewnia użytkownikowi rozdzielność typu warsty od jej funkcji aktywacji, w związku z czym użytkownik może dokładnie dostosować działanie sieci. Niestety, sama składnia tworzonej architektury jest przez to zaciemniona, co utrudnia jej analizę. Po utworzeniu architektury, należy przygotować i skonfigurować solver. Najpopularniejszym z oferowanych przez bibliotekę jest algorytm stochastycznego spadku gradientowego, zaimplementowanego w postaci klasy \textit{dlib::sgd}. Trzeci krok stanowi konfiguracja trenera głębokich sieci neuronowych, oferowanego przez klasę \textit{dlib::dnn\char`_trainer}, poprzez ustawienie parametrów takich jak:
+Konstrukcja sieci neuronowej w przypadku biblioteki Dlib rozpoczyna się od zdefiniowania architektury sieci, za pomocą odpowiedniego łańcucha szablonów. Parametry tworzą sieć w kolejności od najbardziej zagnieżdżonego do najbardziej zewnętrznego. Dlib zapewnia użytkownikowi rozdzielność typu warstwy od jej funkcji aktywacji, w związku z czym użytkownik może dokładnie dostosować działanie sieci. Niestety, sama składnia tworzonej architektury jest przez to zaciemniona, co utrudnia jej analizę. Po utworzeniu architektury, należy przygotować i skonfigurować solver. Najpopularniejszym z oferowanych przez bibliotekę jest algorytm stochastycznego spadku gradientowego, zaimplementowanego w postaci klasy \textit{dlib::sgd}. Trzeci krok stanowi konfiguracja trenera głębokich sieci neuronowych, oferowanego przez klasę \textit{dlib::dnn\char`_trainer}, poprzez ustawienie parametrów takich jak:
 
 \begin{itemize}
 	\item współczynnik uczenia;
 	\item współczynnik zmiany szybkości uczenia; 
-	\item rozmiar mini-batch'y;
-	\item maksymalna ilość epok.
+	\item rozmiar porcji wsadowych;
+	\item maksymalna liczba epok.
 \end{itemize}
 
 Obiekt trenera w trakcie jego tworzenia przyjmuje referencję do architektury sieci oraz do obiektu solvera. Proces nauki odbywa się poprzez wywołanie funkcji \textit{train()}, natomiast wynikowy model zapisany zostaje w obiekcie architektury sieci. Listing \ref{dlib:neural} przedstawia przykład budowy sieci neuronowej z wykorzystaniem niniejszej biblioteki.
 
-\cppcode{Result/inc/dlib/neural.hpp}{Przykład sieci neuronowej w Dlib}{dlib:neural} 
+\cppcode{Result/inc/dlib/neural.hpp}{Przykład sieci neuronowej w Dlib.}{dlib:neural} 
 
-\subsection{Brzegowa regresja jądra}
+\subsection{Brzegowa regresja jądrowa}
 
-Przygotowanie wieloklasowego modelu brzegowej regresji jądra (ang. \textit{Kernel Ridge Regression}) w przypadku biblioteki Dlib wygląda prawie identycznie do sposobu realizacji wieloklasowej maszyny wektorów nośnych. Główną różnicą jest wykorzystany trener podstawowy, w tym wypadku stanowiący obiekt klasy \textit{dlib::krr\char`_trainer}. Możliwe jest także wykorzystanie tego samego typu jądra, co w przypadku maszyny wektorów nośnych. Listing \ref{dlib:krr} obrazuje szczegółowy sposób przygotowania modelu.
+Przygotowanie wieloklasowego modelu grzbietowej regresji jądrowej (ang. \textit{Kernel Ridge Regression}) w przypadku biblioteki Dlib wygląda prawie identycznie do sposobu realizacji wieloklasowej maszyny wektorów nośnych. Główną różnicą jest wykorzystany trener podstawowy, w tym wypadku stanowiący obiekt klasy \textit{dlib::krr\char`_trainer}. Możliwe jest także wykorzystanie tego samego typu jądra, co w przypadku maszyny wektorów nośnych. Listing \ref{dlib:krr} obrazuje szczegółowy sposób przygotowania modelu.
 
-\newpage
-\cppcode{Result/inc/dlib/krr.hpp}{Przykład użycia brzegowej regresji jądra w Dlib}{dlib:krr}
+\cppcode{Result/inc/dlib/krr.hpp}{Przykład użycia brzegowej regresji jądra w Dlib.}{dlib:krr}
 
 \section{Metody analizy modeli}
 
 \subsection{Pole pod wykresem krzywej charakterystycznej odbiornika}
 
-Biblioteka Dlib posiada implementację funkcji wyznaczającej krzywą ROC, jednak wymaga ona pewnego przetwarzania danych przed i po jej użyciu. W celu jej zastosowania należy podzielić dane sklasyfikowane prawidłowo i nieprawidłowo. Wynikiem funkcji jest wektor zawierający współrzędne poszczególnych punktów krzywej charakterystycznej odbiornika, które pozwalają na narysowanie wykresu na płaszczyźnie dwuwymiarowej. Obliczenie wartości pola pod wykresem należy dokonać ręcznie, wykorzystując np. jedną z numerycznych metod na obliczenie całki. Listing \ref{dlib:eval} przedstawia funkcję ewaluującą predykcje modelu, w tym obliczenie wartości pola pod wykresem krzywej charakterystycznej odbiornika dla zadania klasyfikacji.
+Biblioteka Dlib posiada implementację funkcji wyznaczającej krzywą ROC, jednak wymaga ona pewnego przetwarzania danych przed i po jej użyciu. W celu jej zastosowania należy podzielić dane sklasyfikowane prawidłowo i nieprawidłowo. Wynikiem funkcji jest wektor zawierający współrzędne poszczególnych punktów krzywej charakterystycznej odbiornika, które pozwalają na narysowanie wykresu na płaszczyźnie. Obliczenie wartości pola pod wykresem należy dokonać ręcznie, wykorzystując np. jedną z metod całkowania numerycznego. Listing \ref{dlib:eval} przedstawia funkcję wyznaczającą wartości predykcji modelu, w tym obliczenie wartości pola pod wykresem krzywej charakterystycznej odbiornika dla zadania klasyfikacji, wykonując całkowanie numeryczne z użyciem metody trapezów.
 
-\cppcode{Result/inc/dlib/eval.hpp}{Obliczenie pola pod wykresem funkcji ROC dla Dlib}{dlib:eval}
+\cppcode{Result/inc/dlib/eval.hpp}{Obliczenie pola pod wykresem funkcji ROC dla Dlib.}{dlib:eval}
 
-\subsection{Sprawdzian krzyżowy K-krotny}
+\subsection{K-krotny sprawdzian krzyżowy}
 
-Przeprowadzenie sprawdzianu krzyżowego z wykorzystaniem biblioteki Dlib stanowi złożony proces. Jest on realizowany wielofazowo, rozpoczynając od zdefiniowania własnej funkcji obliczającej interesujący użytkownika wynik metryki sprawdzianu, w oparciu o funkcję \textit{dlib::cross\char`_validate\char`_regression\char`_trainer()}. Zewnętrzna część ustalania docelowych wartości hiperparametrów dokonywana jest przez funkcję \textit{dlib::find\char`_min\char`_global()} przyjmującą adres stworzonej funkcji optymalizacyjnej, kontenery przechowujące informacje o minimalnych i maksymalnych dopuszczalnych wartościach poszczególnych hiperparametrów, oraz ilość dozwolonych wywołań funkcji optymalizacyjnej. Aby odczytać wynikowe wartości, należy sięgnąć do kolejnych pół składowej \textit{x} zwróconej przez funkcję \textit{find\char`_min\char`_global()} struktury. Szczegóły zostały zaprezentowane w oparciu o przykład z książki ,,Hands-On Machine Learning with C++'' \cite{handsOnMachineLearning} na listingu \ref{dlib:cross}.
+Przeprowadzenie sprawdzianu krzyżowego z wykorzystaniem biblioteki Dlib stanowi złożony proces. Jest on realizowany wielofazowo, rozpoczynając od zdefiniowania własnej funkcji obliczającej interesujący użytkownika wynik metryki sprawdzianu, w oparciu o funkcję \textit{dlib::cross\char`_validate\char`_regression\char`_trainer()}. Zewnętrzna część ustalania docelowych wartości hiperparametrów dokonywana jest przez funkcję \textit{dlib::find\char`_min\char`_global()} przyjmującą adres stworzonej funkcji optymalizacyjnej, kontenery przechowujące informacje o minimalnych i maksymalnych dopuszczalnych wartościach poszczególnych hiperparametrów, oraz liczbę dozwolonych wywołań funkcji optymalizacyjnej. Aby odczytać wynikowe wartości, należy sięgnąć do kolejnych pól składowej \textit{x} zwróconej przez funkcję \textit{find\char`_min\char`_global()} struktury. Szczegóły zostały zaprezentowane w oparciu o przykład z podręcznika \cite{handsOnMachineLearning} na listingu \ref{dlib:cross}.
 
-\cppcode{Result/inc/dlib/cross.hpp}{Przykład realizacji sprawdzianu krzyżowego}{dlib:cross}
+\cppcode{Result/inc/dlib/cross.hpp}{Przykład realizacji sprawdzianu krzyżowego.}{dlib:cross}
 
 \section{Dostępność dokumentacji i źródeł wiedzy}
 
-Dlib posiada zbiór przykładów w postaci listingów kodów źródłowych realizujących poszczególne mechanizmy, dostępnych na stronie głównej projektu \cite{dlib:home}. Jest ona także jedną z głównych bibliotek omawianych w ramach wspomnianej wcześniej książki ,,Hands-On Machine Learning with C++''. Niestety większość forów społecznościowych skupia się na pracy z Dlib z poziomu interfejsu języka Python, co może utrudnić szukanie rozwiązań dla specyficznych przypadków. Warto wspomnieć, że oprócz funkcjonalności uczenia maszynowego, Dlib realizuje także inne zadania, jak np. networking, co sprawia, że nawigacja po stronie projektu jest lekko utrudniona przez obecność potencjalnie nieinteresujących użytkownika elementów.
+Dlib posiada zbiór przykładów w postaci listingów kodów źródłowych realizujących poszczególne mechanizmy, dostępnych na stronie głównej projektu \cite{dlib:home}. Jest ona także jedną z głównych bibliotek omawianych w ramach wspomnianej wcześniej pracy \cite{handsOnMachineLearning}. Niestety, większość forów społecznościowych skupia się na pracy z Dlib z poziomu interfejsu języka Python, co może utrudnić szukanie rozwiązań dla specyficznych przypadków. Warto wspomnieć, że oprócz funkcjonalności uczenia maszynowego, Dlib realizuje także inne zadania, jak np. networking, co sprawia, że nawigacja po stronie projektu jest lekko utrudniona przez obecność potencjalnie nieinteresujących użytkownika elementów.

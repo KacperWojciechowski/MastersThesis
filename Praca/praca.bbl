@@ -176,8 +176,8 @@
          giveni={D\bibinitperiod},
       }}%
     }
-    \strng{namehash}{FD1}
-    \strng{fullhash}{FD1}
+    \strng{namehash}{FD2}
+    \strng{fullhash}{FD2}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{title}{Features of C++ | How Programmers use C++ in 10 Unbelievable
@@ -550,6 +550,26 @@
     \verb http://dlib.net/license.html
     \endverb
     \field{year}{2003}
+  \endentry
+
+  \entry{sammon}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=FD}{%
+         family={Farmers},
+         familyi={F\bibinitperiod},
+         given={Data},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FD1}
+    \strng{fullhash}{FD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Sammon Mapping - A non-linear mapping for data visualisation}
+    \verb{url}
+    \verb https://data-farmers.github.io/2019-06-10-sammon-mapping/
+    \endverb
+    \field{year}{2019}
   \endentry
 \enddatalist
 \endinput

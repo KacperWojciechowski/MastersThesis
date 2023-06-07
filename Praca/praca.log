@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  7 JUN 2023 21:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  7 JUN 2023 22:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1609,17 +1609,10 @@ Overfull \hbox (9.5257pt too wide) in paragraph at lines 14--15
 ó-rych prze-ka-zy-wany jest wska¹-
  []
 
-(./Rozdzial5/shark-adaptor.cpp)
-
-LaTeX Warning: Reference `shark:http' on page 42 undefined on input line 30.
-
-[42] (./Result/inc/shark/normalization.hpp)
-(./Rozdzial5/shark-dimension-reduction.cpp)
-
-LaTeX Warning: Reference `shark:lda' on page 43 undefined on input line 43.
-
-[43] (./Rozdzial5/shark-lda-red.cpp)
-Underfull \vbox (badness 4995) has occurred while \output is active []
+(./Rozdzial5/shark-adaptor.cpp) [42] (./Result/inc/shark/normalization.hpp)
+(./Rozdzial5/shark-dimension-reduction.cpp) [43] (./Rozdzial5/shark-lda-red.cpp
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [44]
 (./Result/inc/shark/linear.hpp [45]) (./Rozdzial5/shark-linear2.cpp) [46]
@@ -1661,23 +1654,25 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 150.
 
-[55] (./Rozdzial5/shark-r2.cpp) (./Result/inc/shark/printEvaluation.hpp
-[56])
+[55] (./Rozdzial5/shark-r2.cpp) (./Result/inc/shark/printEvaluation2.hpp
+[56]) (./Rozdzial5/shark-cv.cpp [57])) (./Rozdzial6/rozdzial6.tex [58]
+Rozdzia\l  6.
+(./Rozdzial6/csv.cpp [59
+
+]) (./Result/inc/dlib/normalizer.hpp) [60]
+(./Result/inc/dlib/pca.hpp) (./Result/inc/dlib/lda.hpp [61])
+(./Result/inc/dlib/sammon.hpp) [62] (./Result/inc/dlib/linear.hpp) [63]
+(./Result/inc/dlib/svm.hpp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57]
-(./Rozdzial5/shark-cv.cpp [58])) (./Rozdzial6/rozdzial6.tex [59]
-Rozdzia\l  6.
-(./Rozdzial6/csv.cpp [60
+ [64]
+(./Result/inc/dlib/neural.hpp [65])
+Overfull \hbox (12.87791pt too wide) in paragraph at lines 74--75
+\T1/lmr/m/n/12 rzy-stany tre-ner pod-sta-wowy, w tym wy-padku sta-no-wi¡cy obie
+kt klasy \T1/lmr/m/it/12 dlib::krr_trainer\T1/lmr/m/n/12 .
+ []
 
-]) (./Result/inc/dlib/normalizer.hpp) [61]
-(./Result/inc/dlib/pca.hpp) (./Result/inc/dlib/lda.hpp [62])
-
-LaTeX Warning: Reference `dlib:sammmon' on page 63 undefined on input line 36.
-
-(./Result/inc/dlib/sammon.hpp) [63] (./Result/inc/dlib/linear.hpp) [64]
-(./Result/inc/dlib/svm.hpp) [65] (./Result/inc/dlib/neural.hpp [66]) [67]
-(./Result/inc/dlib/krr.hpp) [68] (./Result/inc/dlib/eval.hpp
+(./Result/inc/dlib/krr.hpp [66]) (./Result/inc/dlib/eval.hpp [67]
 Overfull \hbox (26.03394pt too wide) in paragraph at lines 42--43
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1687,26 +1682,29 @@ Overfull \hbox (62.78394pt too wide) in paragraph at lines 43--44
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[69]) (./Result/inc/dlib/cross.hpp [70])
+) [68] (./Result/inc/dlib/cross.hpp
+Underfull \vbox (badness 2680) has occurred while \output is active []
 
-LaTeX Warning: Citation 'dlib:home' on page 71 undefined on input line 95.
+ [69])
 
-) (./Rozdzial7/rozdzial7.tex [71] [72]
+LaTeX Warning: Citation 'dlib:home' on page 70 undefined on input line 94.
+
+) (./Rozdzial7/rozdzial7.tex [70]
 Rozdzia\l  7.
 
 Overfull \hbox (7.70227pt too wide) in alignment at lines 7--68
  [] [] [] [] 
  []
 
-[73
+[71
 
-] [74]
+] [72]
 
-LaTeX Warning: Reference `fig:dlib_linear_svm' on page 75 undefined on input li
+LaTeX Warning: Reference `fig:dlib_linear_svm' on page 73 undefined on input li
 ne 76.
 
-[75]
-<Rozdzial7/shogun.png, id=2792, 151.3153pt x 182.18062pt>
+[73]
+<Rozdzial7/shogun.png, id=2765, 151.3153pt x 182.18062pt>
 File: Rozdzial7/shogun.png Graphic file (type png)
 <use Rozdzial7/shogun.png>
 Package pdftex.def Info: Rozdzial7/shogun.png  used on input line 96.
@@ -1731,7 +1729,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--97
 \T1/lmr/m/n/10.95 dla bi-blio-
  []
 
-<Rozdzial7/shark.png, id=2793, 150.5625pt x 271.0125pt>
+<Rozdzial7/shark.png, id=2766, 150.5625pt x 271.0125pt>
 File: Rozdzial7/shark.png Graphic file (type png)
 <use Rozdzial7/shark.png>
 Package pdftex.def Info: Rozdzial7/shark.png  used on input line 103.
@@ -1756,15 +1754,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--104
 \T1/lmr/m/n/10.95 dla bi-blio-
  []
 
-) [76 <./Rozdzial7/shogun.png (PNG copy)> <./Rozdzial7/shark.png>] [77]
-[78
+) [74 <./Rozdzial7/shogun.png (PNG copy)> <./Rozdzial7/shark.png>] [75]
+[76
 
-] [79] (./praca.aux)
+] [77] (./praca.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: F3D7C128971CCC5CBA83A9F6A81089DC;17784.
+(rerunfilecheck)             Checksum: 91F2112862EDB3512DAD49A1361EF766;18079.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                praca
@@ -1775,10 +1773,10 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35484 strings out of 476017
- 638874 string characters out of 5789275
+ 35447 strings out of 476017
+ 638392 string characters out of 5789275
  1928660 words of memory out of 5000000
- 53241 multiletter control sequences out of 15000+600000
+ 53234 multiletter control sequences out of 15000+600000
  600993 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,12n,109p,2262b,2479s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1799,10 +1797,10 @@ ublic/lm/lmtt12.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/lm/
 lmtti10.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sf
 xc1728.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfx
 c2074.pfb>
-Output written on praca.pdf (85 pages, 820221 bytes).
+Output written on praca.pdf (83 pages, 818481 bytes).
 PDF statistics:
- 3348 PDF objects out of 3580 (max. 8388607)
- 3151 compressed objects within 32 object streams
- 1962 named destinations out of 2073 (max. 500000)
+ 3314 PDF objects out of 3580 (max. 8388607)
+ 3117 compressed objects within 32 object streams
+ 1932 named destinations out of 2073 (max. 500000)
  863 words of extra memory for PDF output out of 10000 (max. 10000000)
 
