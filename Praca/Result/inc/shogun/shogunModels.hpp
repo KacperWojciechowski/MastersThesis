@@ -7,19 +7,22 @@
 #include <inc/shogun/neural.hpp>
 
 #include <shogun/base/init.h>
+#include <iostream>
 
 inline void shogunModels()
 {
     using namespace shogun;
 
     init_shogun_with_defaults();
-
+    std::cout << "Test 1\n";
     // odczytanie danych we własnym pośrednim typie danych
     auto classificationDatasetTemp =
         readShogunCsvData("wdbc_data_with_labels.csv", LabelPos::LAST);
+    std::cout << "Test 2\n";
     auto regressionDatasetTemp =
         readShogunCsvData("IronGlutathione.csv", LabelPos::LAST);
     // rozdzielenie danych na regresory i zmienne odpowiedzi
+    std::cout << "Test 3\n";
     auto classificationTrainFeatures =
         some<CDenseFeatures<float64_t>>(
             classificationDatasetTemp.trainInputs);
@@ -51,21 +54,21 @@ inline void shogunModels()
         regressionTestFeatures, 
         regressionTrainLabels, 
         regressionTestLabels);
-    shogunLogistic(
-        classificationTrainFeatures, 
-        classificationTestFeatures, 
-        classificationTrainLabels, 
-        classificationTestLabels);
+    //shogunLogistic(
+    //    classificationTrainFeatures, 
+    //    classificationTestFeatures, 
+    //    classificationTrainLabels, 
+    //    classificationTestLabels);
     shogunSVM(
         classificationTrainFeatures, 
         classificationTestFeatures, 
         classificationTrainLabels, 
         classificationTestLabels);
-    sharkNeural(
-        classificationTrainFeatures, 
-        classificationTestFeatures, 
-        classificationTrainLabels, 
-        classificationTestLabels);
+    //shogunNeural(
+    //    classificationTrainFeatures, 
+    //    classificationTestFeatures, 
+    //    classificationTrainLabels, 
+    //    classificationTestLabels);
 
     exit_shogun();
 }
