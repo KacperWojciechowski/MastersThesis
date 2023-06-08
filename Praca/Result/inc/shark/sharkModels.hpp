@@ -27,8 +27,6 @@ inline void sharkModels()
     // wywołanie modeli
     sharkLinear(regressionTrainData, regressionTestData);
     //sharkLogistic(classificationTrainData, classificationTestData);
-    std::cout << "Test1" << std::endl;
     sharkSVM(classificationTrainData, classificationTestData);
-    std::cout << "Test2" << std::endl;
     //sharkNN(classificationTrainData, classificationTestData);
 }
