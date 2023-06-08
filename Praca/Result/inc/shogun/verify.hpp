@@ -21,8 +21,6 @@ inline void shogunVerifyModel(
     // metryka R^2
     float64_t avg = 0.0;
     float64_t sum = 0.0;
-    float64_t sumFromErr = 0.0;
-    float64_t sumFromAvg = 0.0;
     // obliczenie średniej
     for (index_t i = 0; i < targets->get_num_labels(); i++)
     {
