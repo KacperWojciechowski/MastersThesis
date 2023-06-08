@@ -16,11 +16,11 @@ inline void sharkSVM(const shark::ClassificationDataset& trainData,
 
     // utworzenie jądra
     // auto tmp = binarySubProblem(trainData, 0, 1);
-    double gamma = 0.5;
+    double gamma = 0.1111;
     GaussianRbfKernel<> kernel(gamma);
     KernelClassifier<RealVector> svm;
-    double regularization = 10.0;
-    bool bias = false;
+    double regularization = 1.0;
+    bool bias = true;
     // utworzenie i konfiguracja modelu
     CSvmTrainer<RealVector> trainer(
         &kernel, regularization, bias);
