@@ -26,7 +26,7 @@
 \contentsline {section}{\numberline {4.2}Formaty źródeł danych}{21}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Metody przetwarzania i eksploracji danych}{25}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Normalizacja}{25}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Redukcja wymiarowości}{25}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.2}Redukcja wymiarowości}{26}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Regularyzacja L1 i L2}{27}{subsection.4.3.3}%
 \contentsline {section}{\numberline {4.4}Modele uczenia maszynowego}{27}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Regresja liniowa}{27}{subsection.4.4.1}%
@@ -92,4 +92,4 @@
 \contentsline {chapter}{\numberline {7}Zestawienie zbiorcze i podsumowanie}{71}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Oferowane funkcjonalności}{71}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Porównanie wyników dla zadanych przykładów}{73}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Wymagany nakład pracy i jakość źródeł}{74}{section.7.3}%
+\contentsline {section}{\numberline {7.3}Wymagany nakład pracy i jakość źródeł}{75}{section.7.3}%

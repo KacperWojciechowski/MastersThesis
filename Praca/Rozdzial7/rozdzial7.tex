@@ -63,7 +63,7 @@ Omówione w ramach niniejszej pracy biblioteki różnią się typem i liczbą of
 	\makecell{Pole pod \\ wykresem \\ ROC} & Tak & Tak & Tak* \\
 	\hline
 	\makecell{Sprawdzian \\ krzyżowy \\ k-krotny} & Tak & Tak & Tak \\
-	\caption{Zbiorcze porównanie funkcjonalności bibliotek}
+	\caption{Zbiorcze porównanie funkcjonalności bibliotek.}
 	\label{fun:sum}
 \end{longtable} 
 
@@ -75,6 +75,7 @@ Analizując dane zebrane w tabeli \ref{fun:sum} można zauważyć, że bibliotek
 
 W celu przetestowania sprawności poszczególnych bibliotek, użyto ich do stworzenia i ewaluacji modeli regresji liniowej oraz maszyny wektorów nośnych dla zestawów danych opisanych w rozdziale 3. Dla każdego modelu użyto 80\% zestawu danych w celu treningu, oraz pozostałe 20\% jako dane testowe. Tabela \ref{tab:models} przedstawia zbiorcze zestawienie uzyskanych wyników ewaluacji. Wyjście programów zostało zaprezentowane na rysunkach \ref{fig:shogun_linear_svm}, \ref{fig:shark_linear_svm} oraz \ref{fig:dlib_linear_svm}.
 
+\newpage
 \begin{longtable}{c | c | c }
 	\centering
 	\multirow{2}{*}{\makecell{Biblioteka}} & \multicolumn{2}{c}{Metoda uczenia maszynowego} \\
@@ -85,37 +86,43 @@ W celu przetestowania sprawności poszczególnych bibliotek, użyto ich do stwor
 	\hline
 	\makecell{Shark} & \makecell{Dane treningowe: \\ MSE = 0,38728; $R^2$ = 0,745707 \\ Dane testowe: \\ MSE = 0,449118; $R^2$ = 0,60082} & \makecell{Dane treningowe: \\ AUC ROC: 1 \\ Dane testowe: \\ AUC ROC: 0,5} \\
 	\hline
-	\makecell{Dlib} & & 
+	\makecell{Dlib} & \makecell{Dane treningowe: \\ MSE = 3,08953; \\ Dane testowe: \\ MSE = 1,33014; } & \makecell{Dane treningowe: \\ AUC ROC: 1 \\ Dane testowe: \\ AUC ROC: 1} \\
+	\caption{Zestawienie uzyskanych wyników poprawności modeli.}
 	\label{tab:models}
 \end{longtable} 
 
 \begin{figure}[!ht]
 	\centering
-	\begin{minipage}{0.32\textwidth}
+	\begin{minipage}{0.31\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{Rozdzial7/shogun}
+		\includegraphics[width=0.8\linewidth]{Rozdzial7/shogun}
 		\caption{Wynik działania programu dla biblioteki Shogun}
 		\label{fig:shogun_linear_svm}		
 	\end{minipage}%
     \hspace{0.02\textwidth}
-	\begin{minipage}{0.32\textwidth}
+	\begin{minipage}{0.31\textwidth}
 		\centering
 		\includegraphics[width=0.7\linewidth]{Rozdzial7/shark}
 		\caption{Wynik działania programu dla biblioteki Shark}
 		\label{fig:shark_linear_svm}		
+	\end{minipage}%
+	\hspace{0.02\textwidth}
+	\begin{minipage}{0.31\textwidth}
+		\centering
+		\includegraphics[width=0.8\textwidth]{Rysunki/Rozdzial7/dlib}
+		\caption{Wynik działania programu dla biblioteki Dlib}
+		\label{fig:dlib_linear_svm}
 	\end{minipage}
 \end{figure}
 
-DOPISAĆ DALEJ !!!!!
+Analizując powyższe wyniki pod krątem regresji liniowej, stwierdzić można iż pierwsze miejsce zajęła biblioteka Shark-ML cechując się najniższymi błędami średniokwadratowymi. Na drugim miejscu znalazła się biblioteka Shogun. Zauważyć można, że mechanizm wyliczania współczynnika determinacji liniowej $R^2$ wyszedł dla danych testowych poza dopuszczalny zakres. Podejrzewa się, iż jest to wynik kumulacji błędów reprezentacji zmiennoprzecinkowej wartości podczas obliczeń, wskazując że mechanizm wyliczania składowych potrzebnych do obliczenia $R^2$ dla tej biblioteki jest niestabilny numerycznie. Ostatnie miejsce zajęła biblioteka Dlib, w przypadku której wartość błędu średniokwadratowego przekroczyła 3 jednostki.
 
-\begin{figure}[!ht]
-	
-\end{figure}
+Dużo gorsze rezultaty uzyskane zostały przy próbie dokonania klasyfikacji z wykorzystaniem wyżej wspomnianych bibliotek. Każda z nich cechuje się pozornie idealnym dopasowaniem do danych uczących, oraz w przypadku bibliotek Shark-ML i Shogun dopasowaniem porównywalnym do klasyfikacji za pomocą rzutu monetą. Biblioteka Dlib dodatkowo uzyskała pole pod wykresem krzywej charakterystycznej odbiornika na poziomie 1 dla danych testowych. Powyższe wyniki są nierealne do uzyskania, co udowodniono w rozdziale 3.3.1, wykorzystując dedykowane oprogramowanie statystyczne. Sugeruje to, że powyższe biblioteki w obecnym stanie nie nadają się do realizacji zadania klasyfikacji z wykorzystaniem metody maszyny wektorów nośnych. 
 
 
 \section{Wymagany nakład pracy i jakość źródeł}
 
-W procesie pracy z poszczególnymi bibliotekami zauważono, że najmniejszą ilością potrzebnego wkładu pracy charakteryzowała się biblioteka Shark-ML. Wynika to z bardzo przyjaznej dla użytkownika składni, oraz dokładnej dokumentacji dostępnej na stronie internetowej projektu, wraz z przykładami wykorzystania poszczególnych metod. Biblioteka także bez jakichkolwiek problemów została zbudowana i zainstalowana na systemie operacyjnym Ubuntu 22.04 w środowisku WSL, pozwalając bardzo szybko przejść do docelowej pracy.
+W procesie pracy z poszczególnymi bibliotekami zauważono, że najmniejszą ilością potrzebnego wkładu pracy charakteryzowała się biblioteka Shark-ML. Wynika to z bardzo przyjaznej dla użytkownika składni, oraz dokładnej dokumentacji dostępnej na stronie internetowej projektu, wraz z przykładami wykorzystania poszczególnych metod. Biblioteka także bez jakichkolwiek problemów została zbudowana i zainstalowana na systemie operacyjnym Ubuntu 22.04 w środowisku WSL2, pozwalając bardzo szybko przejść do badań.
 
 Drugą biblioteką pod względem koniecznego wkładu czasu okazał się zestaw narzędziowy Dlib. Posiada on stronę projektu z wylistowanymi klasami oraz funkcjami dostępnymi w bibliotece, jednak opis działania poszczególnych metod jest bardzo pobieżny, oraz brakuje dostępnych przykładów. Składnia biblioteki może stanowić wyzwanie dla użytkownika, gdyż nie zawsze jest oczywista, i momentami utrudnia analizę realizowanych przez program operacji.
 
