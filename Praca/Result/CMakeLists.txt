@@ -34,8 +34,8 @@ target_include_directories(MyApp PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
 #set_property(TARGET openblas PROPERTY IMPORTED_LOCATION "/usr/local/lib/libopenblas.a")
 
 # Link against the libraries
-target_link_libraries(MyApp dlib)# Shark)
+target_link_libraries(MyApp dlib shogun)# Shark)
 
 # Set the include directories
-target_include_directories(MyApp PRIVATE ${DLIB_INCLUDE_DIRS})
+target_include_directories(MyApp PRIVATE ${DLIB_INCLUDE_DIRS} ${SHOGUN_INCLUDE_DIRS})
 set_property(TARGET MyApp PROPERTY CXX_STANDARD 14)
