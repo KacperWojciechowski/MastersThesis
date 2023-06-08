@@ -15,12 +15,12 @@
 \contentsline {subsection}{\numberline {3.2.1}Dane klasyfikacyjne}{10}{subsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.1.1}Analiza rozkładów predyktorów i odpowiedzi}{10}{subsubsection.3.2.1.1}%
 \contentsline {subsubsection}{\numberline {3.2.1.2}Czyszczenie i normalizacja rozkładu danych}{10}{subsubsection.3.2.1.2}%
-\contentsline {subsection}{\numberline {3.2.2}Dane regresyjne}{14}{subsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.2.1}Analiza rozkładu danych}{14}{subsubsection.3.2.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2.2}Czyszczenie i normalizacja rozkładu danych}{15}{subsubsection.3.2.2.2}%
-\contentsline {section}{\numberline {3.3}Modele zbudowane w programie JMP}{17}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Maszyna wektorów nośnych}{17}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Regresja liniowa}{19}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.2.2}Dane regresyjne}{16}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}Analiza rozkładu danych}{16}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}Czyszczenie i normalizacja rozkładu danych}{16}{subsubsection.3.2.2.2}%
+\contentsline {section}{\numberline {3.3}Modele zbudowane w programie JMP}{19}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Maszyna wektorów nośnych}{19}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Regresja liniowa}{20}{subsection.3.3.2}%
 \contentsline {chapter}{\numberline {4}Biblioteka Shogun}{21}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Wprowadzenie}{21}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Formaty źródeł danych}{21}{section.4.2}%
