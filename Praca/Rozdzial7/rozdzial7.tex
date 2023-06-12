@@ -117,8 +117,51 @@ W celu przetestowania sprawności poszczególnych bibliotek, użyto ich do stwor
 
 Analizując powyższe wyniki pod krątem regresji liniowej, stwierdzić można iż pierwsze miejsce zajęła biblioteka Shark-ML cechując się najniższymi błędami średniokwadratowymi. Na drugim miejscu znalazła się biblioteka Shogun. Zauważyć można, że mechanizm wyliczania współczynnika determinacji liniowej $R^2$ wyszedł dla danych testowych poza dopuszczalny zakres. Podejrzewa się, iż jest to wynik kumulacji błędów reprezentacji zmiennoprzecinkowej wartości podczas obliczeń, wskazując że mechanizm wyliczania składowych potrzebnych do obliczenia $R^2$ dla tej biblioteki jest niestabilny numerycznie. Ostatnie miejsce zajęła biblioteka Dlib, w przypadku której wartość błędu średniokwadratowego przekroczyła 3 jednostki.
 
-Dużo gorsze rezultaty uzyskane zostały przy próbie dokonania klasyfikacji z wykorzystaniem wyżej wspomnianych bibliotek. Każda z nich cechuje się pozornie idealnym dopasowaniem do danych uczących, oraz w przypadku bibliotek Shark-ML i Shogun dopasowaniem porównywalnym do klasyfikacji za pomocą rzutu monetą. Biblioteka Dlib dodatkowo uzyskała pole pod wykresem krzywej charakterystycznej odbiornika na poziomie 1 dla danych testowych. Powyższe wyniki są nierealne do uzyskania, co udowodniono w rozdziale 3.3.1, wykorzystując dedykowane oprogramowanie statystyczne. Sugeruje to, że powyższe biblioteki w obecnym stanie nie nadają się do realizacji zadania klasyfikacji z wykorzystaniem metody maszyny wektorów nośnych. 
+Dużo gorsze rezultaty uzyskane zostały przy próbie dokonania klasyfikacji z wykorzystaniem wyżej wspomnianych bibliotek. Każda z nich cechuje się pozornie idealnym dopasowaniem do danych uczących, oraz w przypadku bibliotek Shark-ML i Shogun dopasowaniem porównywalnym do klasyfikacji za pomocą rzutu monetą. Biblioteka Dlib dodatkowo uzyskała pole pod wykresem krzywej charakterystycznej odbiornika na poziomie 1 dla danych testowych. Powyższe wyniki są nierealne do uzyskania, co udowodniono w rozdziale 3.3.1, wykorzystując dedykowane oprogramowanie statystyczne. W związku z tym rozpoczęto analizę przyczyny uzyskanych wyników. 
 
+W celu poprawy uzyskanych wyników i rozwiązania napotkanych błędów zdecydowano się na normalizację wartości predyktorów dla obu zestawów danych do przedziału $[0; 1]$ z wykorzystaniem programu JMP, a następnie analizę kodu realizującego uczenie maszyn wektorów nośnych w poszczególnych bibliotekach. Pierwszą z analizowanych bibliotek była biblioteka Shark-ML, w przypadku której wykorzystano ręczne dostrajanie parametrów gamma oraz regularyzacji. Okazało się, że po normalizacji oraz ustawieniu parametrów gamma na 0,16 oraz regularyzacji na 1 uzyskano prawidłowi i prawdopodobne pole pod wykresem na poziomie 0,933129 dla danych testowych. W drugiej kolejności przetestowano bibliotekę Shogun. Niestety pomimo normalizacji danych nie udało się rozwiązać problemu ujemnego współczynnika $R^2$ dla danych testowych, natomiast poprawie udało się wykonać klasyfikację, uzyskując wartość pola pod wykresem krzywej charakterystycznej odbiornika wynoszącą 0,638112. Należy zwrócić szczególną uwagę, że normalizacja pogorszyła uzyskane wyniki przed bibliotekę Shogun, zmniejszając uzyskane $R^2$ dla danych uczących i sprawiając, że $R^2$ dla danych testowych jeszcze bardziej odbiega od swojego prawidłowego zakresu. Ostatnią z bibliotek była biblioteka Dlib, dla której normalizacja zestawu danych dla zadania regresji znacznie poprawiła uzyskany błąd średniokwadratowy, natomiast w dalszym ciągu uzyskane zostało idealne dopasowanie maszyny wektorów nośnych, co może wskazywać na to, iż nie jest on zaimplementowany prawidłowo w bibliotece. Tabela \ref{tab:models2} podsumowuje wyniki uzyskane po analizie kodu oraz normalizacji danych. Wyjście programów zostało przedstawione na rys. \ref{fig:shogun_linear_svm2}, \ref{fig:shark_linear_svm2} oraz \ref{fig:dlib_linear_svm2}
+
+\begin{longtable}{c | c | c }
+	\centering
+	\multirow{2}{*}{\makecell{Biblioteka}} & \multicolumn{2}{c}{Metoda uczenia maszynowego} \\
+	\cline{2-3}
+	& Regresja liniowa & Maszyna wektorów nośnych \\
+	\hline
+	\makecell{Shogun} & \makecell{Dane treningowe: \\ MSE = 0,0286481; $R^2$ = 0,3127 \\ Dane testowe: \\ MSE = 0.0427863; $R^2$ = -0.389462} & \makecell{Dane treningowe: \\ AUC ROC: 0,789143 \\ Dane testowe: \\ AUC ROC: 0,638112} \\
+	\hline
+	\makecell{Shark} & \makecell{Dane treningowe: \\ MSE = 0,0105995; $R^2$ = 0,745707 \\ Dane testowe: \\ MSE = 0.0122919; $R^2$ = 0,600826} & \makecell{Dane treningowe: \\ AUC ROC: 0,921643 \\ Dane testowe: \\ AUC ROC: 0,933129} \\
+	\hline
+	\makecell{Dlib} & \makecell{Dane treningowe: \\ MSE = 0,481402; \\ Dane testowe: \\ MSE = 0,179538; } & \makecell{Dane treningowe: \\ AUC ROC: 1 \\ Dane testowe: \\ AUC ROC: 1} \\
+	\caption{Zestawienie uzyskanych wyników poprawności modeli.}
+	\label{tab:models2}
+\end{longtable} 
+
+Podsumowując, zauważono że każda z bibliotek jest wyjątkowo wrażliwa na zakres wartości predyktorów i w celu prawidłowego wykorzystania przeważnie wymaga, aby każdy z predyktorów zawierał się w przedziale $[0; 1]$. W przypadku zestawu danych klasyfikacyjnych było to szczególnie widoczne, gdyż ze względu na bardzo duże wartości zmiennych po transformacji odwrotnym wzorem Arrheniusa, istniała duża rozbieżność między ich zakresem, a zakresami pozostałych predyktorów. Ponadto zauważono, że mechanizm obliczania współczynnika determinancji liniowej w bibliotece Shogun oraz model maszyny wektorów nośnych w bibliotece Dlib najprawdopodobniej posiadają błędy implementacji, a więc należy z nich nie korzystać, lub mieć do nich bardzo ograniczony stopień zaufania. Spośród uzyskanych wyników, najlepszym dopasowaniem do danych charakteryzuje się biblioteka Shark, na drugim miejscu znalazła się biblioteka Shogun, natomiast ostatnie miejsce zajęła biblioteka Dlib.
+
+
+\begin{figure}[!ht]
+	\centering
+	\begin{minipage}{0.31\textwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{Rozdzial7/shogun_linear_svm}
+		\caption{Wynik działania programu dla biblioteki Shogun}
+		\label{fig:shogun_linear_svm2}		
+	\end{minipage}%
+	\hspace{0.02\textwidth}
+	\begin{minipage}{0.31\textwidth}
+		\centering
+		\includegraphics[width=0.7\linewidth]{Rozdzial7/shark_linear_svm}
+		\caption{Wynik działania programu dla biblioteki Shark}
+		\label{fig:shark_linear_svm2}		
+	\end{minipage}%
+	\hspace{0.02\textwidth}
+	\begin{minipage}{0.31\textwidth}
+		\centering
+		\includegraphics[width=0.8\textwidth]{Rysunki/Rozdzial7/dlib_linear_svm}
+		\caption{Wynik działania programu dla biblioteki Dlib}
+		\label{fig:dlib_linear_svm2}
+	\end{minipage}
+\end{figure} 
 
 \section{Wymagany nakład pracy i jakość źródeł}
 

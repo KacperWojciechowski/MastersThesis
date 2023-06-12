@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  12 JUN 2023 08:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  12 JUN 2023 11:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1556,20 +1556,28 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 Underfull \vbox (badness 1028) has occurred while \output is active []
 
  [22])
-(./Result/inc/shogun/shogunModels.hpp [23]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [24])
+(./Result/inc/shogun/shogunModels.hpp [23])
 Overfull \hbox (2.96196pt too wide) in paragraph at lines 29--30
 \T1/lmr/m/n/12 mie-±ci¢ si¦ b¦d¡ w prze-dziale jed-nost-ko-wym, za po-moc¡ klas
 y \T1/lmr/m/it/12 shogun::CRescaleFeatu-
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
 (./Result/inc/shogun/rescale.hpp) [25] (./Result/inc/shogun/pca_reduction.hpp)
 [26] (./Result/inc/shogun/linear.hpp) [27] (./Result/inc/shogun/logistic.hpp)
-[28] (./Result/inc/shogun/svm.hpp [29]) (./Result/inc/shogun/knn.hpp [30])
-(./Result/inc/shogun/gb.hpp [31]) [32] (./Result/inc/shogun/rforest.hpp)
-[33] (./Result/inc/shogun/neural.hpp [34]) (./Rozdzial4/shogun-mse.cpp [35])
+(./Result/inc/shogun/svm.hpp [28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29])
+(./Result/inc/shogun/knn.hpp [30]) (./Result/inc/shogun/gb.hpp [31]) [32]
+(./Result/inc/shogun/rforest.hpp) [33] (./Result/inc/shogun/neural.hpp [34])
+(./Rozdzial4/shogun-mse.cpp)
+Underfull \vbox (badness 1708) has occurred while \output is active []
+
+ [35]
 (./Rozdzial4/shogun-mae.cpp) (./Rozdzial4/shogun-log.cpp)
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 154.
@@ -1598,12 +1606,9 @@ ji dla me-tryki $\OML/lmm/m/it/12 R[]$ \T1/lmr/m/n/12 w zwi¡zku
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 158.
-(./Result/inc/shogun/verify.hpp [36])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [37]
-(./Rozdzial4/shogun-acc.cpp) (./Rozdzial4/shogun-roc.cpp) [38]
-(./Result/inc/shogun/cross.hpp [39])) (./Rozdzial5/rozdzial5.tex [40]
+(./Result/inc/shogun/verify.hpp [36]) (./Rozdzial4/shogun-acc.cpp [37])
+(./Rozdzial4/shogun-roc.cpp) (./Result/inc/shogun/cross.hpp [38]) [39])
+(./Rozdzial5/rozdzial5.tex [40]
 Rozdzia\l  5.
 [41
 
@@ -1622,7 +1627,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (./Result/inc/shark/linear.hpp [45]) (./Rozdzial5/shark-linear2.cpp) [46]
 (./Rozdzial5/shark-logistic.cpp) (./Result/inc/shark/logistic.hpp [47])
 [48] (./Result/inc/shark/svm.hpp [49]) (./Rozdzial5/shark-svm2.cpp)
-Underfull \vbox (badness 2653) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [50]
 (./Result/inc/shark/knn.hpp)
@@ -1703,7 +1708,7 @@ Overfull \hbox (7.70227pt too wide) in alignment at lines 7--68
 [71
 
 ] [72] [73]
-<Rozdzial7/shogun.png, id=2798, 151.3153pt x 182.18062pt>
+<Rozdzial7/shogun.png, id=2782, 151.3153pt x 182.18062pt>
 File: Rozdzial7/shogun.png Graphic file (type png)
 <use Rozdzial7/shogun.png>
 Package pdftex.def Info: Rozdzial7/shogun.png  used on input line 98.
@@ -1728,7 +1733,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--99
 \T1/lmr/m/n/10.95 dla bi-blio-
  []
 
-<Rozdzial7/shark.png, id=2799, 150.5625pt x 271.0125pt>
+<Rozdzial7/shark.png, id=2783, 150.5625pt x 271.0125pt>
 File: Rozdzial7/shark.png Graphic file (type png)
 <use Rozdzial7/shark.png>
 Package pdftex.def Info: Rozdzial7/shark.png  used on input line 105.
@@ -1753,7 +1758,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--106
 \T1/lmr/m/n/10.95 dla bi-blio-
  []
 
-<Rysunki/Rozdzial7/dlib.png, id=2800, 151.3153pt x 142.28156pt>
+<Rysunki/Rozdzial7/dlib.png, id=2784, 151.3153pt x 142.28156pt>
 File: Rysunki/Rozdzial7/dlib.png Graphic file (type png)
 <use Rysunki/Rozdzial7/dlib.png>
 Package pdftex.def Info: Rysunki/Rozdzial7/dlib.png  used on input line 112.
@@ -1779,9 +1784,89 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--113
  []
 
 [74 <./Rozdzial7/shogun.png (PNG copy)> <./Rozdzial7/shark.png> <./Rysunki/Rozd
-zial7/dlib.png>]) [75] [76
+zial7/dlib.png>] [75]
+<Rozdzial7/shogun_linear_svm.jpg, id=2801, 163.3603pt x 205.5178pt>
+File: Rozdzial7/shogun_linear_svm.jpg Graphic file (type jpg)
+<use Rozdzial7/shogun_linear_svm.jpg>
+Package pdftex.def Info: Rozdzial7/shogun_linear_svm.jpg  used on input line 14
+6.
+(pdftex.def)             Requested size: 105.84381pt x 133.1585pt.
 
-] [77] (./praca.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+[][]|\T1/lmr/m/n/10.95 Wy-nik
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+\T1/lmr/m/n/10.95 dzia-ªa-nia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+\T1/lmr/m/n/10.95 pro-gramu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+\T1/lmr/m/n/10.95 dla bi-blio-
+ []
+
+<Rozdzial7/shark_linear_svm.png, id=2802, 149.05687pt x 213.04594pt>
+File: Rozdzial7/shark_linear_svm.png Graphic file (type png)
+<use Rozdzial7/shark_linear_svm.png>
+Package pdftex.def Info: Rozdzial7/shark_linear_svm.png  used on input line 153
+.
+(pdftex.def)             Requested size: 92.61258pt x 132.36993pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+[][]|\T1/lmr/m/n/10.95 Wy-nik
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+\T1/lmr/m/n/10.95 dzia-ªa-nia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+\T1/lmr/m/n/10.95 pro-gramu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+\T1/lmr/m/n/10.95 dla bi-blio-
+ []
+
+<Rysunki/Rozdzial7/dlib_linear_svm.jpg, id=2803, 152.06813pt x 146.04562pt>
+File: Rysunki/Rozdzial7/dlib_linear_svm.jpg Graphic file (type jpg)
+<use Rysunki/Rozdzial7/dlib_linear_svm.jpg>
+Package pdftex.def Info: Rysunki/Rozdzial7/dlib_linear_svm.jpg  used on input l
+ine 160.
+(pdftex.def)             Requested size: 105.84381pt x 101.65404pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+[][]|\T1/lmr/m/n/10.95 Wy-nik
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+\T1/lmr/m/n/10.95 dzia-ªa-nia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+\T1/lmr/m/n/10.95 pro-gramu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+\T1/lmr/m/n/10.95 dla bi-blio-
+ []
+
+) [76 <./Rozdzial7/shogun_linear_svm.jpg> <./Rozdzial7/shark_linear_svm.png> <.
+/Rysunki/Rozdzial7/dlib_linear_svm.jpg>] [77] [78
+
+] [79] (./praca.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1797,10 +1882,10 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35473 strings out of 476017
- 638493 string characters out of 5789275
- 1928660 words of memory out of 5000000
- 53227 multiletter control sequences out of 15000+600000
+ 35495 strings out of 476017
+ 639568 string characters out of 5789275
+ 1936660 words of memory out of 5000000
+ 53258 multiletter control sequences out of 15000+600000
  600993 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,12n,109p,2262b,2479s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1821,10 +1906,10 @@ ublic/lm/lmtt12.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/lm/
 lmtti10.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sf
 xc1728.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfx
 c2074.pfb>
-Output written on praca.pdf (83 pages, 859220 bytes).
+Output written on praca.pdf (85 pages, 901729 bytes).
 PDF statistics:
- 3356 PDF objects out of 3580 (max. 8388607)
- 3156 compressed objects within 32 object streams
- 1964 named destinations out of 2073 (max. 500000)
- 863 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3357 PDF objects out of 3580 (max. 8388607)
+ 3151 compressed objects within 32 object streams
+ 1952 named destinations out of 2073 (max. 500000)
+ 878 words of extra memory for PDF output out of 10000 (max. 10000000)
 
