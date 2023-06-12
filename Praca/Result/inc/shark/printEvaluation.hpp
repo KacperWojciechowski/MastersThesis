@@ -63,5 +63,5 @@ inline void printSharkModelEvaluation(
     auto predData = createDataFromRange(predVec);
     // obliczenie AUC ROC
     auto roc = auc(labels, predData);
-    std::cout << "ROC: " << (-1 * roc) << std::endl << std::endl;
+    std::cout << "ROC: " << (-1*roc) << std::endl << std::endl;
 }

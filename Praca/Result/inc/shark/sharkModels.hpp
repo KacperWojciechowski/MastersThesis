@@ -14,7 +14,7 @@ inline void sharkModels()
 
     // odczytanie i podział danych
     auto classificationTrainData = sharkReadCsvData<ClassificationDataset>(
-        "wdbc_data_with_labels.csv");
+        "wdbc_data_with_labels_tn.csv");
     auto classificationTestData = splitAtElement(
         classificationTrainData,
         static_cast<std::size_t>(0.8*classificationTrainData.numberOfElements()));
@@ -27,8 +27,6 @@ inline void sharkModels()
     // wywołanie modeli
     sharkLinear(regressionTrainData, regressionTestData);
     //sharkLogistic(classificationTrainData, classificationTestData);
-    std::cout << "Test1" << std::endl;
     sharkSVM(classificationTrainData, classificationTestData);
-    std::cout << "Test2" << std::endl;
     //sharkNN(classificationTrainData, classificationTestData);
 }
