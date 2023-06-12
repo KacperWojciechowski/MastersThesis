@@ -18,7 +18,7 @@ inline void shogunModels()
     auto classificationDatasetTemp =
         readShogunCsvData("wdbc_data_with_labels_tn.csv", LabelPos::LAST);
     auto regressionDatasetTemp =
-        readShogunCsvData("IronGlutathione.csv", LabelPos::LAST);
+        readShogunCsvData("IronGlutathione_tn.csv", LabelPos::LAST);
     // rozdzielenie danych na regresory i zmienne odpowiedzi
     auto classificationTrainFeatures =
         some<CDenseFeatures<float64_t>>(

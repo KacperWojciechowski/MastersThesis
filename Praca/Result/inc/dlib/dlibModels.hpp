@@ -12,7 +12,7 @@ inline void dlibModels()
     matrix<double> classData;
     matrix<double> regData;
     std::ifstream classFile("wdbc_data_with_labels_tn.csv");
-    std::ifstream regFile("IronGlutathione.csv");
+    std::ifstream regFile("IronGlutathione_tn.csv");
     classFile >> classData;
     regFile >> regData;
     // rozpakowanie danych klasyfikacyjnych
