@@ -304,44 +304,7 @@ W trakcie analizy zestawów danych wybrany został przedstawiony poniżej zestaw
 
 \subsection{Maszyna wektorów nośnych}
 
-%Badanie zależności w modelu maszyny wektorów nośnych odbyło się z wykorzystaniem wykresu wpływu zmiennej decyzyjnej na zmienną odpowiedzi opartego o p-wartość. Jako poziom istotności testu o braku wypływu zmiennej na odpowiedź przyjęto 0,05. Rysunek \ref{fig:pvalue1} przedstawia w/w wykres wraz z p-wartościami dla poszczególnych zmiennych. Zauważyć można, że dla części zmiennych nie została wyznaczona p-wartość -- oznacza to, że część zmiennych jest ze sobą skorelowanych.
-
-%Pierwszym krokiem w wybraniu istotnych zmiennych było usunięcie zmiennych skorelowanych, drugim natomiast stopniowe usuwanie zmiennych o p-wartości powyżej progu 0,05. Rysunek \ref{fig:pvalue2} przedstawia listę wraz z wykresem kolumnowym istotnych predyktorów. Ich lista, wraz z odpowiadającymi im p-wartościami została umieszczona w tabeli \ref{lin_reg:1}.
-
 Do procesu uczenia maszyny wektorów nośnych wykorzystano wszystkie zmienne pozostałe po procesie czyszczenia i eksploracji danych. W celu walidacji użyto metody wybrania losowego zestawu walidacyjnego spośród dostarczonych danych, w proporcji 80\% obserwacji uczących i 20\% testowych, z użyciem wartości 1234 dla ziarna generatora liczb pseudolosowych. Jako funkcję jądra maszyny wektorów nośnych (ang. Support Vector Machine, SVM) wybrano jądro radialne (ang. \textit{Radial Basis Function}), która jest domyślnym wyborem dla SVM w środowisku JMP. 
-
-%\begin{longtable}{l|c}
-%	\centering
-%	Nazwa zmiennej & p-wartość \\
-%	\hline
-	%\textit{Log mean largest texture} & 0,00000 \\
-	%\textit{Log mean largest compactness} & 0,00000 \\
-	%\textit{Cube root mean largest symmetry} & 0,00001 \\
-	%\textit{Arrhenius inverse std err symmetry} & 0,00005 \\
-	%\textit{Arrhenius inverse std err radius} & 0,00018 \\
-	%\textit{Cube root mean concave points} & 0,00056 \\
-	%\textit{Cube root mean largest concavity} & 0,00069 \\
-	%\textit{Log std err texture} & 0,00252 \\
-	%\textit{Cube root mean largest perimeter} & 0,00526 \\
-	%\textit{Log mean smoothness} & 0,04867 \\
-	%\textit{Log mean radius} & 0,04884 \\
-	%\caption{Lista istotnych predyktorów}
-%	\label{lin_reg:1}
-%\end{longtable}
-
-%\begin{figure}[!ht]
-%	\centering
-%	\includegraphics[width=0.7\linewidth]{Rysunki/Rozdzial3/pvalue1}
-%	\caption{Zestawienie p-wartości dla zmiennych decyzyjnych.}
-%	\label{fig:pvalue1}
-%\end{figure}
-
-%\begin{figure}[!ht]
-%	\centering
-%	\includegraphics[width=0.7\linewidth]{Rysunki/Rozdzial3/pvalue2}
-%	\caption{Wykres p-wartości istotnych zmiennych decyzyjnych.}
-%	\label{fig:pvalue2}
-%\end{figure}
 
 \begin{longtable}{l | c}
 	\centering
@@ -376,7 +339,7 @@ Do procesu uczenia maszyny wektorów nośnych wykorzystano wszystkie zmienne poz
 	\end{minipage}	
 \end{figure}
 
-Utworzony w ten sposób model uzyskał współczynnik błędnej klasyfikacji wynoszący 2,64\% dla danych testowych, oraz 9,57\% dla danych uczących. Tabela \ref{svm:1} przedstawia współczyniki wyliczone w procesie uczenia dla poszczególnych regresorów. Rysunki \ref{fig:rocsvm1test} oraz \ref{fig:rocsvm1val} przedstawiają krzywe charakterystyczne odbiornika dla uzyskanego modelu, pola pod którymi uzyskały wartość odpowiednio 0,9972 dla danych uczących i 0,9632 dla danych testowych.
+Utworzony w ten sposób model uzyskał współczynnik błędnej klasyfikacji wynoszący 2,64\% dla danych uczących, oraz 9,57\% dla danych testowych. Tabela \ref{svm:1} przedstawia współczyniki wyliczone w procesie uczenia dla poszczególnych regresorów. Rysunki \ref{fig:rocsvm1test} oraz \ref{fig:rocsvm1val} przedstawiają krzywe charakterystyczne odbiornika dla uzyskanego modelu, pola pod którymi uzyskały wartość odpowiednio 0,9972 dla danych uczących i 0,9632 dla danych testowych.
 
 \subsection{Regresja liniowa}
 
