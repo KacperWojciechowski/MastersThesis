@@ -19,7 +19,7 @@ inline void sharkModels()
         classificationTrainData,
         static_cast<std::size_t>(0.8*classificationTrainData.numberOfElements()));
     auto regressionTrainData = sharkReadCsvData<RegressionDataset>(
-        "IronGlutathione.csv");
+        "IronGlutathione_tn.csv");
     auto regressionTestData = splitAtElement(
         regressionTrainData,
         static_cast<std::size_t>(0.8*regressionTrainData.numberOfElements()));
