@@ -14,7 +14,7 @@ inline void sharkModels()
 
     // odczytanie i podział danych
     auto classificationTrainData = sharkReadCsvData<ClassificationDataset>(
-        "wdbc_data_with_labels.csv");
+        "wdbc_data_with_labels_tn.csv");
     auto classificationTestData = splitAtElement(
         classificationTrainData,
         static_cast<std::size_t>(0.8*classificationTrainData.numberOfElements()));

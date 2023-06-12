@@ -15,18 +15,15 @@ inline void sharkSVM(const shark::ClassificationDataset& trainData,
     using namespace shark;
 
     // utworzenie jądra
-    // auto tmp = binarySubProblem(trainData, 0, 1);
-    double gamma = 0.1111;
+    double gamma = 0.16;
     GaussianRbfKernel<> kernel(gamma);
     KernelClassifier<RealVector> svm;
-    double regularization = 1.0;
+    double regularization = 1;
     bool bias = true;
     // utworzenie i konfiguracja modelu
     CSvmTrainer<RealVector> trainer(
         &kernel, regularization, bias);
     trainer.sparsify() = false;
-    //trainer.stoppingCondition().minAccuracy=1e-6;
-    //trainer.setCacheSize(0x1000000);
     // trening
     trainer.train(svm, trainData);
     // ewaluacja
