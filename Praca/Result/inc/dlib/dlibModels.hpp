@@ -11,7 +11,7 @@ inline void dlibModels()
     
     matrix<double> classData;
     matrix<double> regData;
-    std::ifstream classFile("wdbc_data_with_labels.csv");
+    std::ifstream classFile("wdbc_data_with_labels_tn.csv");
     std::ifstream regFile("IronGlutathione.csv");
     classFile >> classData;
     regFile >> regData;

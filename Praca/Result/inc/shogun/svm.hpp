@@ -67,9 +67,7 @@ inline void shogunSVM(
 
     // trening
     svm->set_labels(trainOutputs);
-    std::cout << "t" << std::endl;
     svm->train(trainInputs);
-    std::cout << "u" << std::endl;
 
     // ewaluacja modelu
     std::cout << "----- Shogun SVM -----" << std::endl;

@@ -16,7 +16,7 @@ inline void dlibSVM(
     using Kernel = radial_basis_kernel<matrix<double, 11, 1>>;
     // utworzenie trenera maszyny wektorów nośnych
     svm_nu_trainer<Kernel> svmTrainer;
-    svmTrainer.set_kernel(Kernel(0.1));
+    svmTrainer.set_kernel(Kernel(0.16));
     // utworzenie trenera klasyfikatora wieloklasowego
     OVOTrainer trainer;
     trainer.set_trainer(svmTrainer);
