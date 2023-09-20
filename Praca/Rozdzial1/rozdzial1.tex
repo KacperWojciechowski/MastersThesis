@@ -1,36 +1,36 @@
-\chapter{Wstęp}
-\section{Wprowadzenie} % -------------------------------------------------------------------------
+\chapter{Introduction}
+\section{About modern challenges} % -------------------------------------------------------------------------
 
-We współczesnym stanie techniki coraz częściej można spotkać się z urządzeniami i programami o inteligentnych funkcjach, takich jak predykcja zjawisk na podstawie zestawu danych, rozpoznawanie obrazu, analiza mowy, czy przetwarzanie języka naturalnego. Znajdują one zastosowanie w różnych dziedzinach codziennego życia, m.in. w medycynie. W zależności od potrzeb, techniki uczenia maszynowego można wykorzystać do zastosowań medycznych, takich jak np. rozpoznawanie komórek rakowych na skanach rezonansem magnetycznym, podejmowanie decyzji na podstawie zbioru objawów obecnych u pacjenta, lub przewidywanie norm związków naturalnie występujących w organiźmie ludzkim w zależności od okoliczności i wyników pomiarów. 
+In current times people encounter more and more devices with intelligent functions, such as predicting phenomenons based on various datasets, image recognition, speech analysis, or natural language processing. They make its way into more daily life aspects, such as eg. medicine, work and private homes. Depending on the needs, few of the applicable uses of machine learning in medicine are recognition of cancer cells using MRI scans, diagnosis based on patient's symptoms, or setting norms for compounds naturally occuring in human body, depending on the situation (such as stress) and organic samples tests.
 
-Jedną z istotnych dziedzin medycyny jest biostatystyka, polegająca na wykorzystaniu analizy statystycznej do wnioskowania na podstawie zbiorów danych, takich jak rezultaty przeprowadzonych badań (np. morfologicznych, poziomu poszczególnych hormonów we krwii, itp.), informacji o nawykach żywieniowych oraz stylu życia pacjenta. Szczególnie istotną formą systemów operujących w tej dziedzinie są systemy eksperckie, wykorzystujące techniki płytkiego i głębokiego uczenia maszynowego w celu wspierania diagnozy stawianej przez wykwalifikowanych lekarzy \cite{expert}. 
+One of the major parts of medical field is biostatistics, based on statistical analysis and reasoning based on data such as blood tests results, eating habits and lifestyle of the patient. Especially important type of systems present in this field are expert systems, utilizing shallow and deep machine learning to help doctors diagnose any potential issues. \cite{expert}
 
-U podstaw wyżej wymienionych zagadnień leży implementacja rozwiązań opartych o teorię uczenia maszynowego, oraz wszelkie związane z tym problemy. W związku z tym na przestrzeni lat powstało wiele gotowych narzędzi, takich jak biblioteki i \textit{frameworki}, mające na celu wsparcie programistów w szybkim i prawidłowym wprowadzaniu rozwiązań sztucznej inteligencji na różne platformy docelowe oraz w różnych językach, począwszy od języka C++, przez Python, po środowiska takie jak Matlab \cite{tf_api}. 
+At the foundation of aforementioned subjects lies the implementation of machine learning solutions and all related problems. Due to this fact, over the decades specialists created various tools, such as libraries and frameworks, aiming to help programmers in quick and accurate application of artificial intelligence products on different platforms and in different languages, starting from C++, through Python, reaching environments such as Matlab \cite{tf_api}.
 
-Istotnym krokiem w przygotowywaniu oprogramowania wykorzystującego sztucz-ną inteligencję jest prawidłowy wybór wspomnianych wcześniej narzędzi dokonywany na etapie projektowania, tak, aby oferowały one możliwości adekwatne do wymagań funkcjonalnych. Niniejsza praca dokonuje analizy porównawczej bibliotek uczenia maszynowego dla języka C++ w kontekście zastosowań w dziedzinie biostatystyki, celem umożliwienia czytelnikowi trafnego wyboru odpowiedniego narzędzia do realizacji projektu badawczego. Warto zaznaczyć, że niniejsza praca przedstawia jedynie wybrany zakres głównych funkcjonalności omawianych bibliotek ze względu na zastosowania w biostatystyce, w związku z czym mogą one posiadać większą liczbę bardziej szczegółowych funkcjonalności, lub nowe metody dodane po utworzeniu niniejszej pracy. W trakcie realizacji pracy implementację bazowano na przykładach zawartych w podręczniku \cite{handsOnMachineLearning}, lecz przedstawione w niej kody źródłowe stanowią wytwór autora przystosowany do wybranych modeli i zestawów danych, oraz opatrzony metodami ewluacji poprawności modeli. 
+A major step in preparing AI software is proper selection of needed tools, performed at the design stage, so that they offer functionalities adequate to the requirements. This dissertation performs comparative analysis of machine learning libraries for C++ for use in biostatistics, and aims to help the reader choose the right tools for a research project. It is worth to mention, that only a selected subset of functionalities was presented, suitable for the context of test datasets. As such, mentioned libraries can offer broader range of more precise methods, or new method added after creation of this paper. The realization of this dissertation, the implementation parts were inspired by the examples in this handbook \cite{handsOnMachineLearning}, however each listing is the creation of the author, fine-tuned to the used methods and datasets, and equiped with evaluation mechanisms.
 
-\section{Cel i zakres pracy} % ----------------------------------------------------------------------
+\section{Aim and scope} % ----------------------------------------------------------------------
 
-Celem pracy jest przeprowadzenie analizy i przygotowanie zestawienia bibliotek do uczenia maszynowego dla języka C++, obrazując przykłady bazujące na zestawie danych biostatystycznych.
+Aim of this dissertation is to perform a comparative analysis and breakdown of machine learning libraries for C++, presenting examples based on biostatistics datasets.
 
-Zakres pracy obejmuje:
+Scope of the thesis:
 
 \begin{itemize}
-    \item [$\bullet$] przegląd dostępnych bibliotek języka C++;
-    \item [$\bullet$] inżynierię i kształtowanie danych;
-    \item [$\bullet$] płytkie i głębokie uczenie nadzorowane;
-    \item [$\bullet$] kwestie wydajnościowe w dopasowywaniu i wdrażaniu modeli;
-    \item [$\bullet$] badania praktyczne w oparciu o zestaw danych medycznych i biologicznych.
+    \item [$\bullet$] overview of available libraries;
+    \item [$\bullet$] data engineering;
+    \item [$\bullet$] shallow and deep supervised learning;
+    \item [$\bullet$] efficiency aspects of selecting models;
+    \item [$\bullet$] practical experiment based on medical and biological data.
 \end{itemize}
 
-\section{Struktura pracy} % ----------------------------------------------------------------------
+\section{Structure} % ----------------------------------------------------------------------
 
-Pierwszy rozdział przedstawia ogólne zagadnienie poruszone w pracy, począwszy od dziedziny problemu i jej zastosowań, do istoty tematu pracy. Dodatkowo omawiany jest cel i zakres realizacji pracy, oraz jej struktura.
+First chapter shows the general aspect touched in this paper, starting from the field of the problem and its uses, ending at the dissertations main topic, additionally describing aim and scope of the thesis, and its structure. 
 
-Kolejny rozdział wprowadza czytelnika do tematu uczenia maszynowego, oraz napotykanych w nim problemów dotyczących złożoności obliczeniowej oraz zużycia zasobów. Stanowią one podstawę do zaproponowania języka C++ jako technologii wspierającej ich rozwiązanie przy pomocy bibliotek. 
+Following chapter guides user through the machine learning topic and usually encountered problems regarding computational complexity and resource usage. Those issues are the base argument of suggesting C++ language as a desired technology for solving them via various libraries.
 
-Tematem rozdziału trzeciego jest przygotowanie elementów testowych do wykorzystania w późniejszej analizie porównawczej. Składa się na nie wybranie i przygotowanie zestawu danych biostatystycznych do procesu uczenia oraz wybrane wzorcowych rozwiązań. Czytelnik przeprowadzony jest przez normalizację danych i selekcję najlepiej dopasowanych regresorów, oraz zostaje zapoznany z przykładowymi wynikami rozwiązań wzorcowych.
+Data engineering is the main topic of the third chapter. It describes the choice and preparation of biostatistics datasets for the learning process, and selected benchmark methods. The reader is presented with the way of data normalization, selection of regressors, and the control results of selected methods.
 
-Kolejne trzy rozdziały skupiają się na analizie głównych funkcjonalności wybranych bibliotek pod kątem zastosowań w biostatystyce. Czwarty rozdział przedstawia bibliotekę Shogun, piąty zapoznaje użytkownika z biblioteką Shark-ML, natomiast szósty omawia bibliotekę Dlib. Wprowadzają one czytelnika kolejno w poszczególne aspekty pracy z wybranym produktem, od akceptowanych formatów danych, przez manipulację obserwacjami, po dostępne modele i metody ich analizy. 
+Three of the following chapters contain the analysis of selected main functionalities of Shogun, Shark-ML and Dlib libraries respectively. They discuss how does the way of work with each of the products look like, starting from accepted data formats, through data manipulation, ending on available models and their analysis.
 
-Rozdział siódmy zestawia podobieństwa i różnice między bibliotekami  na podstawie wyników przeprowadzonych procesów uczenia, zestawiając wyniki uzyskanych modeli oraz dostępne funkcjonalności w formie tabel. Dodatkowo, zawarta tu została także subiektywna opinia autora w postaci opisów słownych na podstawie jego doświadczeń z implementacją rozwiązań i pracą ze źródłami wiedzy.
+Seventh chapter sums up the similarities and differences between mentioned libraries based on results of benchmarking machine learning methods, and available functionalities. Additionally, it describes author's subjective opinion regarding his personal experiences with creating implementations, and working with knowledge sources for each of the product.
