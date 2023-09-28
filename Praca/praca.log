@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  20 SEP 2023 22:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  28 SEP 2023 21:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -104,71 +104,6 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(d:/Programy/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2023/03/28 3.87 The Babel package
-\babel@savecnt=\count272
-\U@D=\dimen150
-\l@unhyphenated=\language87
-
-(d:/Programy/texlive/2023/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@readstream=\read2
-\bbl@dirlevel=\count273
-
-(d:/Programy/texlive/2023/texmf-dist/tex/generic/babel-polish/polish.ldf
-Language: polish 2022/03/12 1.3 Babel support for Polish
-Package babel Info: Making " an active character on input line 101.
-))
-(d:/Programy/texlive/2023/texmf-dist/tex/generic/babel/locale/pl/babel-polish.t
-ex
-Package babel Info: Importing font and identification data for polish
-(babel)             from babel-pl.ini. Reported on input line 11.
-) (d:/Programy/texlive/2023/texmf-dist/tex/latex/polski/polski.sty
-Package: polski 2021/08/25 v1.3.6 Polish language package
-
-   Switching to Polish text encoding and Polish maths fonts.
-(d:/Programy/texlive/2023/texmf-dist/tex/latex/base/ot4enc.def
-File: ot4enc.def 2021/04/29 v2.0v Standard LaTeX file
-Now handling font encoding OT4 ...
-... no UTF-8 mapping file for font encoding OT4
-)
-LaTeX Font Info:    Trying to load font information for OT4+cmr on input line 3
-62.
-
-(d:/Programy/texlive/2023/texmf-dist/tex/latex/polski/ot4cmr.fd
-File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
-)
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT4/cmr/bx/n on input line 362.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT4/cmss/m/n on input line 362.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT4/cmr/m/it on input line 362.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT4/cmtt/m/n on input line 362.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT4/cmss/bx/n on input line 362.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT4/cmr/bx/it on input line 362.
-LaTeX Font Info:    Encoding `OT1' has changed to `OT4' for symbol font
-(Font)              `operators' in the math version `normal' on input line 362.
-
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT4/cmr/m/n on input line 362.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/plm/m/it on input line 362.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> OMS/plsy/m/n on input line 362.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/plex/m/n on input line 362.
-LaTeX Font Info:    Encoding `OT1' has changed to `OT4' for symbol font
-(Font)              `operators' in the math version `bold' on input line 362.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT4/cmr/bx/n on input line 362.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/plm/b/it on input line 362.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> OMS/plsy/b/n on input line 362.
-)
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks21
@@ -245,11 +180,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (d:/Programy/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count274
+\c@section@level=\count272
 )
-\@linkdim=\dimen151
-\Hy@linkcounter=\count275
-\Hy@pagecounter=\count276
+\@linkdim=\dimen150
+\Hy@linkcounter=\count273
+\Hy@pagecounter=\count274
 
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
@@ -262,7 +197,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (d:/Programy/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count277
+\Hy@SavedSpaceFactor=\count275
 
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
@@ -284,13 +219,13 @@ Package hyperref Info: Plain pages OFF on input line 4192.
 Package hyperref Info: Backreferencing OFF on input line 4197.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4425.
-\c@Hy@tempcnt=\count278
+\c@Hy@tempcnt=\count276
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen152
+\XeTeXLinkMargin=\dimen151
 
 (d:/Programy/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -299,9 +234,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count279
-\Field@Width=\dimen153
-\Fld@charsize=\dimen154
+\Fld@menulength=\count277
+\Field@Width=\dimen152
+\Fld@charsize=\dimen153
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -314,15 +249,15 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\c@Item=\count280
-\c@Hfootnote=\count281
+\c@Item=\count278
+\c@Hfootnote=\count279
 )
 Package hyperref Info: Driver: hpdftex.
 
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
-\Fld@listcount=\count282
-\c@bookmark@seq@number=\count283
+\Fld@listcount=\count280
+\c@bookmark@seq@number=\count281
 
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.st
 y
@@ -365,17 +300,17 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (d:/Programy/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count284
-\Gm@cntv=\count285
-\c@Gm@tempcnt=\count286
-\Gm@bindingoffset=\dimen155
-\Gm@wd@mp=\dimen156
-\Gm@odd@mp=\dimen157
-\Gm@even@mp=\dimen158
-\Gm@layoutwidth=\dimen159
-\Gm@layoutheight=\dimen160
-\Gm@layouthoffset=\dimen161
-\Gm@layoutvoffset=\dimen162
+\Gm@cnth=\count282
+\Gm@cntv=\count283
+\c@Gm@tempcnt=\count284
+\Gm@bindingoffset=\dimen154
+\Gm@wd@mp=\dimen155
+\Gm@odd@mp=\dimen156
+\Gm@even@mp=\dimen157
+\Gm@layoutwidth=\dimen158
+\Gm@layoutheight=\dimen159
+\Gm@layouthoffset=\dimen160
+\Gm@layoutvoffset=\dimen161
 \Gm@dimlist=\toks24
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/tocloft/tocloft.sty
@@ -410,8 +345,8 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cftbeforefigskip=\skip80
 \cftfigindent=\skip81
 \cftfignumwidth=\skip82
-\c@lofdepth=\count287
-\c@lotdepth=\count288
+\c@lofdepth=\count285
+\c@lotdepth=\count286
 \cftbeforelottitleskip=\skip83
 \cftafterlottitleskip=\skip84
 \cftbeforetabskip=\skip85
@@ -420,9 +355,9 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/tools/array.sty
 Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen163
+\col@sep=\dimen162
 \ar@mcellbox=\box53
-\extrarowheight=\dimen164
+\extrarowheight=\dimen163
 \NC@list=\toks25
 \extratabsurround=\skip88
 \backup@length=\skip89
@@ -433,53 +368,53 @@ Package: caption 2023/03/12 v3.6j Customizing captions (AR)
 
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
-\caption@tempdima=\dimen165
-\captionmargin=\dimen166
-\caption@leftmargin=\dimen167
-\caption@rightmargin=\dimen168
-\caption@width=\dimen169
-\caption@indent=\dimen170
-\caption@parindent=\dimen171
-\caption@hangindent=\dimen172
+\caption@tempdima=\dimen164
+\captionmargin=\dimen165
+\caption@leftmargin=\dimen166
+\caption@rightmargin=\dimen167
+\caption@width=\dimen168
+\caption@indent=\dimen169
+\caption@parindent=\dimen170
+\caption@hangindent=\dimen171
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count289
-\c@continuedfloat=\count290
+\c@caption@flags=\count287
+\c@continuedfloat=\count288
 Package caption Info: hyperref package is loaded.
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/floatflt/floatflt.sty
 Package: floatflt 1997/07/16 v. 1.31
-\c@OptionTest=\count291
+\c@OptionTest=\count289
 \figbox=\box55
 \tabbox=\box56
 \pagebox=\box57
-\ffigcount=\count292
-\ftabcount=\count293
-\fftest=\count294
-\hangcount=\count295
-\nosuccesstryfig=\count296
-\nosuccesstrytab=\count297
-\figgutter=\dimen173
-\tabgutter=\dimen174
-\htdone=\dimen175
-\pageht=\dimen176
-\startpageht=\dimen177
-\tabbredd=\dimen178
-\floatfltwidth=\dimen179
-\fltitemwidth=\dimen180
+\ffigcount=\count290
+\ftabcount=\count291
+\fftest=\count292
+\hangcount=\count293
+\nosuccesstryfig=\count294
+\nosuccesstrytab=\count295
+\figgutter=\dimen172
+\tabgutter=\dimen173
+\htdone=\dimen174
+\pageht=\dimen175
+\startpageht=\dimen176
+\tabbredd=\dimen177
+\floatfltwidth=\dimen178
+\fltitemwidth=\dimen179
 \outputpretest=\toks26
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count298
+\c@KVtest=\count296
 \sf@farskip=\skip90
-\sf@captopadj=\dimen181
+\sf@captopadj=\dimen180
 \sf@capskip=\skip91
 \sf@nearskip=\skip92
-\c@subfigure=\count299
-\c@subfigure@save=\count300
-\c@subtable=\count301
-\c@subtable@save=\count302
+\c@subfigure=\count297
+\c@subfigure@save=\count298
+\c@subtable=\count299
+\c@subtable@save=\count300
 \sf@top=\skip93
 \sf@bottom=\skip94
 )
@@ -497,13 +432,13 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 )
-\Gin@req@height=\dimen182
-\Gin@req@width=\dimen183
+\Gin@req@height=\dimen181
+\Gin@req@width=\dimen182
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/here/here.sty)
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count303
+\c@float@type=\count301
 \float@exts=\toks27
 \float@box=\box58
 \@float@everytoks=\toks28
@@ -516,28 +451,28 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip95
-\multirow@cntb=\count304
+\multirow@cntb=\count302
 \multirow@dima=\skip96
-\bigstrutjot=\dimen184
+\bigstrutjot=\dimen183
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count305
+\lst@mode=\count303
 \lst@gtempboxa=\box60
 \lst@token=\toks30
-\lst@length=\count306
-\lst@currlwidth=\dimen185
-\lst@column=\count307
-\lst@pos=\count308
-\lst@lostspace=\dimen186
-\lst@width=\dimen187
-\lst@newlines=\count309
-\lst@lineno=\count310
-\lst@maxwidth=\dimen188
+\lst@length=\count304
+\lst@currlwidth=\dimen184
+\lst@column=\count305
+\lst@pos=\count306
+\lst@lostspace=\dimen185
+\lst@width=\dimen186
+\lst@newlines=\count307
+\lst@lineno=\count308
+\lst@maxwidth=\dimen187
 
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count311
-\lst@skipnumbers=\count312
+\c@lstnumber=\count309
+\lst@skipnumbers=\count310
 \lst@framebox=\box61
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
@@ -567,7 +502,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks31
 \XKV@tempa@toks=\toks32
 )
-\XKV@depth=\count313
+\XKV@depth=\count311
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
@@ -575,7 +510,7 @@ Package: mfirstuc 2022/10/14 v2.08 (NLCT)
 
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count314
+\etb@tempcnta=\count312
 )
 \@glsmfirst=\toks33
 \@glsmrest=\toks34
@@ -588,7 +523,7 @@ Package: datatool-base 2019/09/27 v2.32 (NLCT)
 
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/substr/substr.sty
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count315
+\c@su@anzahl=\count313
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/datatool/datatool-fp.sty
 Package: datatool-fp 2019/09/27 v2.32 (NLCT)
@@ -599,19 +534,19 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/fp/defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count316
+\actioncount=\count314
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/fp/fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count317
-\FP@xia=\count318
-\FP@xib=\count319
-\FP@xfa=\count320
-\FP@xfb=\count321
-\FP@rega=\count322
-\FP@regb=\count323
-\FP@regs=\count324
-\FP@times=\count325
+\FP@xs=\count315
+\FP@xia=\count316
+\FP@xib=\count317
+\FP@xfa=\count318
+\FP@xfb=\count319
+\FP@rega=\count320
+\FP@regb=\count321
+\FP@regs=\count322
+\FP@times=\count323
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/fp/fp-addons.sty
 Package: fp-addons 1995/03/15
@@ -630,7 +565,7 @@ Package: fp-pas 1994/08/29
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/fp/fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count326
+\FPseed=\count324
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
@@ -642,29 +577,16 @@ Package: fp-upn 1996/10/21
 Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks35
-\@dtl@tmpcount=\count327
+\@dtl@tmpcount=\count325
 \dtl@tmplength=\skip97
-\dtl@sortresult=\count328
-\@dtl@numgrpsepcount=\count329
-\@dtl@datatype=\count330
-\dtl@codeA=\count331
-\dtl@codeB=\count332
-\@dtl@foreach@level=\count333
+\dtl@sortresult=\count326
+\@dtl@numgrpsepcount=\count327
+\@dtl@datatype=\count328
+\dtl@codeA=\count329
+\dtl@codeB=\count330
+\@dtl@foreach@level=\count331
 )
-(d:/Programy/texlive/2023/texmf-dist/tex/latex/tracklang/tracklang.sty
-Package: tracklang 2022/12/13 v1.6.1 (NLCT) Track Languages
-
-(d:/Programy/texlive/2023/texmf-dist/tex/generic/tracklang/tracklang.tex))
-(d:/Programy/texlive/2023/texmf-dist/tex/latex/translator/translator.sty
-Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
-)
-(d:/Programy/texlive/2023/texmf-dist/tex/latex/glossaries-polish/glossaries-pol
-ish.ldf
-File: glossaries-polish.ldf 2014/11/23 v1.0
-
-(d:/Programy/texlive/2023/texmf-dist/tex/latex/glossaries-polish/glossaries-pol
-ish-utf8.ldf))
-\gls@level=\count334
+\gls@level=\count332
 \@gls@tmpb=\toks36
 \gls@tmplen=\skip98
 \glskeylisttok=\toks37
@@ -690,17 +612,17 @@ Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTright=\skip101
 \LTpre=\skip102
 \LTpost=\skip103
-\LTchunksize=\count335
-\LTcapwidth=\dimen189
+\LTchunksize=\count333
+\LTcapwidth=\dimen188
 \LT@head=\box62
 \LT@firsthead=\box63
 \LT@foot=\box64
 \LT@lastfoot=\box65
 \LT@gbox=\box66
-\LT@cols=\count336
-\LT@rows=\count337
-\c@LT@tables=\count338
-\c@LT@chunks=\count339
+\LT@cols=\count334
+\LT@rows=\count335
+\c@LT@tables=\count336
+\c@LT@chunks=\count337
 \LT@p@ftn=\toks41
 )
 \glsdescwidth=\skip104
@@ -712,20 +634,20 @@ Package: glossary-super 2022/11/03 v4.52 (NLCT)
 
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2020/02/02 v4.1g the supertabular environment
-\c@tracingst=\count340
-\ST@wd=\dimen190
+\c@tracingst=\count338
+\ST@wd=\dimen189
 \ST@rightskip=\skip106
 \ST@leftskip=\skip107
 \ST@parfillskip=\skip108
-\ST@pageleft=\dimen191
-\ST@headht=\dimen192
-\ST@tailht=\dimen193
-\ST@pagesofar=\dimen194
-\ST@pboxht=\dimen195
-\ST@lineht=\dimen196
-\ST@prevht=\dimen197
-\ST@toadd=\dimen198
-\ST@dimen=\dimen199
+\ST@pageleft=\dimen190
+\ST@headht=\dimen191
+\ST@tailht=\dimen192
+\ST@pagesofar=\dimen193
+\ST@pboxht=\dimen194
+\ST@lineht=\dimen195
+\ST@prevht=\dimen196
+\ST@toadd=\dimen197
+\ST@dimen=\dimen198
 \ST@pbox=\box67
 ))
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/glossaries/styles/glossary-tree.
@@ -738,7 +660,7 @@ Package: dashrule 2013/03/28 v1.3 Dashed rules
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
 Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 )
-\c@hdr@segments=\count341
+\c@hdr@segments=\count339
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
@@ -755,15 +677,15 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count342
-\calc@Bcount=\count343
-\calc@Adimen=\dimen256
-\calc@Bdimen=\dimen257
+\calc@Acount=\count340
+\calc@Bcount=\count341
+\calc@Adimen=\dimen199
+\calc@Bdimen=\dimen256
 \calc@Askip=\skip119
 \calc@Bskip=\skip120
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count344
+\calc@Ccount=\count342
 \calc@Cskip=\skip121
 )
 (./packages/zmienne.sty) (./packages/strona_tytulowa.sty)
@@ -781,40 +703,36 @@ Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
-LaTeX Font Info:    Encoding `OT4' has changed to `OT1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 22.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT4/cmr/m/n --> OT1/lmr/m/n on input line 22.
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/plm/m/it --> OML/lmm/m/it on input line 23.
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/plsy/m/n --> OMS/lmsy/m/n on input line 24.
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/plex/m/n --> OMX/lmex/m/n on input line 25.
-LaTeX Font Info:    Encoding `OT4' has changed to `OT1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 26.
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT4/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/plm/b/it --> OML/lmm/b/it on input line 27.
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/plsy/b/n --> OMS/lmsy/b/n on input line 28.
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT4/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT4/cmss/m/n --> OT1/lmss/m/n on input line 32.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT4/cmr/m/it --> OT1/lmr/m/it on input line 33.
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT4/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
 (Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT4/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT4/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
@@ -828,14 +746,14 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 \@float@every@algorithm=\toks42
-\c@algorithm=\count345
+\c@algorithm=\count343
 )
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count346
-\c@ALC@line=\count347
-\c@ALC@rem=\count348
-\c@ALC@depth=\count349
+\c@ALC@unique=\count344
+\c@ALC@line=\count345
+\c@ALC@rem=\count346
+\c@ALC@depth=\count347
 \ALC@tlm=\skip122
 \algorithmicindent=\skip123
 )
@@ -869,10 +787,12 @@ Already applied: [0000/00/00] Usage of raw or classic option list on input line
 \scr@dte@tocline@numberwidth=\skip124
 \scr@dte@tocline@numbox=\box68
 )
-Package tocbasic Info: setting babel extension for `nlo' on input line 187.
-Package tocbasic Info: setting babel extension for `nls' on input line 188.
-\nomlabelwidth=\dimen258
-\nom@tempdim=\dimen259
+Package tocbasic Info: omitting babel extension for `nlo'
+(tocbasic)             because of missing \bbl@set@language on input line 187.
+Package tocbasic Info: omitting babel extension for `nls'
+(tocbasic)             because of missing \bbl@set@language on input line 188.
+\nomlabelwidth=\dimen257
+\nom@tempdim=\dimen258
 \nomitemsep=\skip125
 )
 \@nomenclaturefile=\write3
@@ -893,54 +813,54 @@ Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
 
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count350
+\lrq@indent=\count348
 
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count351
-\c@listtotal=\count352
-\c@listcount=\count353
-\c@liststart=\count354
-\c@liststop=\count355
-\c@citecount=\count356
-\c@citetotal=\count357
-\c@multicitecount=\count358
-\c@multicitetotal=\count359
-\c@instcount=\count360
-\c@maxnames=\count361
-\c@minnames=\count362
-\c@maxitems=\count363
-\c@minitems=\count364
-\c@citecounter=\count365
-\c@maxcitecounter=\count366
-\c@savedcitecounter=\count367
-\c@uniquelist=\count368
-\c@uniquename=\count369
-\c@refsection=\count370
-\c@refsegment=\count371
-\c@maxextratitle=\count372
-\c@maxextratitleyear=\count373
-\c@maxextraname=\count374
-\c@maxextradate=\count375
-\c@maxextraalpha=\count376
-\c@abbrvpenalty=\count377
-\c@highnamepenalty=\count378
-\c@lownamepenalty=\count379
-\c@maxparens=\count380
-\c@parenlevel=\count381
-\blx@tempcnta=\count382
-\blx@tempcntb=\count383
-\blx@tempcntc=\count384
-\c@blx@maxsection=\count385
-\blx@maxsegment@0=\count386
-\blx@notetype=\count387
-\blx@parenlevel@text=\count388
-\blx@parenlevel@foot=\count389
-\blx@sectionciteorder@0=\count390
-\blx@sectionciteorderinternal@0=\count391
-\blx@entrysetcounter=\count392
-\blx@biblioinstance=\count393
+\c@tabx@nest=\count349
+\c@listtotal=\count350
+\c@listcount=\count351
+\c@liststart=\count352
+\c@liststop=\count353
+\c@citecount=\count354
+\c@citetotal=\count355
+\c@multicitecount=\count356
+\c@multicitetotal=\count357
+\c@instcount=\count358
+\c@maxnames=\count359
+\c@minnames=\count360
+\c@maxitems=\count361
+\c@minitems=\count362
+\c@citecounter=\count363
+\c@maxcitecounter=\count364
+\c@savedcitecounter=\count365
+\c@uniquelist=\count366
+\c@uniquename=\count367
+\c@refsection=\count368
+\c@refsegment=\count369
+\c@maxextratitle=\count370
+\c@maxextratitleyear=\count371
+\c@maxextraname=\count372
+\c@maxextradate=\count373
+\c@maxextraalpha=\count374
+\c@abbrvpenalty=\count375
+\c@highnamepenalty=\count376
+\c@lownamepenalty=\count377
+\c@maxparens=\count378
+\c@parenlevel=\count379
+\blx@tempcnta=\count380
+\blx@tempcntb=\count381
+\blx@tempcntc=\count382
+\c@blx@maxsection=\count383
+\blx@maxsegment@0=\count384
+\blx@notetype=\count385
+\blx@parenlevel@text=\count386
+\blx@parenlevel@foot=\count387
+\blx@sectionciteorder@0=\count388
+\blx@sectionciteorderinternal@0=\count389
+\blx@entrysetcounter=\count390
+\blx@biblioinstance=\count391
 \labelnumberwidth=\skip126
 \labelalphawidth=\skip127
 \biblabelsep=\skip128
@@ -949,12 +869,12 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \bibinitsep=\skip131
 \bibparsep=\skip132
 \bibhang=\skip133
-\blx@bcfin=\read3
+\blx@bcfin=\read2
 \blx@bcfout=\write5
-\blx@langwohyphens=\language88
-\c@mincomprange=\count394
-\c@maxcomprange=\count395
-\c@mincompwidth=\count396
+\blx@langwohyphens=\language87
+\c@mincomprange=\count392
+\c@maxcomprange=\count393
+\c@mincompwidth=\count394
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -965,74 +885,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count397
-\c@savedafterword=\count398
-\c@annotator=\count399
-\c@savedannotator=\count400
-\c@author=\count401
-\c@savedauthor=\count402
-\c@bookauthor=\count403
-\c@savedbookauthor=\count404
-\c@commentator=\count405
-\c@savedcommentator=\count406
-\c@editor=\count407
-\c@savededitor=\count408
-\c@editora=\count409
-\c@savededitora=\count410
-\c@editorb=\count411
-\c@savededitorb=\count412
-\c@editorc=\count413
-\c@savededitorc=\count414
-\c@foreword=\count415
-\c@savedforeword=\count416
-\c@holder=\count417
-\c@savedholder=\count418
-\c@introduction=\count419
-\c@savedintroduction=\count420
-\c@namea=\count421
-\c@savednamea=\count422
-\c@nameb=\count423
-\c@savednameb=\count424
-\c@namec=\count425
-\c@savednamec=\count426
-\c@translator=\count427
-\c@savedtranslator=\count428
-\c@shortauthor=\count429
-\c@savedshortauthor=\count430
-\c@shorteditor=\count431
-\c@savedshorteditor=\count432
-\c@labelname=\count433
-\c@savedlabelname=\count434
-\c@institution=\count435
-\c@savedinstitution=\count436
-\c@lista=\count437
-\c@savedlista=\count438
-\c@listb=\count439
-\c@savedlistb=\count440
-\c@listc=\count441
-\c@savedlistc=\count442
-\c@listd=\count443
-\c@savedlistd=\count444
-\c@liste=\count445
-\c@savedliste=\count446
-\c@listf=\count447
-\c@savedlistf=\count448
-\c@location=\count449
-\c@savedlocation=\count450
-\c@organization=\count451
-\c@savedorganization=\count452
-\c@origlocation=\count453
-\c@savedoriglocation=\count454
-\c@origpublisher=\count455
-\c@savedorigpublisher=\count456
-\c@publisher=\count457
-\c@savedpublisher=\count458
-\c@language=\count459
-\c@savedlanguage=\count460
-\c@origlanguage=\count461
-\c@savedoriglanguage=\count462
-\c@pageref=\count463
-\c@savedpageref=\count464
+\c@afterword=\count395
+\c@savedafterword=\count396
+\c@annotator=\count397
+\c@savedannotator=\count398
+\c@author=\count399
+\c@savedauthor=\count400
+\c@bookauthor=\count401
+\c@savedbookauthor=\count402
+\c@commentator=\count403
+\c@savedcommentator=\count404
+\c@editor=\count405
+\c@savededitor=\count406
+\c@editora=\count407
+\c@savededitora=\count408
+\c@editorb=\count409
+\c@savededitorb=\count410
+\c@editorc=\count411
+\c@savededitorc=\count412
+\c@foreword=\count413
+\c@savedforeword=\count414
+\c@holder=\count415
+\c@savedholder=\count416
+\c@introduction=\count417
+\c@savedintroduction=\count418
+\c@namea=\count419
+\c@savednamea=\count420
+\c@nameb=\count421
+\c@savednameb=\count422
+\c@namec=\count423
+\c@savednamec=\count424
+\c@translator=\count425
+\c@savedtranslator=\count426
+\c@shortauthor=\count427
+\c@savedshortauthor=\count428
+\c@shorteditor=\count429
+\c@savedshorteditor=\count430
+\c@labelname=\count431
+\c@savedlabelname=\count432
+\c@institution=\count433
+\c@savedinstitution=\count434
+\c@lista=\count435
+\c@savedlista=\count436
+\c@listb=\count437
+\c@savedlistb=\count438
+\c@listc=\count439
+\c@savedlistc=\count440
+\c@listd=\count441
+\c@savedlistd=\count442
+\c@liste=\count443
+\c@savedliste=\count444
+\c@listf=\count445
+\c@savedlistf=\count446
+\c@location=\count447
+\c@savedlocation=\count448
+\c@organization=\count449
+\c@savedorganization=\count450
+\c@origlocation=\count451
+\c@savedoriglocation=\count452
+\c@origpublisher=\count453
+\c@savedorigpublisher=\count454
+\c@publisher=\count455
+\c@savedpublisher=\count456
+\c@language=\count457
+\c@savedlanguage=\count458
+\c@origlanguage=\count459
+\c@savedoriglanguage=\count460
+\c@pageref=\count461
+\c@savedpageref=\count462
 \shorthandwidth=\skip134
 \shortjournalwidth=\skip135
 \shortserieswidth=\skip136
@@ -1068,19 +988,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (d:/Programy/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count465
-\c@textcitetotal=\count466
-\c@textcitemaxnames=\count467
-\c@biburlbigbreakpenalty=\count468
-\c@biburlbreakpenalty=\count469
-\c@biburlnumpenalty=\count470
-\c@biburlucpenalty=\count471
-\c@biburllcpenalty=\count472
+\c@textcitecount=\count463
+\c@textcitetotal=\count464
+\c@textcitemaxnames=\count465
+\c@biburlbigbreakpenalty=\count466
+\c@biburlbreakpenalty=\count467
+\c@biburlnumpenalty=\count468
+\c@biburlucpenalty=\count469
+\c@biburllcpenalty=\count470
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count473
+\c@smartand=\count471
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1092,8 +1012,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count474
-\c@bbx:relatedtotal=\count475
+\c@bbx:relatedcount=\count472
+\c@bbx:relatedtotal=\count473
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1126,7 +1046,7 @@ Package: expl3 2023-03-30 L3 programming layer (loader)
 
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count476
+\l__color_backend_stack_int=\count474
 \l__pdf_internal_box=\box69
 ))
 Package biblatex Info: ... and expl3
@@ -1142,16 +1062,13 @@ Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 (./Ustawienia/ustawienia.tex
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen260
-\c@nlinenum=\count477
+\rotheadsize=\dimen259
+\c@nlinenum=\count475
 \TeXr@lab=\toks43
 ))
+\@quotelevel=\count476
+\@quotereset=\count477
 
-Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
-(biblatex)                Loading 'csquotes' recommended.
-
-\@quotelevel=\count478
-\@quotereset=\count479
 (./praca.aux)
 \openout1 = `praca.aux'.
 
@@ -1169,8 +1086,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
@@ -1178,16 +1093,16 @@ LaTeX Font Info:    ... okay on input line 51.
 
 (d:/Programy/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count480
-\scratchdimen=\dimen261
+\scratchcounter=\count478
+\scratchdimen=\dimen260
 \scratchbox=\box70
-\nofMPsegments=\count481
-\nofMParguments=\count482
+\nofMPsegments=\count479
+\nofMParguments=\count480
 \everyMPshowfont=\toks44
-\MPscratchCnt=\count483
-\MPscratchDim=\dimen262
-\MPnumerator=\count484
-\makeMPintoPDFobject=\count485
+\MPscratchCnt=\count481
+\MPscratchDim=\dimen261
+\MPnumerator=\count482
+\makeMPintoPDFobject=\count483
 \everyMPtoPDFconversion=\toks45
 ) (d:/Programy/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1249,12 +1164,12 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count486
-Package biblatex Info: Trying to load language 'polish'...
-Package biblatex Info: ... file 'polish.lbx' found.
+\c@lstlisting=\count484
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
 
-(d:/Programy/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/polish.lbx
-File: polish.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+(d:/Programy/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -1327,9 +1242,9 @@ ts/enc/dvips/lm/lm-rm.enc}])
 \openout7 = `praca.toc'.
 
  [6]
-\c@licznikStron=\count487
+\c@licznikStron=\count485
  (./Rozdzial1/rozdzial1.tex
-Rozdzia\l  1.
+Chapter 1.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1337,7 +1252,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ])
 (./Rozdzial2/rozdzial2.tex [2]
-Rozdzia\l  2.
+Chapter 2.
 <Rysunki/Rozdzial2/neuron.png, id=531, 753.81625pt x 326.21875pt>
 File: Rysunki/Rozdzial2/neuron.png Graphic file (type png)
 <use Rysunki/Rozdzial2/neuron.png>
@@ -1353,179 +1268,145 @@ Package pdftex.def Info: Rysunki/Rozdzial2/multithreading.jpg  used on input li
 ne 37.
 (pdftex.def)             Requested size: 426.79134pt x 154.36906pt.
 ) (./Rozdzial3/rozdzial3.tex [5 <./Rysunki/Rozdzial2/multithreading.jpg>] [6]
-Rozdzia\l  3.
+Chapter 3.
 [7
 
 ] [8]
-<Rysunki/Rozdzial2/diagnosis_distribution.png, id=599, 355.3275pt x 126.4725pt>
+<Rysunki/Rozdzial2/diagnosis_distribution.png, id=600, 355.3275pt x 126.4725pt>
 
 File: Rysunki/Rozdzial2/diagnosis_distribution.png Graphic file (type png)
 <use Rysunki/Rozdzial2/diagnosis_distribution.png>
 Package pdftex.def Info: Rysunki/Rozdzial2/diagnosis_distribution.png  used on 
 input line 62.
 (pdftex.def)             Requested size: 256.07741pt x 91.1489pt.
-<Rysunki/Rozdzial2/variable_distribution.png, id=600, 369.63094pt x 237.88875pt
+<Rysunki/Rozdzial2/variable_distribution.png, id=601, 369.63094pt x 237.88875pt
 >
 File: Rysunki/Rozdzial2/variable_distribution.png Graphic file (type png)
 <use Rysunki/Rozdzial2/variable_distribution.png>
 Package pdftex.def Info: Rysunki/Rozdzial2/variable_distribution.png  used on i
 nput line 69.
 (pdftex.def)             Requested size: 256.07741pt x 164.80766pt.
- [9 <./Rysunki/Rozdzial2/diagnosis_distribution.png> <./Rysunki/Rozdzial2/varia
-ble_distribution.png (PNG copy)>]
-<Rysunki/Rozdzial2/box_graph.png, id=609, 423.08063pt x 378.66469pt>
+<Rysunki/Rozdzial2/box_graph.png, id=603, 423.08063pt x 378.66469pt>
 File: Rysunki/Rozdzial2/box_graph.png Graphic file (type png)
 <use Rysunki/Rozdzial2/box_graph.png>
 Package pdftex.def Info: Rysunki/Rozdzial2/box_graph.png  used on input line 81
 .
 (pdftex.def)             Requested size: 298.75264pt x 267.39777pt.
- [10 <./Rysunki/Rozdzial2/box_graph.png (PNG copy)>]
-<Rysunki/Rozdzial3/log.png, id=624, 368.1253pt x 258.9675pt>
+ [9 <./Rysunki/Rozdzial2/diagnosis_distribution.png> <./Rysunki/Rozdzial2/varia
+ble_distribution.png (PNG copy)>]
+<Rysunki/Rozdzial3/log.png, id=615, 368.1253pt x 258.9675pt>
 File: Rysunki/Rozdzial3/log.png Graphic file (type png)
 <use Rysunki/Rozdzial3/log.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/log.png  used on input line 106.
 (pdftex.def)             Requested size: 298.75264pt x 210.18137pt.
-<Rysunki/Rozdzial3/cube_root.png, id=626, 385.44pt x 251.43938pt>
+ [10 <./Rysunki/Rozdzial2/box_graph.png (PNG copy)>]
+<Rysunki/Rozdzial3/cube_root.png, id=637, 385.44pt x 251.43938pt>
 File: Rysunki/Rozdzial3/cube_root.png Graphic file (type png)
 <use Rysunki/Rozdzial3/cube_root.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/cube_root.png  used on input line 12
 6.
 (pdftex.def)             Requested size: 298.75264pt x 194.8865pt.
- [11 <./Rysunki/Rozdzial3/log.png (PNG copy)>]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 40.
-
-(d:/Programy/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
+ (d:/Programy/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [12{d:/Programy/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./Rys
-unki/Rozdzial3/cube_root.png (PNG copy)>]
-<Rysunki/Rozdzial3/arrhenius.png, id=664, 398.23781pt x 237.88875pt>
+)
+[11 <./Rysunki/Rozdzial3/log.png (PNG copy)> <./Rysunki/Rozdzial3/cube_root.png
+ (PNG copy)>]
+<Rysunki/Rozdzial3/arrhenius.png, id=654, 398.23781pt x 237.88875pt>
 File: Rysunki/Rozdzial3/arrhenius.png Graphic file (type png)
 <use Rysunki/Rozdzial3/arrhenius.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/arrhenius.png  used on input line 16
 2.
 (pdftex.def)             Requested size: 298.75264pt x 178.46692pt.
- [13 <./Rysunki/Rozdzial3/arrhenius.png (PNG copy)>]
-<Rysunki/Rozdzial3/scatter.png, id=683, 505.89pt x 465.23813pt>
+ [12{d:/Programy/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./Rysu
+nki/Rozdzial3/arrhenius.png (PNG copy)>]
+<Rysunki/Rozdzial3/scatter.png, id=669, 505.89pt x 465.23813pt>
 File: Rysunki/Rozdzial3/scatter.png Graphic file (type png)
 <use Rysunki/Rozdzial3/scatter.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/scatter.png  used on input line 193.
 
 (pdftex.def)             Requested size: 384.1096pt x 353.25099pt.
-
-[14 <./Rysunki/Rozdzial3/scatter.png>]
-<Rozdzial3/ferritin.png, id=703, 247.67531pt x 180.675pt>
+ [13]
+<Rozdzial3/ferritin.png, id=704, 247.67531pt x 180.675pt>
 File: Rozdzial3/ferritin.png Graphic file (type png)
 <use Rozdzial3/ferritin.png>
 Package pdftex.def Info: Rozdzial3/ferritin.png  used on input line 219.
 (pdftex.def)             Requested size: 213.39568pt x 155.66968pt.
-<Rozdzial3/decision.png, id=705, 245.41687pt x 175.40532pt>
+ [14 <./Rysunki/Rozdzial3/scatter.png> <./Rozdzial3/ferritin.png (PNG copy)>]
+<Rozdzial3/decision.png, id=712, 245.41687pt x 175.40532pt>
 File: Rozdzial3/decision.png Graphic file (type png)
 <use Rozdzial3/decision.png>
 Package pdftex.def Info: Rozdzial3/decision.png  used on input line 229.
 (pdftex.def)             Requested size: 153.64148pt x 109.8154pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--230
-[][]|\T1/lmr/m/n/10.95 Przy-kªa-dowy roz-
- []
-
-<Rozdzial3/decision1.png, id=706, 238.64156pt x 174.6525pt>
+<Rozdzial3/decision1.png, id=713, 238.64156pt x 174.6525pt>
 File: Rozdzial3/decision1.png Graphic file (type png)
 <use Rozdzial3/decision1.png>
 Package pdftex.def Info: Rozdzial3/decision1.png  used on input line 236.
 (pdftex.def)             Requested size: 153.64148pt x 112.44345pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--237
-[][]|\T1/lmr/m/n/10.95 Przy-kªa-dowy
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--237
-\T1/lmr/m/n/10.95 roz-kªad zmien-
- []
-
-
-Underfull \hbox (badness 5862) in paragraph at lines 237--237
-\T1/lmr/m/n/10.95 nej decy- zyj-nej
- []
-
-<Rozdzial3/mnf.png, id=708, 218.31563pt x 124.21407pt>
+<Rozdzial3/mnf.png, id=715, 218.31563pt x 124.21407pt>
 File: Rozdzial3/mnf.png Graphic file (type png)
 <use Rozdzial3/mnf.png>
 Package pdftex.def Info: Rozdzial3/mnf.png  used on input line 246.
 (pdftex.def)             Requested size: 256.07741pt x 145.69945pt.
-[15 <./Rozdzial3/ferritin.png (PNG copy)>]
-<Rozdzial3/log2.png, id=723, 353.06906pt x 237.13594pt>
+ [15 <./Rozdzial3/decision.png> <./Rozdzial3/decision1.png (PNG copy)> <./Rozdz
+ial3/mnf.png (PNG copy)>]
+<Rozdzial3/log2.png, id=728, 353.06906pt x 237.13594pt>
 File: Rozdzial3/log2.png Graphic file (type png)
 <use Rozdzial3/log2.png>
-Package pdftex.def Info: Rozdzial3/log2.png  used on input line 276.
+Package pdftex.def Info: Rozdzial3/log2.png  used on input line 274.
 (pdftex.def)             Requested size: 256.07741pt x 171.99332pt.
- [16 <./Rozdzial3/decision.png> <./Rozdzial3/decision1.png (PNG copy)> <./Rozdz
-ial3/mnf.png (PNG copy)>]
-<Rozdzial3/cube2.png, id=738, 376.40625pt x 240.14719pt>
+<Rozdzial3/cube2.png, id=730, 376.40625pt x 240.14719pt>
 File: Rozdzial3/cube2.png Graphic file (type png)
 <use Rozdzial3/cube2.png>
-Package pdftex.def Info: Rozdzial3/cube2.png  used on input line 291.
+Package pdftex.def Info: Rozdzial3/cube2.png  used on input line 289.
 (pdftex.def)             Requested size: 256.07741pt x 163.38951pt.
-
-Overfull \hbox (6.4146pt too wide) in paragraph at lines 296--297
-[]\T1/lmr/m/n/12 Transformacja od-wrot-nym wzo-rem Ar-r-he-niusa oka-zaªa si¦ n
-ie-sku-teczna na wszyst-
- []
-
-[17 <./Rozdzial3/log2.png (PNG copy)> <./Rozdzial3/cube2.png (PNG copy)>]
+ [16 <./Rozdzial3/log2.png (PNG copy)> <./Rozdzial3/cube2.png (PNG copy)>]
+[17]
 <Rysunki/Rozdzial3/roc_svm1_test.png, id=748, 384.6872pt x 261.97874pt>
 File: Rysunki/Rozdzial3/roc_svm1_test.png Graphic file (type png)
 <use Rysunki/Rozdzial3/roc_svm1_test.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/roc_svm1_test.png  used on input lin
-e 329.
+e 324.
 (pdftex.def)             Requested size: 200.75998pt x 136.72542pt.
-
-Underfull \hbox (badness 2035) in paragraph at lines 330--330
-[][]|\T1/lmr/m/n/10.95 Krzywa charakterystycz-
- []
-
 <Rysunki/Rozdzial3/roc_svm1_val.png, id=749, 380.92313pt x 262.73157pt>
 File: Rysunki/Rozdzial3/roc_svm1_val.png Graphic file (type png)
 <use Rysunki/Rozdzial3/roc_svm1_val.png>
 Package pdftex.def Info: Rysunki/Rozdzial3/roc_svm1_val.png  used on input line
- 336.
+ 331.
 (pdftex.def)             Requested size: 200.75998pt x 138.4653pt.
-
-Underfull \hbox (badness 2035) in paragraph at lines 337--337
-[][]|\T1/lmr/m/n/10.95 Krzywa charakterystycz-
- []
-
-
-Underfull \hbox (badness 4872) in paragraph at lines 337--337
-\T1/lmr/m/n/10.95 na od-bior-nika dla da-
- []
-
-
-Underfull \hbox (badness 1394) in paragraph at lines 337--337
-\T1/lmr/m/n/10.95 nych wa-li-da-cyj-nych mo-
- []
-
-[18 <./Rysunki/Rozdzial3/roc_svm1_test.png> <./Rysunki/Rozdzial3/roc_svm1_val.p
-ng>]
+ [18 <./Rysunki/Rozdzial3/roc_svm1_test.png> <./Rysunki/Rozdzial3/roc_svm1_val.
+png>]
 <Rozdzial3/pvalue3.png, id=764, 374.90062pt x 134.75343pt>
 File: Rozdzial3/pvalue3.png Graphic file (type png)
 <use Rozdzial3/pvalue3.png>
-Package pdftex.def Info: Rozdzial3/pvalue3.png  used on input line 350.
+Package pdftex.def Info: Rozdzial3/pvalue3.png  used on input line 345.
 (pdftex.def)             Requested size: 256.07741pt x 92.04851pt.
 <Rozdzial3/pvalue4.png, id=765, 366.61969pt x 82.80937pt>
 File: Rozdzial3/pvalue4.png Graphic file (type png)
 <use Rozdzial3/pvalue4.png>
-Package pdftex.def Info: Rozdzial3/pvalue4.png  used on input line 357.
+Package pdftex.def Info: Rozdzial3/pvalue4.png  used on input line 352.
 (pdftex.def)             Requested size: 298.75264pt x 67.4846pt.
 
-Overfull \hbox (2.60454pt too wide) in paragraph at lines 365--395
+Overfull \hbox (2.60454pt too wide) in paragraph at lines 360--390
 []$[]$  $[]$ 
  []
 
 ) (./Rozdzial4/rozdzial4.tex [19 <./Rozdzial3/pvalue3.png (PNG copy)> <./Rozdzi
 al3/pvalue4.png (PNG copy)>]
-Rozdzia\l  4.
+Chapter 4.
+
+Overfull \hbox (50.6114pt too wide) in paragraph at lines 19--20
+[]\T1/lmr/m/n/12 Do od-czytu i par-sowa-nia danych z pliku CSV wyko-rzysty-wana
+ jest klasa \T1/lmr/m/it/12 shogun::CCSVFile\T1/lmr/m/n/12 ,
+ []
+
+
+Overfull \hbox (18.2797pt too wide) in paragraph at lines 19--20
+[]\T1/lmr/m/n/12 4.1[]. Po praw-idªowym roz-granicze-niu frag-men-tów danych, n
+ale»y przeprowadzi¢ ponown¡
+ []
+
 [20
 
 ] (d:/Programy/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -1545,28 +1426,80 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-(./Result/inc/shogun/csv.hpp
-Underfull \vbox (badness 1028) has occurred while \output is active []
-
- [21])
-(./Result/inc/shogun/shogunModels.hpp [22])
+(./Result/inc/shogun/csv.hpp [21]) (./Result/inc/shogun/shogunModels.hpp
+[22])
 Overfull \hbox (2.96196pt too wide) in paragraph at lines 29--30
-\T1/lmr/m/n/12 mie-±ci¢ si¦ b¦d¡ w prze-dziale jed-nost-ko-wym, za po-moc¡ klas
-y \T1/lmr/m/it/12 shogun::CRescaleFeatu-
+\T1/lmr/m/n/12 mie±-ci¢ si¦ b¦d¡ w przedziale jed-nos-tkowym, za po-moc¡ klasy 
+\T1/lmr/m/it/12 shogun::CRescaleFeatu-
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23]
-(./Result/inc/shogun/rescale.hpp) [24] (./Result/inc/shogun/pca_reduction.hpp)
-[25] (./Result/inc/shogun/linear.hpp) [26] (./Result/inc/shogun/logistic.hpp)
+(./Result/inc/shogun/rescale.hpp)
+Overfull \hbox (6.45879pt too wide) in paragraph at lines 42--43
+\T1/lmr/m/n/12 Shogun udost¦p-nia u»ytkown-ikowi kilka rodza-jów al-go-ryt-mów 
+re-dukcji wymi-arowo±ci,
+ []
+
+[24]
+Overfull \hbox (7.91971pt too wide) in paragraph at lines 54--55
+\T1/lmr/m/n/12 danych ucz¡-cych metod¡ \T1/lmr/m/it/12 fit() \T1/lmr/m/n/12 ora
+z ustaw-ie-nie do-celowej liczby wymi-arów (z wyj¡tkiem
+ []
+
+(./Result/inc/shogun/pca_reduction.hpp)
+Overfull \hbox (5.35228pt too wide) in paragraph at lines 64--65
+\T1/lmr/m/n/12 bib-liotek¦ Shogun jest re-gresja lin-iowa, re-al-i-zowana za po
+-moc¡ klasy \T1/lmr/m/it/12 CLin-ear-RidgeRe-
+ []
+
+[25] (./Result/inc/shogun/linear.hpp)
+Overfull \hbox (5.76834pt too wide) in paragraph at lines 69--70
+\T1/lmr/m/n/12 Biblioteka Shogun za-w-iera im-ple-men-tacj¦ wielok-la-sowej re-
+gresji lo-gisty-cznej w postaci
+ []
+
+[26] (./Result/inc/shogun/logistic.hpp)
+Overfull \hbox (15.79222pt too wide) in paragraph at lines 74--75
+\T1/lmr/m/n/12 im-ple-men-tacja wielok-la-sowej klasy-fikacji z wyko-rzys-tanie
+m maszyny wek-torów no±nych,
+ []
+
 (./Result/inc/shogun/svm.hpp [27]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [28])
-(./Result/inc/shogun/knn.hpp [29]) (./Result/inc/shogun/gb.hpp [30]) [31]
-(./Result/inc/shogun/rforest.hpp) [32] (./Result/inc/shogun/neural.hpp [33])
+Overfull \hbox (5.24971pt too wide) in paragraph at lines 80--81
+\T1/lmr/m/n/12 wia on wybranie sposobu oblicza-nia odlegªo±ci poprzez przekazan
+ie obiektu odpowied-
+ []
+
+(./Result/inc/shogun/knn.hpp [29])
+Overfull \hbox (2.21315pt too wide) in paragraph at lines 96--97
+\T1/lmr/m/n/12 taniem bi-na-rnego drzewa de-cyzyjnego re-gresji i klasy-fikacji
+ (im-ple-men-towanego przez
+ []
+
+(./Result/inc/shogun/gb.hpp [30])
+Overfull \hbox (12.46979pt too wide) in paragraph at lines 101--102
+\T1/lmr/m/n/12 pozwala tak»e na dokony-wanie klasy-fikacji. Do gªównych kon-fig
+-urowal-nych parametrów
+ []
+
+(./Result/inc/shogun/rforest.hpp [31]) [32]
+Overfull \hbox (15.87999pt too wide) in paragraph at lines 130--131
+\T1/lmr/m/it/12 _optimization\T1/lmr/m/n/12 . Klasa \T1/lmr/m/it/12 CNeu-ral-Ne
+t-work \T1/lmr/m/n/12 wspiera op-ty-mal-iza-cj¦ z wyko-rzys-taniem metody
+ []
+
+(./Result/inc/shogun/neural.hpp [33])
+Overfull \hbox (0.28976pt too wide) in paragraph at lines 138--139
+\T1/lmr/m/n/12 worzenia obiektu wyko-rzys-tu-j¡cego typ \T1/lmr/m/it/12 CMean-S
+quared-Er-ror \T1/lmr/m/n/12 jako ar-gu-ment sz-ablonu
+ []
+
 (./Rozdzial4/shogun-mse.cpp)
 Underfull \vbox (badness 1708) has occurred while \output is active []
 
@@ -1593,33 +1526,73 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 Overfull \hbox (3.44022pt too wide) in paragraph at lines 156--157
-\T1/lmr/m/n/12 Biblioteka Sho-gun nie po-siada bez-po-±red-niej im-ple-men-ta-c
-ji dla me-tryki $\OML/lmm/m/it/12 R[]$ \T1/lmr/m/n/12 w zwi¡zku
+\T1/lmr/m/n/12 Biblioteka Shogun nie posi-ada bezpo±red-niej im-ple-men-tacji d
+la me-tryki $\OML/lmm/m/it/12 R[]$ \T1/lmr/m/n/12 w zwi¡zku
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 158.
 (./Result/inc/shogun/verify.hpp [35]) (./Rozdzial4/shogun-acc.cpp [36])
-(./Rozdzial4/shogun-roc.cpp) (./Result/inc/shogun/cross.hpp [37]) [38])
-(./Rozdzial5/rozdzial5.tex [39]
-Rozdzia\l  5.
+(./Rozdzial4/shogun-roc.cpp)
+Overfull \hbox (16.5762pt too wide) in paragraph at lines 178--179
+\T1/lmr/m/n/12 terium ewalu-acji mod-elu poprzez ut-worze-nie odpowied-nich kla
+s, a nast¦p-nie przekazanie
+ []
+
+
+Overfull \hbox (12.94098pt too wide) in paragraph at lines 178--179
+\T1/lmr/m/n/12 ich w kon-struk-torze obiektu sprawdzianu krzy»owego, b¦d¡cego i
+n-stancj¡ klasy \T1/lmr/m/it/12 CCross-
+ []
+
+(./Result/inc/shogun/cross.hpp [37]) [38]) (./Rozdzial5/rozdzial5.tex
+Overfull \hbox (23.78929pt too wide) in paragraph at lines 186--1
+\T1/lmr/m/n/12 stawy teorii uczenia maszynowego w kon-tek±-cie ich za-s-tosowa-
+nia. Wi¦k-szo±¢ z przykªadów
+ []
+
+[39]
+Chapter 5.
 [40
 
 ] (./Result/inc/shark/csv.hpp)
-Overfull \hbox (9.5257pt too wide) in paragraph at lines 14--15
-\T1/lmr/m/n/12 wy-ko-rzy-sta-nie spe-cjal-nych funk-cji ad-ap-to-ro-wych, do kt
-ó-rych prze-ka-zy-wany jest wska¹-
+Overfull \hbox (21.60251pt too wide) in paragraph at lines 14--15
+\T1/lmr/m/n/12 wyko-rzys-tanie spec-jal-nych funkcji adap-torowych, do których 
+przekazy-wany jest wska¹nik
  []
 
-(./Rozdzial5/shark-adaptor.cpp) [41] (./Result/inc/shark/normalization.hpp)
+(./Rozdzial5/shark-adaptor.cpp)
+Overfull \hbox (2.93768pt too wide) in paragraph at lines 30--31
+[]\T1/lmr/m/n/12 Opieraj¡ si¦ one o u»y-cie metody \T1/lmr/m/it/12 train() \T1/
+lmr/m/n/12 na obiek-cie nor-mal-iza-tora, aby odpowied-
+ []
+
+[41] (./Result/inc/shark/normalization.hpp)
 (./Rozdzial5/shark-dimension-reduction.cpp) [42] (./Rozdzial5/shark-lda-red.cpp
 )
+Overfull \hbox (17.77803pt too wide) in paragraph at lines 53--54
+\T1/lmr/m/n/12 Podobnie jak w przy-padku metody Lasso, wyko-rzys-tanie reg-u-la
+ryza-cji L2 w trenowanym
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [43]
+Overfull \hbox (21.03836pt too wide) in paragraph at lines 60--61
+\T1/lmr/m/n/12 lin-iowa. Do celów jej reprezen-tacji dost¦pna jest klasa \T1/lm
+r/m/it/12 Lin-ear-Model\T1/lmr/m/n/12 , ofer-u-j¡ca rozwi¡zanie
+ []
+
 (./Result/inc/shark/linear.hpp [44]) (./Rozdzial5/shark-linear2.cpp) [45]
 (./Rozdzial5/shark-logistic.cpp) (./Result/inc/shark/logistic.hpp [46])
-[47] (./Result/inc/shark/svm.hpp [48]) (./Rozdzial5/shark-svm2.cpp)
+[47]
+Overfull \hbox (6.31308pt too wide) in paragraph at lines 95--96
+[]\T1/lmr/m/n/12 regularyzacja - po-dawana jako liczba rzeczy-wista w kon-struk
+-torze \T1/lmr/m/it/12 CSvm-Trainer\T1/lmr/m/n/12 ,
+ []
+
+(./Result/inc/shark/svm.hpp [48]) (./Rozdzial5/shark-svm2.cpp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [49]
@@ -1631,6 +1604,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [53]
+Overfull \hbox (14.99887pt too wide) in paragraph at lines 146--147
+[]\T1/lmr/m/n/12 Ka»da z powy»szych klas u»y-wana jest w schematy-czny sposób, 
+poprzez wcze±niejsze
+ []
+
 (./Rozdzial5/shark-mse.cpp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1656,25 +1634,65 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 150.
 
-[54] (./Rozdzial5/shark-r2.cpp) (./Result/inc/shark/printEvaluation2.hpp
-[55]) (./Rozdzial5/shark-cv.cpp [56])) (./Rozdzial6/rozdzial6.tex [57]
-Rozdzia\l  6.
+[54] (./Rozdzial5/shark-r2.cpp)
+Overfull \hbox (27.06532pt too wide) in paragraph at lines 156--156
+[]\T1/lmr/bx/n/14.4 Pole pod wykre-sem krzy-wej charak-terysty-cznej odbiornika
+ 
+ []
+
+(./Result/inc/shark/printEvaluation2.hpp [55]) (./Rozdzial5/shark-cv.cpp
+[56])) (./Rozdzial6/rozdzial6.tex
+Overfull \hbox (13.08298pt too wide) in paragraph at lines 170--1
+\T1/lmr/m/n/12 wyró»-ni-a-j¡c¡ j¡ nato-mi-ast na tle po-zostaªych bib-liotek om
+ówionych w ra-mach niniejszej
+ []
+
+[57]
+Chapter 6.
 (./Rozdzial6/csv.cpp [58
 
-]) (./Result/inc/dlib/normalizer.hpp) [59]
-(./Result/inc/dlib/pca.hpp) (./Result/inc/dlib/lda.hpp [60])
-(./Result/inc/dlib/sammon.hpp) [61] (./Result/inc/dlib/linear.hpp) [62]
-(./Result/inc/dlib/svm.hpp)
+]) (./Result/inc/dlib/normalizer.hpp)
+Overfull \hbox (15.2132pt too wide) in paragraph at lines 24--25
+\T1/lmr/m/n/12 klasy \T1/lmr/m/it/12 dlib::vector_normalizer_pca\T1/lmr/m/n/12 
+, która oprócz samej re-dukcji wymi-arowo±ci wykonuje
+ []
+
+[59] (./Result/inc/dlib/pca.hpp) (./Result/inc/dlib/lda.hpp [60])
+(./Result/inc/dlib/sammon.hpp) [61] (./Result/inc/dlib/linear.hpp)
+Overfull \hbox (2.36644pt too wide) in paragraph at lines 53--54
+\T1/lmr/m/n/12 bib-lioteka Dlib ofer-uje klas¦ funkcji de-cyzyjnej \T1/lmr/m/it
+/12 dlib::one_vs_one_decision_function\T1/lmr/m/n/12 .
+ []
+
+
+Overfull \hbox (0.44557pt too wide) in paragraph at lines 53--54
+\T1/lmr/m/n/12 za-warty w klasie \T1/lmr/m/it/12 one_versus_one\T1/lmr/m/n/12 ,
+ do której przesªany zostaje trener SVM. Dokªadny
+ []
+
+[62] (./Result/inc/dlib/svm.hpp)
+Overfull \hbox (14.28766pt too wide) in paragraph at lines 59--60
+\T1/lmr/m/n/12 try tworz¡ sie¢ w kole-jno±ci od na-jbardziej za-g-nie»d»onego d
+o na-jbardziej zewn¦trznego.
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [63]
 (./Result/inc/dlib/neural.hpp [64])
-Overfull \hbox (12.87791pt too wide) in paragraph at lines 74--75
-\T1/lmr/m/n/12 rzy-stany tre-ner pod-sta-wowy, w tym wy-padku sta-no-wi¡cy obie
-kt klasy \T1/lmr/m/it/12 dlib::krr_trainer\T1/lmr/m/n/12 .
+Overfull \hbox (6.10262pt too wide) in paragraph at lines 74--75
+\T1/lmr/m/it/12 Ridge Re-gres-sion\T1/lmr/m/n/12 ) w przy-padku bib-lioteki Dli
+b wygl¡da prawie iden-ty-cznie do sposobu
  []
 
-(./Result/inc/dlib/krr.hpp [65]) (./Result/inc/dlib/eval.hpp [66]
+(./Result/inc/dlib/krr.hpp [65])
+Overfull \hbox (27.06532pt too wide) in paragraph at lines 80--80
+[]\T1/lmr/bx/n/14.4 Pole pod wykre-sem krzy-wej charak-terysty-cznej odbiornika
+ 
+ []
+
+(./Result/inc/dlib/eval.hpp [66]
 Overfull \hbox (26.03394pt too wide) in paragraph at lines 42--43
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1684,15 +1702,24 @@ Overfull \hbox (62.78394pt too wide) in paragraph at lines 43--44
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [67] (./Result/inc/dlib/cross.hpp
-Underfull \vbox (badness 2680) has occurred while \output is active []
+)
+Overfull \hbox (71.01376pt too wide) in paragraph at lines 88--89
+\T1/lmr/m/n/12 la-nia do-celowych warto±ci hiper-parametrów dokony-wana jest pr
+zez funkcj¦ \T1/lmr/m/it/12 dlib::find_min_global()
+ []
 
- [68])
+[67] (./Result/inc/dlib/cross.hpp [68])
 
 LaTeX Warning: Citation 'dlib:home' on page 69 undefined on input line 94.
 
 ) (./Rozdzial7/rozdzial7.tex [69]
-Rozdzia\l  7.
+Chapter 7.
+
+Overfull \hbox (5.87727pt too wide) in paragraph at lines 5--6
+\T1/lmr/m/n/12 funkcjon-al-no±ci. Tabela []7.1[] zbior-czo pod-sumowuje poszcze
+gólne omówione w poprzed-
+ []
+
 
 Overfull \hbox (7.70227pt too wide) in alignment at lines 7--68
  [] [] [] [] 
@@ -1700,30 +1727,25 @@ Overfull \hbox (7.70227pt too wide) in alignment at lines 7--68
 
 [70
 
-] [71] [72]
+] [71]
+Overfull \hbox (4.14268pt too wide) in paragraph at lines 74--74
+[]\T1/lmr/bx/n/17.28 Porównanie wyników dla zadanych przykªadów 
+ []
+
+[72]
 <Rozdzial7/shogun.png, id=2776, 151.3153pt x 182.18062pt>
 File: Rozdzial7/shogun.png Graphic file (type png)
 <use Rozdzial7/shogun.png>
 Package pdftex.def Info: Rozdzial7/shogun.png  used on input line 98.
 (pdftex.def)             Requested size: 105.84381pt x 127.4338pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
-[][]|\T1/lmr/m/n/10.95 Wy-nik
+Underfull \hbox (badness 1406) in paragraph at lines 99--99
+\T1/lmr/m/n/10.95 nia pro-gramu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
-\T1/lmr/m/n/10.95 dzia-ªa-nia
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
-\T1/lmr/m/n/10.95 pro-gramu
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
-\T1/lmr/m/n/10.95 dla bi-blio-
+Underfull \hbox (badness 3019) in paragraph at lines 99--99
+\T1/lmr/m/n/10.95 dla bib-lioteki
  []
 
 <Rozdzial7/shark.png, id=2777, 150.5625pt x 271.0125pt>
@@ -1732,23 +1754,13 @@ File: Rozdzial7/shark.png Graphic file (type png)
 Package pdftex.def Info: Rozdzial7/shark.png  used on input line 105.
 (pdftex.def)             Requested size: 92.61258pt x 166.70683pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
-[][]|\T1/lmr/m/n/10.95 Wy-nik
+Underfull \hbox (badness 1406) in paragraph at lines 106--106
+\T1/lmr/m/n/10.95 nia pro-gramu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
-\T1/lmr/m/n/10.95 dzia-ªa-nia
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
-\T1/lmr/m/n/10.95 pro-gramu
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
-\T1/lmr/m/n/10.95 dla bi-blio-
+Underfull \hbox (badness 3019) in paragraph at lines 106--106
+\T1/lmr/m/n/10.95 dla bib-lioteki
  []
 
 <Rysunki/Rozdzial7/dlib.png, id=2778, 151.3153pt x 142.28156pt>
@@ -1757,27 +1769,35 @@ File: Rysunki/Rozdzial7/dlib.png Graphic file (type png)
 Package pdftex.def Info: Rysunki/Rozdzial7/dlib.png  used on input line 112.
 (pdftex.def)             Requested size: 105.84381pt x 99.52475pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--113
-[][]|\T1/lmr/m/n/10.95 Wy-nik
+Underfull \hbox (badness 1406) in paragraph at lines 113--113
+\T1/lmr/m/n/10.95 nia pro-gramu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--113
-\T1/lmr/m/n/10.95 dzia-ªa-nia
+Underfull \hbox (badness 3019) in paragraph at lines 113--113
+\T1/lmr/m/n/10.95 dla bib-lioteki
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--113
-\T1/lmr/m/n/10.95 pro-gramu
+Overfull \hbox (5.57527pt too wide) in paragraph at lines 118--119
+\T1/lmr/m/n/12 mu-lacji bª¦dów reprezen-tacji zmi-enno-przecinkowej warto±ci po
+d-czas oblicze«, wskazu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--113
-\T1/lmr/m/n/10.95 dla bi-blio-
+Overfull \hbox (1.95345pt too wide) in paragraph at lines 120--121
+\T1/lmr/m/n/12 gramowanie statysty-czne. W zwi¡zku z tym rozpocz¦to anal-iz¦ pr
+zy-czyny uzyskanych
  []
 
 [73 <./Rozdzial7/shogun.png (PNG copy)> <./Rozdzial7/shark.png> <./Rysunki/Rozd
-zial7/dlib.png>] [74]
+zial7/dlib.png>]
+Overfull \hbox (18.07513pt too wide) in paragraph at lines 122--123
+\T1/lmr/m/n/12 uzysku-j¡c warto±¢ pola pod wykre-sem krzy-wej charak-terysty-cz
+nej odbiornika wynosz¡c¡
+ []
+
+[74]
 <Rozdzial7/shogun_linear_svm.jpg, id=2796, 163.3603pt x 205.5178pt>
 File: Rozdzial7/shogun_linear_svm.jpg Graphic file (type jpg)
 <use Rozdzial7/shogun_linear_svm.jpg>
@@ -1785,23 +1805,13 @@ Package pdftex.def Info: Rozdzial7/shogun_linear_svm.jpg  used on input line 14
 6.
 (pdftex.def)             Requested size: 105.84381pt x 133.1585pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
-[][]|\T1/lmr/m/n/10.95 Wy-nik
+Underfull \hbox (badness 1406) in paragraph at lines 147--147
+\T1/lmr/m/n/10.95 nia pro-gramu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
-\T1/lmr/m/n/10.95 dzia-ªa-nia
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
-\T1/lmr/m/n/10.95 pro-gramu
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
-\T1/lmr/m/n/10.95 dla bi-blio-
+Underfull \hbox (badness 3019) in paragraph at lines 147--147
+\T1/lmr/m/n/10.95 dla bib-lioteki
  []
 
 <Rozdzial7/shark_linear_svm.png, id=2797, 149.05687pt x 213.04594pt>
@@ -1811,23 +1821,13 @@ Package pdftex.def Info: Rozdzial7/shark_linear_svm.png  used on input line 153
 .
 (pdftex.def)             Requested size: 92.61258pt x 132.36993pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--154
-[][]|\T1/lmr/m/n/10.95 Wy-nik
+Underfull \hbox (badness 1406) in paragraph at lines 154--154
+\T1/lmr/m/n/10.95 nia pro-gramu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--154
-\T1/lmr/m/n/10.95 dzia-ªa-nia
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--154
-\T1/lmr/m/n/10.95 pro-gramu
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--154
-\T1/lmr/m/n/10.95 dla bi-blio-
+Underfull \hbox (badness 3019) in paragraph at lines 154--154
+\T1/lmr/m/n/10.95 dla bib-lioteki
  []
 
 <Rysunki/Rozdzial7/dlib_linear_svm.jpg, id=2798, 152.06813pt x 146.04562pt>
@@ -1837,34 +1837,42 @@ Package pdftex.def Info: Rysunki/Rozdzial7/dlib_linear_svm.jpg  used on input l
 ine 160.
 (pdftex.def)             Requested size: 105.84381pt x 101.65404pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
-[][]|\T1/lmr/m/n/10.95 Wy-nik
+Underfull \hbox (badness 1406) in paragraph at lines 161--161
+\T1/lmr/m/n/10.95 nia pro-gramu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
-\T1/lmr/m/n/10.95 dzia-ªa-nia
+Underfull \hbox (badness 3019) in paragraph at lines 161--161
+\T1/lmr/m/n/10.95 dla bib-lioteki
+ []
+
+)
+Overfull \hbox (9.88158pt too wide) in paragraph at lines 172--117
+[]\T1/lmr/m/n/12 Jako na-jbardziej wyma-ga-j¡c¡ bib-liotek¦ uz-nano Shogun. W c
+hwili pisa-nia niniejszej
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
-\T1/lmr/m/n/10.95 pro-gramu
+Overfull \hbox (8.84119pt too wide) in paragraph at lines 172--117
+\T1/lmr/m/n/12 manka-ment sprawia, »e w celu po-bra-nia bib-lioteki konieczne o
+kazaªo si¦ zain-stalowanie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
-\T1/lmr/m/n/10.95 dla bi-blio-
+Overfull \hbox (9.94765pt too wide) in paragraph at lines 172--117
+\T1/lmr/m/n/12 mu-si-aªo zosta¢ oparte prak-ty-cznie wyª¡cznie o ma-te-ri-aªy d
+ost¦pne w formie ksi¡»kowej.
  []
 
-) [75 <./Rozdzial7/shogun_linear_svm.jpg> <./Rozdzial7/shark_linear_svm.png> <.
-/Rysunki/Rozdzial7/dlib_linear_svm.jpg>] [76] [77
+[75 <./Rozdzial7/shogun_linear_svm.jpg> <./Rozdzial7/shark_linear_svm.png> <./R
+ysunki/Rozdzial7/dlib_linear_svm.jpg>] [76] [77
 
 ] [78] (./praca.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: 2B987B7B092383324007621F72D87943;17860.
+(rerunfilecheck)             Checksum: 6311DE65F2E025783E0DEB8E82372B59;17631.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                praca
@@ -1875,13 +1883,13 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35494 strings out of 476017
- 639561 string characters out of 5789275
- 1936660 words of memory out of 5000000
- 53258 multiletter control sequences out of 15000+600000
- 600993 words of font info for 95 fonts, out of 8000000 for 9000
+ 32063 strings out of 476017
+ 562218 string characters out of 5789275
+ 1935660 words of memory out of 5000000
+ 49876 multiletter control sequences out of 15000+600000
+ 600498 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,12n,109p,2262b,2469s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,12n,109p,2262b,2282s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><d:/Pro
 gramy/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/Programy/tex
 live/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><d:/Programy/texlive/202
@@ -1899,7 +1907,7 @@ ublic/lm/lmtt12.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/lm/
 lmtti10.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sf
 xc1728.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfx
 c2074.pfb>
-Output written on praca.pdf (84 pages, 896971 bytes).
+Output written on praca.pdf (84 pages, 893403 bytes).
 PDF statistics:
  3351 PDF objects out of 3580 (max. 8388607)
  3146 compressed objects within 32 object streams

@@ -1,89 +1,89 @@
-\chapter{Wykorzystane zestawy danych}
-\section{Omówienie danych eksperymentalnych}
+\chapter{Used datasets}
+\section{Overview of experimental data}
 
-W celu zestawienia funkcjonalnego bibliotek uczenia maszynowego w języku C++ i przedstawienia przykładów konieczne było wybranie danych eksperymentalnych możliwych do wykorzystania jako porównawczy punkt odniesienia. W tym celu, dla pełnego przetestowania wybranych funkcjonalności przygotowano zestaw danych do problemu klasyfikacji binarnej oraz zadania regresji.
+In order to compare the selected libraries and to show examples, it was necessary to select experimental data that can be used as a reference point. For this purpose, one binary classification and one regression dataset was selected.
 
-\subsection{Dane klasyfikacyjne}
+\subsection{Classification data}
 	
-	 Jako dane klasyfikacyjne wybrano bazę dotyczącą diagnostyki raka piersi ,,\textit{Wisconsin Diagnostic Breast Cancer}'' z listopada 1995 roku, w której zamieszczono wyniki obrazowania określone w sposób liczbowy. Autorami zestawu są Dr. Wiliam H. Wolberg, W. Nick Street oraz Olvi L. Mangasarian z Uniwersytetu Wisconsin \cite{wisconsin}. Baza ta jest dostępna do pobrania z repozytorium Uniwersytetu Californii \cite{Dua:2019}. Dane mają następującą strukturę:
-	
+	 The classification task was carried out using complete ''\textit{Wisconsin Diagnostic Breast Cancer}'' from November 1995, containing data about cancer tumors. The dataset was created by William H. Wolberg PhDm W. Nick Street and Olvi L. Mangasarian from the University of Wisconsin \cite{wisconsin}. It is available for download from the repository of the University of California \cite{Dua:2019}, and has the following structure:
+	 
 	\begin{enumerate}
-		\item [1)] ID - numer identyfikacyjny pacjentki;
-		\item [2)] Diagnosis [\textit{Malignant - M} / \textit{Benign - B}] - charakter nowotworu (złośliwy / łagodny), \textbf{zmienna odpowiedzi};
-		\item [3)] Dane klasyfikujące:
+		\item [1)] ID - identification number of a pacient;
+		\item [2)] Diagnosis [\textit{Malignant - M} / \textit{Benign - B}] - tumor type, \textbf{response variable};
+		\item [3)] Classification data:
 			\begin{enumerate}
-				\item [a)] \textit{Radius} - średnica guza;
-				\item [b)] \textit{Texture} - tekstura guza;
-				\item [c)] \textit{Perimeter} - obwód guza;
-				\item [d)] \textit{Area} - pole guza;
-				\item [e)] \textit{Smoothness} - gładkość, miara lokalnych różnic w promieniu guza;
-				\item [f)] \textit{Compactness} - zwartość, wykorzystywana do oceny stadium guza;
-				\item [g)] \textit{Concavity} - stopień wklęsłości miejsc guza;
-				\item [h)] \textit{Concave points} - punkty wklęsłości guza;
-				\item [i)] \textit{Symmetry} - symetria guza, pomagająca w ocenie charakteru przyrostu guza;
-				\item [j)] \textit{Fractal dimention (,,coastline approximation'' - 1)} - wymiar fraktalny pozwalający na ilościowy opis złożoności komórek nerwowych, umożliwiający stwierdzenie nowotworzenia się zbioru komórek.
+				\item [a)] \textit{Radius};
+				\item [b)] \textit{Texture};
+				\item [c)] \textit{Perimeter};
+				\item [d)] \textit{Area};
+				\item [e)] \textit{Smoothness} - described as local differences in tumor radius;
+				\item [f)] \textit{Compactness} - used to determine the stadium of the tumor;
+				\item [g)] \textit{Concavity};
+				\item [h)] \textit{Concave points};
+				\item [i)] \textit{Symmetry} - helpful in evaluation of the spread characteristics;
+				\item [j)] \textit{Fractal dimention (,,coastline approximation'' - 1)} - describes the complexity of nerve cells, helping to determine whether cells exhibit cancerous mutations.
 			\end{enumerate}
 	\end{enumerate}
 	
-	Dla każdej ze zmiennych odpowiedzi określono wartość średnią, odchylenie standardowe oraz średnią trzech największych pomiarów, gdzie każdy zestaw ustawiony jest sekwencyjnie (np. kolumna 3 - średni promień, kolumna 12 - odchylenie standardowe promienia, kolumna 22 - średnia trzech największych pomiarów promienia). Każda ze zmiennych ma charakter ciągły. Zredukowany zestaw danych, zawierający jedynie zmienne decyzyjne informujące o średnich wartościach znaleźć można jako dodatek do podręcznika \cite{biostatisticsJMP}.
+	For each of the variables above, the data contain an average, standard deviation, and average of three highest observations, and are organized sequentially, starting from set of averages. All variables have continuous character. There is also a reduced version of the data containing only the averages set, available as an attachment to this handbook \cite{biostatisticsJMP}.
 	
 \subsection{Dane regresyjne}
 
-	Do demonstracji problemu regresji wykorzystano zestaw danych ,,IronGlutathione'' dołączony do podręcznika \cite{biostatisticsJMP}, dotyczące badań nad związkiem między zawartością żelaza, a enzymem transferazy glutationowej w organiźmie człowieka. Obserwacje pochodzą z badań z 2012 roku. Zestaw obejmuje 90 obserwacji i dotyczy 10 zmiennych:
+	For the demonstation purposes of regression task, the ''IronGlutathione'' dataset attached to this handbook \cite{biostatisticsJMP} was selected. It describes the connection between iron content and glutathione transferase enzyme in human body. It was created in 2012, and contains 90 observations of following 10 variables:  
 	
 	\begin{enumerate}
-		\item \textit{Age} - wiek badanej osoby;
-		\item \textit{Gender} - płeć osoby;
-		\item \textit{Alpha GST (ng/L)} - zawartość transferazy glutationinowej typu $\alpha$;
-		\item \textit{pi GST (mg/L)} - zawartość transferazy glutationinowej typu $\pi$;
-		\item \textit{transferrin (mg/mL)} - zawartość transferyny;
-		\item \textit{sTfR (mg/mL)} - zawartość rozpuszczalnego receptora transferyny;
-		\item \textit{Iron (mg/dL)} - zawartość żelaza;
-		\item \textit{TIBC (mg/dL)} - całkowita zdolność wiązania żelaza;
-		\item \textit{\%ISAF (Iron / TIBC)} - współczynnik nasycenia transferyny;
-		\item \textit{Ferritin (ng/dL)} - zawartość ferrytyny;
+		\item \textit{Age};
+		\item \textit{Gender};
+		\item \textit{Alpha GST (ng/L)} - glutatione transferase type $\alpha$ content;
+		\item \textit{pi GST (mg/L)} - glutatione transferase type  $\pi$ content;
+		\item \textit{transferrin (mg/mL)};
+		\item \textit{sTfR (mg/mL)} - solvable transferin receptor content;
+		\item \textit{Iron (mg/dL)};
+		\item \textit{TIBC (mg/dL)} - total capacity of iron bonding;
+		\item \textit{\%ISAF (Iron / TIBC)} - transferin saturation coefficient;
+		\item \textit{Ferritin (ng/dL)};
 	\end{enumerate} 
 	
-	Z racji na większą swobode w wyborze zmiennej odpowiedzi w przypadku danych regresyjnych, zdecydowano się na wybór ostatniej zmiennej (\textit{Ferritin (ng/dL)}) jako odpowiedzi. 
+	\textit{Ferritin (ng/dL)} was selected as a response variable.
 	
-\section{Specyfika danych}
+\section{Data characteristics}
 
-	Podczas przeprowadzenia procesu uczenia maszynowego, jednym z najistotniejszych kroków jakie należy podjąć jest wstępne zaznajomienie się z zestawem danych i jego analiza pod kątem rozkładu poszczególnych zmiennych. W tym celu wykorzystane zostało oprogramowanie JMP Pro \cite{jmp}. 
+	During the process of learning by the model, one of the most crucial steps is to familiarize with the dataset and analyze the distribution of the regressors. JMP Pro \cite{jmp} was selected as the software for this purpose.
 
-	\subsection{Dane klasyfikacyjne}
-	\subsubsection{Analiza rozkładów predyktorów i odpowiedzi}
+	\subsection{Classification data}
+	\subsubsection{Predictor and response distribution analysis}
 		
-	Proces analizy rozkładu rozpoczęto od scharakteryzowania zmiennej odpowiedzi (\textit{Diagnosis}). Rysunek \ref{fig:diagnosisdistribution} przedstawia uzyskany histogram, wraz z tabelą określającą liczby obserwacji danej klasy i prawdopodobieństwo przynależności odpowiedzi do danej klasy. Zauważyć można, że dla użytego zestawu danych zarejestrowano 357 obserwacji łagodnego raka piersi, a jego prawdopodobieństwo wynosi $\approx$ 62,7\%, natomiast do klasy \textit{Malignant} należało 212 obserwacji, co odpowiada prawodpodobieństwu $\approx$ 37,3\%.
+	The analysis was started by characterising the \textit{Diagnosis} variable. Figure \ref{fig:diagnosisdistribution} shows the histogram and table describing the number of observations in each class and the probability of an observation to belong to each of them. The data contains 357 observations of benign tumor with probability of $\approx$ 62.7\%, and 212 malignant tumors with probability of $\approx$ 37.3\%.
 		
-	Podczas analizy histogramów predyktorów stwierdzono, że znaczna liczba ma charakter prawostronnie skośny oraz występują dla nich obserwacje odstające, o czym informuje znajdujący się po prawej stronie histogramu wykres pudełkowy, co przedstawiono na rys. \ref{fig:variabledistribution}. Wyjątkiem okazała się zmienna \textit{Mean Largest Concave Points}, która mimo lekkiej skośności, okazała się nie posiadać obserwacji odstających. Na podstawie tych informacji stwierdzono, że aby przygotować dane w odpowiedni sposób do procesu uczenia, należy przeprowadzić ich czyszczenie oraz normalizację rozkładu.
+	Based on produced histograms, it was determined that majority of the predictors have right-skewed distribution and contain outliers, as shown on the attached box plots from fig. \ref{fig:variabledistribution}. \textit{Mean Largest Concave Points} was an exception for despite having lighly skewed distribution, it contains no outliers. Based on this information, in order to properly teach the model, the data needed to be cleaned and normalized.
 	
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=0.6\linewidth]{Rysunki/Rozdzial2/diagnosis_distribution}
-		\caption{Histogram rozkładu zmiennej odpowiedzi.}
+		\caption{Response distribution.}
 		\label{fig:diagnosisdistribution}
 	\end{figure}
 	
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=0.6\linewidth]{Rysunki/Rozdzial2/variable_distribution}
-		\caption{Przykłady histogramów zmiennych decyzyjnych.}
+		\caption{Predictors distribution sample.}
 		\label{fig:variabledistribution}
 	\end{figure}
 	
 	
-	\subsubsection{Czyszczenie i normalizacja rozkładu danych}
+	\subsubsection{Cleaning and normalizing the data}
 	
-	Na pełny zestaw danych składa się 569 obserwacji. Podczas wstępnej analizy stwierdzono istnienie 13 brakujących wartości dla predyktora \textit{Std err concave points}, które uzupełniono wartością średnią z całej kolumny. Głównym problemem okazały się obserwacje odstające oraz skośności rozkładu. Do analizy obserwacji odstających wykorzystano wykresy pudełkowe, gdzie oś Y reprezentowała zmienną odpowiedzi, natomiast oś X czyszczoną zmienną decyzyjną. Przykładowy wykres został przedstawiony na rysunku \ref{fig:boxgraph}. Ze względu na bardzo małą liczbę obserwacji zdecydowano się rozpocząć proces przystosowywania danych do uczenia od normalizacji ich rozkładu, aby zminimalizować lub wyeliminować konieczność usunięcia danych odstających. 
+	The full dataset consists of 569 observations, with 13 missing values for \textit{Std err concave points}, which were filled with the average of other values from this column. Outliers and distribution skewedness proved to be the main problem. Box plots were used to analyze and identify observations with outlying values, where Y axis described the response variable, and X axis the cleaned predictor. Sample graph was shown on fig. \ref{fig:boxgraph}. Due to relatively small size of the dataset, in order to reduce or eliminate the need for excluding observations, the data was first normalized.
 	
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=0.7\linewidth]{Rysunki/Rozdzial2/box_graph}
-		\caption{Przykład analizy obserwacji odstających dla poszczególnych klas zmiennej odpowiedzi.}
+		\caption{Analysis of outliers.}
 		\label{fig:boxgraph}
 	\end{figure}
 	
-	W pierwszym podejściu zdecydowano się na zastosowanie transformacji logarytmicznej dla wszystkich zmiennych decyzyjnych i porównanie charakterystyk uzyskanych rozkładów z oryginalnymi. Zmienna \textit{Mean largest concave points} okazała się posiadać rozkład bardzo zbliżony do rozkładu normalnego, w związku z czym wyłączono ją z dalszej analizy normalizacji. Przykładowe wyniki przedstawiono na rysunku \ref{fig:log}. Transformacja ta okazała się skutecznym rozwiązaniem jedynie dla następujących zmiennych:
+	Logarithmic transformation was used as a first approach to the normalization task for every predictor. In comparison to the original state, \textit{Mean largest concave points} created a distribution very similar to Gaussian distribution, excluding it from attempts to transform it further. Sample results were shown on fig. \ref{fig:log}. The logarithm proved effective for the following variables:
 	
 	\begin{enumerate}
 		\item \textit{Mean radius};
@@ -104,11 +104,11 @@ W celu zestawienia funkcjonalnego bibliotek uczenia maszynowego w języku C++ i 
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=0.7\linewidth]{Rysunki/Rozdzial3/log}
-		\caption{Porównanie rozkładu danych przed i po transformacji logarytmicznej.}
+		\caption{Comparison of distributions before and after the logarithmic transformation.}
 		\label{fig:log}
 	\end{figure}
 
-	W drugim kroku podjęto próbę wykorzystania transformacji pierwiastkiem sześciennym dla pozostałych zmiennych decyzyjnych, ze względu na jej skuteczność dla danych o rozkładzie prawoskośnym. Rysunek \ref{fig:cuberoot} przedstawia porównanie rozkładu zmiennej \textit{Mean concavity} przed i po transformacji pierwiastkiem sześciennym. Pomyślnie znormalizowano rozkłady następujących zmiennych:
+	Next step was to use cube root transformation on each of the remaining variables, due to its effectiveness on right-skewed data. Figure \ref{fig:cuberoot} shows the achieved results for \textit{Mean concavity}. The transformation was applied to following predictors:
 	
 	\begin{enumerate}
 		\item \textit{Mean compactness};
@@ -124,27 +124,27 @@ W celu zestawienia funkcjonalnego bibliotek uczenia maszynowego w języku C++ i 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Rysunki/Rozdzial3/cube_root}
-	\caption{Porównanie rozkładów danych przed i po zastosowaniu transformacji pierwiastkiem sześciennym.}
+	\caption{Comparison of distributions before and after the cube root transformation.}
 	\label{fig:cuberoot}
 \end{figure}
 
-	Ostatecznym krokiem okazało się zastosowanie odwrotnej transformacji Arrheniusa, wywodzącej się od wzoru Arrheniusa opisującego energię aktywacji reakcji chemicznej, wyrażonego wzorem \ref{eq_arr} \cite{arr}: 
+	Inverse Arrhenius transformation was used as the last resort. It takes root in the Arrhenius formula describing energy of chemical reaction activation as \ref{eq_arr} \cite{arr}:
 	
 	\begin{equation}
 		\ln k = \ln A - \frac{E_a}{RT}
 		\label{eq_arr}
 	\end{equation}
 
-	gdzie: 
+	where: 
 	\begin{itemize}
-		\item $k$ - stała współczynnika reaktywności chemicznej;
-		\item $A$ - współczynnik częstotliwości;
-		\item $E_a$ - energia aktywacji reakcji;
-		\item $R$ - stała gazu idealnego;
-		\item $T$ - temperatura reakcji w Kelvinach;
+		\item $k$ - constant chemical reactivity coefficient;
+		\item $A$ - frequency coefficient;
+		\item $E_a$ - reaction activation energy;
+		\item $R$ - perfect gas constant;
+		\item $T$ - reaction temperature in Kelvins;
 	\end{itemize}
 	
-	Niestety, część z uzyskanych zmodyfikowanych zmiennych decyzyjnych zachowała częściowy skośny rozkład, jednak inne przetestowane transformacje, jak m.in. pierwiastek kwadratowy, potęga kwadratowa, $\log(x+1)$, logarytm dziesiętny, funkcja potęgowa, funkcja wykładnicza, przyniosły rezultaty porównywalne lub gorsze od uzyskanego w wyniku w/w odwrotnej transformacji Arrheniusa. Rysunek \ref{fig:arrhenius} przedstawia porównanie uzyskanych rozkładów. Predyktory poddane odwrotnej transformacji Arrheniusa to:
+	Sadly, part of the modified variables maintained partial right-skewed distribution, however other available transformations, such as square root, square power, $\log(x+1)$, decimal logarithm, power function, and exponential function provided similar or worse effect. Example result is shown on fig. \ref{fig:arrhenius}. The Inverse Arrhenius transformation was applied to following predictors:
 	
 	\begin{enumerate}
 		\item \textit{Mean fractal dimension};
@@ -160,13 +160,13 @@ W celu zestawienia funkcjonalnego bibliotek uczenia maszynowego w języku C++ i 
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=0.7\linewidth]{Rysunki/Rozdzial3/arrhenius}
-		\caption{Porównanie uzyskanych rozkładów danych przed i po odwrotnej transformacji Arrheniusa.}
+		\caption{Comparison of the distribution before and after inverse Arrhenius transformation.}
 		\label{fig:arrhenius}
 	\end{figure}
 	
-	Ze względu na bardzo małą liczbę obserwacji, zdecydowano się na zachowanie wszystkich obserwacji odstających, aby zapobiec utracie informacji i zmianie uzyskanych w procesie normalizacji rozkładów. W celu zachowania kompatybilności z bibliotekami omawianymi w niniejszej pracy, przekodowano zmienną odpowiedzi na binarne wartości liczbowe, gdzie wartość 1 oznaczała złośliwy, natomiast wartość 0 łagodny charakter wykrytego nowotworu.
+	Due to very small amount of observations, outliers were kept to prevent data loss and further changes in distributions. In order to make the data compatibile with used libraries, the result variable was recoded from using characters to numbers: 1 for malignant and 0 for benign tumor;
 	
-	Dalsze przygotowania do procesu uczenia uwzględniały analizę i wykluczenie zmiennych skorelowanych. W tym celu posłużono się macierzą wykresów rozrzutu. Zdecydowano na wyłączenie z uczenia następujących predyktorów:
+	Further analysis aimed to exclude highly correlated predictors. This was accomplished via scatterplot matrix, resulting in the exclusion of following variables from the learning process:
 	
 	\begin{enumerate}
 		\item \textit{Log mean perimeter};
@@ -191,11 +191,11 @@ W celu zestawienia funkcjonalnego bibliotek uczenia maszynowego w języku C++ i 
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=0.9\linewidth]{Rysunki/Rozdzial3/scatter}
-		\caption{Macierz wykresów rozrzutu po usunięciu zmiennych skorelowanych}
+		\caption{Scatterplot matrix after removing correlated predictors}
 		\label{scatter}
 	\end{figure}
 	
-	Rysunek \ref{scatter} przedstawia wynikową macierz. Po usunięciu zmiennych skorelowanych, do procesu uczenia pozostało 9 predyktorów:
+	Figure \ref{scatter} shows the resulting matrix. After removing correlated variables, the following remained: 
 	
 	\begin{enumerate}
 		\item \textit{Log mean radius};
@@ -209,50 +209,48 @@ W celu zestawienia funkcjonalnego bibliotek uczenia maszynowego w języku C++ i 
 		\item \textit{Arrhenius inverse std err dimension}.
 	\end{enumerate}
 
-	\subsection{Dane regresyjne}	
-	\subsubsection{Analiza rozkładu danych}
+	\subsection{Regression data}	
+	\subsubsection{Distribution analysis}
 	
-	Podobnie jak w przypadku danych klasyfikacyjnych, analizę rozpoczęto od zapoznania się z rozkładem wybranej zmiennej odpowiedzi. Zauważono że posiada ona rozkład skrajnie prawostronny, co przedstawiono na rysunku \ref{fig:ferritin}.
+	Simiarly to the classification data, the analysis was started from the response variable. It was determined to have highly right-skewed distribution, as shown on fig. \ref{fig:ferritin}.
 	
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=0.5\linewidth]{Rozdzial3/ferritin}
-		\caption{Wykres rozkładu zmiennej odpowiedzi dla zestawu regresyjnego.}
+		\caption{Response variable distribution}
 		\label{fig:ferritin}
 	\end{figure}
 	
-	Na wykresie pudełkowym zawartym nad histogramem rozkładu można zauważyć wystąpienie dwóch obserwacji odstających. Podczas dalszej analizy, spostrzeżono podobny problem w przypadku zmiennych \textit{\%ISAF}, \textit{Iron}, \textit{sTfR}, \textit{Transferrin} oraz szczególnie \textit{Alpha GST}. Pozostałe zmienne charakteryzują się rozkładem zbliżonym do krzywej Gaussa, nie przejawiając obserwacji zaklasyfikowanych jako odstające. Rysunek \ref{fig:decision} przedstawia dwa przykładowe histogramy rozkładów zmiennych decyzyjnych.
+	Attached box plot shows two outliers. The same problem was spotted for \textit{\%ISAF}, \textit{Iron}, \textit{sTfR}, \textit{Transferrin} and especially \textit{Alpha GST}. Other predictors proved to have distribution close to the Gaussian curve, and not containing any outliers. Figure \ref{fig:decision} shows sample histograms of the predictors.
 	
 	\begin{figure}[!ht]
 		\begin{minipage}{0.40\textwidth}
 			\centering
 			\includegraphics[width=0.9\linewidth]{Rozdzial3/decision}
-			\caption{Przykładowy rozkład zmiennej decy- zyjnej (TIBC).}
+			\caption{Distribution of TIBC.}
 			\label{fig:decision}		
 		\end{minipage}%
 		\hspace{0.10\textwidth}
 		\begin{minipage}{0.40\textwidth}
 			\centering
 			\includegraphics[width=0.9\linewidth]{Rozdzial3/decision1}
-			\caption{Przykładowy rozkład zmiennej decy- zyjnej (ISAF).}
+			\caption{Distribution of ISAF.}
 			\label{fig:decision1}			
 		\end{minipage}
 	\end{figure}
 	
-	Pojedyncza zmienna - \textit{Gender} - posiada dychotomiczny charakter, aczkolwiek okazuje się relatywnie bardzo zrównoważona, posiadając rozkład na poziomie przynależności w 46,7\% do klasy F reprezentującej kobiety oraz 53,3\% do klasy M odpowiadającej mężczyznom. Rozkład tej zmiennej przedstawiono na rys. \ref{fig:mnf}.
+	One variable - \textit{Gender} - has dichotomous character, although it is fairly balanced, with 46.7\% of observations assigned to female (F) class and 53.3\% to male (M) class. Its distribution was showed on fig. \ref{fig:mnf}/
 	
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=0.6\linewidth]{Rozdzial3/mnf}
-		\caption{Rozkład zmiennej \textit{Gender}.}
+		\caption{Distribution of \textit{Gender}.}
 		\label{fig:mnf}
 	\end{figure}
 	
-	\subsubsection{Czyszczenie i normalizacja rozkładu danych}
+	\subsubsection{Cleaning and normalizing the data}
 	
-	W trakcie przeglądu obserwacji, zauważono pojedynczą obserwację z brakującą wartością w przypadku zmiennej \textit{Ferritin}. Ze względu na wystąpienie tylko jednego takiego wpisu na 85 obserwacji, zdecydowano się na jej usunięcie. Pozostałymi kwestiami wymagającymi zaadresowania okazały się normalizacja rozkładu części zmiennych i decyzja o działaniu względem wartości odstających.
-	
-	W celu zmniejszenia liczby obserwacji odstających, postanowiono rozpocząć następny etap od problemu normalizacji rozkładu. Następujące zmienne, ze względu na ich obecną charakterystykę, nie zostały poddane żadnym przekształceniom:
+	It was noticed that one observation had missing value for \textit{Ferritin}. Due to only single missing value for 85 observations, the observation without said value was removed. Other things needed to address were normalizing the distribution of some of the predictors and decision in respect to outliers. As previously, normalization came first. Following variables were deemed good as-is:
 	
 	\begin{enumerate}
 		\item \textit{Age};
@@ -260,25 +258,25 @@ W celu zestawienia funkcjonalnego bibliotek uczenia maszynowego w języku C++ i 
 		\item \textit{TIBC}.
 	\end{enumerate}
 
-	Dla pozostałych zmiennych decyzyjnych zastosowano trzy rodzaje transformacji opisanych w rozdz. 3.2.1.1. Pierwszą z nich była obliczenie logarytmu z wartości zmiennej, które przyniosło zadowalający efekt dla zmiennych:
-	
+	For other variables the same three transformations mentioned in section 3.2.1.1 were applied, first of which was using a logarithm. Satisfying result was achieved for predictors:
+
 	\begin{enumerate}
 		\item \textit{alpha GST};
 		\item \textit{pi GST};
 		\item \textit{sTfR};
-		\item \textit{Ferritin} (zmienna odpowiedzi).
+		\item \textit{Ferritin} (response variable).
 	\end{enumerate}
 
-	Rysunek \ref{fig:log2} przedstawia przykład uzyskanej zmiany rozkładu dla zmiennej odpowiedzi.
+	Figure \ref{fig:log2} shows sample change in distribution.
 	
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=0.6\linewidth]{Rozdzial3/log2}
-		\caption{Wpływ transformacji logarytmicznej na rozkład zmiennej odpowiedzi.}
+		\caption{Effect of logarithmic transformation on distribution}
 		\label{fig:log2}
 	\end{figure}
 
-	Drugą transformacją o zadowalających wynikach okazało się zastosowanie pierwiastka sześciennego, co pokazano na rys. \ref{fig:cube2}. Wykorzystano ją do normalizacji rozkładu następujących zmiennych:
+	Second modification via cube root was successfully used, as shown on fig. \ref{fig:cube2}, for these variables:
 	
 	\begin{enumerate}
 		\item \textit{Transferrin};
@@ -289,26 +287,23 @@ W celu zestawienia funkcjonalnego bibliotek uczenia maszynowego w języku C++ i 
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.6\linewidth]{Rozdzial3/cube2}
-		\caption{Normalizacja rozkładu za pomocą transformacji pierwiastkiem kwadratowym.}
+		\caption{Cube root distribution normalization}
 		\label{fig:cube2}
 	\end{figure}
 
-	Transformacja odwrotnym wzorem Arrheniusa okazała się nieskuteczna na wszystkich zmiennych, uzyskując gorsze efekty niż pozostałe przedstawione wyżej metody. Z racji na niewielką liczbę obserwacji, oraz stosunkowo małą liczbę wartości odstających, zdecydowano się na pozostawienie ich w procesie uczenia. W celu kompatybilności z omawianymi bibliotekami, przekodowano zmienną dychotomiczną na binarne wartości liczbowe, gdzie wartość 1 odpowiadała płci żeńskiej, natomiast 0 płci męskiej.
+	The inverse Arrhenius transformation proved ineffective for every variable, producing worse effects from the previous methods. Due to low total amount of observations, and relatively few outliers, it was decided that they should be kept for the learning process. To make the data compatibile with used libraries, the \textit{Gender} variable was recoded from characters to numbers: 1 for female, 0 for male.
 
-\section{Modele zbudowane w programie JMP}
+\section{Models built in JMP}
 
-W trakcie analizy zestawów danych wybrany został przedstawiony poniżej zestaw metod dla których wykonano i podsumowano testy praktyczne. Szablony struktury rozwiązań, takie jak np. wybór zmiennych uczestniczących w procesie uczenia, lub struktura sieci neuronowej zostały ustalone w sposób empiryczny z wykorzystaniem programu do uczenia maszynowego JMP. 
+After the analysis of the datasets, a few models were selected to serve as a reference for practical tests. Sections below present used templates for the models, such as predictors choice chosen based on practical experimentation with JMP machine learning software.
 
+\subsection{Support Vector Machine (SVM)}
 
-
-
-\subsection{Maszyna wektorów nośnych}
-
-Do procesu uczenia maszyny wektorów nośnych wykorzystano wszystkie zmienne pozostałe po procesie czyszczenia i eksploracji danych. W celu walidacji użyto metody wybrania losowego zestawu walidacyjnego spośród dostarczonych danych, w proporcji 80\% obserwacji uczących i 20\% testowych, z użyciem wartości 1234 dla ziarna generatora liczb pseudolosowych. Jako funkcję jądra maszyny wektorów nośnych (ang. Support Vector Machine, SVM) wybrano jądro radialne (ang. \textit{Radial Basis Function}), która jest domyślnym wyborem dla SVM w środowisku JMP. 
+This model accepted all variables remaining after the exploration process for learning. A randomized set of observations was used for the validation purpose, in proportions of 80\% learning data and 20\% testing data, using value 1234 as seed for the pseudorandom number generator. \textit{Radial Basis Function} was chosen as the SVM kernel, which is a default choice for this model in JMP environment.
 
 \begin{longtable}{l | c}
 	\centering
-	Zmienna decyzyjna & współczynnik przy predyktorze \\
+	Predictor & Learned coefficient \\
 	\hline
 	\textit{Log mean radius} & 2,6191 \\
 	\textit{Log mean texture} & 2,9353 \\
@@ -319,7 +314,7 @@ Do procesu uczenia maszyny wektorów nośnych wykorzystano wszystkie zmienne poz
 	\textit{Log std err smoothness} & -5,0286 \\
 	\textit{Arrhenius inverse std err symmetry} & 635100 \\
 	\textit{Arrhenius inverse std err dimension} & 4053000 \\
-	\caption{Wartości współczynników modelu przy predyktorach.}
+	\caption{Predictors coefficients after learning process.}
 	\label{svm:1}
 \end{longtable} 
 
@@ -327,45 +322,45 @@ Do procesu uczenia maszyny wektorów nośnych wykorzystano wszystkie zmienne poz
 	\begin{minipage}{0.48\textwidth}
 		\centering
 		\includegraphics[width=0.98\linewidth]{Rysunki/Rozdzial3/roc_svm1_test}
-		\caption{Krzywa charakterystycz-na odbiornika dla danych uczących modelu SVM.}
+		\caption{ROC curve for the learning data.}
 		\label{fig:rocsvm1test}		
 	\end{minipage}%
 	\hspace{10pt}
 	\begin{minipage}{0.48\textwidth}
 		\centering
 		\includegraphics[width=0.98\linewidth]{Rysunki/Rozdzial3/roc_svm1_val}
-		\caption{Krzywa charakterystycz-na odbiornika dla danych walidacyjnych modelu SVM.}
+		\caption{ROC curve for the testing data.}
 		\label{fig:rocsvm1val}				
 	\end{minipage}	
 \end{figure}
 
-Utworzony w ten sposób model uzyskał współczynnik błędnej klasyfikacji wynoszący 2,64\% dla danych uczących, oraz 9,57\% dla danych testowych. Tabela \ref{svm:1} przedstawia współczyniki wyliczone w procesie uczenia dla poszczególnych regresorów. Rysunki \ref{fig:rocsvm1test} oraz \ref{fig:rocsvm1val} przedstawiają krzywe charakterystyczne odbiornika dla uzyskanego modelu, pola pod którymi uzyskały wartość odpowiednio 0,9972 dla danych uczących i 0,9632 dla danych testowych.
+The model achieved missclassification rate of 2.64\% for learning data and 9.57\% for testing data. Table \ref{svm:1} shows coefficients determined during learning process for each of the predictors. Figures \ref{fig:rocsvm1test} and \ref{fig:rocsvm1val} show receiver operation characteristic curves for learning and validation data respectively, presenting classification accuracy of 0.9972 for the former and 0.9632 for the latter. 
 
-\subsection{Regresja liniowa}
+\subsection{Linear regression}
 
-Podobnie jak w przypadku regresji logistycznej, do ustalenia które z regresorów mają największy wpływ na zmienną odpowiedzi, zastosowano wykres wpływu poszczególnych zmiennych oparty o p-wartość. Jako próg zaakceptowania parametru do procesu uczenia zdecydowano się na wybranie p-wartości wynoszących poniżej 0,05 jednostek. Rysunek \ref{fig:pvalue3} przedstawia wykres dla wszystkich zmiennych, natomiast rys. \ref{fig:pvalue4} ukazuje wykres zawierający jedynie wybrane zmienne. 
+To determine which predictors have the biggest impact on the response, the p-value was calculated for each of the variables. It was decided that the acceptance threshold should be a p-value equal or below 0.05. Figure \ref{fig:pvalue3} shows a plot for all predictors, and fig. \ref{fig:pvalue4} only for those selected for the learning process.
 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.6\linewidth]{Rozdzial3/pvalue3}
-	\caption{Wykres p-wartości dla wszystkich zmiennych.}
+	\caption{P-value plot for all predictors.}
 	\label{fig:pvalue3}
 \end{figure}
 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Rozdzial3/pvalue4}
-	\caption{Wykres p-wartości dla zmiennych wybranych do procesu uczenia.}
+	\caption{P-value plot for selected predictors.}
 	\label{fig:pvalue4}
 \end{figure}
 
-W procesie eliminacji regresorów o p-wartości przekraczającej wybrany próg akceptacji, do procesu uczenia wybrano zmienne z tabeli \ref{pvalue}:
+Through the process of elimination, the variables mentioned in the table \ref{pvalue} were chosen for the learning process:
 
 \begin{table}[!ht]
 	\begin{minipage}{0.48\textwidth}
 		\centering
 		\begin{tabular}{l|c}
-			Nazwa zmiennej & p-wartość \\
+			Predictor & p-value \\
 			\hline
 			\textit{Gender} & 0.00002 \\
 			\textit{TIBC} & 0.00066 \\
@@ -373,14 +368,14 @@ W procesie eliminacji regresorów o p-wartości przekraczającej wybrany próg a
 			\textit{Cube Root \%ISAF} & 0.01223 \\
 			\textit{Age} & 0.02059
 		\end{tabular}
-		\caption{Wybrane zmienne decyzyjne i ich p-wartości.}
+		\caption{Selected predictors and their p-value}
 		\label{pvalue}
 	\end{minipage}%
 	\hspace{0.04\textwidth}
 	\begin{minipage}{0.48\textwidth}
 		\centering
 		\begin{tabular}{l|c}
-			Nazwa zmiennej & waga \\
+			Predictors & Weight \\
 			\hline
 			\textit{Intercept} & 8,498959 \\
 			\textit{Age} & 0.0201022 \\
@@ -389,9 +384,9 @@ W procesie eliminacji regresorów o p-wartości przekraczającej wybrany próg a
 			\textit{TIBC} & -0.014182 \\
 			\textit{Cube Root \%ISAF} & -4,356345
 		\end{tabular}
-		\caption{Wartości wag zmiennych decyzyjnych.}
+		\caption{Weights assigned to the predictors}
 		\label{weights}		
 	\end{minipage}
 \end{table}
 
-W wyniku uczenia uzyskano model dla którego wartość współczynnika determinacji liniowej \textit{$R^2$} wyniosła 0.4654525, co sugeruje że dane są umiarkowanie dobrze aproksymowalne liniowo. Tabela \ref{weights} przedstawia nauczone wagi poszczególnych regresorów.
+As a result of the learning, a model was created with the linear determination coefficient \textit{$R^2$} of 0.4654525, which suggests that the data are moderately well linearly approximable. The table \ref{weights} shows the learned weights for each of the predictors.
