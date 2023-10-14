@@ -1,101 +1,102 @@
-\chapter{Biblioteka Shogun}
+\chapter{Shogun}
 
-\section{Wprowadzenie}
+\section{Introductions}
 
-Shogun to darmowa biblioteka do uczenia maszynowego o otwartym źródle, napisana w C++ i udostępniana według licencji \textit{BSD 3-clause} \cite{shogun:github}. Posiada ona interfejsy dla różnych języków, w tym Python, Ruby czy C\#, jednak pozwala ona na jej użycie także w jej natywnym języku. Skupia się ona na problemach klasyfikacji oraz regresji. 
+Shogun is an open-source free machine learning library made in C++, accessible based on \textit{BSD 3-clause} license \cite{shogun:github}. It provides interfaces for various languages, such as Python, Ruby or C\#, but also allows users to use it in its native language. The library focuses on classification and regression problems.
 
-\section{Formaty źródeł danych}
+\section{Data formats}
 
-Podstawową klasą pozwalającą na załadowanie danych do biblioteki Shogun jest klasa \textit{std::vector} z standardowej biblioteki szablonowej (ang. \textit{Standard Template Library, STL}) języka C++. W związku z tym, do pobrania danych dla programu realizującego uczenie i pracę z modelem możliwe jest wykorzystanie dowolnego mechanizmu (np. odczytu z pliku, pobranie danych z sieci czy innego urządzenia) które finalnie przetworzy je do postaci wektora, lecz należy ten mechanizm dostarczyć we własnym zakresie. Popularnym wyborem do przechowywania informacji uczących jest plik o ustrukturyzowanym formacie CSV, dla którego biblioteka Shogun posiada dedykowane wsparcie \cite{handsOnMachineLearning}. Obwarowane jest ono jednak pewnymi wymaganiami:
-
-\begin{itemize}
-	\item \textbf{Plik musi zawierać jedynie dane numeryczne} - w przypadku występowania wartości tekstowych, należy wykonać przetwarzanie wstępne mające na celu ich zamianę na wartości liczbowe (np. w przypadku klas decyzyjnych zmiennej odpowiedzi sugerowane jest zastosowanie kodowania \textit{one-hot}). Niestety, ten wymóg nie pozwala na przechowywanie etykiet wraz z danymi.
-	
-	\item \textbf{Jako separator należy użyć przecinka} - mimo iż sam format, jak i wiele programów komercyjnych do pracy z danymi, jak np. Microsoft Excel, JMP, itp., pozwalają na zastosowanie innych separatorów, takich jak średnik, dla biblioteki Shogun należy zastosować w formie separatora przecinek;
-	
-	\item \textbf{Liczby rzeczywiste powinny być zapisywane z użyciem kropki jako separatora dziesiętnego} - wynika to ze specyfiki języka C++ (jak i wielu innych języków), że domyślne mechanizmy wymuszają użycie kropki jako separatora dziesiętnego, i oczekują jej w przypadku parsowania liczby rzeczywistej z postaci ciągu znakowego odczytanego z pliku, do postaci wartości liczbowej.
-\end{itemize} 
-
-Do odczytu i parsowania danych z pliku CSV wykorzystywana jest klasa \textit{shogun::CCSVFile}, której wynik następnie ładowany jest do klasy \textit{shogun::SGMatrix}. Ze względu na zapis odczytanych danych w kolejności według kolumn, do wykorzystania ich w procesie uczenia konieczna jest transpozycja, a następnie rozdzielenie macierzy na dwie części, z których jedna zawiera predyktory, a druga wartości zmiennej odpowiedzi. Przykładowy fragment kodu realizujący to zadanie zamieszczony został na listingu \ref{shogun:csv}. Po prawidłowym rozgraniczeniu fragmentów danych, należy przeprowadzić ponowną transpozycję do postaci akceptowalnej przez algorytmy uczenia, oraz obudować dane klasami na których operują docelowe metody uczenia, takimi jak \textit{CDenseFeatures}, \textit{CMulticlassLabels} czy \textit{CRegressionLabels}, co zostało ukazane na listingu \ref{shogun:csv2}.
-
-\cppcode{Result/inc/shogun/csv.hpp}{Przykładowa funkcja do odczytu i przygotowania danych z pliku CSV dla biblioteki Shogun.}{shogun:csv}
-
-\cppcode{Result/inc/shogun/shogunModels.hpp}{Funkcja przepakowujące dane do kontenerów docelowych.}{shogun:csv2}
-
-\section{Metody przetwarzania i eksploracji danych}
-
-\subsection{Normalizacja}
-
-Biblioteka dostarcza możliwość normalizacji typu min-max, zapewniając że dane mieścić się będą w przedziale jednostkowym, za pomocą klasy \textit{shogun::CRescaleFeatu-res}. Klasa pozwala na ponowne wykorzystanie dla danych o tych samych nauczonych zmiennych. Posiada ona dwie główne metody:
+Base class allowing for loading data into Shogun is \textit{std::vector} present in the Standard Template Library (STL) of C++ language. As such, a user can use any mechanism of loading and parsing data, eg. from a file, network or another device, that at the end returns a vector containing the observations, as long as he provides it himself. One popular choice for storing training data is CSV file, for which Shogun provides support \cite{handsOnMachineLearning}. Still in that case data is a subject to several requirements:
 
 \begin{itemize}
-	\item \textit{fit()} - pozwalającą na nauczenie normalizatora statystyk danych;
-	\item \textit{transform()} - pozwalającą na normalizację obserwacji.
+	\item \textbf{The file can only contain numeric data} - if any text data are present, preprocessing is needed to recode them into some numeric values (eg. one-hot encoding or regular subsequent numbers in terms of response variable classes). Sadly this means that data explanations cannot be stored alongside it.
+	
+	\item \textbf{Comma separator} - this becomes an issue if data is previously processed via other software, like Microsoft Excel or JMP, as it commonly uses semicolon as a separator. Despite the CSV format allows for several different separators, Shogun accepts only comma as a valid one.
+
+	\item \textbf{Real values should use dot character as a decimal point} - this comes from the characteristics of C++ (and also other languages), and is required for the language to be able to automatically parse a value from text representation to numeric representation.
 \end{itemize}
 
-W przypadku niektórych algorytmów oferowanych przez Shogun, normalizacja jest jednym z pierwszych wykonywanych kroków, w związku z czym nie zawsze zachodzi potrzeba wykonania jej we wstępnym przetwarzaniu. Informacja o takim przypadku powinna być zawarta w dokumentacji danej metody. Listing \ref{shogun:normalizer} pokazuje jak wykorzystać wyżej wspomnianą klasę do zrealizowania normalizacji. Zarówno przedstawiona klasa jak i funkcja zawarta na listingu realizują normalizację w miejscu zapisu macierzy regresorów, w związku z czym nie ma potrzeby nadpisywania elementu ją przechowującego.
+In order to read and parse data from CSV file, user needs to use \textit{shogun::CCSVFile} class, which result is then loaded into an object of \textit{shogun::SGMatrix}. Because of the fact that this class saved the stored data column-wise, to use them in the training process, user needs to transpose it, and then separate this matrix into two parts, one of which contains predictors, and the other labels. Sample code snippet of this procedure is shown on listing \ref{shogun:csv}. After correct data separation, the container needs to be transposed again so it will be accepted by the learning algorithm, and it needs to be wrapped into specifically designed classes called \textit{CDenseFeatures}, \textit{CMulticlassLabels} or \textit{CRegressionLabels}. This part was shown on listing \ref{shogun:csv2}.
+
+\cppcode{Result/inc/shogun/csv.hpp}{Sample read and preprocessing of data from a CSV file}{shogun:csv}
+
+\cppcode{Result/inc/shogun/shogunModels.hpp}{Repackaging data into desired containers}{shogun:csv2}
+
+\section{Data processing and exploration methods}
+
+\subsection{Normalizing}
+
+The library provides a normalizing min-max mechanism that guarantees the data will be rescaled into a $\langle$ 0; 1 $\rangle$ range, with a class \textit{shogun::CRescaleFeatures}. An object of this class can be then used again for the new data corresponding to the previously learned predictors. Its two main methods are:
+
+\begin{itemize}
+	\item \textit{fit()} - teaches the normalizer object statistical characteristics of the provided data;
+	\item \textit{transform()} - performs normalizing.
+\end{itemize}
+
+In case of some algorithms provided by Shogun, normalizing is one of the first steps executed automatically, so it is not always necessary to do this in preprocessing. Such information should be included in the documentation of a given method. Listing \ref{shogun:normalizer} shows how to use the aforementioned class. The class, aswell as the function shown on the listing perform the normalizing in-place, hence no need to override the object storing the data.
 
 \cppcode{Result/inc/shogun/rescale.hpp}{Przykład funkcji wykonującej normalizację.}{shogun:normalizer}
 
-\subsection{Redukcja wymiarowości}
+\subsection{Dimensionality reduction}
 
-Shogun udostępnia użytkownikowi kilka rodzajów algorytmów redukcji wymiarowości, realizowane przez następujące klasy \cite{handsOnMachineLearning}:
-
-\begin{itemize}
-	\item \textbf{analiza składowych głównych} - klasa \textit{CPCA};
-	\item \textbf{jądrowa analiza składowych głównych} - klasa \textit{CKernelPCA};
-	\item \textbf{skalowanie wielowymiarowe} - klasa \textit{MultidimensionalScaling};
-	\item \textbf{IsoMap} - klasa \textit{CIsoMap};
-	\item \textbf{ICA} - klasa \textit{CFastICA};
-	\item \textbf{analiza czynnikowa} - klasa \textit{CFactorAnalysis};
-	\item \textbf{t-SNE} - klasa \textit{CTDistributedStochasticNeighborEmbedding}.
-\end{itemize}
-
-Każda z powyższych klas operuje poprzez uprzednie nauczenie się parametrów danych uczących metodą \textit{fit()} oraz ustawienie docelowej liczby wymiarów (z wyjątkiem ICA). Nauczony obiekt reduktora można wykorzystać do redukcji wymiarowości danych poprzez metodę \textit{apply\char`_to\char`_feature\char`_vector()} zwracającą przetworzony wektor, lub w przypadku ICA, Analizy Składowych oraz t-SNE metodę \textit{transform()}, której wynik należy zrzutować na wskaźnik na CDenseFeatures. Niestety, wykorzystanie któregokolwiek z reduktorów wiąże się z koniecznością utworzenia nowej kopii obiektu w procesie transformacji, zamiast wykonania przekształceń w miejscu. Listing \ref{shogun:reduction} przedstawia sposób wykonania redukcji na przykładzie klasy \textit{CKernelPCA}.
-
-\cppcode{Result/inc/shogun/pca_reduction.hpp}{Przykład redukcji wymiarowości z wykorzystaniem metody Kernel PCA \cite{handsOnMachineLearning}.}{shogun:reduction}
-
-\subsection{Regularyzacja L1 i L2}
-
-W przypadku biblioteki Shogun, regularyzacja stanowi integralną część modelu, co oznacza że występuje ona zawsze podczas wykorzystania danego typu modelu uczenia maszynowego, oraz nie ma możliwości zmiany typu regularyzacji używanej przez docelowy model.
-
-\section{Modele uczenia maszynowego}
-\subsection{Regresja liniowa}
-Jednym z podstawowych algorytmów uczenia maszynowego udostępnianych przez bibliotekę Shogun jest regresja liniowa, realizowana za pomocą klasy \textit{CLinearRidgeRegression}. Jak wskazuje nazwa, metoda ta posiada wbudowaną regresję grzbietową, której konfiguracja odbywa się podczas tworzenia obiektu modelu. Listing \ref{shogun:linear} przedstawia sposób dopasowania modelu regresji liniowej z pomocą biblioteki Shogun.
-
-\cppcode{Result/inc/shogun/linear.hpp}{Przykład regresji liniowej w Shogun.}{shogun:linear}
-
-\subsection{Regresja logistyczna}
-Biblioteka Shogun zawiera implementację wieloklasowej regresji logistycznej w postaci gotowego obiektu klasy \textit{CMulticlassLogisticRegression}. Posiada ona wbudowaną konfigurowalną regularyzację. Listing \ref{shogun:logistic} przedstawia sposób użycia wspomnianej klasy.
-
-\cppcode{Result/inc/shogun/logistic.hpp}{Przykład regresji logistycznej.}{shogun:logistic}
-
-\subsection{Maszyna wektorów nośnych}
-Podobnie jak w przypadku regresji logistycznej, w bibliotece Shogun dostępna jest implementacja wieloklasowej klasyfikacji z wykorzystaniem maszyny wektorów nośnych, w postaci klasy \textit{CMulticlassLibSVM}. Posiada ona szereg dostępnych do konfiguracji parametrów, i umożliwia wybór zastosowanego jądra użytkownikowi. Listing \ref{shogun:svm} prezentuje jak wykorzystać wymienioną klasę.
-
-\cppcode{Result/inc/shogun/svm.hpp}{Przykład użycia maszyny wektorów nośnych.}{shogun:svm}
-
-\subsection{Algorytm K najbliższych sąsiadów}
-
-Algorytm K najbliższych sąsiadów dostępny jest pod postacią klasy \textit{CKNN}. Umożliwia on wybranie sposobu obliczania odległości poprzez przekazanie obiektu odpowiedniej klasy, oraz liczby najbliższych sąsiadów. Głównymi z dostępnych typów dystansów są odległość Euklidesa, Hamminga, Manhattanu oraz podobieństwo kosinusowe. W porównaniu do poprzednich metod, nie wymaga on ustawiania hiperparametrów, dzięki czemu można z niego bezproblemowo korzystać bez sprawdzianu krzyżowego. Listing \ref{shogun:knn} pokazuje przykład konfiguracji i użycia algorytmu kNN z użyciem odległości euklidesowej.
-
-\cppcode{Result/inc/shogun/knn.hpp}{Przykład algorytmu kNN w Shogun.}{shogun:knn}
-
-\subsection{Algorytm zbiorowy}
-\subsubsection{Wzmacnianie gradientu}
-Implementacja algorytmu zbiorowego z wykorzystaniem metody wzmacniania gradientu przystosowana jest do działania jedynie z modelami wykonującymi zadanie regresji. Klasa odpowiedzialna za jego realizację to \textit{CStochasticGBMachine}. Pozwala ona na konfigurację szeregu parametrów, do których należą:
+Shogun gives to the user several algorithms of dimensionality reduction as following classes \cite{handsOnMachineLearning}:
 
 \begin{itemize}
-	\item bazowy algorytm;
-	\item funkcja straty;
-	\item liczba iteracji;
-	\item współczynnik uczenia;
-	\item ułamek wektorów do losowego wybrania w każdej iteracji.
+	\item \textbf{Principle Component Analysis} - class \textit{CPCA};
+	\item \textbf{Kernel Principle Component Analysis} - class \textit{CKernelPCA};
+	\item \textbf{Multidimensional Scaling} - class \textit{MultidimensionalScaling};
+	\item \textbf{IsoMap} - class \textit{CIsoMap};
+	\item \textbf{ICA} - class \textit{CFastICA};
+	\item \textbf{Factor Analysis} - class \textit{CFactorAnalysis};
+	\item \textbf{t-SNE} - class \textit{CTDistributedStochasticNeighborEmbedding}.
 \end{itemize}
 
-Listing \ref{shogun:gb} przedstawia sposób implementacji powyższej metody z wykorzystaniem binarnego drzewa decyzyjnego regresji i klasyfikacji (implementowanego przez klasę \textit{CCARTree}) jako algorytmu bazowego. 
+Each of the classes mentioned above operates by first learning the parameters of the training data by calling the \textit{fit()} function, and establishing the desired dimensions count (except for ICA). Trained reductor object can be used to reduce the dimensionality by \textit{apply\char`_to\char`_feature\char`_vector()} method, that returns transformed data, or in case of ICA, Factor Analysis and t-SNE, by \textit{transform()} method, which result needs to be casted into a pointer to \textit{CDenseFeatures}. Unfortunately, using any of the reductor objects requires creating a new copy of the data object during transformation, instead of performing it in-place. Listing \ref{shogun:reduction} shows an example based on class \textit{CKernelPCA}.
 
-\cppcode{Result/inc/shogun/gb.hpp}{Przykład użycia metody wzmacniania gradientu.}{shogun:gb}
+\cppcode{Result/inc/shogun/pca_reduction.hpp}{Dimensionality reduction using Kernel PCA \cite{handsOnMachineLearning}.}{shogun:reduction}
+
+\subsection{L1 and L2 Regularisation}
+
+In Shogun, regularisation is an integral part of a machine learning model, and as such, it is always performed by given model. Each model defines itself which kind of regularization it performs, and this cannot be changed.
+
+\section{Machine Learning Models}
+\subsection{Linear Regression}
+One of the fundamental machine learning algorithms provided by the Shogun library is linear regression, performed by the \textit{CLinearRidgeRegression} class. As the name suggests, it utilizes Ridge Regression, configured at the model creation stage. Listing \ref{shogun:linear} shows how to adjust the model.
+
+\cppcode{Result/inc/shogun/linear.hpp}{Linear regression example in Shogun}{shogun:linear}
+
+\subsection{Logistic Regression}
+Shogun library contains implementation of multiclass logistic regression via \textit{CMulticlassLogisticRegression} class. It also provides configurable regularisation. Listing \ref{shogun:logistic} shows how to use it.
+
+\cppcode{Result/inc/shogun/logistic.hpp}{Logistic regression example in Shogun}{shogun:logistic}
+
+\subsection{Support Vector Machine}
+Similarly to logistic regression, Shogun provides the multiclass Support Vector Machine model implementation for classification tasks, as \textit{CMulticlassLibSVM} class. It contains several configurable parameters, along with the choice of kernel itself. Listing \ref{shogun:svm} shows an example of use.
+
+\cppcode{Result/inc/shogun/svm.hpp}{Support Vector Machine example in Shogun}{shogun:svm}
+
+\subsection{K-Nearest Neighbours}
+
+K-Nearest Neighbours algorith is available as \textit{CKNN} class. It allows user to select the method of calculating distances by passing a correct object, and the count of neighbours considered the nearest. The main available distance metrics are: Euklidean, Hamming, Manhattan and cosinus similarity. In comparison to other methods, it does not require the configuration of hyperparameters, allowing the use of it in crossvalidation without problems. Listing \ref{shogun:knn} presents an example configuration and use of KNN algorithm using Euclidean distance.
+
+\cppcode{Result/inc/shogun/knn.hpp}{KNN algorithm example in Shogun}{shogun:knn}
+
+\subsection{Ensemble algorithms}
+\subsubsection{Gradient boosting}
+
+Implementation of ensemble algorithm using gradient boosting is adjusted only for regression models. The class \textit{CStochasticGBMachine} is responsible for its execution. It allows the user to configure several parameters, some of which are:
+
+\begin{itemize}
+	\item base algorithm;
+	\item loss function;
+	\item iteration count;
+	\item learning coefficient;
+	\item fraction of vectors to choose at each iteration.
+\end{itemize}
+
+Listing \ref{shogun:gb} shows a method of creating such model using binary decisive tree for regression and classification (implemented by \textit{CCARTree} class) as a base algorithm.
+
+\cppcode{Result/inc/shogun/gb.hpp}{Gradient boosting example in Shogun}{shogun:gb}
 
 \subsubsection{Las losowy}
 Metoda lasu losowego jest dostępna w bibliotece Shogun poprzez użycie klasy \textit{CRandomForest}. W przeciwieństwie do wzmacniania gradientu, implementacja tej metody pozwala także na dokonywanie klasyfikacji. Do głównych konfigurowalnych parametrów należą:

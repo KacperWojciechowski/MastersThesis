@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  28 SEP 2023 21:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  14 OCT 2023 16:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1396,15 +1396,9 @@ Overfull \hbox (2.60454pt too wide) in paragraph at lines 360--390
 al3/pvalue4.png (PNG copy)>]
 Chapter 4.
 
-Overfull \hbox (50.6114pt too wide) in paragraph at lines 19--20
-[]\T1/lmr/m/n/12 Do od-czytu i par-sowa-nia danych z pliku CSV wyko-rzysty-wana
- jest klasa \T1/lmr/m/it/12 shogun::CCSVFile\T1/lmr/m/n/12 ,
- []
-
-
-Overfull \hbox (18.2797pt too wide) in paragraph at lines 19--20
-[]\T1/lmr/m/n/12 4.1[]. Po praw-idªowym roz-granicze-niu frag-men-tów danych, n
-ale»y przeprowadzi¢ ponown¡
+Overfull \hbox (1.4877pt too wide) in paragraph at lines 19--20
+[]\T1/lmr/m/n/12 In or-der to read and parse data from CSV file, user needs to 
+use \T1/lmr/m/it/12 shogun::CCSVFile
  []
 
 [20
@@ -1426,30 +1420,29 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
 (d:/Programy/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-(./Result/inc/shogun/csv.hpp [21]) (./Result/inc/shogun/shogunModels.hpp
-[22])
+(./Result/inc/shogun/csv.hpp
+Underfull \vbox (badness 1259) has occurred while \output is active []
+
+ [21])
+(./Result/inc/shogun/shogunModels.hpp [22])
 Overfull \hbox (2.96196pt too wide) in paragraph at lines 29--30
 \T1/lmr/m/n/12 mie±-ci¢ si¦ b¦d¡ w przedziale jed-nos-tkowym, za po-moc¡ klasy 
 \T1/lmr/m/it/12 shogun::CRescaleFeatu-
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23]
-(./Result/inc/shogun/rescale.hpp)
+[23] (./Result/inc/shogun/rescale.hpp)
 Overfull \hbox (6.45879pt too wide) in paragraph at lines 42--43
 \T1/lmr/m/n/12 Shogun udost¦p-nia u»ytkown-ikowi kilka rodza-jów al-go-ryt-mów 
 re-dukcji wymi-arowo±ci,
  []
 
-[24]
+
 Overfull \hbox (7.91971pt too wide) in paragraph at lines 54--55
 \T1/lmr/m/n/12 danych ucz¡-cych metod¡ \T1/lmr/m/it/12 fit() \T1/lmr/m/n/12 ora
 z ustaw-ie-nie do-celowej liczby wymi-arów (z wyj¡tkiem
  []
 
-(./Result/inc/shogun/pca_reduction.hpp)
+[24] (./Result/inc/shogun/pca_reduction.hpp)
 Overfull \hbox (5.35228pt too wide) in paragraph at lines 64--65
 \T1/lmr/m/n/12 bib-liotek¦ Shogun jest re-gresja lin-iowa, re-al-i-zowana za po
 -moc¡ klasy \T1/lmr/m/it/12 CLin-ear-RidgeRe-
@@ -1461,7 +1454,7 @@ Overfull \hbox (5.76834pt too wide) in paragraph at lines 69--70
 gresji lo-gisty-cznej w postaci
  []
 
-[26] (./Result/inc/shogun/logistic.hpp)
+(./Result/inc/shogun/logistic.hpp [26])
 Overfull \hbox (15.79222pt too wide) in paragraph at lines 74--75
 \T1/lmr/m/n/12 im-ple-men-tacja wielok-la-sowej klasy-fikacji z wyko-rzys-tanie
 m maszyny wek-torów no±nych,
@@ -1476,7 +1469,7 @@ Overfull \hbox (5.24971pt too wide) in paragraph at lines 80--81
 ie obiektu odpowied-
  []
 
-(./Result/inc/shogun/knn.hpp [29])
+(./Result/inc/shogun/knn.hpp) [29]
 Overfull \hbox (2.21315pt too wide) in paragraph at lines 96--97
 \T1/lmr/m/n/12 taniem bi-na-rnego drzewa de-cyzyjnego re-gresji i klasy-fikacji
  (im-ple-men-towanego przez
@@ -1500,11 +1493,8 @@ Overfull \hbox (0.28976pt too wide) in paragraph at lines 138--139
 quared-Er-ror \T1/lmr/m/n/12 jako ar-gu-ment sz-ablonu
  []
 
-(./Rozdzial4/shogun-mse.cpp)
-Underfull \vbox (badness 1708) has occurred while \output is active []
-
- [34]
-(./Rozdzial4/shogun-mae.cpp) (./Rozdzial4/shogun-log.cpp)
+(./Rozdzial4/shogun-mse.cpp) [34] (./Rozdzial4/shogun-mae.cpp)
+(./Rozdzial4/shogun-log.cpp)
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 154.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1532,7 +1522,10 @@ la me-tryki $\OML/lmm/m/it/12 R[]$ \T1/lmr/m/n/12 w zwi¡zku
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 158.
-(./Result/inc/shogun/verify.hpp [35]) (./Rozdzial4/shogun-acc.cpp [36])
+(./Result/inc/shogun/verify.hpp [35]) (./Rozdzial4/shogun-acc.cpp)
+Underfull \vbox (badness 7558) has occurred while \output is active []
+
+ [36]
 (./Rozdzial4/shogun-roc.cpp)
 Overfull \hbox (16.5762pt too wide) in paragraph at lines 178--179
 \T1/lmr/m/n/12 terium ewalu-acji mod-elu poprzez ut-worze-nie odpowied-nich kla
@@ -1545,13 +1538,13 @@ Overfull \hbox (12.94098pt too wide) in paragraph at lines 178--179
 n-stancj¡ klasy \T1/lmr/m/it/12 CCross-
  []
 
-(./Result/inc/shogun/cross.hpp [37]) [38]) (./Rozdzial5/rozdzial5.tex
+(./Result/inc/shogun/cross.hpp [37])) (./Rozdzial5/rozdzial5.tex
 Overfull \hbox (23.78929pt too wide) in paragraph at lines 186--1
 \T1/lmr/m/n/12 stawy teorii uczenia maszynowego w kon-tek±-cie ich za-s-tosowa-
 nia. Wi¦k-szo±¢ z przykªadów
  []
 
-[39]
+[38] [39]
 Chapter 5.
 [40
 
@@ -1872,7 +1865,7 @@ ysunki/Rozdzial7/dlib_linear_svm.jpg>] [76] [77
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: 6311DE65F2E025783E0DEB8E82372B59;17631.
+(rerunfilecheck)             Checksum: 48384C2E1C66F2D5B5A10DE864F0B13F;17511.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                praca
@@ -1885,7 +1878,7 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
 Here is how much of TeX's memory you used:
  32063 strings out of 476017
  562218 string characters out of 5789275
- 1935660 words of memory out of 5000000
+ 1931660 words of memory out of 5000000
  49876 multiletter control sequences out of 15000+600000
  600498 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1907,7 +1900,7 @@ ublic/lm/lmtt12.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/lm/
 lmtti10.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sf
 xc1728.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfx
 c2074.pfb>
-Output written on praca.pdf (84 pages, 893403 bytes).
+Output written on praca.pdf (84 pages, 892733 bytes).
 PDF statistics:
  3351 PDF objects out of 3580 (max. 8388607)
  3146 compressed objects within 32 object streams

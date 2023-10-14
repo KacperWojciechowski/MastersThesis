@@ -20,15 +20,15 @@
 \contentsline {section}{\numberline {3.3}Models built in JMP}{18}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Support Vector Machine (SVM)}{18}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Linear regression}{19}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {4}Biblioteka Shogun}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Wprowadzenie}{20}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Formaty źródeł danych}{20}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Metody przetwarzania i eksploracji danych}{24}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Normalizacja}{24}{subsection.4.3.1}%
+\contentsline {chapter}{\numberline {4}Shogun}{20}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introductions}{20}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Data formats}{20}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Data processing and exploration methods}{23}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Normalizacja}{23}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Redukcja wymiarowości}{24}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Regularyzacja L1 i L2}{25}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Modele uczenia maszynowego}{26}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Regresja liniowa}{26}{subsection.4.4.1}%
+\contentsline {section}{\numberline {4.4}Modele uczenia maszynowego}{25}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Regresja liniowa}{25}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Regresja logistyczna}{26}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Maszyna wektorów nośnych}{27}{subsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.4.4}Algorytm K najbliższych sąsiadów}{29}{subsection.4.4.4}%
@@ -38,7 +38,7 @@
 \contentsline {subsection}{\numberline {4.4.6}Sieć neuronowa}{32}{subsection.4.4.6}%
 \contentsline {section}{\numberline {4.5}Metody analizy modeli}{34}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Błąd średniokwadratowy}{34}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Średni błąd bezwzględny}{35}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.2}Średni błąd bezwzględny}{34}{subsection.4.5.2}%
 \contentsline {subsection}{\numberline {4.5.3}Logarytmiczna funkcja straty}{35}{subsection.4.5.3}%
 \contentsline {subsection}{\numberline {4.5.4}Metryka $R^2$}{35}{subsection.4.5.4}%
 \contentsline {subsection}{\numberline {4.5.5}Dokładność}{36}{subsection.4.5.5}%
