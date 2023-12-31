@@ -98,35 +98,38 @@ Listing \ref{shogun:gb} shows a method of creating such model using binary decis
 
 \cppcode{Result/inc/shogun/gb.hpp}{Gradient boosting example in Shogun}{shogun:gb}
 
-\subsubsection{Las losowy}
-Metoda lasu losowego jest dostępna w bibliotece Shogun poprzez użycie klasy \textit{CRandomForest}. W przeciwieństwie do wzmacniania gradientu, implementacja tej metody pozwala także na dokonywanie klasyfikacji. Do głównych konfigurowalnych parametrów należą:
+\subsubsection{Random forest}
+The random forest method is available in the Shogun library via the \textit{CRandomForest} class. On the contrary to gradient boosting, its implementation allows also for classification tasks. Some of the main configurable parameters are:
 
 \begin{itemize}
-	\item liczba drzew;
-	\item liczba zbiorów na które powinny zostać podzielone dane;
-	\item algorytm wybrania końcowego wyniku;
-	\item typ rozwiązywanego problemu;
-	\item ciągłość wartości regresorów.
+	\item number of trees;
+	\item number of batches to which the data should be separated;
+	\item algorithm of the result selection;
+	\item type of the problem;
+	\item continuity of the regressors.
 \end{itemize}
 
-Listing \ref{shogun:rf} pokazuje jak utworzyć i skonfigurować model losowego lasu do wykonania zadania aproksymacji funkcji kosinus.
+Listing \ref{shogun:rf} shows how to create and configure random forest model for cosinus approximation.
 
 \cppcode{Result/inc/shogun/rforest.hpp}{Przykład użycia metody losowego lasu}{shogun:rf}
 
-\subsection{Sieć neuronowa}
+\subsection{Neural network}
 
-Pierwszym krokiem tworzenia sieci neuronowej dla niniejszej biblioteki jest skonfigurowanie architektury sieci za pomocą obiektu klasy \textit{CNeuralLayers}. Posiada ona szereg metod, które tworzą odpowiednio skonfigurowane warstwy z wybraną funkcją aktywacji:
+First step in creating a neural network with this library is to configure the network topology, using \textit{CNeuralLayers} object. It consists of a range of methods, which create layers with given activation function:
 
 \begin{itemize}
-	\item \textit{input()} - warstwa wejściowa z określoną ilością wymiarów;
-	\item \textit{logistic()} - warstwa w pełni połączona z sigmoidalną funkcją aktywacji;
-	\item \textit{linear()} - warstwa w pełni połączona z liniową funkcją aktywacji;
-	\item \textit{rectified\char`_linear()} - warstwa w pełni połączona z funkcją aktywacji ReLU;
-	\item \textit{leaky\char`_rectified\char`_linear} - warstwa w pełni połączona z funkcją aktywacji Leaky ReLU;
-	\item \textit{softmax} - warstwa w pełni połączona z funkcją aktywacji softmax. 
+	\item \textit{input()} - input layer with a certain number of inputs;
+	\item \textit{logistic()} - fully connected sigmoid function layer;
+	\item \textit{linear()} - fully connected linear function layer;
+	\item \textit{rectified\char`_linear()} - fully connected ReLU layer;
+	\item \textit{leaky\char`_rectified\char`_linear} - fully connected Leaky ReLU layer;
+	\item \textit{softmax} - fully connected softmax layer;
 \end{itemize}
 
-Kolejność wywoływania powyższych metod jest istotna, ponieważ decyduje ona o kolejności warstw w modelu. Po zakończeniu konfiguracji, możliwe jest utworzenie obiektu zatwierdzonej architektury za pomocą funkcji \textit{done()}, a następnie wykorzystanie go do inicjalizacji klasy \textit{CNeuralNetwork}. W celu połączenia warstw, należy wywołać na obiekcie sieci neuronowej funkcję \textit{quick\char`_connect} oraz zainicjalizować wagi metodą \textit{initialize\char`_neural\char`_network}. Może ona przyjąć parametr określający rozkład Gaussa używany do inicjalizacji parametrów.
+The order in which we call the methods is important, because it decides about the order of layers within the model. After completing the configuration process, it is possible to confirm the architecture by creating another object via the \textit{done()} method, and using it to initialize \textit{CNeuralNetwork} class. In order to connect the layers, the \textit{quick\char`_connect} method needs to be called, and subsequently, the weights have to be inialized via \textit{initialize\char`_neural\char`_network} function. It accepts a parameter describing a Gaussian distribution used to initialize weights.
+
+
+
 
 Następnym krokiem jest skonfigurowanie optymalizatora za pomocą metody \textit{set-\char`_optimization}. Klasa \textit{CNeuralNetwork} wspiera optymalizację z wykorzystaniem metody najszybszego spadku oraz Broydena-Fletchera-Goldfarba-Shannona. Sieć neuronowa posiada wbudowaną regularyzację L2, którą można skonfigurować, podobnie jak pozostałe parametry takie jak współczynnik uczenia, liczba epok, kryterium zbieżności dla funkcji straty, czy wielkość zestawów wsadowych. Niestety, niemożliwy jest wybór funkcji straty, gdyż jest on dokonywany automatycznie na podstawie typu zmiennej odpowiedzi. Listing \ref{shogun:nn} przedstawia pełny proces budowania, konfiguracji oraz uczenia sieci. Niestety ze względu na brak implementacji warstwy neuronu o aktywacji w postaci tangensa hiperbolicznego, na potrzeby prezentacji zastosowania zdecydowano się na wykorzystanie funkcji reLU, co ma wpływ na uzyskane wyniki.
 

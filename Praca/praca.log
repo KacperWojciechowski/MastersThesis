@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  14 OCT 2023 16:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  10 NOV 2023 17:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1424,129 +1424,84 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 Underfull \vbox (badness 1259) has occurred while \output is active []
 
  [21])
-(./Result/inc/shogun/shogunModels.hpp [22])
-Overfull \hbox (2.96196pt too wide) in paragraph at lines 29--30
-\T1/lmr/m/n/12 mie±-ci¢ si¦ b¦d¡ w przedziale jed-nos-tkowym, za po-moc¡ klasy 
-\T1/lmr/m/it/12 shogun::CRescaleFeatu-
- []
-
-[23] (./Result/inc/shogun/rescale.hpp)
-Overfull \hbox (6.45879pt too wide) in paragraph at lines 42--43
-\T1/lmr/m/n/12 Shogun udost¦p-nia u»ytkown-ikowi kilka rodza-jów al-go-ryt-mów 
-re-dukcji wymi-arowo±ci,
- []
-
-
-Overfull \hbox (7.91971pt too wide) in paragraph at lines 54--55
-\T1/lmr/m/n/12 danych ucz¡-cych metod¡ \T1/lmr/m/it/12 fit() \T1/lmr/m/n/12 ora
-z ustaw-ie-nie do-celowej liczby wymi-arów (z wyj¡tkiem
- []
-
-[24] (./Result/inc/shogun/pca_reduction.hpp)
-Overfull \hbox (5.35228pt too wide) in paragraph at lines 64--65
-\T1/lmr/m/n/12 bib-liotek¦ Shogun jest re-gresja lin-iowa, re-al-i-zowana za po
--moc¡ klasy \T1/lmr/m/it/12 CLin-ear-RidgeRe-
- []
-
-[25] (./Result/inc/shogun/linear.hpp)
-Overfull \hbox (5.76834pt too wide) in paragraph at lines 69--70
-\T1/lmr/m/n/12 Biblioteka Shogun za-w-iera im-ple-men-tacj¦ wielok-la-sowej re-
-gresji lo-gisty-cznej w postaci
- []
-
-(./Result/inc/shogun/logistic.hpp [26])
-Overfull \hbox (15.79222pt too wide) in paragraph at lines 74--75
-\T1/lmr/m/n/12 im-ple-men-tacja wielok-la-sowej klasy-fikacji z wyko-rzys-tanie
-m maszyny wek-torów no±nych,
- []
-
-(./Result/inc/shogun/svm.hpp [27]
+(./Result/inc/shogun/shogunModels.hpp [22]) [23]
+(./Result/inc/shogun/rescale.hpp) [24] (./Result/inc/shogun/pca_reduction.hpp)
+[25] (./Result/inc/shogun/linear.hpp) (./Result/inc/shogun/logistic.hpp
+[26]) (./Result/inc/shogun/svm.hpp [27]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [28])
-Overfull \hbox (5.24971pt too wide) in paragraph at lines 80--81
-\T1/lmr/m/n/12 wia on wybranie sposobu oblicza-nia odlegªo±ci poprzez przekazan
-ie obiektu odpowied-
- []
+(./Result/inc/shogun/knn.hpp)
+Underfull \vbox (badness 5696) has occurred while \output is active []
 
-(./Result/inc/shogun/knn.hpp) [29]
-Overfull \hbox (2.21315pt too wide) in paragraph at lines 96--97
-\T1/lmr/m/n/12 taniem bi-na-rnego drzewa de-cyzyjnego re-gresji i klasy-fikacji
- (im-ple-men-towanego przez
- []
-
-(./Result/inc/shogun/gb.hpp [30])
-Overfull \hbox (12.46979pt too wide) in paragraph at lines 101--102
-\T1/lmr/m/n/12 pozwala tak»e na dokony-wanie klasy-fikacji. Do gªównych kon-fig
--urowal-nych parametrów
- []
-
-(./Result/inc/shogun/rforest.hpp [31]) [32]
-Overfull \hbox (15.87999pt too wide) in paragraph at lines 130--131
+ [29]
+(./Result/inc/shogun/gb.hpp [30]) (./Result/inc/shogun/rforest.hpp [31])
+[32]
+Overfull \hbox (15.87999pt too wide) in paragraph at lines 131--132
 \T1/lmr/m/it/12 _optimization\T1/lmr/m/n/12 . Klasa \T1/lmr/m/it/12 CNeu-ral-Ne
 t-work \T1/lmr/m/n/12 wspiera op-ty-mal-iza-cj¦ z wyko-rzys-taniem metody
  []
 
-(./Result/inc/shogun/neural.hpp [33])
-Overfull \hbox (0.28976pt too wide) in paragraph at lines 138--139
+(./Result/inc/shogun/neural.hpp
+Underfull \vbox (badness 1881) has occurred while \output is active []
+
+ [33])
+Overfull \hbox (0.28976pt too wide) in paragraph at lines 139--140
 \T1/lmr/m/n/12 worzenia obiektu wyko-rzys-tu-j¡cego typ \T1/lmr/m/it/12 CMean-S
 quared-Er-ror \T1/lmr/m/n/12 jako ar-gu-ment sz-ablonu
  []
 
-(./Rozdzial4/shogun-mse.cpp) [34] (./Rozdzial4/shogun-mae.cpp)
+(./Rozdzial4/shogun-mse.cpp) (./Rozdzial4/shogun-mae.cpp) [34]
 (./Rozdzial4/shogun-log.cpp)
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 154.
+(Font)              <14.4> on input line 155.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 154.
+(Font)              <10> on input line 155.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 154.
+(Font)              <7> on input line 155.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 154.
+(hyperref)                removing `math shift' on input line 155.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 154.
+(hyperref)                removing `superscript' on input line 155.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 154.
+(hyperref)                removing `math shift' on input line 155.
 
 
-Overfull \hbox (3.44022pt too wide) in paragraph at lines 156--157
+Overfull \hbox (3.44022pt too wide) in paragraph at lines 157--158
 \T1/lmr/m/n/12 Biblioteka Shogun nie posi-ada bezpo±red-niej im-ple-men-tacji d
 la me-tryki $\OML/lmm/m/it/12 R[]$ \T1/lmr/m/n/12 w zwi¡zku
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 158.
-(./Result/inc/shogun/verify.hpp [35]) (./Rozdzial4/shogun-acc.cpp)
-Underfull \vbox (badness 7558) has occurred while \output is active []
-
- [36]
+(Font)              <10.95> on input line 159.
+(./Result/inc/shogun/verify.hpp [35]) (./Rozdzial4/shogun-acc.cpp) [36]
 (./Rozdzial4/shogun-roc.cpp)
-Overfull \hbox (16.5762pt too wide) in paragraph at lines 178--179
+Overfull \hbox (16.5762pt too wide) in paragraph at lines 179--180
 \T1/lmr/m/n/12 terium ewalu-acji mod-elu poprzez ut-worze-nie odpowied-nich kla
 s, a nast¦p-nie przekazanie
  []
 
 
-Overfull \hbox (12.94098pt too wide) in paragraph at lines 178--179
+Overfull \hbox (12.94098pt too wide) in paragraph at lines 179--180
 \T1/lmr/m/n/12 ich w kon-struk-torze obiektu sprawdzianu krzy»owego, b¦d¡cego i
 n-stancj¡ klasy \T1/lmr/m/it/12 CCross-
  []
 
 (./Result/inc/shogun/cross.hpp [37])) (./Rozdzial5/rozdzial5.tex
-Overfull \hbox (23.78929pt too wide) in paragraph at lines 186--1
+Overfull \hbox (23.78929pt too wide) in paragraph at lines 187--1
 \T1/lmr/m/n/12 stawy teorii uczenia maszynowego w kon-tek±-cie ich za-s-tosowa-
 nia. Wi¦k-szo±¢ z przykªadów
  []
 
-[38] [39]
+[38]
 Chapter 5.
-[40
+[39
 
 ] (./Result/inc/shark/csv.hpp)
 Overfull \hbox (21.60251pt too wide) in paragraph at lines 14--15
@@ -1560,8 +1515,8 @@ Overfull \hbox (2.93768pt too wide) in paragraph at lines 30--31
 lmr/m/n/12 na obiek-cie nor-mal-iza-tora, aby odpowied-
  []
 
-[41] (./Result/inc/shark/normalization.hpp)
-(./Rozdzial5/shark-dimension-reduction.cpp) [42] (./Rozdzial5/shark-lda-red.cpp
+[40] (./Result/inc/shark/normalization.hpp)
+(./Rozdzial5/shark-dimension-reduction.cpp) [41] (./Rozdzial5/shark-lda-red.cpp
 )
 Overfull \hbox (17.77803pt too wide) in paragraph at lines 53--54
 \T1/lmr/m/n/12 Podobnie jak w przy-padku metody Lasso, wyko-rzys-tanie reg-u-la
@@ -1571,32 +1526,32 @@ ryza-cji L2 w trenowanym
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
+ [42]
 Overfull \hbox (21.03836pt too wide) in paragraph at lines 60--61
 \T1/lmr/m/n/12 lin-iowa. Do celów jej reprezen-tacji dost¦pna jest klasa \T1/lm
 r/m/it/12 Lin-ear-Model\T1/lmr/m/n/12 , ofer-u-j¡ca rozwi¡zanie
  []
 
-(./Result/inc/shark/linear.hpp [44]) (./Rozdzial5/shark-linear2.cpp) [45]
-(./Rozdzial5/shark-logistic.cpp) (./Result/inc/shark/logistic.hpp [46])
-[47]
+(./Result/inc/shark/linear.hpp [43]) (./Rozdzial5/shark-linear2.cpp) [44]
+(./Rozdzial5/shark-logistic.cpp) (./Result/inc/shark/logistic.hpp [45])
+[46]
 Overfull \hbox (6.31308pt too wide) in paragraph at lines 95--96
 []\T1/lmr/m/n/12 regularyzacja - po-dawana jako liczba rzeczy-wista w kon-struk
 -torze \T1/lmr/m/it/12 CSvm-Trainer\T1/lmr/m/n/12 ,
  []
 
-(./Result/inc/shark/svm.hpp [48]) (./Rozdzial5/shark-svm2.cpp)
+(./Result/inc/shark/svm.hpp [47]) (./Rozdzial5/shark-svm2.cpp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49]
+ [48]
 (./Result/inc/shark/knn.hpp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50]
-(./Rozdzial5/shark-rf.cpp) [51] (./Result/inc/shark/neural.hpp [52])
+ [49]
+(./Rozdzial5/shark-rf.cpp) [50] (./Result/inc/shark/neural.hpp [51])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53]
+ [52]
 Overfull \hbox (14.99887pt too wide) in paragraph at lines 146--147
 []\T1/lmr/m/n/12 Ka»da z powy»szych klas u»y-wana jest w schematy-czny sposób, 
 poprzez wcze±niejsze
@@ -1627,22 +1582,22 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 150.
 
-[54] (./Rozdzial5/shark-r2.cpp)
+[53] (./Rozdzial5/shark-r2.cpp)
 Overfull \hbox (27.06532pt too wide) in paragraph at lines 156--156
 []\T1/lmr/bx/n/14.4 Pole pod wykre-sem krzy-wej charak-terysty-cznej odbiornika
  
  []
 
-(./Result/inc/shark/printEvaluation2.hpp [55]) (./Rozdzial5/shark-cv.cpp
-[56])) (./Rozdzial6/rozdzial6.tex
+(./Result/inc/shark/printEvaluation2.hpp [54]) (./Rozdzial5/shark-cv.cpp
+[55])) (./Rozdzial6/rozdzial6.tex
 Overfull \hbox (13.08298pt too wide) in paragraph at lines 170--1
 \T1/lmr/m/n/12 wyró»-ni-a-j¡c¡ j¡ nato-mi-ast na tle po-zostaªych bib-liotek om
 ówionych w ra-mach niniejszej
  []
 
-[57]
+[56]
 Chapter 6.
-(./Rozdzial6/csv.cpp [58
+(./Rozdzial6/csv.cpp [57
 
 ]) (./Result/inc/dlib/normalizer.hpp)
 Overfull \hbox (15.2132pt too wide) in paragraph at lines 24--25
@@ -1650,8 +1605,8 @@ Overfull \hbox (15.2132pt too wide) in paragraph at lines 24--25
 , która oprócz samej re-dukcji wymi-arowo±ci wykonuje
  []
 
-[59] (./Result/inc/dlib/pca.hpp) (./Result/inc/dlib/lda.hpp [60])
-(./Result/inc/dlib/sammon.hpp) [61] (./Result/inc/dlib/linear.hpp)
+[58] (./Result/inc/dlib/pca.hpp) (./Result/inc/dlib/lda.hpp [59])
+(./Result/inc/dlib/sammon.hpp) [60] (./Result/inc/dlib/linear.hpp)
 Overfull \hbox (2.36644pt too wide) in paragraph at lines 53--54
 \T1/lmr/m/n/12 bib-lioteka Dlib ofer-uje klas¦ funkcji de-cyzyjnej \T1/lmr/m/it
 /12 dlib::one_vs_one_decision_function\T1/lmr/m/n/12 .
@@ -1663,7 +1618,7 @@ Overfull \hbox (0.44557pt too wide) in paragraph at lines 53--54
  do której przesªany zostaje trener SVM. Dokªadny
  []
 
-[62] (./Result/inc/dlib/svm.hpp)
+[61] (./Result/inc/dlib/svm.hpp)
 Overfull \hbox (14.28766pt too wide) in paragraph at lines 59--60
 \T1/lmr/m/n/12 try tworz¡ sie¢ w kole-jno±ci od na-jbardziej za-g-nie»d»onego d
 o na-jbardziej zewn¦trznego.
@@ -1672,20 +1627,20 @@ o na-jbardziej zewn¦trznego.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63]
-(./Result/inc/dlib/neural.hpp [64])
+ [62]
+(./Result/inc/dlib/neural.hpp [63])
 Overfull \hbox (6.10262pt too wide) in paragraph at lines 74--75
 \T1/lmr/m/it/12 Ridge Re-gres-sion\T1/lmr/m/n/12 ) w przy-padku bib-lioteki Dli
 b wygl¡da prawie iden-ty-cznie do sposobu
  []
 
-(./Result/inc/dlib/krr.hpp [65])
+(./Result/inc/dlib/krr.hpp [64])
 Overfull \hbox (27.06532pt too wide) in paragraph at lines 80--80
 []\T1/lmr/bx/n/14.4 Pole pod wykre-sem krzy-wej charak-terysty-cznej odbiornika
  
  []
 
-(./Result/inc/dlib/eval.hpp [66]
+(./Result/inc/dlib/eval.hpp [65]
 Overfull \hbox (26.03394pt too wide) in paragraph at lines 42--43
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1701,11 +1656,11 @@ Overfull \hbox (71.01376pt too wide) in paragraph at lines 88--89
 zez funkcj¦ \T1/lmr/m/it/12 dlib::find_min_global()
  []
 
-[67] (./Result/inc/dlib/cross.hpp [68])
+[66] (./Result/inc/dlib/cross.hpp [67])
 
-LaTeX Warning: Citation 'dlib:home' on page 69 undefined on input line 94.
+LaTeX Warning: Citation 'dlib:home' on page 68 undefined on input line 94.
 
-) (./Rozdzial7/rozdzial7.tex [69]
+) (./Rozdzial7/rozdzial7.tex [68]
 Chapter 7.
 
 Overfull \hbox (5.87727pt too wide) in paragraph at lines 5--6
@@ -1718,15 +1673,15 @@ Overfull \hbox (7.70227pt too wide) in alignment at lines 7--68
  [] [] [] [] 
  []
 
-[70
+[69
 
-] [71]
+] [70]
 Overfull \hbox (4.14268pt too wide) in paragraph at lines 74--74
 []\T1/lmr/bx/n/17.28 Porównanie wyników dla zadanych przykªadów 
  []
 
-[72]
-<Rozdzial7/shogun.png, id=2776, 151.3153pt x 182.18062pt>
+[71]
+<Rozdzial7/shogun.png, id=2772, 151.3153pt x 182.18062pt>
 File: Rozdzial7/shogun.png Graphic file (type png)
 <use Rozdzial7/shogun.png>
 Package pdftex.def Info: Rozdzial7/shogun.png  used on input line 98.
@@ -1741,7 +1696,7 @@ Underfull \hbox (badness 3019) in paragraph at lines 99--99
 \T1/lmr/m/n/10.95 dla bib-lioteki
  []
 
-<Rozdzial7/shark.png, id=2777, 150.5625pt x 271.0125pt>
+<Rozdzial7/shark.png, id=2773, 150.5625pt x 271.0125pt>
 File: Rozdzial7/shark.png Graphic file (type png)
 <use Rozdzial7/shark.png>
 Package pdftex.def Info: Rozdzial7/shark.png  used on input line 105.
@@ -1756,7 +1711,7 @@ Underfull \hbox (badness 3019) in paragraph at lines 106--106
 \T1/lmr/m/n/10.95 dla bib-lioteki
  []
 
-<Rysunki/Rozdzial7/dlib.png, id=2778, 151.3153pt x 142.28156pt>
+<Rysunki/Rozdzial7/dlib.png, id=2774, 151.3153pt x 142.28156pt>
 File: Rysunki/Rozdzial7/dlib.png Graphic file (type png)
 <use Rysunki/Rozdzial7/dlib.png>
 Package pdftex.def Info: Rysunki/Rozdzial7/dlib.png  used on input line 112.
@@ -1783,15 +1738,15 @@ Overfull \hbox (1.95345pt too wide) in paragraph at lines 120--121
 zy-czyny uzyskanych
  []
 
-[73 <./Rozdzial7/shogun.png (PNG copy)> <./Rozdzial7/shark.png> <./Rysunki/Rozd
+[72 <./Rozdzial7/shogun.png (PNG copy)> <./Rozdzial7/shark.png> <./Rysunki/Rozd
 zial7/dlib.png>]
 Overfull \hbox (18.07513pt too wide) in paragraph at lines 122--123
 \T1/lmr/m/n/12 uzysku-j¡c warto±¢ pola pod wykre-sem krzy-wej charak-terysty-cz
 nej odbiornika wynosz¡c¡
  []
 
-[74]
-<Rozdzial7/shogun_linear_svm.jpg, id=2796, 163.3603pt x 205.5178pt>
+[73]
+<Rozdzial7/shogun_linear_svm.jpg, id=2792, 163.3603pt x 205.5178pt>
 File: Rozdzial7/shogun_linear_svm.jpg Graphic file (type jpg)
 <use Rozdzial7/shogun_linear_svm.jpg>
 Package pdftex.def Info: Rozdzial7/shogun_linear_svm.jpg  used on input line 14
@@ -1807,7 +1762,7 @@ Underfull \hbox (badness 3019) in paragraph at lines 147--147
 \T1/lmr/m/n/10.95 dla bib-lioteki
  []
 
-<Rozdzial7/shark_linear_svm.png, id=2797, 149.05687pt x 213.04594pt>
+<Rozdzial7/shark_linear_svm.png, id=2793, 149.05687pt x 213.04594pt>
 File: Rozdzial7/shark_linear_svm.png Graphic file (type png)
 <use Rozdzial7/shark_linear_svm.png>
 Package pdftex.def Info: Rozdzial7/shark_linear_svm.png  used on input line 153
@@ -1823,7 +1778,7 @@ Underfull \hbox (badness 3019) in paragraph at lines 154--154
 \T1/lmr/m/n/10.95 dla bib-lioteki
  []
 
-<Rysunki/Rozdzial7/dlib_linear_svm.jpg, id=2798, 152.06813pt x 146.04562pt>
+<Rysunki/Rozdzial7/dlib_linear_svm.jpg, id=2794, 152.06813pt x 146.04562pt>
 File: Rysunki/Rozdzial7/dlib_linear_svm.jpg Graphic file (type jpg)
 <use Rysunki/Rozdzial7/dlib_linear_svm.jpg>
 Package pdftex.def Info: Rysunki/Rozdzial7/dlib_linear_svm.jpg  used on input l
@@ -1857,15 +1812,15 @@ Overfull \hbox (9.94765pt too wide) in paragraph at lines 172--117
 ost¦pne w formie ksi¡»kowej.
  []
 
-[75 <./Rozdzial7/shogun_linear_svm.jpg> <./Rozdzial7/shark_linear_svm.png> <./R
-ysunki/Rozdzial7/dlib_linear_svm.jpg>] [76] [77
+[74 <./Rozdzial7/shogun_linear_svm.jpg> <./Rozdzial7/shark_linear_svm.png> <./R
+ysunki/Rozdzial7/dlib_linear_svm.jpg>] [75] [76
 
-] [78] (./praca.aux)
+] [77] (./praca.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: 48384C2E1C66F2D5B5A10DE864F0B13F;17511.
+(rerunfilecheck)             Checksum: BE45DF3418069FD0E735309EA0A46B06;17432.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                praca
@@ -1876,9 +1831,9 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32063 strings out of 476017
- 562218 string characters out of 5789275
- 1931660 words of memory out of 5000000
+ 32062 strings out of 476017
+ 562211 string characters out of 5789275
+ 1932660 words of memory out of 5000000
  49876 multiletter control sequences out of 15000+600000
  600498 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1900,10 +1855,10 @@ ublic/lm/lmtt12.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/lm/
 lmtti10.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sf
 xc1728.pfb><d:/Programy/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfx
 c2074.pfb>
-Output written on praca.pdf (84 pages, 892733 bytes).
+Output written on praca.pdf (83 pages, 891893 bytes).
 PDF statistics:
- 3351 PDF objects out of 3580 (max. 8388607)
- 3146 compressed objects within 32 object streams
- 1951 named destinations out of 2073 (max. 500000)
+ 3346 PDF objects out of 3580 (max. 8388607)
+ 3142 compressed objects within 32 object streams
+ 1950 named destinations out of 2073 (max. 500000)
  878 words of extra memory for PDF output out of 10000 (max. 10000000)
 
