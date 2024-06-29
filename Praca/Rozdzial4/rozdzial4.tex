@@ -126,24 +126,22 @@ First step in creating a neural network with this library is to configure the ne
 	\item \textit{softmax} - fully connected softmax layer;
 \end{itemize}
 
-The order in which we call the methods is important, because it decides about the order of layers within the model. After completing the configuration process, it is possible to confirm the architecture by creating another object via the \textit{done()} method, and using it to initialize \textit{CNeuralNetwork} class. In order to connect the layers, the \textit{quick\char`_connect} method needs to be called, and subsequently, the weights have to be inialized via \textit{initialize\char`_neural\char`_network} function. It accepts a parameter describing a Gaussian distribution used to initialize weights.
+The order in which we call the methods is important, because it decides about the order of layers within the model. After completing the configuration process, it is possible to confirm the architecture by creating another object via the \textit{done()} method, and using it to initialize \textit{CNeuralNetwork} class. In order to connect the layers, the \textit{quick\char`_connect} method needs to be called, and subsequently, the weights have to be initialized via \textit{initialize\char`_neural\char`_network()} function. It accepts a parameter describing a Gaussian distribution used to initialize weights.
+
+The next step is to configure the optimizer using \textit{set\char`_optimization()} method. The class \textit{CNeuralNetwork} supports optimizing using the steepest descent method and Broyden-Fletcher-Goldfarb-Shannon method. This model has in-built L2 regularization, which can be further configured, similarly to other parameters such as learning coefficient, epoch count, convergence criterion for the loss function, or the size of batches. Unfortunately, user cannot select the loss function in question, since it is established automatically based on the label type. Listing \ref{shogun:nn} shows the full process of building, configuring and teaching a network. Unfortunately, due to the lack of hyperbolic tangential function implementation, a reLU function was used in its stead, which affects the achieved results.
+
+\cppcode{Result/inc/shogun/neural.hpp}{Example of neural network use in Shogun.}{shogun:nn}
+
+\section{Model analysis methods}
+
+\subsection{Mean squared error}
+
+Calculation of mean squared error in the Shogun library comes down to creating an object of type \textit{CMeanSquaredError} as an argument to the \textit{some<>()} template function. It is returned as a pointer to the object. In order to acquire the value of the error for given data, user needs to call the \textit{evaluate()} method, passing prediction results and observed output. Listing \ref{shogun:mse} presents the detailed way to use it.
 
 
+\cppcode{Rozdzial4/shogun-mse.cpp}{Example of calculating mean squared error in Shogun\cite{handsOnMachineLearning}}{shogun:mse}
 
-
-Następnym krokiem jest skonfigurowanie optymalizatora za pomocą metody \textit{set-\char`_optimization}. Klasa \textit{CNeuralNetwork} wspiera optymalizację z wykorzystaniem metody najszybszego spadku oraz Broydena-Fletchera-Goldfarba-Shannona. Sieć neuronowa posiada wbudowaną regularyzację L2, którą można skonfigurować, podobnie jak pozostałe parametry takie jak współczynnik uczenia, liczba epok, kryterium zbieżności dla funkcji straty, czy wielkość zestawów wsadowych. Niestety, niemożliwy jest wybór funkcji straty, gdyż jest on dokonywany automatycznie na podstawie typu zmiennej odpowiedzi. Listing \ref{shogun:nn} przedstawia pełny proces budowania, konfiguracji oraz uczenia sieci. Niestety ze względu na brak implementacji warstwy neuronu o aktywacji w postaci tangensa hiperbolicznego, na potrzeby prezentacji zastosowania zdecydowano się na wykorzystanie funkcji reLU, co ma wpływ na uzyskane wyniki.
-
-\cppcode{Result/inc/shogun/neural.hpp}{Przykład użycia sieci neuronowej.}{shogun:nn}
-
-\section{Metody analizy modeli}
-
-\subsection{Błąd średniokwadratowy}
-
-Obliczenie błędu średniokwadratowego w bibliotece Shogun sprowadza się do utworzenia obiektu wykorzystującego typ \textit{CMeanSquaredError} jako argument szablonu funkcji \textit{some<>()}. Jest on zwracany pod postacią wskaźnika. W celu otrzymania wartości błędu dla posiadanych danych, należy wywołać z jego pomocą funkcję \textit{evaluate}, do której przekazany zostaje zestaw predykcji modelu oraz zaobserwowanych wartości odpowiedzi. Listing \ref{shogun:mse} ukazuje sposób użycia wspomnianego mechanizmu.
-
-\cppcode{Rozdzial4/shogun-mse.cpp}{Przykład obliczenia wartości błędu średniokwadratowego \cite{handsOnMachineLearning}}{shogun:mse}
-
-\subsection{Średni błąd bezwzględny}
+\subsection{Mean absolute error}
 
 Realizacja obliczania średniego błędu bezwzględnego dla biblioteki Shogun dokonywana jest za pomocą klasy \textit{CMeanAbsoluteError} pełniącej rolę ewaluatora. Tworzona jest ona poprzez wykorzystanie szablonu \textit{some<>} a następnie wykorzystywana do obliczeń wołając jej metodę \textit{evaluate} przekazując uzyskane oraz oczekiwane wyniki regresji lub klasyfikacji. Listing \ref{shogun:mae} przedstawia sposób użycia wyżej wymienionej klasy.
 
