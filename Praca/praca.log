@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.6.29)  29 JUN 2024 15:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.6.29)  30 JUN 2024 00:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1420,76 +1420,42 @@ Underfull \vbox (badness 5696) has occurred while \output is active []
 
  [29]
 (./Result/inc/shogun/gb.hpp [30]) (./Result/inc/shogun/rforest.hpp [31])
-Overfull \hbox (15.87999pt too wide) in paragraph at lines 134--135
-\T1/lmr/m/it/12 _optimization\T1/lmr/m/n/12 . Klasa \T1/lmr/m/it/12 CNeu-ral-Ne
-t-work \T1/lmr/m/n/12 wspiera op-ty-mal-iza-cj¦ z wyko-rzys-taniem metody
- []
-
-[32] (./Result/inc/shogun/neural.hpp [33])
-Overfull \hbox (0.28976pt too wide) in paragraph at lines 142--143
-\T1/lmr/m/n/12 worzenia obiektu wyko-rzys-tu-j¡cego typ \T1/lmr/m/it/12 CMean-S
-quared-Er-ror \T1/lmr/m/n/12 jako ar-gu-ment sz-ablonu
- []
-
-(./Rozdzial4/shogun-mse.cpp) (./Rozdzial4/shogun-mae.cpp) [34]
-(./Rozdzial4/shogun-log.cpp)
+[32] (./Result/inc/shogun/neural.hpp [33]) (./Rozdzial4/shogun-mse.cpp)
+(./Rozdzial4/shogun-mae.cpp) [34] (./Rozdzial4/shogun-log.cpp)
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 158.
+(Font)              <14.4> on input line 156.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 158.
+(Font)              <10> on input line 156.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 158.
+(Font)              <7> on input line 156.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 158.
+(hyperref)                removing `math shift' on input line 156.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 158.
+(hyperref)                removing `superscript' on input line 156.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 158.
-
-
-Overfull \hbox (3.44022pt too wide) in paragraph at lines 160--161
-\T1/lmr/m/n/12 Biblioteka Shogun nie posi-ada bezpo±red-niej im-ple-men-tacji d
-la me-tryki $\OML/lmm/m/it/12 R[]$ \T1/lmr/m/n/12 w zwi¡zku
- []
+(hyperref)                removing `math shift' on input line 156.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 162.
-(./Result/inc/shogun/verify.hpp [35]) (./Rozdzial4/shogun-acc.cpp) [36]
-(./Rozdzial4/shogun-roc.cpp)
-Overfull \hbox (16.5762pt too wide) in paragraph at lines 182--183
-\T1/lmr/m/n/12 terium ewalu-acji mod-elu poprzez ut-worze-nie odpowied-nich kla
-s, a nast¦p-nie przekazanie
- []
-
-
-Overfull \hbox (12.94098pt too wide) in paragraph at lines 182--183
-\T1/lmr/m/n/12 ich w kon-struk-torze obiektu sprawdzianu krzy»owego, b¦d¡cego i
-n-stancj¡ klasy \T1/lmr/m/it/12 CCross-
- []
-
-(./Result/inc/shogun/cross.hpp [37])) (./Rozdzial5/rozdzial5.tex
-Overfull \hbox (23.78929pt too wide) in paragraph at lines 190--1
-\T1/lmr/m/n/12 stawy teorii uczenia maszynowego w kon-tek±-cie ich za-s-tosowa-
-nia. Wi¦k-szo±¢ z przykªadów
- []
-
-[38]
+(Font)              <10.95> on input line 160.
+(./Result/inc/shogun/verify.hpp [35]) (./Rozdzial4/shogun-acc.cpp)
+(./Rozdzial4/shogun-roc.cpp [36]) (./Result/inc/shogun/cross.hpp [37]))
+(./Rozdzial5/rozdzial5.tex [38]
 Chapter 5.
+
+Overfull \hbox (0.42929pt too wide) in paragraph at lines 9--10
+\T1/lmr/m/n/12 cre-ated by wrap-ping raw ar-rays us-ing spe-cial-ized adapters,
+ such as eg. \T1/lmr/m/it/12 remora::dense-
+ []
+
 [39
 
-] (./Result/inc/shark/csv.hpp)
-Overfull \hbox (21.60251pt too wide) in paragraph at lines 14--15
-\T1/lmr/m/n/12 wyko-rzys-tanie spec-jal-nych funkcji adap-torowych, do których 
-przekazy-wany jest wska¹nik
- []
-
-(./Rozdzial5/shark-adaptor.cpp)
+] (./Result/inc/shark/csv.hpp) (./Rozdzial5/shark-adaptor.cpp)
 Overfull \hbox (2.93768pt too wide) in paragraph at lines 30--31
 []\T1/lmr/m/n/12 Opieraj¡ si¦ one o u»y-cie metody \T1/lmr/m/it/12 train() \T1/
 lmr/m/n/12 na obiek-cie nor-mal-iza-tora, aby odpowied-
@@ -1805,7 +1771,7 @@ L3 programming layer <2024-01-22>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: C6443D42423C6667697A1961DA401C8F;17429.
+(rerunfilecheck)             Checksum: 17F2F02E9ED970995B4D2292D3620B45;16973.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                praca
@@ -1836,7 +1802,7 @@ lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt1
 0.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf/font
 s/type1/public/lm/lmtti10.pfb>
-Output written on praca.pdf (83 pages, 882144 bytes).
+Output written on praca.pdf (83 pages, 880887 bytes).
 PDF statistics:
  3379 PDF objects out of 3580 (max. 8388607)
  3143 compressed objects within 32 object streams

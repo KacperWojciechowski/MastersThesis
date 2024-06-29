@@ -143,46 +143,46 @@ Calculation of mean squared error in the Shogun library comes down to creating a
 
 \subsection{Mean absolute error}
 
-Realizacja obliczania średniego błędu bezwzględnego dla biblioteki Shogun dokonywana jest za pomocą klasy \textit{CMeanAbsoluteError} pełniącej rolę ewaluatora. Tworzona jest ona poprzez wykorzystanie szablonu \textit{some<>} a następnie wykorzystywana do obliczeń wołając jej metodę \textit{evaluate} przekazując uzyskane oraz oczekiwane wyniki regresji lub klasyfikacji. Listing \ref{shogun:mae} przedstawia sposób użycia wyżej wymienionej klasy.
+Mean absolute error calculation is carried out by the \textit{CMeanAbsoluteError} class, which serves as an evaluator. It is created by a call to \textit{some<>()} function and used for evaluation by calling the \textit{evaluate()} method, providing the results of a model and expected labels of regression or classification. Listing \ref{shogun:mae} shows how to use the aforementioned class.
 
-\cppcode{Rozdzial4/shogun-mae.cpp}{Przykład obliczenia wartości średniego błędu bezwzględnego \cite{handsOnMachineLearning}.}{shogun:mae}
+\cppcode{Rozdzial4/shogun-mae.cpp}{Example of mean absolute error calculation using Shogun\cite{handsOnMachineLearning}.}{shogun:mae}
 
-\subsection{Logarytmiczna funkcja straty}
+\subsection{Logarithmic loss function}
 
-Logarytmiczna funkcja straty jest możliwa do obliczenia z wykorzystaniem biblioteki Shogun przy użyciu klasy \textit{CLogLoss}, jednak udostępniane przez nią metody wskazują że powinna być wykorzystywana przez model, a nie bezpośrednio przez użytkownika. Udostępnia ona metodę \textit{get\char`_square\char`_grad()} pozwalającą na obliczenie kwadratu gradientu między zadaną predykcją a docelowym wynikiem. Sposób użycia tej metody zaprezentowano na listingu \ref{shogun:log}
+Logarithmic loss function is possible to calculate using the Shogun library using \textit{CLogLoss} class, however the public interface of said class indicate that it should be rather used by a model than directly by the user. It provides \textit{get\char`_square\char`_grad()} method which allows for calculation of the squared gradient between prediction and expected result. The use case is presented on listing \ref{shogun:log}.
 
-\cppcode{Rozdzial4/shogun-log.cpp}{Przykład użycia klasy \textit{CLogLoss}.}{shogun:log}
+\cppcode{Rozdzial4/shogun-log.cpp}{Example of use for \textit{CLogLoss} class.}{shogun:log}
 
-\subsection{Metryka $R^2$}
+\subsection{$R^2$ metric}
 
-Biblioteka Shogun nie posiada bezpośredniej implementacji dla metryki $R^2$ w związku z czym, pomimo możliwości wykorzystania wbudowanej metody obliczania błędu średniokwadratowego, wariancja odpowiedzi potrzebna dla uzyskania wyniku musi zostać uzyskana przez własny mechanizm użytkownika. Listing \ref{shogun:verify} przedstawia funkcję weryfikującą poprawność modeli opisanych w poprzednich punktach, obliczającą wartość metryki $R^2$.
+The Shogun library does not provide implementation for the $R^2$ metric as such, so despite the ability to use the in-built method of mean squared error calculation, the variance of output needed for calculating the metric needs to be acquired from a user-provided mechanism. Listing \ref{shogun:verify} shows a function that verifies the correctness of models described in previous paragraphs by calculating the $R^2$ metric.
 
-\cppcode{Result/inc/shogun/verify.hpp}{Przykład obliczenia metryki $R^2$.}{shogun:verify}
+\cppcode{Result/inc/shogun/verify.hpp}{Example of $R^2$ metric calculation.}{shogun:verify}
 
-\subsection{Dokładność}
+\subsection{Accuracy}
 
-Do obliczenia dokładności w przypadku zadań regresji, biblioteka udostępnia klasę \textit{CMulticlassAccuracy}. Pozwala ona nie tylko na samą klasyfikację, lecz także oferuje metodę pobrania macierzy błędnych klasyfikacji. Nie znaleziono natomiast klasy \textit{CAccuracyMeasure} wspomnianej w pracy \cite{handsOnMachineLearning}, co sugerowałoby jej usunięcie z biblioteki. Listing \ref{shogun:acc} pokazuje w jaki sposób należy użyć klasy \textit{CMulticlassAccuracy}.
+In order to calculate the accuracy metric for regression tasks, this library provides \textit{CMulticlassAccuracy} class. It also allows for getting a misclassification matrix. The \textit{CAccuracyMeasure} class mentioned in \cite{handsOnMachineLearning} however was not found, which indicates it was removed from the library. Listing \ref{shogun:acc} shows how to use \textit{CMulticlassAccuracy}.
 
-\cppcode{Rozdzial4/shogun-acc.cpp}{Przykład obliczenia dokładności modelu.}{shogun:acc} 
+\cppcode{Rozdzial4/shogun-acc.cpp}{Example of accuracy calculation in Shogun.}{shogun:acc} 
 
-\subsection{Precyzja i pełność (recall), oraz metryka F1}
+\subsection{Precision, Recall and F1 metric}
 
-W podręczniku \cite{handsOnMachineLearning} wspomniane zostały klasy \textit{CRecallMeasure} oraz \textit{CF1Measure} mające pozwolić obliczyć odpowiednio pamięć modelu oraz metrykę F1, jednak w trakcie pracy z biblioteką nie znaleziono definicji tych klas, lub jakichkolwiek innych pełniących te funkcje, w związku z czym założono brak implementacji tych metod dla biblioteki Shogun. Zdecydowano się na wspomnienie o tym fakcie, w celu podkreślenia możliwoścy wystąpienia rozbieżności między źródłami wiedzy, a aktualnym stanem biblioteki.
+The \cite{handsOnMachineLearning} handbook mentions \textit{CRecallMeasure} and \textit{CF1Measure} classes that are supposed to allow the user to calculate the recall and F1 metric of the model, however while working with the library, their definitions were not found, neither any other classes of similar functionality, and as such it was assumed that the Shogun library does not provide the implementation for them. The motivation to touch on this topic was to inform the reader of possible discrepancies between available sources and current state of the library. 
 
-\subsection{Pole pod wykresem krzywej operacyjnej}
+\subsection{ROC curve}
 
-Biblioteka Shogun posiada implementację obliczania pola pod wykresem krzywej charakterystycznej odbiornika, w postaci klasy \textit{CROCEvaluation}. Listing \ref{shogun:roc} przedstawia sposób jej użycia.
+The Shogun library provides implementation to calculate ROC curve as the \textit{CROCEvaluation} class. Listing \ref{shogun:roc} shows the way how to use it.
 
-\cppcode{Rozdzial4/shogun-roc.cpp}{Przykład obliczenia pola pod wykresem funkcji ROC dla Shogun.}{shogun:roc}
+\cppcode{Rozdzial4/shogun-roc.cpp}{ROC curve calculation example for Shogun.}{shogun:roc}
 
-\subsection{K-krotny sprawdzian krzyżowy}
+\subsection{K-fold cross-validation}
 
-Sprawdzian krzyżowy stanowi w bibliotece Shogun złożony mechanizm, do którego wykorzystania należy przygotować drzewo decyzyjne parametrów, reprezentowane przez klasę \textit{CModelSelectionParameters}. Użytkownik może wybrać model oraz kryterium ewaluacji modelu poprzez utworzenie odpowiednich klas, a następnie przekazanie ich w konstruktorze obiektu sprawdzianu krzyżowego, będącego instancją klasy \textit{CCrossValidation}. Kolejnym krokiem jest utworzenie instancji klasy \textit{CGridSearchModelSelection} która dokona wyboru parametrów. Ostatnim etapem jest konfiguracja docelowego modelu i przeprowadzenie procesu uczenia. Dokłady wygląd całego mechanizmu został przedstawiony na listingu \ref{shogun:cross}.
+Cross-validation inside the Shogun library is a complex mechanism, which in order to use it requires a decision tree of available parameters, represented by the \textit{CModelSelectionParameters} class. The user can select the model and evaluation criterion for it by creating objects of selected classes and providing them to the \textit{CCrossValidation} instance constructor. The next step is to create an instance of \textit{CGridSearchModelSelection} which will select parameters. The last phase is to configure the desired model and complete the teaching process. Precise example of the whole mechanism was presented on listing \ref{shogun:cross}.
 
-\cppcode{Result/inc/shogun/cross.hpp}{Przygotowanie modelu wieloklasowej regresji liniowej z wykorzystaniem sprawdzianu krzyżowego.}{shogun:cross}
+\cppcode{Result/inc/shogun/cross.hpp}{Preparation of multiclass classification via linear regression with cross-validation in Shogun.}{shogun:cross}
 
-\section{Dostępność dokumentacji i źródeł wiedzy}
+\section{Documentation and sources availability}
 
-Internetowe źródła informacji w postaci forów społecznościowych skupiają się na wykorzystaniu biblioteki Shark w innych językach, jak np. Python, lecz wraz z jej kodem źródłowym na platformie GitHub \cite{shogun:github} możliwe jest wygenerowanie przykładów jej wykorzystania także w języku C++ w folderze \textit{examples}. Przykłady te należy zbudować za pomocą odpowiednego skryptu Pythona zawartego w repozytorium, powodując wygenerowanie listingów kodów w docelowym języku w plikach JSON. Niestety, okazują się one obrazować użycie biblioteki w nienaturalny, proceduralnie generowany sposób, sprawiając, że przy faktycznej próbie skorzystania z API projektu, stają się one bezużyteczne. Dodatkowo, jedyna forma dokumentacji projektu ogranicza się do komentarzy w kodzie, zmuszając użytkownika do błądzenia po repozytorum w poszukiwaniu potrzebnych informacji. 
+Internet sources such as community forums focus on using Shogun with different programming languages such as eg. Python, however using its source code available on GitHub \cite{shogun:github} it is possible to generate examples of its use in C++ language aswell in the \textit{examples} directory. Those examples need to be build using a specific Python script contained within the repository, that generates listings of codes in desired language in JSON files. Unfortunately, they present the use of the library in very unnatural, procedurally generated manner, causing them to be useless when attempting to use the actual project's API. In addition, the only form of project documentation is restricted to the comments within the source code, making the user wander through the repository in search of the needed information.
 
-Shogun jest jedną z bibliotek opisaną w podręczniku \cite{handsOnMachineLearning}, wprowadzającym czytelnika zarówno do podstawowych funkcjonalności Shogun, jak i podsumowującej podstawy teorii uczenia maszynowego w kontekście ich zastosowania. Większość z przykładów realizacji poszczególnych typów modeli w tej książce posiada przedstawione główne fragmenty listingów dla biblioteki Shogun. Warto jednak zaznaczyć, że różnią się one od przykładów generowanych przez skrypt budujący, obrazując wykorzystanie faktycznie udostępnianego API biblioteki. W toku pracy nad niniejszym rozdziałem, książka ta okazała się jedynym wartościowym źródłem wiedzy na jego temat.
+The Shogun is one of the libraries described within the \cite{handsOnMachineLearning} library, which both introduces the reader to basic functionalities of the library, aswell as summarizes the basics of machine learning theory in order to use it. Majority of various model types examples within this book is equipped with listings of main code snippets for the Shogun library. It is important to mention however, that they are different from the examples generated by the build script, showing the use of actual API of the library. During the making of this chapter, this handbook proved to be the only valuable source on the topic.
