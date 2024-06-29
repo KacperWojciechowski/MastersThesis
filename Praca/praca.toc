@@ -9,7 +9,7 @@
 \contentsline {chapter}{\numberline {3}Used datasets}{7}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Overview of experimental data}{7}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Classification data}{7}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Dane regresyjne}{8}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.2}Regression data}{8}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}Data characteristics}{8}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Classification data}{8}{subsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.1.1}Predictor and response distribution analysis}{8}{subsubsection.3.2.1.1}%
@@ -35,7 +35,7 @@
 \contentsline {subsection}{\numberline {4.4.5}Ensemble algorithms}{30}{subsection.4.4.5}%
 \contentsline {subsubsection}{\numberline {4.4.5.1}Gradient boosting}{30}{subsubsection.4.4.5.1}%
 \contentsline {subsubsection}{\numberline {4.4.5.2}Random forest}{31}{subsubsection.4.4.5.2}%
-\contentsline {subsection}{\numberline {4.4.6}Sieć neuronowa}{32}{subsection.4.4.6}%
+\contentsline {subsection}{\numberline {4.4.6}Neural network}{32}{subsection.4.4.6}%
 \contentsline {section}{\numberline {4.5}Metody analizy modeli}{34}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Błąd średniokwadratowy}{34}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}Średni błąd bezwzględny}{34}{subsection.4.5.2}%
