@@ -49,23 +49,23 @@
 \contentsline {chapter}{\numberline {5}Shark-ML}{39}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Introduction}{39}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Data sources formats}{39}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Metody przetwarzania i eksploracji danych}{40}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Normalizacja}{40}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Redukcja wymiarowości}{41}{subsection.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.2.1}Analiza składowych głównych}{41}{subsubsection.5.3.2.1}%
-\contentsline {subsubsection}{\numberline {5.3.2.2}Liniowa analiza dyskryminacyjna}{42}{subsubsection.5.3.2.2}%
-\contentsline {subsection}{\numberline {5.3.3}Regularyzacja L1}{42}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Regularyzacja L2}{43}{subsection.5.3.4}%
-\contentsline {section}{\numberline {5.4}Modele uczenia maszynowego}{43}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Regresja liniowa}{43}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Regresja logistyczna}{44}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Maszyna wektorów nośnych}{46}{subsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.4.4}Algorytm K najbliższych sąsiadów}{49}{subsection.5.4.4}%
-\contentsline {subsection}{\numberline {5.4.5}Algorytm zbiorowy}{50}{subsection.5.4.5}%
-\contentsline {subsection}{\numberline {5.4.6}Sieć neuronowa}{50}{subsection.5.4.6}%
-\contentsline {section}{\numberline {5.5}Metody analizy modeli}{53}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Funkcje straty}{53}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Metryka $R^2$ i skorygowane $R^2$}{54}{subsection.5.5.2}%
+\contentsline {section}{\numberline {5.3}Data exploration and processing methods}{40}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Normalization}{40}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Dimensionality reduction}{41}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}Principal component analysis}{41}{subsubsection.5.3.2.1}%
+\contentsline {subsubsection}{\numberline {5.3.2.2}Linear discriminant analysis}{42}{subsubsection.5.3.2.2}%
+\contentsline {subsection}{\numberline {5.3.3}L1 regularization}{42}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}L2 regularization}{42}{subsection.5.3.4}%
+\contentsline {section}{\numberline {5.4}Machine learning models}{43}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Linear regression}{43}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Logistic regression}{44}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Support vector machine}{46}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}K-nearest neighbors algorithm}{48}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}Ensemble algorithm}{49}{subsection.5.4.5}%
+\contentsline {subsection}{\numberline {5.4.6}Neural network}{50}{subsection.5.4.6}%
+\contentsline {section}{\numberline {5.5}Model analysis methods}{52}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Funkcje straty}{52}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Metryka $R^2$ i skorygowane $R^2$}{53}{subsection.5.5.2}%
 \contentsline {subsection}{\numberline {5.5.3}Pole pod wykresem krzywej charakterystycznej odbiornika}{54}{subsection.5.5.3}%
 \contentsline {subsection}{\numberline {5.5.4}K-krotny sprawdzian krzyżowy}{55}{subsection.5.5.4}%
 \contentsline {section}{\numberline {5.6}Dostępność dokumentacji i źródeł wiedzy}{56}{section.5.6}%

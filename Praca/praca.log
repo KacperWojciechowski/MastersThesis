@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.6.29)  30 JUN 2024 00:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.6.29)  30 JUN 2024 14:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1455,50 +1455,22 @@ Overfull \hbox (0.42929pt too wide) in paragraph at lines 9--10
 
 [39
 
-] (./Result/inc/shark/csv.hpp) (./Rozdzial5/shark-adaptor.cpp)
-Overfull \hbox (2.93768pt too wide) in paragraph at lines 30--31
-[]\T1/lmr/m/n/12 Opieraj¡ si¦ one o u»y-cie metody \T1/lmr/m/it/12 train() \T1/
-lmr/m/n/12 na obiek-cie nor-mal-iza-tora, aby odpowied-
- []
+] (./Result/inc/shark/csv.hpp) (./Rozdzial5/shark-adaptor.cpp) [40]
+(./Result/inc/shark/normalization.hpp)
+(./Rozdzial5/shark-dimension-reduction.cpp)
+Underfull \vbox (badness 1527) has occurred while \output is active []
 
-[40] (./Result/inc/shark/normalization.hpp)
-(./Rozdzial5/shark-dimension-reduction.cpp) [41] (./Rozdzial5/shark-lda-red.cpp
-)
-Overfull \hbox (17.77803pt too wide) in paragraph at lines 53--54
-\T1/lmr/m/n/12 Podobnie jak w przy-padku metody Lasso, wyko-rzys-tanie reg-u-la
-ryza-cji L2 w trenowanym
- []
+ [41]
+(./Rozdzial5/shark-lda-red.cpp) [42] (./Result/inc/shark/linear.hpp)
+(./Rozdzial5/shark-linear2.cpp [43]) (./Rozdzial5/shark-logistic.cpp [44])
+(./Result/inc/shark/logistic.hpp [45]) [46] (./Result/inc/shark/svm.hpp
+[47]) (./Rozdzial5/shark-svm2.cpp) [48] (./Result/inc/shark/knn.hpp) [49]
+(./Rozdzial5/shark-rf.cpp) [50] (./Result/inc/shark/neural.hpp
+Underfull \vbox (badness 1194) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42]
-Overfull \hbox (21.03836pt too wide) in paragraph at lines 60--61
-\T1/lmr/m/n/12 lin-iowa. Do celów jej reprezen-tacji dost¦pna jest klasa \T1/lm
-r/m/it/12 Lin-ear-Model\T1/lmr/m/n/12 , ofer-u-j¡ca rozwi¡zanie
- []
-
-(./Result/inc/shark/linear.hpp [43]) (./Rozdzial5/shark-linear2.cpp) [44]
-(./Rozdzial5/shark-logistic.cpp) (./Result/inc/shark/logistic.hpp [45])
-[46]
-Overfull \hbox (6.31308pt too wide) in paragraph at lines 95--96
-[]\T1/lmr/m/n/12 regularyzacja - po-dawana jako liczba rzeczy-wista w kon-struk
--torze \T1/lmr/m/it/12 CSvm-Trainer\T1/lmr/m/n/12 ,
- []
-
-(./Result/inc/shark/svm.hpp [47]) (./Rozdzial5/shark-svm2.cpp)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [48]
-(./Result/inc/shark/knn.hpp)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [49]
-(./Rozdzial5/shark-rf.cpp) [50] (./Result/inc/shark/neural.hpp [51])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [52]
-Overfull \hbox (14.99887pt too wide) in paragraph at lines 146--147
+ [51])
+[52]
+Overfull \hbox (14.99887pt too wide) in paragraph at lines 147--148
 []\T1/lmr/m/n/12 Ka»da z powy»szych klas u»y-wana jest w schematy-czny sposób, 
 poprzez wcze±niejsze
  []
@@ -1506,37 +1478,40 @@ poprzez wcze±niejsze
 (./Rozdzial5/shark-mse.cpp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 150.
+(hyperref)                removing `math shift' on input line 151.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 150.
+(hyperref)                removing `superscript' on input line 151.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 150.
+(hyperref)                removing `math shift' on input line 151.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 150.
+(hyperref)                removing `math shift' on input line 151.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 150.
+(hyperref)                removing `superscript' on input line 151.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 150.
+(hyperref)                removing `math shift' on input line 151.
 
-[53] (./Rozdzial5/shark-r2.cpp)
-Overfull \hbox (27.06532pt too wide) in paragraph at lines 156--156
+(./Rozdzial5/shark-r2.cpp)
+Overfull \hbox (27.06532pt too wide) in paragraph at lines 157--157
 []\T1/lmr/bx/n/14.4 Pole pod wykre-sem krzy-wej charak-terysty-cznej odbiornika
  
  []
 
-(./Result/inc/shark/printEvaluation2.hpp [54]) (./Rozdzial5/shark-cv.cpp
-[55])) (./Rozdzial6/rozdzial6.tex
-Overfull \hbox (13.08298pt too wide) in paragraph at lines 170--1
+[53] (./Result/inc/shark/printEvaluation2.hpp)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+(./Rozdzial5/shark-cv.cpp [55])) (./Rozdzial6/rozdzial6.tex
+Overfull \hbox (13.08298pt too wide) in paragraph at lines 171--1
 \T1/lmr/m/n/12 wyró»-ni-a-j¡c¡ j¡ nato-mi-ast na tle po-zostaªych bib-liotek om
 ówionych w ra-mach niniejszej
  []
@@ -1771,7 +1746,7 @@ L3 programming layer <2024-01-22>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: 17F2F02E9ED970995B4D2292D3620B45;16973.
+(rerunfilecheck)             Checksum: 426F9C15CF785335F714F62D5EAF87C0;16920.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                praca
@@ -1802,7 +1777,7 @@ lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt1
 0.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf/font
 s/type1/public/lm/lmtti10.pfb>
-Output written on praca.pdf (83 pages, 880887 bytes).
+Output written on praca.pdf (83 pages, 880120 bytes).
 PDF statistics:
  3379 PDF objects out of 3580 (max. 8388607)
  3143 compressed objects within 32 object streams
