@@ -6,68 +6,68 @@ Libraries discussed within this dissertation differ in types and numbers of offe
 
 \begin{longtable}{c | c | c | c}
 	\centering
-	\multirow{2}{*}{\makecell{Funkcjonalność}} & \multicolumn{3}{c}{Biblioteka} \\
+	\multirow{2}{*}{\makecell{Functionality}} & \multicolumn{3}{c}{Library} \\
 	\cline{2-4}
 	 &  Shogun & Shark-ML & Dlib \\
 	\hline
-	\makecell{Odczyt \\ danych} & \makecell{std::vector, \\ wsparcie dla \\ formatu CSV} & \makecell{surowe \\ tablice, \\ wsparcie dla \\ formatu CSV, \\ wsparcie \\ dla HTTP} & \makecell{std::vector, \\ wsparcie dla \\ formatu CSV} \\
+	\makecell{Reading data} & \makecell{std::vector, support \\ for CSV format} & \makecell{raw arrays, support \\ for CSV format, \\ support for HTTP} & \makecell{std::vector, support \\ for CSV format} \\
 	\hline
-	{Normalizacja} & min-max & \makecell{przedział \\ jednostkowy, \\ jednostkowa \\ wariancja, \\ zerowa \\ średnia i \\ wybrana \\ wariancja} & standaryzacja \\
+	{Normalizacja} & min-max & \makecell{unit interval, \\ unit variance, \\ zero mean and \\ selected variance} & standardization \\
 	\hline
-	\makecell{Redukcja \\ wymiarowości} & \makecell{PCA, Kernel PCA, \\ MDS, IsoMap, \\ ICA, Factor analysis, \\t-SNE} & \makecell{PCA, Liniowa \\ analiza \\ dyskryminacyjna} & \makecell{PCA, Liniowa \\ analiza \\ dyskryminacyjna, \\ Mapowanie \\ Sammona} \\
+	\makecell{Dimensionality \\ reduction} & \makecell{PCA, Kernel PCA, \\ MDS, IsoMap, \\ ICA, Factor analysis, \\t-SNE} & \makecell{PCA, Linear \\ discriminant \\ analysis} & \makecell{PCA, Linear \\ discriminant \\ analysis, \\ Sammon mapping} \\
 	\hline
-	\makecell{Regularyzacja} & \makecell{L1 i L2 \\ automatyczna} & \makecell{L1 i L2} & L2 \\
+	\makecell{Regularization} & \makecell{L1 i L2 automatic} & \makecell{L1 i L2} & L2 \\
 	\hline
-	\makecell{Regresja \\ liniowa} & Tak & Tak & Tak \\
+	\makecell{Linear \\ regression} & Yes & Yes & Yes \\
 	\hline
-	\makecell{Regresja \\ logistyczna} & Tak & Tak & Nie \\
+	\makecell{Logistic \\ regression} & Yes & Yes & No \\
 	\hline
-	\makecell{Maszyna \\ wektorów \\ nośnych} & Tak & Tak & Tak \\
+	\makecell{Support \\ vector \\ machine} & Yes & Yes & Yes \\
 	\hline
-	\makecell{Algorytm \\ K-najbliższych \\ sąsiadów} & Tak & Tak & Nie \\
+	\makecell{K-nearest \\ neighbors \\ algorithm} & Yes & Yes & No \\
 	\hline
-	\makecell{Algorytm \\ zbiorowy} & \makecell{Wzmacnianie \\ gradientu, \\ losowy las} & \makecell{Losowy \\ las} & Nie \\
+	\makecell{Ensemble \\ algorithm} & \makecell{Gradient \\ boosting, \\ random forest} & \makecell{Random forest} & No \\
 	\hline
-	\makecell{Sieć \\ neuronowa} & Tak & Tak & Tak \\
+	\makecell{Neural network} & Yes & Yes & Yes \\
 	\hline
-	\makecell{Jądrowa \\ regresja \\ grzbietowa} & Nie & Nie & Tak \\
+	\makecell{Kernel \\ ridge regression} & No & No & Yes \\
 	\hline
-	\makecell{Błąd \\ średniokwadratowy} & Tak & Tak & Nie \\
+	\makecell{Mean squared \\ error} & Yes & Yes & No \\
 	\hline
-	\makecell{Średni \\ błąd \\ bezwzględny} & Tak & Tak & Nie \\
+	\makecell{Mean absolute \\ error} & Yes & Yes & No \\
 	\hline
-	\makecell{Błąd typu \\ zero-jeden} & Nie & Tak & Nie \\
+	\makecell{Zero-one error} & No & Yes & No \\
 	\hline
-	\makecell{Błąd \\ dyskretny} & Nie & Tak & Nie \\
+	\makecell{Discrete error} & No & Yes & No \\
 	\hline
-	\makecell{Entropia \\ krzyżowa} & Nie & Tak & Nie \\
+	\makecell{Cross entropy} & No & Yes & No \\
 	\hline
-	\makecell{Kawałkami \\ liniowa \\ funkcja straty} & Nie & Tak & Nie \\
+	\makecell{Hinge loss} & No & Yes & No \\
 	\hline
-	\makecell{Średnio-\\kwadratowy \\ błąd typu \\ kawałkami \\ liniowej \\ funkcji straty} & Nie & Tak & Nie\\
+	\makecell{Mean squared \\ hinge loss} & No & Yes & No \\
 	\hline
-	\makecell{Kawałkami \\ liniowa \\ funkcja straty \\ typu epsilon} & Nie & Tak & Nie\\
+	\makecell{Epsilon hinge \\ loss} & No & Yes & No \\
 	\hline
-	\makecell{Średnio-\\kwadratowy \\ błąd kawałkami \\ liniowej funkcji \\ straty typu \\ epsilon} & Nie & Tak & Nie\\
+	\makecell{Mean squared \\ epsilon hinge \\ loss} & No & Yes & No \\
 	\hline
-	\makecell{Funkcja \\ straty \\ Hubera} & Nie & Tak & Nie\\
+	\makecell{Huber loss} & No & Yes & No \\
 	\hline
-	\makecell{Funkcja \\ straty \\ Tukeya} & Nie & Tak & Nie\\
+	\makecell{Tukey loss} & No & Yes & No \\
 	\hline
-	\makecell{Logarytmiczna \\ funkcja \\ straty} & Tak & Nie & Nie\\
+	\makecell{Logarithmic loss} & Yes & No & No \\
 	\hline
-	\makecell{Metryka $R^2$} & Tak & Tak & Nie\\
+	\makecell{$R^2$ metric} & Yes & Yes & No \\
 	\hline
-	\makecell{Dokładność} & Tak & Nie & Tak \\
+	\makecell{Accuracy} & Yes & No & Yes \\
 	\hline
-	\makecell{Pole pod \\ wykresem \\ ROC} & Tak & Tak & Tak* \\
+	\makecell{Area under the \\ ROC curve} & Yes & Yes & Yes* \\
 	\hline
-	\makecell{Sprawdzian \\ krzyżowy \\ k-krotny} & Tak & Tak & Tak \\
-	\caption{Zbiorcze porównanie funkcjonalności bibliotek.}
+	\makecell{K-fold cross \\ validation} & Yes & Yes & Yes \\
+	\caption{Group comparison of the functionalities.}
 	\label{fun:sum}
 \end{longtable} 
 
-* - need to calculate the area under ROC curve using data points of the function plot.
+\textit{* - need to calculate the area under ROC curve using data points of the function plot.}
 
 By analyzing the data collected in the table \ref{fun:sum} it can be noticed, that the Shogun and Shark-ML libraries are fairly similar with types and number of available machine learning methods, however Shark-ML contains significantly more loss function types which can be used, allowing for more freedom when customizing the training process. The least amount of functionalities is displayed by the Dlib library, which contain only a subset of the algorithms present in the other projects. What is more, it has very limited model quality analysis possibilities, requiring making of own procedures for data processing by the user, such as eg. area under ROC curve calculation procedure.
 
@@ -75,19 +75,18 @@ By analyzing the data collected in the table \ref{fun:sum} it can be noticed, th
 
 In order to test the proficiency of each library, they were used for creating and evaluating linear regression and support vector machine models for the datasets discussed in chapter 3. Each model uses 80\% of the dataset for training, and the remaining 20\% as validation. Table \ref{tab:models} shows group comparison of achieved results. Output of the programs utilizing the libraries was presented on figures \ref{fig:shogun_linear_svm}, \ref{fig:shark_linear_svm} and \ref{fig:dlib_linear_svm}.
 
-\newpage
 \begin{longtable}{c | c | c }
 	\centering
-	\multirow{2}{*}{\makecell{Biblioteka}} & \multicolumn{2}{c}{Metoda uczenia maszynowego} \\
+	\multirow{2}{*}{\makecell{Library}} & \multicolumn{2}{c}{Machine learning method} \\
 	\cline{2-3}
-	& Regresja liniowa & Maszyna wektorów nośnych \\
+	& Linear regression & Support vector machine \\
 	\hline
-	\makecell{Shogun} & \makecell{Dane treningowe: \\ MSE = 0,903031; $R^2$ = 0,407058 \\ Dane testowe: \\ MSE = 1,26897; $R^2$ = -0.127851} & \makecell{Dane treningowe: \\ AUC ROC: 1 \\ Dane testowe: \\ AUC ROC: 0,5} \\
+	\makecell{Shogun} & \makecell{Training: \\ MSE = 0,903031; $R^2$ = 0,407058 \\ Validation: \\ MSE = 1,26897; $R^2$ = -0.127851} & \makecell{Training: \\ AUC ROC: 1 \\ Validation: \\ AUC ROC: 0,5} \\
 	\hline
-	\makecell{Shark} & \makecell{Dane treningowe: \\ MSE = 0,38728; $R^2$ = 0,745707 \\ Dane testowe: \\ MSE = 0,449118; $R^2$ = 0,60082} & \makecell{Dane treningowe: \\ AUC ROC: 1 \\ Dane testowe: \\ AUC ROC: 0,5} \\
+	\makecell{Shark} & \makecell{Training: \\ MSE = 0,38728; $R^2$ = 0,745707 \\ Validation: \\ MSE = 0,449118; $R^2$ = 0,60082} & \makecell{Training: \\ AUC ROC: 1 \\ Validation: \\ AUC ROC: 0,5} \\
 	\hline
-	\makecell{Dlib} & \makecell{Dane treningowe: \\ MSE = 3,08953; \\ Dane testowe: \\ MSE = 1,33014; } & \makecell{Dane treningowe: \\ AUC ROC: 1 \\ Dane testowe: \\ AUC ROC: 1} \\
-	\caption{Zestawienie uzyskanych wyników poprawności modeli.}
+	\makecell{Dlib} & \makecell{Training: \\ MSE = 3,08953; \\ Validation: \\ MSE = 1,33014; } & \makecell{Training: \\ AUC ROC: 1 \\ Validation: \\ AUC ROC: 1} \\
+	\caption{Summary of achieved model quality results.}
 	\label{tab:models}
 \end{longtable} 
 
@@ -96,21 +95,21 @@ In order to test the proficiency of each library, they were used for creating an
 	\begin{minipage}{0.31\textwidth}
 		\centering
 		\includegraphics[width=0.8\linewidth]{Rozdzial7/shogun}
-		\caption{Wynik działania programu dla biblioteki Shogun}
+		\caption{Output for Shogun library}
 		\label{fig:shogun_linear_svm}		
 	\end{minipage}%
     \hspace{0.02\textwidth}
 	\begin{minipage}{0.31\textwidth}
 		\centering
 		\includegraphics[width=0.7\linewidth]{Rozdzial7/shark}
-		\caption{Wynik działania programu dla biblioteki Shark}
+		\caption{Output for Shark-ML library}
 		\label{fig:shark_linear_svm}		
 	\end{minipage}%
 	\hspace{0.02\textwidth}
 	\begin{minipage}{0.31\textwidth}
 		\centering
 		\includegraphics[width=0.8\textwidth]{Rysunki/Rozdzial7/dlib}
-		\caption{Wynik działania programu dla biblioteki Dlib}
+		\caption{Output for Dlib library}
 		\label{fig:dlib_linear_svm}
 	\end{minipage}
 \end{figure}
@@ -123,16 +122,16 @@ In order to improve the acquired results and to solve encountered errors it was 
 
 \begin{longtable}{c | c | c }
 	\centering
-	\multirow{2}{*}{\makecell{Biblioteka}} & \multicolumn{2}{c}{Metoda uczenia maszynowego} \\
+	\multirow{2}{*}{\makecell{Library}} & \multicolumn{2}{c}{Machine learning method} \\
 	\cline{2-3}
-	& Regresja liniowa & Maszyna wektorów nośnych \\
+	& Linear regression & Support vector machine \\
 	\hline
-	\makecell{Shogun} & \makecell{Dane treningowe: \\ MSE = 0,0286481; $R^2$ = 0,3127 \\ Dane testowe: \\ MSE = 0.0427863; $R^2$ = -0.389462} & \makecell{Dane treningowe: \\ AUC ROC: 0,789143 \\ Dane testowe: \\ AUC ROC: 0,638112} \\
+	\makecell{Shogun} & \makecell{Training: \\ MSE = 0,0286481; $R^2$ = 0,3127 \\ Validation: \\ MSE = 0.0427863; $R^2$ = -0.389462} & \makecell{Training: \\ AUC ROC: 0,789143 \\ Validation: \\ AUC ROC: 0,638112} \\
 	\hline
-	\makecell{Shark} & \makecell{Dane treningowe: \\ MSE = 0,0105995; $R^2$ = 0,745707 \\ Dane testowe: \\ MSE = 0.0122919; $R^2$ = 0,600826} & \makecell{Dane treningowe: \\ AUC ROC: 0,921643 \\ Dane testowe: \\ AUC ROC: 0,933129} \\
+	\makecell{Shark} & \makecell{Training: \\ MSE = 0,0105995; $R^2$ = 0,745707 \\ Validation: \\ MSE = 0.0122919; $R^2$ = 0,600826} & \makecell{Training: \\ AUC ROC: 0,921643 \\ Validation: \\ AUC ROC: 0,933129} \\
 	\hline
-	\makecell{Dlib} & \makecell{Dane treningowe: \\ MSE = 0,481402; \\ Dane testowe: \\ MSE = 0,179538; } & \makecell{Dane treningowe: \\ AUC ROC: 1 \\ Dane testowe: \\ AUC ROC: 1} \\
-	\caption{Zestawienie uzyskanych wyników poprawności modeli.}
+	\makecell{Dlib} & \makecell{Training: \\ MSE = 0,481402; \\ Validation: \\ MSE = 0,179538; } & \makecell{Training: \\ AUC ROC: 1 \\ Validation: \\ AUC ROC: 1} \\
+	\caption{Summary of achieved model quality results after analysis.}
 	\label{tab:models2}
 \end{longtable} 
 
@@ -143,21 +142,21 @@ To summarize, it was noticed that each of the libraries is especially sensitive 
 	\begin{minipage}{0.31\textwidth}
 		\centering
 		\includegraphics[width=0.8\linewidth]{Rozdzial7/shogun_linear_svm}
-		\caption{Wynik działania programu dla biblioteki Shogun}
+		\caption{Output for Shogun library after analysis}
 		\label{fig:shogun_linear_svm2}		
 	\end{minipage}%
 	\hspace{0.02\textwidth}
 	\begin{minipage}{0.31\textwidth}
 		\centering
 		\includegraphics[width=0.7\linewidth]{Rozdzial7/shark_linear_svm}
-		\caption{Wynik działania programu dla biblioteki Shark}
+		\caption{Output for Shark-ML library after analysis}
 		\label{fig:shark_linear_svm2}		
 	\end{minipage}%
 	\hspace{0.02\textwidth}
 	\begin{minipage}{0.31\textwidth}
 		\centering
 		\includegraphics[width=0.8\textwidth]{Rysunki/Rozdzial7/dlib_linear_svm}
-		\caption{Wynik działania programu dla biblioteki Dlib}
+		\caption{Output for Dlib library after analysis}
 		\label{fig:dlib_linear_svm2}
 	\end{minipage}
 \end{figure} 

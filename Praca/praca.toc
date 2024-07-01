@@ -88,7 +88,7 @@
 \contentsline {subsection}{\numberline {6.5.1}Pole pod wykresem krzywej charakterystycznej odbiornika}{65}{subsection.6.5.1}%
 \contentsline {subsection}{\numberline {6.5.2}K-fold cross validation}{66}{subsection.6.5.2}%
 \contentsline {section}{\numberline {6.6}Documentation and sources availability}{68}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Zestawienie zbiorcze i podsumowanie}{69}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Oferowane funkcjonalności}{69}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Porównanie wyników dla zadanych przykładów}{71}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Wymagany nakład pracy i jakość źródeł}{74}{section.7.3}%
+\contentsline {chapter}{\numberline {7}Group comparison and summary}{69}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Offered functionalities}{69}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Comparison of the results from test examples}{70}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Sources quality and needed effort}{73}{section.7.3}%

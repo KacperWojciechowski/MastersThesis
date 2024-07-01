@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.6.29)  1 JUL 2024 20:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.6.29)  1 JUL 2024 23:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1542,159 +1542,117 @@ LaTeX Warning: Citation 'dlib:home' on page 68 undefined on input line 97.
 ) (./Rozdzial7/rozdzial7.tex [68]
 Chapter 7.
 
-Overfull \hbox (5.87727pt too wide) in paragraph at lines 5--6
-\T1/lmr/m/n/12 funkcjon-al-no±ci. Tabela []7.1[] zbior-czo pod-sumowuje poszcze
-gólne omówione w poprzed-
- []
-
-
-Overfull \hbox (7.70227pt too wide) in alignment at lines 7--68
+Overfull \hbox (16.8694pt too wide) in alignment at lines 7--68
  [] [] [] [] 
  []
 
 [69
 
 ] [70]
-Overfull \hbox (4.14268pt too wide) in paragraph at lines 74--74
-[]\T1/lmr/bx/n/17.28 Porównanie wyników dla zadanych przykªadów 
- []
-
-[71]
-<Rozdzial7/shogun.png, id=2770, 151.3153pt x 182.18062pt>
+<Rozdzial7/shogun.png, id=2764, 151.3153pt x 182.18062pt>
 File: Rozdzial7/shogun.png Graphic file (type png)
 <use Rozdzial7/shogun.png>
-Package pdftex.def Info: Rozdzial7/shogun.png  used on input line 98.
+Package pdftex.def Info: Rozdzial7/shogun.png  used on input line 97.
 (pdftex.def)             Requested size: 105.84381pt x 127.4338pt.
 
-Underfull \hbox (badness 1406) in paragraph at lines 99--99
-\T1/lmr/m/n/10.95 nia pro-gramu
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+[][]|\T1/lmr/m/n/10.95 Out-put for
  []
 
 
-Underfull \hbox (badness 3019) in paragraph at lines 99--99
-\T1/lmr/m/n/10.95 dla bib-lioteki
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+\T1/lmr/m/n/10.95 Shogun li-
  []
 
-<Rozdzial7/shark.png, id=2771, 150.5625pt x 271.0125pt>
+<Rozdzial7/shark.png, id=2765, 150.5625pt x 271.0125pt>
 File: Rozdzial7/shark.png Graphic file (type png)
 <use Rozdzial7/shark.png>
-Package pdftex.def Info: Rozdzial7/shark.png  used on input line 105.
+Package pdftex.def Info: Rozdzial7/shark.png  used on input line 104.
 (pdftex.def)             Requested size: 92.61258pt x 166.70683pt.
 
-Underfull \hbox (badness 1406) in paragraph at lines 106--106
-\T1/lmr/m/n/10.95 nia pro-gramu
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+[][]|\T1/lmr/m/n/10.95 Out-put for
  []
 
 
-Underfull \hbox (badness 3019) in paragraph at lines 106--106
-\T1/lmr/m/n/10.95 dla bib-lioteki
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+\T1/lmr/m/n/10.95 Shark-ML
  []
 
-<Rysunki/Rozdzial7/dlib.png, id=2772, 151.3153pt x 142.28156pt>
+<Rysunki/Rozdzial7/dlib.png, id=2766, 151.3153pt x 142.28156pt>
 File: Rysunki/Rozdzial7/dlib.png Graphic file (type png)
 <use Rysunki/Rozdzial7/dlib.png>
-Package pdftex.def Info: Rysunki/Rozdzial7/dlib.png  used on input line 112.
+Package pdftex.def Info: Rysunki/Rozdzial7/dlib.png  used on input line 111.
 (pdftex.def)             Requested size: 105.84381pt x 99.52475pt.
 
-Underfull \hbox (badness 1406) in paragraph at lines 113--113
-\T1/lmr/m/n/10.95 nia pro-gramu
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
+[][]|\T1/lmr/m/n/10.95 Out-put for
  []
 
-
-Underfull \hbox (badness 3019) in paragraph at lines 113--113
-\T1/lmr/m/n/10.95 dla bib-lioteki
- []
-
-
-Overfull \hbox (5.57527pt too wide) in paragraph at lines 118--119
-\T1/lmr/m/n/12 mu-lacji bª¦dów reprezen-tacji zmi-enno-przecinkowej warto±ci po
-d-czas oblicze«, wskazu-
- []
-
-
-Overfull \hbox (1.95345pt too wide) in paragraph at lines 120--121
-\T1/lmr/m/n/12 gramowanie statysty-czne. W zwi¡zku z tym rozpocz¦to anal-iz¦ pr
-zy-czyny uzyskanych
- []
-
-[72 <./Rozdzial7/shogun.png (PNG copy)> <./Rozdzial7/shark.png> <./Rysunki/Rozd
-zial7/dlib.png>]
-Overfull \hbox (18.07513pt too wide) in paragraph at lines 122--123
-\T1/lmr/m/n/12 uzysku-j¡c warto±¢ pola pod wykre-sem krzy-wej charak-terysty-cz
-nej odbiornika wynosz¡c¡
- []
-
-[73]
-<Rozdzial7/shogun_linear_svm.jpg, id=2790, 163.3603pt x 205.5178pt>
+[71 <./Rozdzial7/shogun.png (PNG copy)> <./Rozdzial7/shark.png> <./Rysunki/Rozd
+zial7/dlib.png>] [72]
+<Rozdzial7/shogun_linear_svm.jpg, id=2785, 163.3603pt x 205.5178pt>
 File: Rozdzial7/shogun_linear_svm.jpg Graphic file (type jpg)
 <use Rozdzial7/shogun_linear_svm.jpg>
 Package pdftex.def Info: Rozdzial7/shogun_linear_svm.jpg  used on input line 14
-6.
+4.
 (pdftex.def)             Requested size: 105.84381pt x 133.1585pt.
 
-Underfull \hbox (badness 1406) in paragraph at lines 147--147
-\T1/lmr/m/n/10.95 nia pro-gramu
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[][]|\T1/lmr/m/n/10.95 Out-put for
  []
 
 
-Underfull \hbox (badness 3019) in paragraph at lines 147--147
-\T1/lmr/m/n/10.95 dla bib-lioteki
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/10.95 Shogun li-
  []
 
-<Rozdzial7/shark_linear_svm.png, id=2791, 149.05687pt x 213.04594pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/10.95 brary af-ter
+ []
+
+<Rozdzial7/shark_linear_svm.png, id=2786, 149.05687pt x 213.04594pt>
 File: Rozdzial7/shark_linear_svm.png Graphic file (type png)
 <use Rozdzial7/shark_linear_svm.png>
-Package pdftex.def Info: Rozdzial7/shark_linear_svm.png  used on input line 153
+Package pdftex.def Info: Rozdzial7/shark_linear_svm.png  used on input line 151
 .
 (pdftex.def)             Requested size: 92.61258pt x 132.36993pt.
 
-Underfull \hbox (badness 1406) in paragraph at lines 154--154
-\T1/lmr/m/n/10.95 nia pro-gramu
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
+[][]|\T1/lmr/m/n/10.95 Out-put for
  []
 
 
-Underfull \hbox (badness 3019) in paragraph at lines 154--154
-\T1/lmr/m/n/10.95 dla bib-lioteki
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
+\T1/lmr/m/n/10.95 Shark-ML
  []
 
-<Rysunki/Rozdzial7/dlib_linear_svm.jpg, id=2792, 152.06813pt x 146.04562pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
+\T1/lmr/m/n/10.95 li-brary af-ter
+ []
+
+<Rysunki/Rozdzial7/dlib_linear_svm.jpg, id=2787, 152.06813pt x 146.04562pt>
 File: Rysunki/Rozdzial7/dlib_linear_svm.jpg Graphic file (type jpg)
 <use Rysunki/Rozdzial7/dlib_linear_svm.jpg>
 Package pdftex.def Info: Rysunki/Rozdzial7/dlib_linear_svm.jpg  used on input l
-ine 160.
+ine 158.
 (pdftex.def)             Requested size: 105.84381pt x 101.65404pt.
 
-Underfull \hbox (badness 1406) in paragraph at lines 161--161
-\T1/lmr/m/n/10.95 nia pro-gramu
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+[][]|\T1/lmr/m/n/10.95 Out-put for
  []
 
 
-Underfull \hbox (badness 3019) in paragraph at lines 161--161
-\T1/lmr/m/n/10.95 dla bib-lioteki
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+\T1/lmr/m/n/10.95 Dlib li-brary
  []
 
-)
-Overfull \hbox (9.88158pt too wide) in paragraph at lines 172--117
-[]\T1/lmr/m/n/12 Jako na-jbardziej wyma-ga-j¡c¡ bib-liotek¦ uz-nano Shogun. W c
-hwili pisa-nia niniejszej
- []
+) [73 <./Rozdzial7/shogun_linear_svm.jpg> <./Rozdzial7/shark_linear_svm.png> <.
+/Rysunki/Rozdzial7/dlib_linear_svm.jpg>] [74] [75
 
-
-Overfull \hbox (8.84119pt too wide) in paragraph at lines 172--117
-\T1/lmr/m/n/12 manka-ment sprawia, »e w celu po-bra-nia bib-lioteki konieczne o
-kazaªo si¦ zain-stalowanie
- []
-
-
-Overfull \hbox (9.94765pt too wide) in paragraph at lines 172--117
-\T1/lmr/m/n/12 mu-si-aªo zosta¢ oparte prak-ty-cznie wyª¡cznie o ma-te-ri-aªy d
-ost¦pne w formie ksi¡»kowej.
- []
-
-[74 <./Rozdzial7/shogun_linear_svm.jpg> <./Rozdzial7/shark_linear_svm.png> <./R
-ysunki/Rozdzial7/dlib_linear_svm.jpg>] [75] [76
-
-] [77] (./praca.aux)
+] [76] (./praca.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1704,7 +1662,7 @@ L3 programming layer <2024-01-22>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: E46B70FBBF2242ABE43F9D7626B6CC7D;16331.
+(rerunfilecheck)             Checksum: 9E70EEF7E7EED1A43F74E0C39C0509BD;16246.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                praca
@@ -1715,8 +1673,8 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31815 strings out of 476074
- 549613 string characters out of 5793137
+ 31814 strings out of 476074
+ 549606 string characters out of 5793137
  2008975 words of memory out of 5000000
  51226 multiletter control sequences out of 15000+600000
  645961 words of font info for 97 fonts, out of 8000000 for 9000
@@ -1734,10 +1692,10 @@ e/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt1
 0.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on praca.pdf (83 pages, 872841 bytes).
+Output written on praca.pdf (82 pages, 868956 bytes).
 PDF statistics:
- 3372 PDF objects out of 3580 (max. 8388607)
- 3138 compressed objects within 32 object streams
- 1949 named destinations out of 2073 (max. 500000)
+ 3368 PDF objects out of 3580 (max. 8388607)
+ 3135 compressed objects within 32 object streams
+ 1948 named destinations out of 2073 (max. 500000)
  878 words of extra memory for PDF output out of 10000 (max. 10000000)
 
