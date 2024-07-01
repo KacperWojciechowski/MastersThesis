@@ -30,20 +30,20 @@ Shark-ML implements normalization as training class for model \textit{Normalizer
 Those classes base on using the \textit{train()} method on the normalizer object, in order to configure it to process both testing data, and any other data the user wants to introduce into the model. Their additional functionality is data shuffling and separating a validation dataset using \textit{shuffle()} and \textit{splitAtElement()} methods of the \textit{ClassificationDataset} object. Listing \ref{shark:preprocessing} shows an example of initial data processing using normalization.
 
 
-\cppcode{Result/inc/shark/normalization.hpp}{Initial training data preprocessing in Shark\cite{shark:http}.}{shark:preprocessing}
+\cppcode{Result/inc/shark/normalization.hpp}{Initial training data preprocessing in Shark-ML\cite{shark:http}.}{shark:preprocessing}
 
 \subsection{Dimensionality reduction}
 \subsubsection{Principal component analysis}
 
 Teh dimensionality reduction algorithm utilizing principal component analysis is implemented in Shark as \textit{PCA} class. It uses a linear model as an encoder and accepts target data dimension in the \textit{encoder()} method. The result of this function call is configuring the linear model in a way that allows creating datasets with reduced dimensions. Listing \ref{shark:pca} shows use case of the \textit{PCA} class.
 
-\cppcode{Rozdzial5/shark-dimension-reduction.cpp}{Dimensionality reduction using \textit{PCA} class and an encoder in Shark.}{shark:pca}
+\cppcode{Rozdzial5/shark-dimension-reduction.cpp}{Dimensionality reduction using \textit{PCA} class and an encoder in Shark-ML.}{shark:pca}
 
 \subsubsection{Linear discriminant analysis}
 
 In case of Shark-ML library, the linear discriminant analysis (\textit{LDA}) is based on finding an analytical solution via configuration of \textit{LinearClassifier} model via \textit{LDA} training class, using the \textit{train()} method. It is also possible to use the same model for classification task, receiving predictions for a data set by calling the linear classifier functor (use of operator()) providing data from \textit{ClassificationDataset} acquired by calling \textit{inputs()} method. Detailed implementation on the dimensionality reduction of data using this method are presented on listing \ref{shark:lda-red}.
 
-\cppcode{Rozdzial5/shark-lda-red.cpp}{Dimensionality reduction example using LDA model in Shark\cite{handsOnMachineLearning}.}{shark:lda-red}
+\cppcode{Rozdzial5/shark-lda-red.cpp}{Dimensionality reduction example using LDA model in Shark-ML\cite{handsOnMachineLearning}.}{shark:lda-red}
 
 \subsection{L1 regularization}
 
@@ -59,9 +59,9 @@ Similarly to the Lasso method, using L2 regularization in the trained model is b
 
 One of the fundamental models offered by this library is the linear regression. In order to use it, the \textit{LinearModel} class is provided, which offers an analytical solution using the \textit{LinearRegression} trainer class, or iterative approach implemented by the \textit{LineatSAGTrainer} class, which utilizes the statistic average gradient method. In case of more complicated regression models, where the analytical solution might not exist, the iterative method can be used with the optimizer chose by the user. The whole method comes down into teaching the optimizer using a loss function, and subsequently loading the acquired weights into the regression model. Parameters of the model can be read by calling the \textit{offset()}, \textit{matrix()} or \textit{parameterVector()} methods. Listing \ref{shark:linear} shows the iterative approach, and listing \ref{shark:linear2} presents the analytical method. 
 
-\cppcode{Result/inc/shark/linear.hpp}{Example of linear regression using SAG - Shark.}{shark:linear}
+\cppcode{Result/inc/shark/linear.hpp}{Example of linear regression using SAG - Shark-ML.}{shark:linear}
 
-\cppcode{Rozdzial5/shark-linear2.cpp}{Example of linear regression with analytical method - Shark\cite{handsOnMachineLearning}.}{shark:linear2}
+\cppcode{Rozdzial5/shark-linear2.cpp}{Example of linear regression with analytical method - Shark-ML\cite{handsOnMachineLearning}.}{shark:linear2}
 
 \subsection{Logistic regression}
 
@@ -76,7 +76,7 @@ where $N$ designates the number of classes present in the problem. Created class
 
 \cppcode{Rozdzial5/shark-logistic.cpp}{Example of multiclass classifier building - Shark\cite{handsOnMachineLearning}.}{shark:logistic}
 
-\cppcode{Result/inc/shark/logistic.hpp}{Example of simple binary linear regression - Shark.}{shark:logistic2}
+\cppcode{Result/inc/shark/logistic.hpp}{Example of simple binary linear regression - Shark-ML.}{shark:logistic2}
 
 \subsection{Support vector machine}
 
@@ -101,7 +101,7 @@ The user can configure the model with following parameters:
 
 The use method of the model is identical to the other models, via calling the operator() member function. Listing \ref{shark:svm} shows an example of creating and configuring the model based on the available documentation of the library, however listing \ref{shark:svm2} shows the creating of support vector machine for multiclass problems inside a function that accepts training and validation datasets.
 
-\cppcode{Result/inc/shark/svm.hpp}{Example of binary support vector machine - Shark.}{shark:svm}
+\cppcode{Result/inc/shark/svm.hpp}{Example of binary support vector machine - Shark-ML.}{shark:svm}
 
 \cppcode{Rozdzial5/shark-svm2.cpp}{Example of multiclass support vector machine - Shark\cite{handsOnMachineLearning}.}{shark:svm2} 
 
@@ -110,13 +110,13 @@ The use method of the model is identical to the other models, via calling the op
 One of the classification methods provided by the Shark-ML library is the nearest neighbor model which can be equipped in various algorithms, one of which is the K-nearest neighbors algorithm (kNN). The model is represented by the 
 \textit{NEarestNeighborModel} class. The library allows for using a brute-force solution, or a solution based on space partition trees, using the \textit{KDTree} class and \textit{TreeNearestNeighbors}. In contrary to previously shown methods, performing a multiclass classification in this case does not require compound models or providing the number of classes to the model. It is automatically configured based on the provided training data. Listing \ref{shark:knn} shows how to prepare the kNN classifier. 
 
-\cppcode{Result/inc/shark/knn.hpp}{Example of kNN classifier - Shark.}{shark:knn}
+\cppcode{Result/inc/shark/knn.hpp}{Example of kNN classifier - Shark-ML.}{shark:knn}
 
 \subsection{Ensemble algorithm}
 
 Besides commonly known algorithms, the Shark-ML library also provides more complex structures, such as eg. ensemble algorithm models, which bases on using many component algorithms based on fragments on the characteristics space, in order to combine acquired results to increase the predictions precision. Unfortunately, the only mechanism present in this library that utilizes this technique is random forest composed of decision trees, allowing only for solving classification problems (it does not allow for using it for regression purposes). A classical approach for this library is taken, where the implementation is performed by creating a trainer object - in this case of \textit{RFTrainer} class - which allows for configuring the parameters and subsequently training the model represented by the \textit{RFClassifier} object. Besired the random forest algorithm, there is a possibility of using this library for creating a model in the stacking technique, however due to the fact that this option does not occur natively, it is outside of this dissertation scope. Listing \ref{shark:rf} shows how to create and use the random forest model. 
 
-\cppcode{Rozdzial5/shark-rf.cpp}{Creation of ensemble random forest model - Shark\cite{handsOnMachineLearning}.}{shark:rf}
+\cppcode{Rozdzial5/shark-rf.cpp}{Creation of ensemble random forest model - Shark-ML\cite{handsOnMachineLearning}.}{shark:rf}
 
 \subsection{Neural network}
 
@@ -126,46 +126,46 @@ Construction of neural network using the Shark-ML library utilizes some mechanis
 
 \section{Model analysis methods}
 
-\subsection{Funkcje straty}
+\subsection{Loss functions}
 
-Biblioteka Shark-ML oferuje szereg funkcji straty pozwalających na wymierną weryfikację dokładności modelu. Należą do nich \cite{shark:loss}:
+Shark-ML library offers a range of loss functions allowing for proper verification of model accuracy. Some of them are\cite{shark:loss}: 
 
 \begin{itemize}
-	\item \textbf{średni błąd bezwzględny} - realizowany za pomocą klasy \textit{AbsoluteLoss};
-	\item \textbf{błąd średniokwadratowy} - realizowany za pomocą klasy \textit{SquaredLoss};
-	\item \textbf{błąd typu zero-jeden} - realizowany za pomocą klasy \textit{ZeroOneLoss};
-	\item \textbf{błąd dyskretny} - realizowany za pomocą klasy \textit{DiscreteLoss};
-	\item \textbf{entropia krzyżowa} - realizowana za pomocą klasy \textit{CrossEntropy};
-	\item \textbf{kawałkami liniowa funkcja straty} - realizowany za pomocą klasy \textit{HingeLoss};
-	\item \textbf{średniokwadratowy błąd kawałkami liniowej funkcji straty} - realizowany za pomocą klasy \textit{SquaredHingeLoss};
-	\item \textbf{kawałkami liniowa funkcja straty typu epsilon} - realizowany za pomocą klasy \textit{EpsilonHingeLoss};
-	\item \textbf{średniokwadratowy błąd kawałkami liniowej funkcji straty typu epsilon} - realizowany za pomocą klasy \textit{SquaredEpsilonHingeLoss};
-	\item \textbf{funkcja straty Hubera} - realizowana za pomocą klasy \textit{HuberLoss};
-	\item \textbf{funkcja straty Tukeya} - realizowana za pomocą klasy \textit{TukeyBiweightLoss}.
+	\item \textbf{mean absolute error} - available as \textit{AbsoluteLoss} class;
+	\item \textbf{mean squared error} - available as \textit{SquaredLoss} class;
+	\item \textbf{zero-one loss} - available as \textit{ZeroOneLoss} class;
+	\item \textbf{discrete loss} - available as \textit{DiscreteLoss} class;
+	\item \textbf{cross entropy} - available as \textit{CrossEntropy} class;
+	\item \textbf{hinge loss} - available as \textit{HingeLoss} class;
+	\item \textbf{squared hinge loss} - available as \textit{SquaredHingeLoss} class;
+	\item \textbf{epsilon hinge loss} - available as \textit{EpsilonHingeLoss} class;
+	\item \textbf{squared epsilon hinge loss} - available as \textit{SquaredEpsilonHingeLoss} class;
+	\item \textbf{Huber loss} - available as \textit{HuberLoss} class;
+	\item \textbf{Tukey biweight loss} - available as \textit{TukeyBiweightLoss} class.
 \end{itemize}
 
-Każda z powyższych klas używana jest w schematyczny sposób, poprzez wcześniejsze utworzenie obiektu klasy wybranej funkcji straty, a następnie wywołanie jej jako funkcji przekazując wartości oczekiwane oraz otrzymane predykcje modelu. Listing \ref{shark:mse} przedstawia omówiony sposób użycia na przykładzie błędu średniokwadratowego.
+Each of the aforementioned classes is used in a schematic way, through the creation of the loss class object of choice, and subsequently calling it as a function, passing expected values and acquired predictions. Listing \ref{shark:mse} presents the way to use a loss function via an example of mean squared error.
 
-\cppcode{Rozdzial5/shark-mse.cpp}{Użycie funkcji straty na przykładzie błędu średniokwadratowego}{shark:mse}
+\cppcode{Rozdzial5/shark-mse.cpp}{Mean squared error loss function use - Shark-ML.}{shark:mse}
 
-\subsection{Metryka $R^2$ i skorygowane $R^2$}
+\subsection{$R^2$ and adjusted $R^2$ metrics}
 
-Biblioteka Shark-ML nie oferuje bezpośredniej klasy reprezentującej metrykę $R^2$ jak w przypadku funkcji strat, jednak udostępnia użytkownikowi funkcję obliczania wariancji danych, co umożliwia bardzo łatwą samodzielną implementację obu metryk. Listing \ref{shark:r2} przedstawia sposób ich wyliczenia, posiadając wartość błędu średniokwadratowego.
+Shark-ML does not implement direct representation of the $R^2$ metric, unlike the loss functions. However, it provides a function to calculate the variance of given data, which allows for fairly easy manual implementation of both metrics. Listing \ref{shark:r2} shows how to calculate them, given the value of mean squared error is known.
 
-\cppcode{Rozdzial5/shark-r2.cpp}{Implementacja metryk $R^2$ oraz skorygowanego $R^2$.}{shark:r2}
+\cppcode{Rozdzial5/shark-r2.cpp}{Implementation of $R^2$ and adjusted $R^2$ metrics - Shark-ML.}{shark:r2}
 
-\subsection{Pole pod wykresem krzywej charakterystycznej odbiornika}
+\subsection{ROC curve}
 
-Pole pod wykresem krzywej charakterystycznej odbiornika stanowi jedną z często wykorzystywanych metryk poprawności predykcji modelu, w związku z czym nie mogło jej zabraknąć w bibliotece Shark-ML. Jest ona dostępna za pośrednictwem klasy \textit{NegativeAUC}, wykorzystywanej w taki sam sposób jak pozostałe omówione wcześniej funkcje straty. W przeciwieństwie do standardowego podejścia, wspomniana klasa oblicza dopełnienie pola pod wykresem funkcji ROC, aby umożliwić wykorzystanie jej jako minimalizowanego celu w procesie uczenia. Listing \ref{shark:roc} przedstawia sposób obliczenia wartości wymienionej metryki.
+The ROC curve is one of commonly used metrics for evaluating model's correctness, and as such, it could not be missed in the Shark-ML library. It is available under the \textit{NegativeAUC} class, which can be used similarly to the loss functions. In contrary to the classic approach, this class calculates the compliment of the ROC curve, so it can be used as a minimized goal in the training process. Listing \ref{shark:roc} shows how to use it to calculate the mentioned metric.
 
-\cppcode{Result/inc/shark/printEvaluation2.hpp}{Przykład obliczenia pola pod wykresem funkcji ROC dla Shark-ML.}{shark:roc} 
+\cppcode{Result/inc/shark/printEvaluation2.hpp}{Example of calculating ROC curve metric - Shark-ML.}{shark:roc} 
 
-\subsection{K-krotny sprawdzian krzyżowy}
+\subsection{K-fold cross validation}
 
-Proces poszukiwania najlepszych wartości hiperparametrów w Shark-ML uwzględnia przeprowadzenie wewnętrznie uczenia danego modelu, lecz skupia się na porównaniu uzyskiwanych wyników, w związku z czym jego opis zamieszczony został w tej sekcji. Użycie implementacji metody K-krotnego sprawdzianu krzyżowego w wymaga wykorzystania trzech klas. Pierwszą z nich stanowi \textit{CVFolds}, której zadaniem jest przechowanie zestawu danych podzielonego na odpowiednią liczbę fragmentów. Drugą jest klasa \textit{CrossValidationError} stanowiąca szablon przyjmujący typ modelu, dla którego określany będzie błąd walidacji, oraz obiekt klasy błędu, który ma zostać wyliczony. Ostatnią klasą jest \textit{GridSearch}, którego zadaniem jest iteracyjny wybór fragmentów do uczenia i wyznaczenie wartości hiperparametrów dla modelu. Wynikiem procesu jest uzyskanie najlepszego zestawu hiperparametrów do procedury uczenia - użytkownik musi zawołać metodę \textit{step()} klasy \textit{GridSearch} tylko jeden raz. Listing \ref{shark:cv} przedstawia przykład zawarty w podręczniku \cite{handsOnMachineLearning}, w którym autor przedstawia proces wykorzystania powyższych klas na własnoręcznie zaimplementowanym modelu regresji wielomianowej. 
+The process of acquiring the best hyperparameters value in Shark-ML consists of performing multiple internal training processes of given model, however it focuses on comparing the results, and because of that, its description was placed in this paragraph. In order to use the K-fold cross validation implementation provided by the library, three classes are required. First of them is \textit{CVFolds}, which is tasked with storing data that is split into a number of segments. The second one is \textit{CrossValidationError} - a template accepting model type, for which the validation error will be calculated, and an object of the loss function, which will perform the calculation. The last but not least is \textit{GridSearch}, which iteratively selects fragments for the training process and hyperparameters for the model. This procedure results in acquiring the best set of hyperparameters for training of the model. User needs to invoke the \textit{step()} method of the \textit{GridSearch} object only once. Listing \ref{shark:cv} shows an example of this mechanism from the handbook\cite{handsOnMachineLearning}, where the author uses the aforementioned classes with manually implemented polynomial regression model.  
 
-\cppcode{Rozdzial5/shark-cv.cpp}{Przykład realizacji sprawdzianu krzyżowego K-fold w Shark-ML \cite{handsOnMachineLearning}.}{shark:cv}
+\cppcode{Rozdzial5/shark-cv.cpp}{Example of K-fold cross validation in Shark-ML\cite{handsOnMachineLearning}.}{shark:cv}
 
-\section{Dostępność dokumentacji i źródeł wiedzy}
+\section{Documentation and sources availability}
 
-Biblioteka Shark-ML posiada skróconą dokumentację dostępną na głównej stronie internetowej projektu, wraz z przykładowymi plikami źródłowymi dołączonymi do repozytorium. Jest ona także wspomniana w książce ,,Hands-On Machine Learning with C++'', przedstawiającej sposoby użycia wybranych funkcjonalności. Kwestią wyróżniającą ją natomiast na tle pozostałych bibliotek omówionych w ramach niniejszej pracy jest fakt, że jest ona dedykowana językowi C++, w związku z czym dużo łatwiej dostępne są wątki społecznościowe i artykuły omawiające realizację różnorodnych typów modeli z jej użyciem, oraz oferując przykładowy kod źródłowy. Strona główna projektu \cite{shark:home} posiada rozbudowaną, przejrzystą i opatrzoną przykładami dokumentację, znacznie ułatwiając korzystanie z dostępnego API.
+The Shark-ML library has a shortened documentation available on the main website of the project, alongside example source code files added to the repository. It is also mentioned in the handbook \textit{"Hands-On Machine Learning with C++"}\cite{handsOnMachineLearning}, which shows examples of using selected functionalities. What makes it stand out from all the libraries described in this dissertation however is the fact, that it is dedicated for the C++ language, and as such, community threads and articles describing creation of various types of models with it, and sample source codes are way more available. The main page documentation is clear and extensive enaugh to make using the available API way easier.

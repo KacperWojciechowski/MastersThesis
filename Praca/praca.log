@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.6.29)  30 JUN 2024 14:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.6.29)  1 JUL 2024 20:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1469,13 +1469,7 @@ Underfull \vbox (badness 1527) has occurred while \output is active []
 Underfull \vbox (badness 1194) has occurred while \output is active []
 
  [51])
-[52]
-Overfull \hbox (14.99887pt too wide) in paragraph at lines 147--148
-[]\T1/lmr/m/n/12 Ka»da z powy»szych klas u»y-wana jest w schematy-czny sposób, 
-poprzez wcze±niejsze
- []
-
-(./Rozdzial5/shark-mse.cpp)
+[52] (./Rozdzial5/shark-mse.cpp)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 151.
@@ -1500,63 +1494,30 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 151.
 
-(./Rozdzial5/shark-r2.cpp)
-Overfull \hbox (27.06532pt too wide) in paragraph at lines 157--157
-[]\T1/lmr/bx/n/14.4 Pole pod wykre-sem krzy-wej charak-terysty-cznej odbiornika
- 
- []
+(./Rozdzial5/shark-r2.cpp) [53] (./Result/inc/shark/printEvaluation2.hpp)
+[54] (./Rozdzial5/shark-cv.cpp)) (./Rozdzial6/rozdzial6.tex
+Underfull \vbox (badness 4647) has occurred while \output is active []
 
-[53] (./Result/inc/shark/printEvaluation2.hpp)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [54]
-(./Rozdzial5/shark-cv.cpp [55])) (./Rozdzial6/rozdzial6.tex
-Overfull \hbox (13.08298pt too wide) in paragraph at lines 171--1
-\T1/lmr/m/n/12 wyró»-ni-a-j¡c¡ j¡ nato-mi-ast na tle po-zostaªych bib-liotek om
-ówionych w ra-mach niniejszej
- []
-
+ [55]
 [56]
 Chapter 6.
 (./Rozdzial6/csv.cpp [57
 
 ]) (./Result/inc/dlib/normalizer.hpp)
-Overfull \hbox (15.2132pt too wide) in paragraph at lines 24--25
-\T1/lmr/m/n/12 klasy \T1/lmr/m/it/12 dlib::vector_normalizer_pca\T1/lmr/m/n/12 
-, która oprócz samej re-dukcji wymi-arowo±ci wykonuje
+(./Result/inc/dlib/pca.hpp [58]) (./Result/inc/dlib/lda.hpp [59])
+(./Result/inc/dlib/sammon.hpp)
+Underfull \vbox (badness 4429) has occurred while \output is active []
+
+ [60]
+(./Result/inc/dlib/linear.hpp)
+Overfull \hbox (2.72743pt too wide) in paragraph at lines 56--57
+\T1/lmr/m/n/12 li-brary pro-vides a de-ci-sion func-tion class called \T1/lmr/m
+/it/12 dlib::one_vs_one_decision_function\T1/lmr/m/n/12 .
  []
 
-[58] (./Result/inc/dlib/pca.hpp) (./Result/inc/dlib/lda.hpp [59])
-(./Result/inc/dlib/sammon.hpp) [60] (./Result/inc/dlib/linear.hpp)
-Overfull \hbox (2.36644pt too wide) in paragraph at lines 53--54
-\T1/lmr/m/n/12 bib-lioteka Dlib ofer-uje klas¦ funkcji de-cyzyjnej \T1/lmr/m/it
-/12 dlib::one_vs_one_decision_function\T1/lmr/m/n/12 .
- []
-
-
-Overfull \hbox (0.44557pt too wide) in paragraph at lines 53--54
-\T1/lmr/m/n/12 za-warty w klasie \T1/lmr/m/it/12 one_versus_one\T1/lmr/m/n/12 ,
- do której przesªany zostaje trener SVM. Dokªadny
- []
-
-[61] (./Result/inc/dlib/svm.hpp)
-Overfull \hbox (14.28766pt too wide) in paragraph at lines 59--60
-\T1/lmr/m/n/12 try tworz¡ sie¢ w kole-jno±ci od na-jbardziej za-g-nie»d»onego d
-o na-jbardziej zewn¦trznego.
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [62]
-(./Result/inc/dlib/neural.hpp [63])
-Overfull \hbox (6.10262pt too wide) in paragraph at lines 74--75
-\T1/lmr/m/it/12 Ridge Re-gres-sion\T1/lmr/m/n/12 ) w przy-padku bib-lioteki Dli
-b wygl¡da prawie iden-ty-cznie do sposobu
- []
-
+[61] (./Result/inc/dlib/svm.hpp) [62] (./Result/inc/dlib/neural.hpp [63])
 (./Result/inc/dlib/krr.hpp [64])
-Overfull \hbox (27.06532pt too wide) in paragraph at lines 80--80
+Overfull \hbox (27.06532pt too wide) in paragraph at lines 83--83
 []\T1/lmr/bx/n/14.4 Pole pod wykre-sem krzy-wej charak-terysty-cznej odbiornika
  
  []
@@ -1571,15 +1532,12 @@ Overfull \hbox (62.78394pt too wide) in paragraph at lines 43--44
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-)
-Overfull \hbox (71.01376pt too wide) in paragraph at lines 88--89
-\T1/lmr/m/n/12 la-nia do-celowych warto±ci hiper-parametrów dokony-wana jest pr
-zez funkcj¦ \T1/lmr/m/it/12 dlib::find_min_global()
- []
+) (./Result/inc/dlib/cross.hpp [66]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[66] (./Result/inc/dlib/cross.hpp [67])
+ [67])
 
-LaTeX Warning: Citation 'dlib:home' on page 68 undefined on input line 94.
+LaTeX Warning: Citation 'dlib:home' on page 68 undefined on input line 97.
 
 ) (./Rozdzial7/rozdzial7.tex [68]
 Chapter 7.
@@ -1602,7 +1560,7 @@ Overfull \hbox (4.14268pt too wide) in paragraph at lines 74--74
  []
 
 [71]
-<Rozdzial7/shogun.png, id=2772, 151.3153pt x 182.18062pt>
+<Rozdzial7/shogun.png, id=2770, 151.3153pt x 182.18062pt>
 File: Rozdzial7/shogun.png Graphic file (type png)
 <use Rozdzial7/shogun.png>
 Package pdftex.def Info: Rozdzial7/shogun.png  used on input line 98.
@@ -1617,7 +1575,7 @@ Underfull \hbox (badness 3019) in paragraph at lines 99--99
 \T1/lmr/m/n/10.95 dla bib-lioteki
  []
 
-<Rozdzial7/shark.png, id=2773, 150.5625pt x 271.0125pt>
+<Rozdzial7/shark.png, id=2771, 150.5625pt x 271.0125pt>
 File: Rozdzial7/shark.png Graphic file (type png)
 <use Rozdzial7/shark.png>
 Package pdftex.def Info: Rozdzial7/shark.png  used on input line 105.
@@ -1632,7 +1590,7 @@ Underfull \hbox (badness 3019) in paragraph at lines 106--106
 \T1/lmr/m/n/10.95 dla bib-lioteki
  []
 
-<Rysunki/Rozdzial7/dlib.png, id=2774, 151.3153pt x 142.28156pt>
+<Rysunki/Rozdzial7/dlib.png, id=2772, 151.3153pt x 142.28156pt>
 File: Rysunki/Rozdzial7/dlib.png Graphic file (type png)
 <use Rysunki/Rozdzial7/dlib.png>
 Package pdftex.def Info: Rysunki/Rozdzial7/dlib.png  used on input line 112.
@@ -1667,7 +1625,7 @@ nej odbiornika wynosz¡c¡
  []
 
 [73]
-<Rozdzial7/shogun_linear_svm.jpg, id=2792, 163.3603pt x 205.5178pt>
+<Rozdzial7/shogun_linear_svm.jpg, id=2790, 163.3603pt x 205.5178pt>
 File: Rozdzial7/shogun_linear_svm.jpg Graphic file (type jpg)
 <use Rozdzial7/shogun_linear_svm.jpg>
 Package pdftex.def Info: Rozdzial7/shogun_linear_svm.jpg  used on input line 14
@@ -1683,7 +1641,7 @@ Underfull \hbox (badness 3019) in paragraph at lines 147--147
 \T1/lmr/m/n/10.95 dla bib-lioteki
  []
 
-<Rozdzial7/shark_linear_svm.png, id=2793, 149.05687pt x 213.04594pt>
+<Rozdzial7/shark_linear_svm.png, id=2791, 149.05687pt x 213.04594pt>
 File: Rozdzial7/shark_linear_svm.png Graphic file (type png)
 <use Rozdzial7/shark_linear_svm.png>
 Package pdftex.def Info: Rozdzial7/shark_linear_svm.png  used on input line 153
@@ -1699,7 +1657,7 @@ Underfull \hbox (badness 3019) in paragraph at lines 154--154
 \T1/lmr/m/n/10.95 dla bib-lioteki
  []
 
-<Rysunki/Rozdzial7/dlib_linear_svm.jpg, id=2794, 152.06813pt x 146.04562pt>
+<Rysunki/Rozdzial7/dlib_linear_svm.jpg, id=2792, 152.06813pt x 146.04562pt>
 File: Rysunki/Rozdzial7/dlib_linear_svm.jpg Graphic file (type jpg)
 <use Rysunki/Rozdzial7/dlib_linear_svm.jpg>
 Package pdftex.def Info: Rysunki/Rozdzial7/dlib_linear_svm.jpg  used on input l
@@ -1746,7 +1704,7 @@ L3 programming layer <2024-01-22>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: 426F9C15CF785335F714F62D5EAF87C0;16920.
+(rerunfilecheck)             Checksum: E46B70FBBF2242ABE43F9D7626B6CC7D;16331.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                praca
@@ -1757,11 +1715,11 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31822 strings out of 476074
- 549819 string characters out of 5793137
- 2004975 words of memory out of 5000000
- 51231 multiletter control sequences out of 15000+600000
- 646280 words of font info for 98 fonts, out of 8000000 for 9000
+ 31815 strings out of 476074
+ 549613 string characters out of 5793137
+ 2008975 words of memory out of 5000000
+ 51226 multiletter control sequences out of 15000+600000
+ 645961 words of font info for 97 fonts, out of 8000000 for 9000
  79 hyphenation exceptions out of 8191
  115i,12n,110p,2352b,2289s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/gerwant/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecxc2074.6
@@ -1775,12 +1733,11 @@ ublic/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt1
-0.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf/font
-s/type1/public/lm/lmtti10.pfb>
-Output written on praca.pdf (83 pages, 880120 bytes).
+0.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on praca.pdf (83 pages, 872841 bytes).
 PDF statistics:
- 3379 PDF objects out of 3580 (max. 8388607)
- 3143 compressed objects within 32 object streams
- 1950 named destinations out of 2073 (max. 500000)
+ 3372 PDF objects out of 3580 (max. 8388607)
+ 3138 compressed objects within 32 object streams
+ 1949 named destinations out of 2073 (max. 500000)
  878 words of extra memory for PDF output out of 10000 (max. 10000000)
 
