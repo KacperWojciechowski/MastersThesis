@@ -1,0 +1,72 @@
+<mxfile host="Electron" modified="2024-07-01T21:33:33.393Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="pNfVc3juGZ_F6xURWhss" version="24.6.4" type="device">
+  <diagram name="Page-1" id="hQjzLpgz-kvxmnSTsYAu">
+    <mxGraphModel dx="626" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-3" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;endWidth=36;endSize=10.571428571428571;startSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;width=29.142857142857142;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="40" y="260" as="sourcePoint" />
+            <mxPoint x="720" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-11" value="1998" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#D4E1F5;" vertex="1" connectable="0" parent="rv2LKG0woi7QuUC4Jynv-3">
+          <mxGeometry x="-0.7941" y="3" relative="1" as="geometry">
+            <mxPoint x="10" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-4" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="440" as="sourcePoint" />
+            <mxPoint x="520" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-5" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="440" as="sourcePoint" />
+            <mxPoint x="360" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-6" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="440" as="sourcePoint" />
+            <mxPoint x="200" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-7" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;C++98&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="203" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-8" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;TR1&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="250" y="203" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-9" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;C++11&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="400" y="203" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-10" value="&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 18px;&quot;&gt;C++17 and C++20&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="520" y="203" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-13" value="2005" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#D4E1F5;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="279.99571428571437" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-14" value="2011" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#D4E1F5;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="439.99571428571437" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-15" value="2017 and 2020" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#D4E1F5;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="604.9957142857144" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-16" value="&lt;b&gt;First ISO standard&lt;/b&gt;&lt;div&gt;- STL library with&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; containers and&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; algorithms&lt;/div&gt;&lt;div&gt;- strings represented by&lt;/div&gt;&lt;div&gt;&amp;nbsp; std::string class&lt;/div&gt;&lt;div&gt;- input / output streams&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="45" y="280" width="150" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-17" value="&lt;b&gt;Technical Report 1&lt;/b&gt;&lt;div&gt;- regular expressions&lt;/div&gt;&lt;div&gt;- smart pointers&lt;/div&gt;&lt;div&gt;- hash tables&lt;/div&gt;&lt;div&gt;- pseuro-random number&lt;/div&gt;&lt;div&gt;&amp;nbsp; generators&lt;/div&gt;&lt;div&gt;- time library&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="210" y="280" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-18" value="&lt;b&gt;Next ISO standard&lt;/b&gt;&lt;div&gt;- &amp;lt;algorithms&amp;gt; library&lt;/div&gt;&lt;div&gt;- corrected smart pointers&lt;/div&gt;&lt;div&gt;- multithreading&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="370" y="280" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="rv2LKG0woi7QuUC4Jynv-19" value="&lt;b&gt;Next ISO standards&lt;/b&gt;&lt;div&gt;- file system library&lt;/div&gt;&lt;div&gt;- networking&lt;/div&gt;&lt;div&gt;- array extensions&lt;/div&gt;&lt;div&gt;- transaction memory&lt;/div&gt;&lt;div&gt;- enhancing concurrency&lt;/div&gt;&lt;div&gt;&amp;nbsp; and parallelism&lt;/div&gt;&lt;div&gt;- introduction of concepts&lt;/div&gt;&lt;div&gt;- modularity&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="530" y="280" width="160" height="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
