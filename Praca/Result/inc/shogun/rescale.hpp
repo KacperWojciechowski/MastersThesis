@@ -6,9 +6,9 @@ inline void normalize(auto& inputs)
 {
     using namespace shogun;
 
-    // utworzenie normalizera
+    // creating normalizer
     auto scaler = wrap(new CRescaleFeatures);
-    // nauka normalizera oraz przeprowadzenie normalizacji
+    // training and transforming
     scaler->fit(inputs);
     scaler->transform(inputs);
 }

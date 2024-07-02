@@ -8,37 +8,38 @@ inline void shogunCrossValidLogistic(
 {
     using namespace shogun;
 
-    // utworzenie drzewa parametrów
+    // creating the parameter tree
     auto root = some<CModelSelectionParameters>();
-    // współczynnik regularyzacji
+    // regularization coefficient
     CModelSelectionParameters* z = new CModelSelectionParameters("m_z");
     root->append_child(z);
     z->build_values(0.2, 1.0, R_LINEAR, 0.1);
-    // utworzenie strategii podziału drzewa decyzyjnego
+    // creating the decision tree partition strategy
     index_t k = 3;
     CStatifiedCrossValidationSplitting* splitting =
         new CStatifiedCrossValidationSplitting(labels, k);
-    // utworzenie kryterium ewaluacji dla drzewa decyzyjnego
+    // creating the evaluation criterion
     auto evalCriterium = some<CMulticlassAccuracy>();
-    // utworzenie modelu regresji logistycznej
+    // creating the logistic regression model
     auto logReg = some<CMulticlassLogisticRegression>();
-    // utworzenie obiektu sprawdzianu krzyżowego
+    // creating the cross-validation object
     auto cross = some<CCrossValidation>(logReg, trainInputs, trainOutputs,
                                         splitting, evalCriterium);
     cross->set_num_runs(1);
     auto modelSelection = some<CGridSearchModelSelection>(cross, root);
-    // wybranie parametrów dla modelu
+    // selecting model parameters
     CParameterCombination* bestParams = 
         wrap(modelSelection->select_model(false));
-    // zaaplikowanie parametrów dla modelu
+    // applying parameters to the model
     bestParams->apply_to_machine(logReg);
-    // wyświetlenie drzewa decyzyjnego
+    // printing the decision tree
     bestParams->print_tree();
-    // trenowanie docelowego modelu
+
+    // training
     logReg->set_labels(trainOutputs);
     logReg->train(trainInputs);
 
-    // ewaluacja modelu
+    // evaluation
     std::cout << "----- Shogun CV Logistic -----" << std::endl;
     std::cout << "Train:" << std::endl;
     auto prediction = wrap(logReg->apply_multiclass(trainInputs));

@@ -1,10 +1,10 @@
 // [...]
 
-// utworzenie trenera PCA
+// creating PCA kernel
 shark::PCA pca(data);
 shark::LinearModel<> enc;
 
-// konfiguracja enkodera do redukcji wymiarów
+// configuring the encoder for dimensionality reduction
 constexpr int nbOfDim = 2;
 pca.encoder(enc, nbOfDim);
 auto encoded_data = enc(data);

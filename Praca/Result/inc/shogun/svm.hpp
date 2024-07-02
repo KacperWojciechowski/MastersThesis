@@ -24,52 +24,51 @@ inline void shogunSVM(
 {
     using namespace shogun;
 
-    // utworzenie jądra
+    // creating kernel
     auto kernel = some<CGaussianKernel>();
     kernel->init(trainInputs, trainInputs);
-    // utworzenie i konfiguracja modelu
+    // creating and configuring the model
     auto svm = some<CMulticlassLibSVM>(LIBSVM_C_SVC);
     svm->set_kernel(kernel);
 
-    // poszukiwanie hiperparametrów
+    // searching for hyperparameters
     auto root = some<CModelSelectionParameters>();
-    // stopień unikania missklasyfikacji
+    // missclasification avoidance degree
     CModelSelectionParameters* c = new CModelSelectionParameters("C");
     root->append_child(c);
     c->build_values(1.0, 1000.0, R_LINEAR, 100.);
-    // utworzenie wskaźnika na jądro
+    // creating the kernel pointer
     auto paramsKernel = some<CModelSelectionParameters>("kernel", kernel);
     root->append_child(paramsKernel);
-    // utworzenie wskaźnika na wagi
+    // creating the weights pointer
     auto paramsKernelWidth = 
 	    some<CModelSelectionParameters>("combined_kernel_weight");
     paramsKernelWidth->build_values(0.1, 10.0, R_LINEAR, 0.5);
     paramsKernel->append_child(paramsKernelWidth);
-    // utworzenie podziału do sprawdzianu krzyżowego
+    // creating the partition for cross validation
     index_t k = 3;
     CStratifiedCrossValidationSplitting* splitting =
 	    new CStratifiedCrossValidationSplitting(trainOutputs, k);
-    // utworzenie kryterium trafności
+    // creating the accuracy criterion
     auto evalCriterium = some<CMulticlassAccuracy>();
-    // utworzenie obiektu sprawdzianu krzyżowego
+    // creating the cross-validation object
     auto cross =
 	    some<CCrossValidation>(
 		svm, trainInputs, trainOutputs, splitting, evalCriterium);
     cross->set_num_runs(1);
-    // utworzenie obiektu selekcji modelu
+    // creating model selection object
     auto modelSelection = some<CGridSearchModelSelection>(cross, root);
-    // wybór i zaaplikowanie parametrów
+    // selecting and applying the parameters
     CParameterCombination* bestParams = 
 	    wrap(modelSelection->select_model(false));
     bestParams->apply_to_machine(svm);
     bestParams->print_tree();
  
-
-    // trening
+    // training
     svm->set_labels(trainOutputs);
     svm->train(trainInputs);
 
-    // ewaluacja modelu
+    // model evaluation
     std::cout << "----- Shogun SVM -----" << std::endl;
     std::cout << "Train:" << std::endl;
     auto prediction = wrap(svm->apply_multiclass(trainInputs));

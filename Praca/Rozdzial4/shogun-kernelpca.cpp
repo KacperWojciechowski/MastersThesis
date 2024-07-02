@@ -3,21 +3,21 @@ using namespace shogun;
 void KernelPCAReduction(Some<CDenseFeatures<DataType>> features,
                         const int target_dim)
 {
-    // utworzenie jądra dla metody kernel PCA
+    // creation of kernel for the kernel PCA method
     auto gauss_kernel = some<CGaussianKernel>(features, features, 0.5);
-    // utworzenie reduktora
+    // creating reductor
     auto pca = some<CKernelPCA>();
-    // konfiguracja reduktora
+    // configuring the reductor
     pca->set_kernel(gauss_kernel.get());
     pca->set_target_dim(target_dim);
-    // nauczenie reduktora
+    // training the reductor
     pca->fit(features);
 
-    // przetworzenie danych
+    // data processing
     auto feature_matrix = features->get_feature_matrix();
     for (index_t i = 0; i < features->get_num_vectors(); ++i)
     {
-        // utworzenie przetworzonego wektora
+        // creating processed data vectors
         auto vector = feature_matrix.get_colimn(i);
         auto new_vector = pca->apply_to_feature_vector(vector);
     }

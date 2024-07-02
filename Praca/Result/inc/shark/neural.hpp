@@ -15,58 +15,61 @@ inline void sharkNN(const shark::ClassificationDataset& trainData,
 {
     using namespace shark;
     
-    // zdefiniowanie warstw sieci
+    // defining network layers
     using DenseTanhLayer = LinearModel<RealVector, TanhNeuron>;
     using DenseLogisticLayer = LinearModel<RealVector, LogisticNeuron>;
     DenseTanhLayer layer1(inputDimension(trainData), 5, true);
     DenseTanhLayer layer2(5, 5, true);
     DenseLogisticLayer output(5, numberOfClasses(trainData), true);
-    // połączenie warstw
+    // connecting the layers
     auto network = layer1 >> layer2 >> output;
-    // utworzenie i konfiguracja funkcji straty
+    // creating and configuring the loss function
     CrossEntropy<unsigned int, RealVector> loss;
     ErrorFunction<> error(trainData, &network, &loss, true);
-    //TwoNormRegularizer<> regularizer(error.numberOfVariables());
+    
+    // regularization
+    TwoNormRegularizer<> regularizer(error.numberOfVariables());
     double weightDecay = 0.01;
-    //error.setRegularizer(weightDecay, &regularizer);
+    error.setRegularizer(weightDecay, &regularizer);
     error.init();
-    // inicjalizacja wag sieci
+    
+    // weights initialization
     initRandomNormal(network, 0.001);
-    // utworzenie i konfiguracja optymalizatora
+    // creating and configuring the optimizer
     SteepestDescent<> optimizer;
     optimizer.setMomentum(0.5);
     optimizer.setLearningRate(0.1);
     optimizer.init(error);
-    // przeprowadzenie procesu uczenia
+    // training
     std::size_t epochs = 1000;
     std::size_t iterations = trainData.numberOfBatches();
-    // pętla przechodząca poszczególne epoki
+    // loop that goes through epochs
     for (std::size_t epoch = 0; epoch != epochs; ++epoch)
     {
         double avgLoss = 0.0;
-        // pętla operująca na pojedynczych batch'ach
+        // loop that goes through batches
         for (std::size_t i = 0; i != iterations; ++i)
         {
-            // wykonanie kroku optymalizatora
+            // performing optimizer step
             optimizer.step(error);
-            // zapisanie częściowej wartości funkcji straty
-            //if (i % 100 == 0)
-            //{
+            // saving partial loss
+            if (i % 100 == 0)
+            {
                 avgLoss += optimizer.solution().value;
-            //}
+            }
         }
-        // wyliczenie średniej wartości funkcji straty
+        // calculating average loss value
         avgLoss /= iterations;
         std::cout << "Epoch " << epoch << " | Avg. loss " << avgLoss 
                   << std::endl;
     }
-    // konfiguracja modelu docelowego
+    // configuring the final model
     network.setParameterVector(optimizer.solution().point);
     std::cout << "In Shape=" << network.inputShape() << std::endl;
     std::cout << "Out Shape=" << network.outputShape() << std::endl;
-    //Classifier<ConcatenatedModel<RealVector>> model(network);
+    Classifier<ConcatenatedModel<RealVector>> model(network);
 
-    // walidacja
+    // validation
     std::cout << "-----Shark Neural -----" << std::endl;
     std::cout << "Train data:" << std::endl;
     std::cout << "trainData.numberOfBatches() = " << 

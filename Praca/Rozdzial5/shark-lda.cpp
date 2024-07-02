@@ -5,7 +5,7 @@ using namespace shark;
 
 int main(int argc, char **argv)
 {
-    // import danych
+    // importing data
     ClassificationDataset data;
     try
     {
@@ -17,19 +17,19 @@ int main(int argc, char **argv)
         exit(EXIT_FAILURE);
     }
 
-    // wyświetlenie informacji o danych
+    // presenting data information
     std::cout << "overall number of data points: " << data.numberOfElements()
               << " number of classes: " << numberOfClasses(data)
               << " input dimension: " << inputDimenstion(Data) << std::endl;
 
-    // wyodrębnienie danych testowych
+    // extracting validation data
     auto test = splitAtElement(data, .5 * data.numberOfElements());
-    // utworzenie i wytrenowanie modelu
+    // creating and training the model
     LDA ldaTrainer;
     LinearClassifier<> lda;
     ldaTrainer.train(lda, data);
 
-    // analiza predykcji i dokładności modelu
+    // prediction and model accuracy analysis
     Data<unsigned int> prediction;
     ZeroOneLoss<unsigned int> loss;
     prediction = lda(data.inputs());

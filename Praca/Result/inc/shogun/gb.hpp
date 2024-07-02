@@ -20,15 +20,15 @@ inline void shogunGradientBoost(
 {
     using namespace shogun;
 
-    // oznaczenie regresorów jako ciągłe
+    // marking regressors as continuous
     SGVector<bool> featureType(1);
     featureType.set_const(false);
-    // utworzenie binarnego drzewa decyzyjnego
+    // creating a binary decision tree
     auto tree = some<CCARTree>(featureType, PT_REGRESSION);
     tree->set_max_depth(3);
-    // utworzenie funkcji straty
+    // creating the loss function
     auto loss = some<CSquaredLoss>();
-    // utworzenie i konfiguracja modelu
+    // creating and configuring the model
     constexpr int iterations = 100;
     constexpr int learningRate = 0.1;
     constexpr int subsetFraction = 1.0;
@@ -37,10 +37,10 @@ inline void shogunGradientBoost(
                                             iterations,
                                             learningRate,
                                             subsetFraction);
-    // trening
+    // training
     model->set_labels(trainOutputs);
     model->train(trainInputs);
-    // ewaluacja modelu
+    // evaluation
     std::cout << "----- Shogun Gradient Boost -----" << std::endl;
     std::cout << "Train:" << std::endl;
     auto prediction = wrap(model->apply_multiclass(trainInputs));

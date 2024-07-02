@@ -14,19 +14,19 @@ inline void sharkSVM(const shark::ClassificationDataset& trainData,
 {
     using namespace shark;
 
-    // utworzenie jądra
+    // creating the kernel
     double gamma = 0.16;
     GaussianRbfKernel<> kernel(gamma);
     KernelClassifier<RealVector> svm;
     double regularization = 1;
     bool bias = true;
-    // utworzenie i konfiguracja modelu
+    // creating and configuring the model
     CSvmTrainer<RealVector> trainer(
         &kernel, regularization, bias);
     trainer.sparsify() = false;
-    // trening
+    // training
     trainer.train(svm, trainData);
-    // ewaluacja
+    // evaluation
     std::cout << "-----Shark SVM-----" << std::endl;
     std::cout << "Train data:" << std::endl;
     auto predictions = svm(trainData.inputs());

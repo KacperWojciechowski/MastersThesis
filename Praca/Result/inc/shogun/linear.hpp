@@ -17,14 +17,14 @@ inline void shogunLinear(
 {
     using namespace shogun;
 
-    // utworzenie modelu
+    // creating the model
     float64_t tauRegularization = 0.0001;
     auto linear =
         some<CLinearRidgeRegression>(tauRegularization, nullptr, nullptr);
-    // nauczanie
+    // training
     linear->set_labels(trainOutputs);
     linear->train(trainInputs);
-    // weryfikacja modelu
+    // validation
     std::cout << "----- Shogun Linear -----" << std::endl;
     std::cout << "Train data: " << std::endl;
     auto predictions = wrap(linear->apply_regression(trainInputs));

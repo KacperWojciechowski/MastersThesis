@@ -5,17 +5,17 @@ void RFClassification(const shark::ClassificationDataset& train,
 {
     using namespace shark;
 
-    // utworzenie i konfiguracja trenera
+    // creating and configuring the trainer
     RFTrainer<unsigned int> trainer;
     trainer.setNTrees(100);
     trainer.setMinSplit(10);
     trainer.setMaxDepth(10);
     trainer.setNodeSize(5);
     trainer.minImpurity(1.e-10);
-    // utworzenie klasyfikatora
+    // creating the classifier
     RFClassifier<unsigned int> rf;
     trainer.train(rf, train);
-    // ewaluacja
+    // evaluation
     ZeroOneLoss<unsigned int> loss;
     auto predictions = rf(test.inputs());
     double accuracy = 1. - loss.eval(test.labels(), predictions);

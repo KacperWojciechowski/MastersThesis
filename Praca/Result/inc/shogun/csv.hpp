@@ -11,7 +11,7 @@
 #include <shogun/preprocessor/RescaleFeatures.h>
 #include <iostream>
 
-// pomocnicze pośrednie opakowanie na zestaw danych
+// helper intermediate packaging for data set
 struct Dataset
 {
     shogun::SGMatrix<float64_t> trainInputs;
@@ -20,7 +20,7 @@ struct Dataset
     shogun::SGMatrix<float64_t> testOutputs;
 };
 
-// pomocnicza struktura określająca pozycję zmiennej odpowiedzi
+// helper struct to distinguish label position
 enum class LabelPos
 {
     FIRST,
@@ -35,16 +35,14 @@ inline Dataset readShogunCsvData(
 
     Dataset ret;
 
-    // odczytanie surowej zawartości pliku csv i sparsowanie 
-    // jej do macierzy
+    // reading raw csv file content and parsing it into matrix
     auto csvFile = some<CCSVFile>(filename.c_str());
     Matrix data;
     data.load(csvFile);
-    // transpozycja do postaci docelowej dla człowieka
-    // (działanie na kolumnach)
+    // transposing to human-friendly form (column-wise)
     Matrix::transpose_matrix(data.matrix, data.num_rows, 
 		             data.num_cols);
-    // podział macierzy na część regresorów i zmiennej odpowiedzi
+    // partitioning the matrix into regressors and response variable
     switch(labelPos)
     {
         case LabelPos::FIRST:
@@ -60,15 +58,15 @@ inline Dataset readShogunCsvData(
 		.clone();
             break;
     };
-    // ponowna transpozycja do positaci docelowej dla algorytmów
-    // uczących (operowanie na wierszach)
+
+    // transposing back to library-friendly form (row-wise)
     Matrix::transpose_matrix(ret.trainInputs.matrix, 
 		             ret.trainInputs.num_rows,
                              ret.trainInputs.num_cols);
     Matrix::transpose_matrix(ret.trainOutputs.matrix, 
 		             ret.trainOutputs.num_rows,
                              ret.trainOutputs.num_cols);
-    // podział danych na część treningową i testową
+    // splitting data into training and validation
     auto temp = ret.testInputs = ret.trainInputs.submatrix(
         static_cast<long>(0.8 * ret.trainInputs.num_cols), 
 	ret.trainInputs.num_cols).clone();

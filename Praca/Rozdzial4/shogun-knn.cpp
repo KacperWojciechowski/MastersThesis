@@ -5,19 +5,19 @@ void KNNClassification(Some<CDenseFeatures<DataType>> features,
                        Some<CDenseFeatures<DataType>> test_features,
                        Some<CmulticlassLabels> test_labels)
 {
-    // przygotowanie modelu
+    // preparing the model
     std::int32_t k = 3;
     auto distance = some<CEuclideanDistance>(features, features);
     auto knn = some<CKNN>(k, distance, labels);
 
-    // wygenerowanie predykcji
+    // generating predictions
     auto new_labels = wrap(knn->apply_multiclass(test_features));
 
-    // obliczenie dokładności
+    // calculating the accuracy
     auto eval_criterium = some<CMulticlassAccuracy>();
     auto accuracy = eval_criterium->evaluate(new_labels, test_labels);
 
-    // przetwarzanie wyników
+    // processing the results
     auto feature_matrix = test_features->get_feature_matrix();
     for (index_t i = 0; i < new_labels->get_num_labels(); ++i)
     {

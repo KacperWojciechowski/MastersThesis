@@ -12,14 +12,14 @@ inline void dlibLinear(
     std::vector<double> testLabels)
 {
     using namespace dlib;
-    // utworzenie oraz konfiguracja trenera i jądra
+    // creating and configuring the trainer and kernel
     using linearKernel = linear_kernel<matrix<double, 5, 1>>;
     krr_trainer<linearKernel> trainer;
     trainer.set_kernel(linearKernel());
-    // trening
+    // training
     decision_function<linearKernel> model = trainer.train(
         trainData, trainLabels);
-    // ewaluacja
+    // evaluation
     std::cout << "----- Dlib Linear -----" << std::endl;
     std::cout << "Train data:" << std::endl;
     auto predictions = std::vector<double>(trainData.size());

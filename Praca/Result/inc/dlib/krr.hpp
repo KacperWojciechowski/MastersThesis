@@ -17,16 +17,16 @@ inline void dlibKRR(
     
     using OVOTrainer = one_vs_one_trainer<any_trainer<double>>;
     using Kernel = radial_basis_kernel<double>;
-    // utworzenie trenera maszyny wektorów nośnych
+    // creating support vector machine trainer
     krr_trainer<Kernel> krrTrainer;
     krrTrainer.set_kernel(Kernel(0.1));
-    // utworzenie trenera klasyfikatora wieloklasowego
+    // creating multiclass classifier trainer
     OVOTrainer trainer;
     trainer.set_trainer(krrTrainer);
-    // utworzenie modelu
+    // creating model
     one_vs_one_decision_function<OVOTrainer> model = 
         trainer.train(trainData, trainLabels);
-    // ewaluacja
+    // evaluation
     std::cout << "----- Dlib KRR -----" << std::endl;
     std::cout << "Train data:" << std::endl;
     auto predictions = std::vector<double>(trainData.size());

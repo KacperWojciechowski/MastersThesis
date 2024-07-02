@@ -5,14 +5,14 @@ void GBMClassification(Some<CDenseFeatures<DataType>> features,
                        Some<CDesneFeatures<DataType>> test_features,
                        Some<CRegressionLabels> test_labels)
 {
-    // oznaczenie regresorów jako ciągłe
+    // marking regressors as continuous
     SGVector<bool> feature_type(1);
     feature_type.set_const(false);
 
-    // utworzenie bazowego drzewa decyzyjnego
+    // creating a base decision tree
     auto tree = some<CCARTree>(feature_type, PT_REGRESSION);
     tree->set_max_depth(3);
-    // utworzenie funkcji straty
+    // creating a loss function
     auto loss = some<CSquaredLoss>();
     constexpr int iterations = 100;
     constexpr int learning_rate = 0.1;
@@ -22,11 +22,11 @@ void GBMClassification(Some<CDenseFeatures<DataType>> features,
                                             iterations, 
                                             learning_rate, 
                                             sub_set_fraction);
-    // konfiguracja modelu
+    // model configuration
     model->set_labels(labels);
     model->train(features);
 
-    // ewaluacja modelu
+    // model evaluation
     auto new_labels = wrap(model->apply_regression(test_features));
     auto eval_criterium = some<CMeanSquaredError>();
     auto accuracy = eval_criterium->evaluate(new_labels, test_labels);

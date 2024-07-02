@@ -14,26 +14,26 @@ inline void shogunVerifyModel(
 {
     using namespace shogun;
 
-    // błąd średniokwadratowy
+    // mean squared error
     auto mseError = some<CMeanSquaredError>();
     auto mse = mseError->evaluate(predictions, targets);
     std::cout << "MSE = " << mse << std::endl;
-    // metryka R^2
+    // R^2 metric
     float64_t avg = 0.0;
     float64_t sum = 0.0;
-    // obliczenie średniej
+    // mean calculation
     for (index_t i = 0; i < targets->get_num_labels(); i++)
     {
         avg += targets->get_label(i);
     }
     avg /= targets->get_num_labels();
-    // obliczenie wariancji
+    // variance calculation
     for (index_t i = 0; i < targets->get_num_labels(); i++)
     {
         sum += std::pow(targets->get_label(i), 2);
     }
     float64_t variance = (sum / targets->get_num_labels()) - std::pow(avg, 2);
-    // obliczenie metryki R^2
+    // R^2 metric calculation
     auto r_square = 1 - (mse / variance);
     std::cout << "R^2 = " << r_square << std::endl << std::endl;
 }
@@ -44,7 +44,7 @@ inline void shogunVerifyModel(
 {
     using namespace shogun;
 
-    // obliczenie pola pod wykresem ROC
+    // auc roc calculation
     auto roc = some<CROCEvaluation>();
     roc->evaluate(predictions->get_binary_for_class(1),
 		  targets->get_binary_for_class(1));

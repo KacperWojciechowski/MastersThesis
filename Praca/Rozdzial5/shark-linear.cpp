@@ -27,17 +27,17 @@ RegressionDataset loadData(const std::string& dataFile,
 }
 // [...]
 
-// odczytanie danych z plików oraz podział na dane uczące i testowe
+// reading data from files and splitting them into training and validation sets
 RegressionDataset data = loadData("data/regressionInputs.csv", 
                                   "data/regressionLabels.csv");
 RegressionDataset test = splitAtElement(data, static_cast<std::size_t>(
                                                 0.8*data.numberOfElements()));
-// przygotowanie modelu
+// preparing the model
 LinearModel<> model(inputDimension(data), labelDimension(data));
 SquaredLoss<> loss;
 ErrorFunction errorFunction(data, &model, &loss);
 
-// przygotowanie i wyszkolenie optymizatora
+// preparing and training the optimizer
 CG optimizer;
 errorFunction.init();
 optimizer.init(errorFunction);
@@ -46,7 +46,7 @@ for (int i = 0; i < 100; ++i)
     optimizer.step(errorFunction);
 }
 
-// przeliczenie predykcji modelu dla danych testowych
+// calculating predictions for validation data
 model.setParameterVector(optimizer.solution().point);
 Data<RealVector> predictions = model(test.inputs());
 double testError = loss.eval(test.labels(), predictions);

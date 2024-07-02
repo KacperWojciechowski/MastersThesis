@@ -11,19 +11,19 @@ inline std::vector<dlib::matrix<double>> dlibLDA(
     std::size_t desiredDimensions)
 {
     using namespace dlib;
-    // utworzenie obiektow potrzebnych do redukcji
+    // creating objects needed for reduction
     matrix<double, 0, 1> mean;
     auto transform = data;
-    // przeksztalcenie danych w macierz redukcyjną
+    // converting data into reduction matrix
     compute_lda_transform(transform, mean, labels, desiredDimensions);
-    // przygotowanie kontenera na przetworzone dane
+    // preparing container for transformed data
     std::vector<matrix<double>> transformedData;
     transformedData.reserve(data.nr());
-    // redukcja wymiarowości
+    // dimensionality reduction
     for (long i = 0; i < data.nr(); ++i)
     {
         transformedData.emplace_back(transform * trans(rowm(data, i)) - mean);
     }
-    // zwrócenie wektora przetworzonych wierszy
+    // returning the transformed rows vector
     return transformedData;
 }

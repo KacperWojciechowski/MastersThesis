@@ -17,12 +17,12 @@ inline void shogunKNN(
 {
     using namespace shogun;
 
-    // przygotowanie dystansu
+    // preparing the distance type
     auto distance = some<CEuclideanDistance>(trainInputs, trainInputs);
-    // przygotowanie modelu
+    // preparing the model
     std::int32_t k = 3;
     auto knn = some<CKNN>(k, distance, trainOutputs);
-    // ewaluacja modelu
+    // evaluation
     std::cout << "----- Shogun KNN -----" << std::endl;
     std::cout << "Train:" << std::endl;
     auto prediction = wrap(knn->apply_multiclass(trainInputs));

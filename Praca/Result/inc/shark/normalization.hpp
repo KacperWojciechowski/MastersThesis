@@ -4,15 +4,15 @@ inline auto sharkPreprocess(auto& trainData)
 {
     using namespace shark;
 
-    // przemieszanie danych
+    // shuffling the data
     trainData.shuffle();
-    // utworzenie normalizera
+    // creating the normalizer
     using Trainer = NormalizeComponentsUnitVariance<RealVector>;
     bool removeMean = true;
     Normalizer<RealVector> normalizer;
     Trainer normalizingTrainer(removeMean);
-    // nauczenie normalizera średniej i wariancji danych treningowych
+    // teaching the normalizer the mean and variance of the training data
     normalizingTrainer.train(normalizer, trainData.inputs());
-    // transformacja danych uczących
+    // transforming the training data
     return transformInputs(trainData, normalizer);
 }

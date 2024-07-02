@@ -14,12 +14,12 @@ inline void shogunModels()
     using namespace shogun;
 
     init_shogun_with_defaults();
-    // odczytanie danych we własnym pośrednim typie danych
+    // reading data in the custom type
     auto classificationDatasetTemp =
         readShogunCsvData("wdbc_data_with_labels_tn.csv", LabelPos::LAST);
     auto regressionDatasetTemp =
         readShogunCsvData("IronGlutathione_tn.csv", LabelPos::LAST);
-    // rozdzielenie danych na regresory i zmienne odpowiedzi
+    // splitting data into regressors and labels
     auto classificationTrainFeatures =
         some<CDenseFeatures<float64_t>>(
             classificationDatasetTemp.trainInputs);
@@ -45,7 +45,7 @@ inline void shogunModels()
         some<CRegressionLabels>(
             regressionDatasetTemp.testOutputs);
     
-    // wywołanie modeli
+    // calling the models
     shogunLinear(
         regressionTrainFeatures, 
         regressionTestFeatures, 

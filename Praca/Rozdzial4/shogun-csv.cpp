@@ -6,25 +6,25 @@ using namespace shogun;
 using Matrix = shogun::SGMatrix<float64_t>
 
 // [...]
-// odczyt danych z pliku .csv
+// reading data from .csv file
 auto csv_file = shogun::some<shogun::CCSVFile>("sample_file.csv");
 Matrix data;
 data.load(vsv_file);
 
-// transpozycja i rozdzielenie danych
+// transposing and splitting the data
 Matrix::transpose_matrix(data.matrix, data.num_rows, data.num_cols);
-Matrix inputs = data.submatrix(0, data.num_cols - 1); // utworzenie widoku
-inputs = inputs.clone(); // przekopiowanie danych
+// creating a view of the predictions
+Matrix inputs = data.submatrix(0, data.num_cols - 1);
+inputs = inputs.clone(); // copying data
 
-// utworzenie widoku
+// creating a view of the labels
 Matrix outputs = data.submatrix(data.num_cols - 1, data.num_cols); 
-outputs = outputs.clone(); // przekopiowanie danych
+outputs = outputs.clone(); // copying data
 
-// powrotna transpozycja macierzy danych treningowych dla algorytmów
-// biblioteki
+// transposing the matrix back for the library algorithms
 Matrix::transpose_matrix(inputs.matrix, inputs.num_rows, inputs.num_cols);
 
-// przygotowanie klas wrapujących do wykorzystania przy uczeniu
+// creating wrappers for the models
 auto features = shogun::some<shogun::CDenseFeatures<float64_t>>(inputs);
 auto labels = 
     shogun::wrap(new shogun::CMulticlassLabels(outputs.get_column(0)));

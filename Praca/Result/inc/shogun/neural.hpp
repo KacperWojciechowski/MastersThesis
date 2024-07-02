@@ -16,7 +16,7 @@ inline void sharkNeural(
 {
     using namespace shogun;   
 
-    // konstrukcja architektury sieci
+    // constructing the network architecture
     auto dimensions = trainInputs->get_num_features();
     auto layers = some<CNeuralLayers>();
     layers = wrap(layers->input(dimensions));
@@ -24,11 +24,11 @@ inline void sharkNeural(
     layers = wrap(layers->rectified_linear(5));
     layers = wrap(layers->logistic(1));
     auto allLayers = layers->done();
-    // utworzenie sieci
+    // creating the network
     auto network = some<CNeuralNetwork>(allLayers);
     network->quick_connect();
     network->initialize_neural_network();
-    // konfiguracja sieci
+    // network configuration
     network->set_optimization_method(NNOM_GRADIENT_DESCENT);
     network->set_gd_mini_batch_size(64);
     network->set_l2_coefficient(0.0001);
@@ -36,10 +36,10 @@ inline void sharkNeural(
     network->set_epsilon(0.0);
     network->set_gd_learning_rate(0.01);
     network->set_gd_momentum(0.5);
-    // trening
+    // training
     network->set_labels(trainOutputs);
     network->train(trainInputs);
-    // walidacja
+    // validation
     std::cout << "----- Shogun Neural Network -----" << std::endl;
     std::cout << "Train data:" << std::endl;
     auto predictions = wrap(network->apply_multiclass(trainInputs));

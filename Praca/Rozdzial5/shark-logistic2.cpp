@@ -4,14 +4,14 @@ using namespace shark;
 void SimpleLR(const ClassificationDataset& train,
               const ClassificationDataset& test)
 {
-    // utworzenie modelu oraz trenera
+    // creating the model and the trainer
     LinearClassifier<RealVector> model;
     LogisticRegression<RealVector> trainer;
     
-    // trenowanie modelu
+    // training
     trainer.train(model, train);
 
-    // wykorzystanie modelu
+    // use example
     auto predictions = model(test.inputs());
     // [...]
 }

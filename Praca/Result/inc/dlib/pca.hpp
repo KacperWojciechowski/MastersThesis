@@ -10,13 +10,13 @@ inline std::vector<dlib::matrix<double>> dlibPCA(
     std::size_t desiredDimensions)
 {
     using namespace dlib;
-    // utworzenie i trening reduktora
+    // creating and training the reductor
     vector_normalizer_pca<matrix<double>> pca;
     pca.train(data, desiredDimensions/data[0].nr());
-    // przygotowanie kontenera na przetworzone dane
+    // preparing container for transformed data
     std::vector<matrix<double>> processedData;
     processedData.reserve(data.size());
-    // przetwarzanie danych
+    // data transformation
     for(auto& sample : data)
     {
         processedData.emplace_back(pca(sample));

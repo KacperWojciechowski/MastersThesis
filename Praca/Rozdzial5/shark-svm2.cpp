@@ -6,31 +6,31 @@ void SVMClassification(const ClassificationDataset& train,
 {
     double gamma = 0.5;
     GaussianRbfKernel<> kernel(gamma);
-    // utworzenie obiektu modelu docelowego
+    // creating the composite model
     OneVersusOneClassifier<RealVector> ovo;
-    // utworzenie kontenera na poszczególne podproblemy
+    // creating container for sub-problems
     unsigned int pairs = num_classes * (num_classes - 1) / 2;
     std::vector<KernelClassifier<RealVector>> svm(pairs);
     for (std::size_t n = 0, cls1 = 1; cls1 < num_classes; cls1++)
     {
-        // utworzenie zestawu klasyfikatorów podproblemów dla danej klasy
+        // creating a set of classifiers for a given class
         using BinaryClassifierType = 
             OneVersusOneClassifier<RealVector>::binary_classifier_type;
         std::vector<BinaryClassifierType*> ovo_classifiers;
         for (std::size_t cls2 = 0; cls2 < cls1; cls2++, n++)
         {
-            // utworzenie podproblemu binarnego
+            // creating a binary sub-problem
             ClassificationDataset binary_cls_data = 
                 binarySubProblem(train, cls2, cls1);
-            // trenowanie modelu składowego
+            // training the sub-model
             double c = 10.0;
             CSvmTrainer<RealVector> trainer(&kernel, c, false);
             trainer.train(svm[n], binary_cls_data);
             ovo_classifiers.push_back(&svm[n]);
         }
-        // dołożenie zestawu klasyfikatorów do głównego modelu
+        // adding the set of classifiers to the main model
         ovo.addClass(ovo_classifiers);
     }
-    // użycie modelu
+    // using the model
     auto predictions = ovo(test.inputs());
 }

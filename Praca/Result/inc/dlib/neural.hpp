@@ -14,28 +14,28 @@ inline void dlibNeural(
     std::vector<double> testLabels)
 {
     using namespace dlib;
-    // zdefiniowanie architektury sieci
+    // defining the network architecture
     using Architecture = loss_mean_squared<fc <1, 
                             htan<fc<5, 
                             htan<fc<5, 
                             input<matrix<double>>>>>>>>;
-    // utworzenie sieci
+    // creating the network
     Architecture model;
-    // utworzenie i konfiguracja algorytmu optymalizacji
+    // creagting and configuring the optimizing algorithm
     float weightDecay = 0.0001f;
     float momentum = 0.5f;
     sgd solver(weightDecay, momentum);
-    // utworzenie i konfiguracja trenera
+    // creating and configuring the trainer
     dnn_trainer<Architecture> trainer(model, solver);
     trainer.set_learning_rate(0.1);
     trainer.set_learning_rate_shrink_factor(1);
     trainer.set_mini_batch_size(64);
     trainer.set_max_num_epochs(100);
     trainer.be_verbose();
-    // trening
+    // training
     trainer.train(trainData, trainLabels);
     model.clean();
-    // ewaluacja
+    // evaluation
     std::cout << "----- Dlib Neural -----" << std::endl;
     std::cout << "Train data:" << std::endl;
     auto predictions = model(trainData);

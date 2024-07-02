@@ -2,14 +2,14 @@ using namespace shark;
 
 // [...]
 
-// błąd średniokwadratowy
+// mean squared error
 SquaredLoss<> mse_loss;
 auto mse = mse_loss(train_data.labels(), predictions);
 
-// metryka R^2
+// R^2 metric
 auto var = variance(train_data.labels());
 auto r_squared = 1 - mse / var(0);
 
-// metryka adjusted R^2
+// adjusted R^2 metric
 auto adj_r_squared = 1 - (1 - r_squared)((num_regressors - 1)/
                      (num_regressors - data_size - 1));

@@ -11,12 +11,12 @@ inline void sharkLinear(const shark::RegressionDataset& trainData,
 {
     using namespace shark;
 
-    // przygotowanie modelu i trenera
+    // preparing the model and the trainer
     LinearModel<> model;
     LinearRegression trainer;
-    //trening
+    // training
     trainer.train(model, trainData);
-    // ewaluacja
+    // validation
     std::cout << "----- Shark Linear -----" << std::endl;
     std::cout << "Train data:" << std::endl;
     auto predictions = model(trainData.inputs());

@@ -18,12 +18,12 @@ inline void printSharkModelEvaluation(
     using namespace shark;
     using namespace shark::statistics;
 
-    // błąd średniokwadratowy
+    // mean squared error
     SquaredLoss<> loss;
     auto mse = loss(labels, predictions);
     std::cout << "MSE: " << mse << std::endl;
 
-    // metryka R^2
+    // R^2 metric
     std::vector<RealVector> tmp;
     std::for_each(labels.elements().begin(), labels.elements().end(), 
 		    [&](const auto e){ tmp.emplace_back(e); });
@@ -37,7 +37,7 @@ std::vector<shark::RealVector> repackToRealVectorRange(
 {
     using namespace shark;
 
-    // przepakowanie danych z typu unsigned int na typ RealVector
+    // repackaing the data from unsigned int to RealVector
     std::vector<RealVector> v;
     std::for_each(dataContainer.elements().begin(), 
 		    dataContainer.elements().end(), 
@@ -54,14 +54,14 @@ inline void printSharkModelEvaluation(
 {
     using namespace shark;
 
-    // przygotowanie solvera pola pod wykresem ROC
+    // creating the auc roc solver
     constexpr bool invert = false;
     NegativeAUC<unsigned int, RealVector> auc(invert);
  
-    // przepakowanie danych
+    // repackaging data
     auto predVec = repackToRealVectorRange(predictions);
     auto predData = createDataFromRange(predVec);
-    // obliczenie AUC ROC
+    // calculating auc roc
     auto roc = auc(labels, predData);
     std::cout << "ROC: " << (-1*roc) << std::endl << std::endl;
 }

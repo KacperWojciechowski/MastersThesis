@@ -1,17 +1,17 @@
 #include <shogun/preprocessor/RescaleFeatures.h>
 
 // [...]
-// utwórz obiekt danych uczących
+// training data creation
 auto features = shogun::some<shogun::CDenseFeatures<DataType>>(inputs);
 // [...]
-// utwórz obiekt normalizera
+// normalizer object creation
 auto scaler = shogun::wrap(new shogun::CRescaleFeatures());
-// naucz normalizer minimalnych i maksymalnych wartości danych
+// teaching the normalizer the minimal and maximal data values
 scaler->fit(features);
-// przetwórz dane uczące według funkcji min-max
+// processing the training data with the min-max function
 scaler->transform(features);
 
-// wyświetl wynik normalizacji
+// print normalizing result
 auto features_matrix = features->get_feature_matrix();
 for (int i = 0; i < n; ++i)
 {

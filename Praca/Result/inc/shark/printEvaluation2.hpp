@@ -8,7 +8,7 @@ std::vector<shark::RealVector> repackToRealVectorRange(
 {
     using namespace shark;
 
-    // przepakowanie danych z typu unsigned int na typ RealVector
+    // repackaging data from unsigned int to RealVector
     std::vector<RealVector> v;
     std::for_each(dataContainer.elements().begin(), 
 		    dataContainer.elements().end(), 
@@ -25,14 +25,14 @@ inline void printSharkModelEvaluation(
 {
     using namespace shark;
 
-    // przygotowanie solvera pola pod wykresem ROC
+    // preparing the auc roc solver
     constexpr bool invert = false;
     NegativeAUC<unsigned int, RealVector> auc(invert);
- 
-    // przepakowanie danych
+    
+    // repackaging data
     auto predVec = repackToRealVectorRange(predictions);
     auto predData = createDataFromRange(predVec);
-    // obliczenie AUC ROC
+    // calculating auc roc
     auto roc = auc(labels, predData);
     std::cout << "ROC: " << (-1 * roc) << std::endl << std::endl;
 }

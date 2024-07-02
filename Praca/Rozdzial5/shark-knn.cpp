@@ -9,7 +9,7 @@ int main()
 {
     std::string filename = "sample_data_file.csv"
     
-    // odczytanie danych z pliku
+    // reading data from file
     ClassificationDataset data;
     try 
     {
@@ -22,33 +22,33 @@ int main()
         exit(EXIT_FAILURE);
     }
 
-    // wyświetlenie informacji o danych
+    // presenting data information
     std::cout << "number of data points: " << data.numberOfElements()
               << " number of classes: " << numberOfClasses(data)
               << " input dimension: " << inputDimension(data) 
               << std::endl;
 
-    // wydzielenie zestawu danych testowych
+    // selecting the  validation data
     ClassificationDataset dataTest = splitAtElement(
         data, 
         static_cast<std::size_t>(
             .5 * data.numberOfElements())
         );
-    // wyświetlenie informacji
+    // printing data information
     std::cout << "training data points: " << data.numberOfElements() 
               << std::endl;
     std::cout << "test data points: " << dataTest.numberOfElements() 
               << std::endl;
 
-    // utworzenie i konfiguracja drzewa oraz algorytmu
+    // creation and configuration of the tree and algorithm
     KDTree<RealVector> tree(data.inputs());
     TreeNearestNeighbors<RealVector,unsigned int> algorithm(data, &tree);
 
-    // konfiguracja modelu
-    const unsigned int K = 1; // ilość sąsiadów dla algorytmu kNN
+    // model configuration
+    const unsigned int K = 1; // neighbor count for kNN algorithm
     NearestNeighborModel<RealVector, unsigned int> KNN(&algorithm, K);
 
-    // przykład użycia modelu
+    // example use of the model
     ZeroOneLoss<unsigned int> loss;
     auto prediction = KNN(data.inputs());
     std::cout << K << "-KNN on training set accuracy: " 

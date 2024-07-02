@@ -17,22 +17,22 @@ inline void shogunRandomForest(
 {
     using namespace shogun;
 
-    // utworzenie i konfiguracja modelu
+    // creating and configuring the model
     constexpr std::int32_t numRandFeats = 1;
     constexpr std::int32_t numBags = 10;
     auto randForest = 
         some<CRandomForest>(numRandFeats, numBags);
     auto vote = some<CMajorityVote>();
     randForest->set_combination_rule(vote);
-    // oznaczenie danych jako ciągłe
+    // marking data as continuous
     SGVector<bool> featureType(1);
     featureType.set_const(false);
     randForest->set_feature_type(featureType);
-    // trening
+    // training
     randForest->set_labels(trainOutputs);
     randForest->set_machine_problem_type(PT_REGRESSION);
     randForest->train(trainInputs);
-    // ewaluacja modelu
+    // evaluation
     std::cout << "----- Shogun Random Forest -----" << std::endl;
     std::cout << "Train data:" << std::endl;
     auto predictions = wrap(randForest->apply_regression(trainInputs));

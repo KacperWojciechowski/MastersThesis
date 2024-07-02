@@ -17,13 +17,13 @@ inline void dlibEval(std::vector<double> predictions,
 
     if (task == Task::CLASSIFICATION)
     {
-        // przygotowanie kontenerów na podzielone dane
+        // preparing data containers
         std::vector<double> correct;
         std::vector<double> incorrect;
-        // przygotowanie wartości detektora
+        // preparing detector values
         constexpr double positiveDetectionScore = 0.75;
         constexpr double negativeDetectionScore = 0.25;
-        // podział danych
+        // data split
         for (int i = 0; i < predictions.size() && i < labels.size(); ++i)
         {
             if (predictions[i] == labels[i])
@@ -31,9 +31,9 @@ inline void dlibEval(std::vector<double> predictions,
             else
                 incorrect.emplace_back(negativeDetectionScore);
         }
-        // obliczenie krzywej roc
+        // calculating roc curve
         auto roc = compute_roc_curve(correct, incorrect);
-        // obliczenie pola pod wykresem roc
+        // calculating auc roc
         double aucRoc = 0.0;
         for (int i = 0; i < roc.size() - 1; i++)
         {
@@ -47,13 +47,13 @@ inline void dlibEval(std::vector<double> predictions,
     }
     else
     {
-        // obliczenie sumy kwadratów różnic
+        // calculating the sum of squared differences
         auto sum = 0.0;
         for (int i = 0; i < predictions.size() && i < labels.size(); ++i)
         {
             sum += pow(labels[i] - predictions[i], 2);
         }
-        // obliczenie błędu średniokwadratowego
+        // calculating the mean squared error
         auto mse = sqrt(sum / predictions.size());
         std::cout << "MSE: " << mse << std::endl;
     }   

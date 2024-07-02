@@ -17,14 +17,14 @@ inline void shogunLogistic(
 {
     using namespace shogun;
 
-    // utworzenie modelu
+    // creating the model
     auto logReg = some<CMulticlassLogisticRegression>();
 
-    // nauka modelu
+    // training
     logReg->set_labels(trainOutputs);
     logReg->train(trainInputs);
 
-    // ewaluacja modelu
+    // validation
     std::cout << "----- Shogun Logistic -----" << std::endl;
     std::cout << "Train:" << std::endl;
     auto prediction = wrap(logReg->apply_multiclass(trainInputs));

@@ -5,12 +5,12 @@ inline void sharkLinear(const shark::RegressionDataset& trainData,
 {
     using namespace shark;
 
-    // utworzenie modelu
+    // creating model
     LinearRegression trainer;
     LinearModel<> model;
-    // trening modelu
+    // training the model
     trainer.train(model, trainData);
-    // odczytanie parametrów modelu
+    // reading model parameters
     std::cout << "intercept: " << model.offset() << std::endl;
     std::cout << "matrix: " << model.matrix() << std::endl;
     // ewaluacja

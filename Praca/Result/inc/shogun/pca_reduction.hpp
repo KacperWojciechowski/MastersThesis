@@ -6,16 +6,16 @@ inline void KernelPCA(
 {
     using namespace shogun;
 
-    // utworzenie jądra
+    // creating the kernel
     auto gaussKernel = some<CGaussianKernel>(inputs, inputs, 0.5);
-    // utworzenie obiektu reduktora wymiarowości
+    // creating the reductor
     auto pca = some<CKernelPCA>();
-    // konfiguracja reduktora
+    // configuring the reductor
     pca->set_kernel(gaussKernel.get());
     pca->set_target_dim(target_dim);
-    // nauczenie reduktora
+    // training
     pca->fit(inputs);
-    // zastosowanie redukcji
+    // dimensionality reduction
     auto featureMatrix = inputs->get_feature_matrix();
     for (index_t i = 0; i < inputs->get_num_vectors(); ++i)
     {

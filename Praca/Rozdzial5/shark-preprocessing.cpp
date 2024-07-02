@@ -1,17 +1,17 @@
 // [...]
 
-// przemieszanie danych i wyznaczenie danych testowych
+// shuffling data and extracting validation dataset
 train_data.shuffle();
 auto test_data = shark::splitAtElement(train_data, 120);
 
-// utworzenie normalizera
+// creating normalizer
 using Trainer = shark::NormalizeComponentsUnitVariance<shark::RealVector>;
 bool remove_mean = true;
 shark::Normalizer<shark::RealVector> normalizer;
 Trainer normalizing_trainer(remove_mean);
 
-// nauczenie normalizera średniej i wariancji danych treningowych
+// giving the average and variance of the training data to the normalizer
 normalizing_trainer.train(normalizer, train_data.inputs());
 
-// transformacja danych uczących
+// training data transformation
 train_data = shark::transformInputs(train_data, normalizer);
