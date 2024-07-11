@@ -10,8 +10,8 @@ inline std::vector<matrix<double>> dlibSammon(
     long desiredDimensions)
 {
     using namespace dlib;
-    // utworzenie obiektu mapowania
+    // creating the mapping object
     dlib::sammon_projekction sammon;
-    // redukcja wymiarowości
+    // dimensionality reduction
     return sammon(data, desiredDimensions);
 }

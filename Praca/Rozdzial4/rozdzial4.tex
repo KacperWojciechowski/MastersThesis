@@ -63,6 +63,7 @@ In Shogun, regularisation is an integral part of a machine learning model, and a
 \subsection{Linear Regression}
 One of the fundamental machine learning algorithms provided by the Shogun library is linear regression, performed by the \textit{CLinearRidgeRegression} class. As the name suggests, it utilizes Ridge Regression, configured at the model creation stage. Listing \ref{shogun:linear} shows how to adjust the model.
 
+\newpage
 \cppcode{Result/inc/shogun/linear.hpp}{Linear regression example in Shogun}{shogun:linear}
 
 \subsection{Logistic Regression}
@@ -73,6 +74,8 @@ Shogun library contains implementation of multiclass logistic regression via \te
 \subsection{Support Vector Machine}
 Similarly to logistic regression, Shogun provides the multiclass Support Vector Machine model implementation for classification tasks, as \textit{CMulticlassLibSVM} class. It contains several configurable parameters, along with the choice of kernel itself. Listing \ref{shogun:svm} shows an example of use.
 
+
+\hspace{20px}
 \cppcode{Result/inc/shogun/svm.hpp}{Support Vector Machine example in Shogun}{shogun:svm}
 
 \subsection{K-Nearest Neighbours}

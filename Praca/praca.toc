@@ -17,78 +17,78 @@
 \contentsline {subsection}{\numberline {3.2.2}Regression data}{14}{subsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.2.1}Distribution analysis}{14}{subsubsection.3.2.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2.2}Cleaning and normalizing the data}{15}{subsubsection.3.2.2.2}%
-\contentsline {section}{\numberline {3.3}Models built in JMP}{18}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Support Vector Machine (SVM)}{18}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Linear regression}{19}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {4}Shogun}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introductions}{20}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Data formats}{20}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Data processing and exploration methods}{23}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Normalizing}{23}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Dimensionality reduction}{24}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}L1 and L2 Regularisation}{25}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Machine Learning Models}{25}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Linear Regression}{25}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Logistic Regression}{26}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Support Vector Machine}{27}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}K-Nearest Neighbours}{29}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Ensemble algorithms}{30}{subsection.4.4.5}%
-\contentsline {subsubsection}{\numberline {4.4.5.1}Gradient boosting}{30}{subsubsection.4.4.5.1}%
-\contentsline {subsubsection}{\numberline {4.4.5.2}Random forest}{31}{subsubsection.4.4.5.2}%
-\contentsline {subsection}{\numberline {4.4.6}Neural network}{32}{subsection.4.4.6}%
-\contentsline {section}{\numberline {4.5}Model analysis methods}{34}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Mean squared error}{34}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Mean absolute error}{34}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Logarithmic loss function}{34}{subsection.4.5.3}%
-\contentsline {subsection}{\numberline {4.5.4}$R^2$ metric}{35}{subsection.4.5.4}%
-\contentsline {subsection}{\numberline {4.5.5}Accuracy}{36}{subsection.4.5.5}%
-\contentsline {subsection}{\numberline {4.5.6}Precision, Recall and F1 metric}{36}{subsection.4.5.6}%
-\contentsline {subsection}{\numberline {4.5.7}ROC curve}{36}{subsection.4.5.7}%
-\contentsline {subsection}{\numberline {4.5.8}K-fold cross-validation}{37}{subsection.4.5.8}%
-\contentsline {section}{\numberline {4.6}Documentation and sources availability}{38}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Shark-ML}{39}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Introduction}{39}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Data sources formats}{39}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Data exploration and processing methods}{40}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Normalization}{40}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Dimensionality reduction}{41}{subsection.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.2.1}Principal component analysis}{41}{subsubsection.5.3.2.1}%
-\contentsline {subsubsection}{\numberline {5.3.2.2}Linear discriminant analysis}{42}{subsubsection.5.3.2.2}%
-\contentsline {subsection}{\numberline {5.3.3}L1 regularization}{42}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}L2 regularization}{42}{subsection.5.3.4}%
-\contentsline {section}{\numberline {5.4}Machine learning models}{43}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Linear regression}{43}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Logistic regression}{44}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Support vector machine}{46}{subsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.4.4}K-nearest neighbors algorithm}{48}{subsection.5.4.4}%
-\contentsline {subsection}{\numberline {5.4.5}Ensemble algorithm}{49}{subsection.5.4.5}%
-\contentsline {subsection}{\numberline {5.4.6}Neural network}{50}{subsection.5.4.6}%
-\contentsline {section}{\numberline {5.5}Model analysis methods}{52}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Loss functions}{52}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}$R^2$ and adjusted $R^2$ metrics}{53}{subsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.5.3}ROC curve}{53}{subsection.5.5.3}%
-\contentsline {subsection}{\numberline {5.5.4}K-fold cross validation}{54}{subsection.5.5.4}%
-\contentsline {section}{\numberline {5.6}Documentation and sources availability}{56}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Dlib}{57}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Introduction}{57}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Data formats}{57}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Data processing and exploration}{58}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Normalizing}{58}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Dimensionality reduction}{58}{subsection.6.3.2}%
-\contentsline {subsubsection}{\numberline {6.3.2.1}Principal component analysis}{58}{subsubsection.6.3.2.1}%
-\contentsline {subsubsection}{\numberline {6.3.2.2}Linear discriminant analysis}{59}{subsubsection.6.3.2.2}%
-\contentsline {subsubsection}{\numberline {6.3.2.3}Sammon mapping}{60}{subsubsection.6.3.2.3}%
-\contentsline {subsection}{\numberline {6.3.3}L2 regularization}{60}{subsection.6.3.3}%
-\contentsline {section}{\numberline {6.4}Machine learning models}{61}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Linear regression}{61}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Support vector machine}{61}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Neural network}{62}{subsection.6.4.3}%
-\contentsline {subsection}{\numberline {6.4.4}Kernel ridge regression}{64}{subsection.6.4.4}%
-\contentsline {section}{\numberline {6.5}Model analysis method}{65}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Pole pod wykresem krzywej charakterystycznej odbiornika}{65}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}K-fold cross validation}{66}{subsection.6.5.2}%
-\contentsline {section}{\numberline {6.6}Documentation and sources availability}{68}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Group comparison and summary}{69}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Offered functionalities}{69}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Comparison of the results from test examples}{70}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Sources quality and needed effort}{73}{section.7.3}%
+\contentsline {section}{\numberline {3.3}Models built in JMP}{17}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Support Vector Machine (SVM)}{17}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Linear regression}{18}{subsection.3.3.2}%
+\contentsline {chapter}{\numberline {4}Shogun}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introductions}{19}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Data formats}{19}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Data processing and exploration methods}{22}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Normalizing}{22}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Dimensionality reduction}{23}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}L1 and L2 Regularisation}{24}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Machine Learning Models}{24}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Linear Regression}{24}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Logistic Regression}{25}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Support Vector Machine}{26}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}K-Nearest Neighbours}{28}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Ensemble algorithms}{29}{subsection.4.4.5}%
+\contentsline {subsubsection}{\numberline {4.4.5.1}Gradient boosting}{29}{subsubsection.4.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.4.5.2}Random forest}{30}{subsubsection.4.4.5.2}%
+\contentsline {subsection}{\numberline {4.4.6}Neural network}{31}{subsection.4.4.6}%
+\contentsline {section}{\numberline {4.5}Model analysis methods}{33}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Mean squared error}{33}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Mean absolute error}{33}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Logarithmic loss function}{33}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}$R^2$ metric}{34}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Accuracy}{35}{subsection.4.5.5}%
+\contentsline {subsection}{\numberline {4.5.6}Precision, Recall and F1 metric}{35}{subsection.4.5.6}%
+\contentsline {subsection}{\numberline {4.5.7}ROC curve}{35}{subsection.4.5.7}%
+\contentsline {subsection}{\numberline {4.5.8}K-fold cross-validation}{36}{subsection.4.5.8}%
+\contentsline {section}{\numberline {4.6}Documentation and sources availability}{37}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Shark-ML}{38}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{38}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Data sources formats}{38}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Data exploration and processing methods}{39}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Normalization}{39}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Dimensionality reduction}{40}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}Principal component analysis}{40}{subsubsection.5.3.2.1}%
+\contentsline {subsubsection}{\numberline {5.3.2.2}Linear discriminant analysis}{41}{subsubsection.5.3.2.2}%
+\contentsline {subsection}{\numberline {5.3.3}L1 regularization}{41}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}L2 regularization}{41}{subsection.5.3.4}%
+\contentsline {section}{\numberline {5.4}Machine learning models}{42}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Linear regression}{42}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Logistic regression}{43}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Support vector machine}{45}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}K-nearest neighbors algorithm}{47}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}Ensemble algorithm}{48}{subsection.5.4.5}%
+\contentsline {subsection}{\numberline {5.4.6}Neural network}{49}{subsection.5.4.6}%
+\contentsline {section}{\numberline {5.5}Model analysis methods}{51}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Loss functions}{51}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}$R^2$ and adjusted $R^2$ metrics}{52}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}ROC curve}{52}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}K-fold cross validation}{53}{subsection.5.5.4}%
+\contentsline {section}{\numberline {5.6}Documentation and sources availability}{55}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Dlib}{56}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introduction}{56}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Data formats}{56}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Data processing and exploration}{57}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Normalizing}{57}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Dimensionality reduction}{57}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}Principal component analysis}{57}{subsubsection.6.3.2.1}%
+\contentsline {subsubsection}{\numberline {6.3.2.2}Linear discriminant analysis}{58}{subsubsection.6.3.2.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.3}Sammon mapping}{59}{subsubsection.6.3.2.3}%
+\contentsline {subsection}{\numberline {6.3.3}L2 regularization}{59}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Machine learning models}{60}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Linear regression}{60}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Support vector machine}{60}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Neural network}{61}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Kernel ridge regression}{63}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.5}Model analysis method}{64}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Pole pod wykresem krzywej charakterystycznej odbiornika}{64}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}K-fold cross validation}{65}{subsection.6.5.2}%
+\contentsline {section}{\numberline {6.6}Documentation and sources availability}{67}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Group comparison and summary}{68}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Offered functionalities}{68}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Comparison of the results from test examples}{69}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Sources quality and needed effort}{72}{section.7.3}%

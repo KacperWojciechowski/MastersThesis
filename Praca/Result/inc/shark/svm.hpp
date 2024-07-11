@@ -1,5 +1,4 @@
 #pragma once
-
 #define SHARK_CV_VERBOSE 1
 #include <inc/shark/printEvaluation.hpp>
 #include <shark/Algorithms/KMeans.h>
@@ -13,7 +12,7 @@ inline void sharkSVM(const shark::ClassificationDataset& trainData,
                      const shark::ClassificationDataset& testData)
 {
     using namespace shark;
-
+    
     // creating the kernel
     double gamma = 0.16;
     GaussianRbfKernel<> kernel(gamma);

@@ -61,6 +61,7 @@ One of the fundamental models offered by this library is the linear regression. 
 
 \cppcode{Result/inc/shark/linear.hpp}{Example of linear regression using SAG - Shark-ML.}{shark:linear}
 
+\newpage
 \cppcode{Rozdzial5/shark-linear2.cpp}{Example of linear regression with analytical method - Shark-ML\cite{handsOnMachineLearning}.}{shark:linear2}
 
 \subsection{Logistic regression}
@@ -74,6 +75,7 @@ The logistic regression mechanism available in the Shark-ML library by its natur
 
 where $N$ designates the number of classes present in the problem. Created classifiers are then combined into one object using the right configuration of \textit{OneVersusOneClassifier} class, which then allows for solving a multiclass classification. In order to achieve this, the dataset needs to be iteratively split into binary characteristic subproblems using the in-built \textit{binarySubProblem()} method, which accepts the data set and desired classes. Teaching process is carried out using the \textit{LogisticRegression} trainer object. After the submodel batch is trained, they are loaded into the primary model. The final use of the ready multiclass classifier is no different than using a model acquired eg. in linear classification. Listing \ref{shark:logistic} describes the function for building a multiclass classifier, while listing \ref{shark:logistic2} presents the creation of simple binary classification model. 
 
+\newpage
 \cppcode{Rozdzial5/shark-logistic.cpp}{Example of multiclass classifier building - Shark\cite{handsOnMachineLearning}.}{shark:logistic}
 
 \cppcode{Result/inc/shark/logistic.hpp}{Example of simple binary linear regression - Shark-ML.}{shark:logistic2}
